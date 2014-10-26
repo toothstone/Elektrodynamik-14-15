@@ -1,0 +1,39 @@
+\documentclass[a4paper,12pt,portrait]{book}	  
+\title{Theoretische Elektrodynamik}
+\author{Matthias Vojta\\ \\ \"ubertragen von\\Lukas K\"orber und Friedrich Zahn}
+\date{Wintersemester 2014/2015}
+
+  
+\usepackage[ngerman]{babel}	    
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{amsthm}	 
+\usepackage{graphicx}      
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage[upright]{fourier}
+\usepackage[frak=mma]{mathalfa}
+\usepackage{sectsty}
+\usepackage{lipsum}
+\usepackage{bm}
+
+
+%layout options
+\sectionfont{\color{hblue}}
+\chapterfont{\color{dblue}}
+\pagestyle{headings}
+\setlength\parindent{0pt}
+
+\newcommand{\Int}[4]{\int\limits_{#1}^{#2} #3 \mathrm{d} #4}
+\newcommand{\Oint}[4]{\oint\limits_{#1}^{#2} #3 \mathrm{d} #4}
+\renewcommand{\vec}[1]{\bm{#1}}
+\input{operators.tex}
+\input{environments.tex}
+	
+\begin{document}
+\maketitle
+\tableofcontents
+\input{lectures/001.tex}
+
+\end{document}
