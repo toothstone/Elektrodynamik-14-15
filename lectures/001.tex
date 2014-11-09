@@ -1,5 +1,5 @@
-\chapter*{Einleitung}
-Gegenstand der Vorlesung ist die (klassische) Theorie der Elektrischen Felder ausgehend von den Maxwell-Gleichungen (1864):
+\chapter{Einleitung}
+Gegenstand der Vorlesung ist die (klassische) Theorie der Elektrischen Felder ausgehend von den \textsc{Maxwell}-Gleichungen (1864):
 
 \begin{equation*}
 \text{div} \ \bm{B}=0
@@ -18,9 +18,9 @@ Gegenstand der Vorlesung ist die (klassische) Theorie der Elektrischen Felder au
 \end{equation*}
 
 für die Felder $\bm{E}$ und $\bm{B}$ in Abhängigkeit von Ladungs- und Stromverteilung $\rho(\bm{r},t)$ und $\bm{j}(\bm{r},t)$  sollen physikalische Erscheinungen geschildert werden.\\
-Elektrodynamik ist ein Teil des Standartmodells der Teilchenphysik, das einheitlich Teilichen und ihre Wechselwirkungen beschreibt.\\
+Die Elektrodynamik ist ein Teil des Standardmodells der Teilchenphysik, das einheitlich Teilichen und ihre Wechselwirkungen beschreibt.\\
 Klassische Elektrodynamik ist ein Grenzfall der Quantenelektrodynamik (gültig für kleine Impuls- und Energiebeträge, große Brechungszahlen für Photonen).\\
-Sie ist im Einklang mit der der speziellen Relativitätstheorie (c ist implizit in den Maxwell-Gleichungen enthalten). Viele interessante Effekte von Materie können mit klassischer Theorie nicht beschrieben werden.\\
+Sie ist im Einklang mit der der speziellen Relativitätstheorie (c ist implizit in den \textsc{Maxwell}-Gleichungen enthalten). Viele interessante Effekte von Materie können mit klassischer Theorie nicht beschrieben werden.\\
 Zum Beispiel: Wann sind Atome stabil? Wann ist Eisen ferromagnetisch? Warum wird z.B. Blei bei tiefen Temperaturen supraleitend? Für diese Fragen werden Quanteneffekte wichtig.
 \chapter{Mathematische Hilfsmittel}
 \emph{Literaturtipp:} Mathematischer Einführungskurs Physik\\
@@ -84,7 +84,7 @@ $\nabla |\bm{r}|=\frac{\bm{r}}{|\bm{r}|}=\bm{e}_r\\
 \linebreak\linebreak
 \textbf{b. Divergenz} (Quellenstärke eines Vektorfeldes)\\
 \linebreak
-Die Divergenz div $\bm{E}=\nabla\cdot\bm{E}$ ist ein Skalar unter Koordinatentransformation und kann als \textbf{lokale Quellenstärke} interpretiert werden. Häufig benötigt man auch den Laplace-Operator, der die \emph{zweite Ableitung} repräsentiert.\\
+Die Divergenz div $\bm{E}=\nabla\cdot\bm{E}$ ist ein Skalar unter Koordinatentransformation und kann als \textbf{lokale Quellenstärke} interpretiert werden. Häufig benötigt man auch den \textsc{Laplace}-Operator, der die \emph{zweite Ableitung} repräsentiert.\\
 \begin{equation*}
 \mathrm{div\ grad\ } \varphi=\nabla^2\varphi=\Delta\varphi
 \end{equation*}
@@ -103,7 +103,7 @@ Die Rotation rot $\bm{B}=\nabla\times\bm{B}$
 B_x & B_y & B_z
 \end{vmatrix}
 \end{equation*}
-kann als \textbf{lokale Wirbelstärke} verstanden werden. Ihr Komponenten lassen sich auch als
+kann als \textbf{lokale Wirbelstärke} verstanden werden. Ihre Komponenten lassen sich auch als
 \begin{equation*}
 (\nabla\times\bm{B})_i=\sum\limits_{j,k}\epsilon_{ijk}\cdot\pdiff{}{x_j}\cdot B_k
 \end{equation*}
@@ -114,23 +114,22 @@ darstellen wobei $\epsilon_{ijk}\ $ der total antisymetrische Tensor 3. Stufe is
 $\bm{v}=\bm{\omega}\times\bm{r} \ \Rightarrow \ \nabla\times\bm{v}=2\bm{\omega}$\\
 $\nabla\times\bm{r}=0$\\
 \linebreak\linebreak
-\textbf{d. Gauss'scher Satz}\\
+\textbf{d. \textsc{Gauss}'scher Satz}\\
 \begin{equation*}
 \iiint\limits_V\mathrm{div\ }\vec{E}\cdot\mathrm{d}V=\oiint\limits_{\partial V}\vec{E}\cdot\mathrm{d}\vec{A}
 \end{equation*}
-Der Satz von Gauss verknüpft Eigenschaften im Inneren eines Volumens mit dem Verhalten auf dem Rand.\\
+Der Satz von \textsc{Gauss} verknüpft Eigenschaften im Inneren eines Volumens mit dem Verhalten auf dem Rand.\\
 \linebreak
-\textbf{e. Green'scher Satz}\\
+\textbf{e. \textsc{Green}'scher Satz}\\
 \begin{equation*}
 \Int{V}{}{(\varphi\Delta\psi-\psi\Delta\varphi)}{V}=\Oint{\partial V}{}{(\varphi\nabla\psi-\psi\nabla\varphi)}{\vec{A}}
 \end{equation*}
 \linebreak
-\textbf{f. Stokes'scher Satz}\\
+\textbf{f. \textsc{Stokes}'scher Satz}\\
 \begin{equation*}
-\iint\limits_S\mathrm{rot\ }\vec{B}\cdot\mathrm{d}\vec{A}=\oint\limits_{\partial A}\vec{B}\cdot\mathrm{d}\vec{
-r}
+\iint\limits_S\mathrm{rot\ }\vec{B}\cdot\mathrm{d}\vec{A}=\oint\limits_{\partial A}\vec{B}\cdot\mathrm{d}\vec{r}
 \end{equation*}
-Analog zu Gauss'schen Satz verknüft der Satz von Stokes das Verhalten eines Feldes auf einer Fläche mit dem auf dem Rand der Fläche. Für geschlossene Flächen gilt
+Analog zu \textsc{Gauss}'schen Satz verknüft der Satz von \textsc{Stokes} das Verhalten eines Feldes auf einer Fläche mit dem auf dem Rand der Fläche. Für geschlossene Flächen gilt
 \begin{equation*}
 \oiint\limits_{S=\partial V}\mathrm{rot\ }\vec{B}\cdot\mathrm{d}\vec{A}=0
 \end{equation*}
@@ -142,7 +141,7 @@ z.B: \ $\nabla_x\psi=\partial_x\psi\vec{e}_x+\partial_y\psi\vec{e}_y+\partial_z\
 $\nabla_\theta\psi=\pdiff{}{r}\psi\vec{e}_r+\frac{1}{r}\pdiff{}{\theta}\psi\vec{e}_\theta+\frac{1}{r\sin\theta}\pdiff{}{\phi}\psi\vec{e}_\phi$\\
 \linebreak
 Generell: $(\nabla\psi)_u\equiv(\nabla\psi)\vec{e}_u=\frac{1}{g_u}\pdiff{\psi}{u}$ \ mit \ $g_u=|\pdiff{\psi}{u}|$\\
-\section{Fourier-Transformation}
+\section{\textsc{Fourier}-Transformation}
 \begin{equation*}
 \tilde{f}(\omega)=\frac{1}{\sqrt{2\pi}}\Int{-\infty}{\infty}{f(t)e^{-i\omega t}}{t}
 \end{equation*}
@@ -167,34 +166,105 @@ Verallgemeinert auf $n$ Dimensionen ergibt sich:\\
 \widetilde{(f*g)}(\omega)=\tilde{f}(\omega)\tilde{g}(\omega)
 \end{equation*}
 \textbf{c. Rechenregeln}\\
-\begin{eqnarray*}
-f'(t) & \leftrightarrow & i\omega\tilde{f}(\omega)\\
--itf(t) & \leftrightarrow &\tilde{f}'(\omega)\\
-f(t+a) & \leftrightarrow & e^{i\omega a}\tilde{f}(\omega)\\
-e^{i\omega t}f(t) & \leftrightarrow & \tilde{f}(\omega-a)\\
-f(at) & \leftrightarrow & \frac{1}{|a|}\tilde{f}\left(\frac{\omega}{a}\right)\\
-f^*(t) & \leftrightarrow & \tilde{f}^*(\omega)\\
-\tilde{\tilde{f}}(t) & \leftrightarrow & f(-t)\\
-\end{eqnarray*}
+\begin{align*}
+f'(t) & \leftrightarrow i\omega\tilde{f}(\omega)\\
+-itf(t) & \leftrightarrow \tilde{f}'(\omega)\\
+f(t+a) & \leftrightarrow  e^{i\omega a}\tilde{f}(\omega)\\
+e^{i\omega t}f(t) \leftrightarrow & \tilde{f}(\omega-a)\\
+f(at) & \leftrightarrow \frac{1}{|a|}\tilde{f}\left(\frac{\omega}{a}\right)\\
+f^*(t) & \leftrightarrow \tilde{f}^*(\omega)\\
+\tilde{\tilde{f}}(t) \leftrightarrow & f(-t)\\
+\end{align*}
 
-\chapter{Grundbegriffe und Maxwell-Gleichungen}
+\section{Delta-Distribution}
+
+Die Delta-Distribution ist über folgende Eigenschaften definiert:
+
+\begin{enumerate}
+\item
+\begin{equation*}
+\delta(\vec{r}) = \begin{cases}
+0 & \text{für }\vec{r}\neq\vec{r}_0\\
+\infty & \text{für } \vec{r} = \vec{r}_0
+\end{cases}
+\end{equation*}
+
+\item
+\begin{equation*}
+\int\limits_{\vec{r}_0\in V}\mathrm{d}V \ \delta({\vec{r}-\vec{r}_0}) = 1
+\end{equation*}
+\end{enumerate}
+
+Alle Aussagen gelten analog für die Delta-Distribution $\delta(x)$ in einer Dimension.\
+Bei höherdimensionalen Deltadistributionen gilt allerdings nur in kartesischen Koordinaten:
+
+\begin{equation*}
+\delta(\vec{r} - \vec{r}_0) = \delta(x-x_0)\cdot\delta(y-y_0)\cdot\delta(z-z_0)
+\end{equation*}
+\ \\
+Faltet man die Delta-Distribution mit einer Funktion $f(\vec{r})$, so ergibt sich aus ihren Eigenschaften:
+
+\begin{equation*}
+\int\limits_{\vec{r}_0\in V}\mathrm{d}V \ \delta({\vec{r}-\vec{r}_0}) \ f(\vec{r}) = f(\vec{r}_0)
+\end{equation*}
+
+\section{\textsc{Green}'sche Funktion zur Lösung inhomogener linearer DGL}
+
+Wir betrachten die lineare, inhomogene Differentialgleichung
+
+\begin{equation*}
+L \ \phi (x_1,\dotsc,x_n) = \rho (x_1,\dotsc,x_n) \; \text{ oder kurz } \; L\phi = \rho
+\end{equation*}
+
+wobei $L$ ein linearer Operator und $\rho$ die Inhomogenität sein soll.\
+\\
+Die \textsc{Green}'sche Funktion $g(x,x)$ zum Operator $L$ ist die Lösung der Differentialgleichung mit $\delta$-förmiger Inhomogenität.
+
+\begin{equation*}
+L \ g(x,x') = \delta (x-x') \; [= \delta(x_1-x_1')\cdot\dotsc\cdot\delta(x_n - x_n')]
+\end{equation*}
+\ \\
+Wenn $g$ bekannt ist, dann kann die Lösung für beliebige Inhomogenität durch Superposition gewonnen werden.
+
+\begin{equation*}
+\phi (x) = \int\mathrm{d}x' \ g(x,x') \rho(x')
+\end{equation*}
+
+Den Beweis hierfür erhält man leicht durch Einsetzen:
+
+\begin{equation*}
+L \ \phi(x) = \int\mathrm{d}x' \ L \ g(x,x') \rho(x') = \rho(x)
+\end{equation*}
+
+
+\chapter{Grundbegriffe und \textsc{Maxwell}-Gleichungen}
 \section{Kräfte und Punktladungen}
-Aus der Erfahrung ergibt sich für eine Ruhende Ladung
-\begin{equation}
+
+Aus der Erfahrung ergibt sich für eine ruhende Ladung
+
+\begin{equation*}
 \vec{F}(\vec{r},t)=Q\cdot\vec{E}(\vec{r},t)
-\end{equation}
-Dabei ist $Q$ eine Körpereigenschaft und $\vec{E}$ eine Eigenschaft, die die Umwelt charakterisiert. Über den Vergleich der Kraft auf zwei Körper $\vec{F}_1(\vec{r},t)=\frac{Q_1}{Q_2}\vec{F}_2(\vec{r},t)$ lässt sich so eine Einheit für die Ladung definieren.\\
+\end{equation*}
+
+Dabei ist die Ladung $Q$ eine Körpereigenschaft und $\vec{E}$ eine Eigenschaft, die die Umwelt charakterisiert. Über den Vergleich der Kraft auf zwei Körper $\vec{F}_1(\vec{r},t)=\frac{Q_1}{Q_2}\vec{F}_2(\vec{r},t)$ lässt sich so eine Einheit für die Ladung definieren.\\
 \linebreak
+
 Bei bewegten Ladungen beobachten wir etwas anderes. Die Kraft hat hier die Form
-\begin{equation}
+
+\begin{equation*}
 \vec{F}=Q(\vec{E}+\vec{v}\times\vec{B})
-\end{equation}
-\section{Ladungs- und Stromdichte, Ladungsverteilung}
+\end{equation*}
+
+\section{Ladungs- und Stromdichte, Ladungserhaltung}
+
 Über eine Ladung in einem Volumenelement lässt sich der Begriff der Ladungsdichte definieren.
-\begin{equation}
+
+\begin{equation*}
 \rho(\vec{r},t)=\diff{Q}{V}
-\end{equation}
+\end{equation*}
+
 Eine Ladungsänderung nennen wir schließlich den elektrischen Strom.
-\begin{equation}
+
+\begin{equation*}
 -I:=\dot{Q}=\diff{}{t}\Int{V}{}{\rho(\vec{r},t)}{V}=\Int{V}{}{\pdiff{\rho}{t}}{V}
-\end{equation}
+\end{equation*}		
