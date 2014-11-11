@@ -164,7 +164,7 @@ Verallgemeinert auf $n$ Dimensionen ergibt sich:\\
 \linebreak
 \textbf{b. Faltung}\\
 \begin{equation*}
-(f*g)(t)=\frac{1}{\sqrt{2\pi}}\Int{-\infty}{\infty}{f(t-s)g(s)}{s}
+(f*g)(t)=\frac{1}{\sqrt{2\pi}}\Int{-\infty}{\infty}{f(t-s)G(s)}{s}
 \end{equation*}
 \begin{equation*}
 \widetilde{(f*g)}(\omega)=\tilde{f}(\omega)\tilde{g}(\omega)
@@ -222,22 +222,22 @@ L \ \phi (x_1,\dotsc,x_n) = \rho (x_1,\dotsc,x_n) \; \text{ oder kurz } \; L\phi
 
 wobei $L$ ein linearer Operator und $\rho$ die Inhomogenität sein soll.\
 \\
-Die \textsc{Green}'sche Funktion $g(x,x)$ zum Operator $L$ ist die Lösung der Differentialgleichung mit $\delta$-förmiger Inhomogenität.
+Die \textsc{Green}'sche Funktion $G(x,x)$ zum Operator $L$ ist die Lösung der Differentialgleichung mit $\delta$-förmiger Inhomogenität.
 
 \begin{equation*}
-L \ g(x,x') = \delta (x-x') \; [= \delta(x_1-x_1')\cdot\dotsc\cdot\delta(x_n - x_n')]
+L \ G(x,x') = \delta (x-x') \; [= \delta(x_1-x_1')\cdot\dotsc\cdot\delta(x_n - x_n')]
 \end{equation*}
 \ \\
 Wenn $g$ bekannt ist, dann kann die Lösung für beliebige Inhomogenität durch Superposition gewonnen werden.
 
 \begin{equation*}
-\phi (x) = \int\mathrm{d}x' \ g(x,x') \rho(x')
+\phi (x) = \int\mathrm{d}x' \ G(x,x') \rho(x')
 \end{equation*}
 
 Den Beweis hierfür erhält man leicht durch Einsetzen:
 
 \begin{equation*}
-L \ \phi(x) = \int\mathrm{d}x' \ L \ g(x,x') \rho(x') = \rho(x)
+L \ \phi(x) = \int\mathrm{d}x' \ L \ G(x,x') \rho(x') = \rho(x)
 \end{equation*}
 
 
