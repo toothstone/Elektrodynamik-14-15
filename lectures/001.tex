@@ -22,9 +22,11 @@ Die Elektrodynamik ist ein Teil des Standardmodells der Teilchenphysik, das einh
 Klassische Elektrodynamik ist ein Grenzfall der Quantenelektrodynamik (gültig für kleine Impuls- und Energiebeträge, große Brechungszahlen für Photonen).\\
 Sie ist im Einklang mit der der speziellen Relativitätstheorie (c ist implizit in den \textsc{Maxwell}-Gleichungen enthalten). Viele interessante Effekte von Materie können mit klassischer Theorie nicht beschrieben werden.\\
 Zum Beispiel: Wann sind Atome stabil? Wann ist Eisen ferromagnetisch? Warum wird z.B. Blei bei tiefen Temperaturen supraleitend? Für diese Fragen werden Quanteneffekte wichtig.
+
 \chapter{Mathematische Hilfsmittel}
 \emph{Literaturtipp:} Mathematischer Einführungskurs Physik\\
 \linebreak
+
 \section{Skalar- und Vektorfelder}
 Felder entsprechen Größen, die an jedem Raumpunkt einen bestimmten Wert haben, der zeitabhängig sein kann.\\
 \begin{enumerate}
@@ -33,6 +35,7 @@ Bsp.: Temperatur, Druck, Ladung, Energie
 \item Vektorfelder: $\bm{E}=\bm{E}(x,y,z,t)$\\ \linebreak
 Bsp.: Geschwindigkeitsverteilung in einem strömenden Gas, Wärmestromdichte
 \end{enumerate}
+
 \section{Integrale auf Feldern}
 Integrale über skalare Felder werden wie bekannt bebildet; sie sind zu vermeiden.\\
 Integriert man über ein Vektorfeld, spielt die Richtungsinformation eine entscheidende Rolle. Man unterscheidet je nach Dimension des Parameterbereichs von Linien-, Flächen- und Volumenintegralen.\\
@@ -66,6 +69,7 @@ Beim Volumenintegral wird wiederum (nicht wie beim Flächenintegral) das Vorzeic
 \begin{equation*}
 q=\int\limits_{w_1}^{w_2}\int\limits_{v_1}^{v_2}\int\limits_{u_1}^{u_2}\rho(u,v,w)\cdot\left|\pdiff{\bm{r}}{u}\cdot\left(\pdiff{\bm{r}}{v}\times\pdiff{\bm{r}}{w}\right)\right|\mathrm{d}u\mathrm{d}v\mathrm{d}w
 \end{equation*}
+
 \section{Vektorielle Ableitungen und Integrale}
 \textbf{a. Gradient}\\
 \linebreak
@@ -137,6 +141,7 @@ Analog zu \textsc{Gauss}'schen Satz verknüft der Satz von \textsc{Stokes} das V
 \begin{equation*}
 \oiint\limits_{S=\partial V}\mathrm{rot\ }\vec{B}\cdot\mathrm{d}\vec{A}=0
 \end{equation*}
+
 \section{Differentialoperatoren in krummlinigen Koordinaten}
 Karthesische /Kugel-/Zylinderkoordinaten sind hier wichtig.\\
 \linebreak
@@ -145,6 +150,7 @@ z.B: \ $\nabla_x\psi=\partial_x\psi\vec{e}_x+\partial_y\psi\vec{e}_y+\partial_z\
 $\nabla_\theta\psi=\pdiff{}{r}\psi\vec{e}_r+\frac{1}{r}\pdiff{}{\theta}\psi\vec{e}_\theta+\frac{1}{r\sin\theta}\pdiff{}{\phi}\psi\vec{e}_\phi$\\
 \linebreak
 Generell: $(\nabla\psi)_u\equiv(\nabla\psi)\vec{e}_u=\frac{1}{g_u}\pdiff{\psi}{u}$ \ mit \ $g_u=|\pdiff{\psi}{u}|$\\
+
 \section{\textsc{Fourier}-Transformation}
 \begin{equation*}
 \tilde{f}(\omega)=\frac{1}{\sqrt{2\pi}}\Int{-\infty}{\infty}{f(t)e^{-i\omega t}}{t}
