@@ -1,24 +1,34 @@
 Betrachten wir nun den Stromfluss durch ein Oberflächenelement d$\vec{A}$. Die Ladungsträger, welche durch diese Fläche wandern haben die Geschwindigkeit $\vec{v}$, sodass anschaulich ein kleines Volumenelement dV$ = \vec{v}\mathrm{d}t\cdot\mathrm{d}\vec{A}$ aufgespannt wird:
+
 \begin{align*}
 \mathrm{d}Q &= \rho(\vec{r},t)\vec{v}(\vec{r},t)\mathrm{d}t\mathrm{d}\vec{A}\\
 \diff{Q}{t} =-I &= \rho\vec{v}\cdot\mathrm{d}\vec{A}=:\vec{j}(\vec{r},t)\cdot\mathrm{d}\vec{A}
 \end{align*}
+
 Wir nennen $\vec{j} = \rho\vec{v}$ der Anschaulichkeit nach die \textbf{Stromdichte}, denn man sieht leicht:
+
 \begin{equation*}
 \iint\limits_A\vec{j}\cdot\mathrm{d}\vec{A}=I
 \end{equation*}
+
 Setzen wir nun dies in die Gleichung für die Ladungserhaltung ein:
+
 \begin{equation*}
 0 = \dot{Q} + I = \iiint\limits_V\mathrm{d}V\pdiff{\rho}{t} \ + \oiint\limits_{\partial V}\mathrm{d}\vec{A}\cdot\vec{j} = \iiint\limits_V \mathrm{d}V\left(\pdiff{\rho}{t} + \pdiff{\vec{j}}{\vec{r}}\right) 
 \end{equation*}
+
 Da dies für für alle möglichen Volumina gelten soll, folgt daraus die \textbf{Kontinuitätsgleichung}:
+
 \begin{equation*}
 \dot{\rho} + \text{div} \ \vec{j} = 0
 \end{equation*} 
+
 Für den Grenzfall eines unendlich großen Volumens gilt zunächst $\vec{j}\rightarrow 0$ auf der Oberfläche, woraus man auf die für diesen Grenzfall logische Konsequenz schließen kann, dass
+
 \begin{equation*}
 \dot{Q} = -\oiint\vec{j}\mathrm{d}\vec{A} = 0
 \end{equation*}
+
 die Ladung im gesamten Raum erhalten ist.\ \\
 
 
