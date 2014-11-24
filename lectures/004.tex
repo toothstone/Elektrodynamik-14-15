@@ -1,0 +1,173 @@
+\section{Fernfeld einer räumlich eingegrenzten Ladungsverteilung}
+
+Wenn man das Fernfeld einer räumlich begrenzten Ladungsverteilung ermitteln möchte, spricht man in diesem Zusammenhang auch immer von der sogenannten \textbf{Multipolentwicklung}.
+
+Wir betrachten nun eine räumlich eingegrenzte Ladunugsverteilung der Dichte $\rho$, für die zunächst einmal allgemein gilt:
+
+\begin{equation*}
+\varphi\left(\vec{r}\right) = \frac{1}{4\pi\epsilon_0}\cdot\int\d V \frac{\rho(\vec{r}'}{|\vec{r}-\vec{r}'|}
+\end{equation*}
+
+Unter der Annahme, dass $|\vec{r}| \gg \ a$ gilt (wobei $a$ die größte räumliche Ausdehnungsrichtung der Ladungsverteilung ist), werden wir nun den Term $\frac{1}{|\vec{r}-\vec{r}'|}$ entwickeln:
+
+\begin{equation*}
+\frac{1}{|\vec{r}-\vec{r}'|} = \sum_{n=0}^{\infty} \; \frac{1}{n!}\left(-\vec{r}'\cdot\pdiff{}{\vec{r}}\right)^n \ \frac{1}{r} = \frac{1}{r} + \frac{\vec{r}'\cdot\vec{r}}{r^3} + \frac{1}{2} \ \frac{3 (\vec{r}'\cdot\vec{r})^2 - \vec{r}'^2 \ \vec{r}^2}{r^5} + \dotsc
+\end{equation*}
+
+\begin{align*}
+\Rightarrow \quad \varphi(\vec{r}) &= \frac{1}{4\pi\epsilon_0} \left[ \frac{1}{r}\int\d V' \rho(\vec{r}') + \frac{\vec{r}}{r^3} \int\d V' \vec{r}' \rho(\vec{r}') + \sum_{i,j} \ \frac{x_i x_j}{r^5} \ \int\d V' \rho(\vec{r}') \ (3x_i'x_j' - \delta_{ij}\vec{r}'^2) + \dotsc\right] \\
+&= \frac{1}{4\pi\epsilon_0} \Big[\underbrace{\frac{Q}{r}}_{\sim\frac{1}{r}} \quad + \quad \underbrace{\frac{\vec{r}\cdot\vec{p}}{r^3}}_{\sim\frac{1}{r^2}} \quad + \quad \underbrace{\frac{1}{2}\frac{\vec{r}\cdot \tens{D} \cdot\vec{r}}{r^5}}_{\sim\frac{1}{r^3}} \quad + \quad \dotsc \quad \Big]
+\end{align*}
+
+Die einzelnen Summanden bezeichnet man auch als \textbf{Multipolmomente} einer Ladungsverteilung:
+
+\begin{align*}
+\mathrm{Monopol:}& \qquad Q = \int\d V \rho(\vec{r})\\
+\mathrm{Dipol:}& \qquad \vec{p} = \int\d V \rho(\vec{r})\vec{r}\\
+\mathrm{Quadrupol:}& \qquad \tens{D} = \int\d V \rho(\vec{r}) \ (3\vec{r}a\vec{r}-\mathbb{1}\vec{r}^2)\\
+\mathrm{Oktupol:}& \qquad \dotsc\\
+\vdots \qquad &
+\end{align*}
+
+Im Allgemeinen hängen die Multipolmomente vom Bezugspunkt ab, nur das erste nicht verschwindende Moment ist unabhängig vom selbigen.
+
+Der Quadrupol-Tensor $\tens{D}$ hat dabei folgende Eigenschaften:
+
+\begin{align*}
+- \qquad & \bm{D}_{ij} = \bm{D}_{ji}\text{, insbesondere } \; \text{ Spur } \tens{D} = \sum_j \bm{D}_{jj} = \int\d V (3\vec{r}^2 - 3\vec{r}^2)=0 \\
+- \qquad & \tens{D} \text{ hat 5 unabhängige Komponenten}\\
+- \qquad & \tens{D} \text{ kann hauptachsentransformiert werden}\\
+- \qquad & \text{Spur } \tens{D} =0 \text{ ist } \tens{D}=0 \text{ für Kugel und Kegel}
+\end{align*}
+
+\ \\
+
+Aufgrund der der charakteristischen Richtungsabhängigkeit ist es sinnvoll, das Potential der Ladungsverteilung mit Kugelflächenfunktionen zu entwickeln. Ausgangspunkt ist hierbei wieder das allgemeine Potential für eine beliebige Ladungsverteilung: 
+
+\begin{equation*}
+\varphi(\vec{r}) = \frac{1}{4\pi\epsilon_0}\int\d V' \frac{\rho(\vec{r})}{|\vec{r}-\vec{r}'|} = \int\d V' G(\vec{r}-\vec{r}')\rho(\vec{r}')
+\end{equation*}
+
+Wobei $G$ die \textsc{Green}'sche Funktion ist, welche die \textsc{Poisson}-Gleichung mit $\delta$-förmiger Inhomogenität löst:
+
+\begin{equation*}
+-\epsilon_0 \ \Delta G(\vec{r}) = \delta(\vec{r})
+\end{equation*}
+
+Als nächstes separieren wir die Winkel- und Richtungsabhängigkeit des Differentialoperators $\Delta$, welches sich am besten explizit in Kugelkoordinaten vornehmen lässt.
+
+\begin{equation*}
+\Delta = \frac{1}{r} \pddiff{}{r}  \; +\; \underbrace{\frac{1}{r^2 \sin\theta} \pdiff{}{\theta} \sin\theta \; \pdiff{}{\theta} \; + \; \frac{1}{r^2 \sin^2\theta} \ \pddiff{}{\phi}}_{=: \frac{1}{r^2}\Lambda(\theta,\phi)}
+\end{equation*}
+
+Nun wenden wir auf die Differentialgleichung
+
+\begin{equation*}
+\Lambda \ Y(\theta,\phi) \; = \; -l(l+1) \ Y(\theta,\phi) \qquad l \in \mathbb{N}
+\end{equation*}
+
+den Separationsansatz $Y(\theta,\phi) = P(\theta)\cdot Q(\phi)$ an und erhalten zunächst für $Q(\phi)$:
+
+\begin{align*}
+\ddiff{}{\phi}Q(\phi) &= - m^2 Q(\phi)\\
+\Rightarrow Q &= e^{im\phi} \qquad \text{ mit } \quad m \in [-l,l] \subset \mathbb{Z}
+\end{align*}
+
+Substituieren wir nun oben $\cos\theta = x$, so führt dies auf eine verallgemeinerte \textbf{\textsc{Legendre}-Differentialgleichung} für $P(x)$
+
+\begin{equation*}
+\left(\diff{}{x} \ \left(1+x^2\right) \ \diff{}{x} \ \left(-\frac{m^2}{1-x^2} + l(l+1)\right)\right) \ P_l^m(x) = 0
+\end{equation*}
+
+Es genügt diese für $m=1$ zu lösen, denn:
+
+\begin{equation*}
+P_l^m(x) = (-1)^m(1-x)^{\frac{m}{2}} \ \left(\diff{}{x}\right)^{|m|} P_l(x)
+\end{equation*}
+
+Somit bleibt nur noch folgende \textsc{Legendre}-Differentialgleichung übrig:
+
+\begin{equation*}
+(1-x^2) P_l'' \ - \ 2x \ P_l' \ + \ l(l+1) \ P_l \ = \ 0
+\end{equation*}
+
+Deren Lösungen $P_l$ sind sogenannte \textbf{\textsc{Legendre}-Polynome}:
+
+\begin{equation*}
+P_l(x) = \frac{1}{2^l l!} \ \left(\diff{}{x}\right)^l \ (x^2+1)^l \qquad l\in \mathbb{N}
+\end{equation*}
+
+(Die ersten $P_l$ lauten explizit: $P_0(x) =1, \; P_1(x) = x, \; P_2(x) = \frac{1}{2}(3x-1), \dotsc$)
+Nun erhalten wir aus $P$ und $Q$ unsere ursprüngliche, separierte Funktion $Y(\theta,\phi)$:
+
+\begin{equation*}
+Y_{lm}(\theta,\phi) = \sqrt{\frac{2l + 1}{4\pi} \ \frac{(l-|m|)!}{(l+|m|)!}} \ P_l(\cos\theta) \ e^{im\phi}
+\end{equation*}
+
+(Die ersten $Y_{lm}$ lauten explizit: $Y_{00} = \frac{1}{\sqrt{4\pi}}, \; Y_{10} = \sqrt{\frac{3}{4\pi}}\cos\theta, \; Y_{1,\pm1} = \mp \sqrt{\frac{3}{8\pi}}\sin\theta \ e^{i\phi}$\
+\\
+\ \\
+\underline{Bemerkung zu den $Y_{lm}$:}\
+\\
+\ \\
+Die $Y_{lm}$ sind sogenannte \textbf{Kugelflächenfunktionen} und Lösungen der Differentialgleichung
+
+\begin{align*}
+\left(\frac{1}{\sin\theta}\pdiff{}{\theta} \ + \ \sin\theta \pdiff{}{\theta} \ + \ \frac{1}{\sin^2\theta} \pddiff{}{\phi} \ + \l(l+1)\right) \ Y_{lm}(\theta,\phi) = 0\\
+l \in \mathbb{N}, m \in [-l,l]
+\end{align*}
+
+Sie stellen zudem eine Orthonormalbasis für alle Funktionen auf Kugeloberflächen dar. Dazu überprüfen wir zunächst die Orthogonalität der Basiselemente zueinander:
+
+\begin{equation*}
+\langle Y_{lm},Y_{l'm'}\rangle =: \int_{-1}^1\d(\cos\theta)\int_{0}^2\pi\d\phi \ Y^{*}_{lm}(\theta\phi) Y_{lm}(\theta\phi) = \delta_{ll'}\delta_{mm'}
+\end{equation*}
+
+Nach bekannter Vorgehensweise lässt sich nun jede beliebige Funktion $f$ auf einer Kugeloberfläche aus den $Y_{lm}$ darstellen:
+
+\begin{align*}
+f = (\theta\phi) &= \sum_{l=0}^{\infty} \sum_{m=-l}^{l} f_{lm} Y_{lm}(\theta,\phi)\\
+\text{mit } f_{lm} &= \langle Y_{lm},f\rangle = \int\d(\cos\theta) \int\d\phi \ Y^{*}_{lm}(\theta,\phi)f(\theta,\phi)
+\end{align*}
+
+Somit lässt sich auch mit ihnen die allgemeine Lösung der \textsc{Laplace}-Gleichung $\Delta\varphi=0$ darstellen: 
+
+\begin{equation*}
+\varphi(r,\theta,\phi) = \sum_{l=0}^{\infty}\sum_{m=-l}^{\infty} \left(A_l \cdot r^l + B_l \cdot r^{-l-1}\right) Y_{lm}(\theta,\phi)
+\end{equation*}
+
+Wir können nun zur Entwicklung von $\frac{1}{|\vec{r} - \vec{r}'|}$ zurückkehren:
+
+\begin{align*}
+\frac{1}{|\vec{r} - \vec{r}'|} = \sum_{l=0} \left(A_l \cdot r^l + B_l \cdot r^{-l-1}\right) P_l(\cos\gamma) \; \text{ mit } \gamma = \angle\left(\vec{r},\vec{r}'\right)\\
+(\gamma\text{ ohne $\varphi$-Abhängigkeit wegen axialer Symmetrie)}
+\end{align*}
+
+Wähle nun für die $A_l, B_l$, dass $\vec{r}\parallel\vec{r}'$ ist und führe so die Entwicklung fort
+
+\begin{align*}
+\frac{1}{|\vec{r}-\vec{r}'|} &= \sum_{l=0}^{\infty} \ \frac{1}{l!} \left(\-r_{<}\diff{}{r_{<}}\right)^l \ \frac{1}{r_{>}} \qquad \text{ mit } r_{<} := \min\{r,r'\}, \ r_{>} \text{ analog}\\
+&= \frac{1}{r_{<}}\sum_{l=0}^{\infty} \ \left(\frac{r_{>}}{r_{<}}\right)^l\\
+&=  \sum_{l=0}^{\infty} \frac{r_{>}}{r_{<}^{l+1}} \ P_l (\cos\gamma)\\
+\\
+P_l (\cos\gamma) &= \frac{4\pi}{2l+1}\sum_{m=-l}^{l}  Y^{*}_{lm}(\theta',\varphi')Y_{lm}(\theta,\phi)\\
+& \quad\left(\cos\gamma = \cos\theta\cos\theta' \ + \ \sin\theta\sin\theta'\cos(\phi-\phi')\right)\\
+\\
+\Rightarrow \frac{1}{|\vec{r}-\vec{r}'|} &= 4\pi \sum_{l=0}^{\infty}\sum_{m=-l}^{l} \frac{1}{2l+1}\ \frac{r_{>}^l}{r_{<}^{l+1}} Y^{*}_{lm}(\theta',\phi')Y_{lm}(\theta,\phi)
+\end{align*}
+
+Wir haben nun $\frac{1}{|\vec{r}-\vec{r}'}$ vollständig faktorisiert und können nun das Potential einer Ladungsverteilung aufstellen:
+
+\begin{equation*}
+\varphi (\vec{r}) = \frac{1}{4\pi\epsilon_0} \sum_{l,m} \ \sqrt{\frac{4\pi}{2l +1}} \ \frac{Y_{lm}(\theta,\phi)}{r^{l+1}} \ \underbrace{\int\d V' \  \rho(\vec{r}) \  Y_{lm}^{*}(\theta',\phi') \ {r'}^l \sqrt{\frac{4\pi}{2l+1}}}_{q_{lm} \hat{=} \text{ Multipolmomente}}
+\end{equation*}
+
+Aus dem allgemeinen Ausdruck $q_{lm}$ für die Multipolmomente können wir nun auch die uns bereits bekannten Momente ableiten:
+
+\begin{align*}
+q_{00} &= \sqrt{4\pi}\int\d V' \ \rho(\vec{r}') \ Y_{00} = Q
+\\
+q_{10} &= \int\d V' \ \rho(\vec{r}') \ \underbrace{r'\cos\theta'}_{z'} = p_z\\
+q_{1,\pm 1} &= \pm \frac{1}{\sqrt{2}} \ \int\d V' \ \rho(\vec{r}')  \ r'\sin\theta' \; e^{i\phi'} = (p_x \mp i p_y) \cdot \frac{1}{\sqrt{2}}\\
+\\q_{2m} &\rightarrow \text{ 5 skalare Komponenten } \rightarrow \text{ Quadrupol}
+\end{align*}
