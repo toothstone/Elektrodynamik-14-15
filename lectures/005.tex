@@ -1,0 +1,67 @@
+\section{Randbedingungen}
+
+Die allgemeine Lösung der \textsc{Poisson}-Gleichung $\epsilon_0 \Delta \varphi = \rho$ hängt von ihren Randbedingungen ab. Die vollständige Lösung erhält man durch Addition der allgemeinen Lösung der zugehörigen homogenen Differentialgleichung und einer partikulären Lösung der inhomogenen Gleichung: $\quad \varphi = \varphi_p + \varphi_h$. Es bietet sich an die Randbedingungen in den homogenen Teil einzubauen (bisher haben wir immer angenommen, dass $\varphi (\infty) = 0$). Mathematisch liefert uns eine einzige Randbedingung auf einem geschlossenen Rand R eine physikalisch eindeutige Lösung für eine Differentialgleichung 2. Ordnung, da es sich durch den geschlossenen Rand effektiv um zwei Randbedingungen handelt. Wir unterscheiden dabei verschiedene gängige Varianten sich dem Problem zu nähern:
+
+\begin{enumerate}
+\item $\varphi(R)$ ist gegeben\
+\\
+Diese Variante nennt man auch die \textsc{Dirichlet}-Randbedingung\
+
+\item $\pdiff{\varphi}{n}(R)$ ist gegeben\
+\\
+\ \\
+Diese Variante nennt man auch die \textsc{von-Neumann}-Randbedingung\
+\\
+\ \\
+($\pdiff{\varphi}{n} := \pdiff{\varphi}{\vec{r}}\cdot\vec{e}_n = - \vec{E}_n$ ist dabei die Normalenableitung)\
+
+\item $\alpha \varphi \ + \ \beta\pdiff{\varphi}{n}$ ist gegeben
+\end{enumerate}
+
+\section{Leiter im elektrischen Feld}
+
+Bis jetzt hatten wir in der Elektrostatik nur ruhende Ladungen betrachtet. In Leitern  gibt es allerdings bewegliche Ladungen im Inneren. Diese befinden sich im Gleichgewicht bei $\vec{F}=0 \ \Rightarrow \vec{E}= 0$
+Daraus kann man dieser folgern, dass $\varphi =$ const. im Inneren des Leiters und auf der Leiteroberfläche gilt. Dafür muss gelten, dass $\rho = 0$ im Leiterinneren ist. Außerdem folgt direkt, dass $\vec{E} = -\pdiff{\varphi}{\vec{r}}$ senkrecht zur Oberfläche stehen muss und das es ausschließlich von \textbf{Oberflächenladungen} erzeugt wird. Um diese zu definieren betrachten wir ein Volumen $\Delta V$ auf dem Leiteroberflächenstück $\Delta \vec{A}$, welches die Ladung $\Delta Q$ in sich trägt.
+
+\begin{equation*}
+\epsilon_0 \oiint_{\partial\Delta V}\d\vec{A}\cdot\vec{E} = \Delta Q \quad \Rightarrow \quad \epsilon_0 \ \Delta\vec{A}\cdot\vec{E}_n = \Delta Q
+\end{equation*}
+
+Darüber können wir uns die \textbf{Flächenladungsdichte} $\sigma$ definieren, um die Oberflächenladungen beschreiben zu können:
+
+\begin{align*}
+\sigma &:= \frac{\Delta Q}{\Delta A} = \epsilon_0 \ E_n\\
+Q  &= \iint\d A \cdot \sigma
+\end{align*}
+
+Die Oberflächenladungen werden durch äußere elektrische Felder bestimmt und schirmen das Leiterinnere von diesen Feldern ab.\
+\\
+\ \\
+Betrachten wir nun den Innenraum eines Hohlleiters. Hier gilt genau wie bei einem normalen Leiter, dass auf der Leiteroberfläche das Potential konstant ist. Zudem ist der Innenraum ladungsfrei, woraus folgt, dass auch dort $\varphi$ = const. gilt uns somit auch $\vec{E} = 0$. Dieses Prinzip ist auch als \textbf{\textsc{Faraday}'scher Käfig} bekannt.\
+\\
+Die Begründung für dieses Prizip kann man auch direkt aus den \textsc{Maxwell}-Gleichungen herleiten, denn es gilt div $\vec{E} = 0$ und rot $\vec{E} = 0$ im Inneren des Hohlleiters. Jede Feldlinie im Inneren müsste demzufolge auf dem Rand anfangen und enden. Für eine Integration entlang einer Feldlinie $\int\d \vec{r} \cdot \vec{E} = \Delta \varphi$ würde dies jedoch ein endliches $\Delta \varphi$ zwischen Anfangs- und Endpunkt liefern, welches im Widerspruch zu $\varphi$ = const. auf dem Rand stehen würde. Also muss $\vec{E} = 0$ im Inneren des Hohlleiters gelten.
+
+\section{Beispiele}
+\ \\
+\underline{A)  Punktladung und ebene Leiterfläche}\
+\\
+\ \\
+Wir betrachten eine Punktladung $Q$, welche sich im Abstand $a$ von einer ebenen Leiteroberfläche befindet. Letztere sei entlang der y-Achse unseres Koordinatensystems ausgerichtet, während sich $Q$ auf der x-Achse befindet.
+Demzufolge erhalten wir die \textsc{Poisson}-Gleichung:
+
+\begin{equation*}
+-\epsilon_0 \ \Delta\varphi = Q \ \delta(\vec{r}-a\vec{e}_x)
+\end{equation*}
+
+mit der Randbedingung $\varphi(x=0) = 0$ auf der Leiteroberfläche.\
+Wir wissen, dass die Feldlinien der Punktladung senkrecht auf die Leiteroberfläche aufkommen müssen. Daher können wir uns fragen, wie man eben jenes Feldlinienbild beschreiben könnte. Man erhält es durch das Einbringen einer zweiten, gedachten Ladung $-Q$ bei $-a\vec{e}_x$, sodass die gesamte Anordnung für x$>0$ das gesuchte Feldlinienbild ergibt. Die imaginäre Punktladung bei $-a\vec{e}_x$ nennt man \textbf{Spiegelladung}. Die Begründung für dieses Phänomen ist, das das Einbringen einer Leiteroberfläche in ein gegebenes Potential $\varphi (\vec{r})$ entlang einer Äquipotentialfläche das Feld außerhalb des Leiters nicht ändert. Dort gilt weiterhin $-\epsilon_0 \Delta\varphi = \rho$ unverändert und die Randbedingungen sind effektiv identisch zu der Gleichung, welche das Feldlinienbild mithilfe der Spiegelladung beschreibt. Diese lautet hier:
+
+\begin{equation*}
+- \epsilon_0\Delta\varphi = Q \left(\delta(\vec{r}-a\vec{e}_x) \ - \ \delta(\vec{r}+a\vec{e}_x)\right)
+\end{equation*}
+
+welche für das Potential liefert:
+
+\begin{equation*}
+\varphi = \frac{Q}{4\pi\epsilon_0} \left(\frac{1}{|\vec{r}-a\vec{e}_x|} \ - \ \frac{1}{|\vec{r}+a\vec{e}_x|}\right)
+\end{equation*}
