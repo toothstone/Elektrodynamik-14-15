@@ -26,9 +26,13 @@
 \pagestyle{headings}
 \setlength\parindent{0pt}
 
+
 \newcommand{\Int}[4]{\int\limits_{#1}^{#2} #3 \mathrm{d} #4}
 \newcommand{\Oint}[4]{\oint\limits_{#1}^{#2} #3 \mathrm{d} #4}
+\newcommand{\tens}[1]{\bm{\hat{#1}}}
 \renewcommand{\vec}[1]{\bm{#1}}
+\renewcommand{\d}{\mathrm{d}}
+
 
 \input{operators.tex}
 \input{environments.tex}
@@ -39,5 +43,7 @@
 \input{lectures/001.tex}
 \input{lectures/002.tex}
 \input{lectures/003.tex}
+\input{lectures/004.tex}
+\input{lectures/005.tex}
 
 \end{document}
