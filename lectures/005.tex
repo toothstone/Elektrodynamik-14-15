@@ -65,3 +65,38 @@ welche für das Potential liefert:
 \begin{equation*}
 \varphi = \frac{Q}{4\pi\epsilon_0} \left(\frac{1}{|\vec{r}-a\vec{e}_x|} \ - \ \frac{1}{|\vec{r}+a\vec{e}_x|}\right)
 \end{equation*}
+\ \\
+\ \\
+
+\underline{B) Kugeloberfläche in einem asymptotisch homogenen Feld}\
+\\
+\ \\
+Wir betrachten eine leitende Kugel mit dem Radius $R$, welche sich im Ursprung des Koordinatensystems in einem homogenen elektrischen Feld $\vec{E}_0$ befindet. Für $|\vec{r}|>R$ gilt dementsprechend: $\Delta\varphi = 0$ mit den Randbedingunge $\varphi(|\vec{r}| = R) = \varphi_0 := 0$ und $\varphi(|\vec{r}|\rightarrow\infty) = -\vec{E}_0\cdot\vec{r}$ (Homogenität des Feldes). Aus Symmetrieüberlegungen erhalten wir außerdem, dass $\varphi(\vec{r},R,\vec{E}_0)$ linear in $\vec{E}_0$ sein muss.\
+Dementsprechend wählen wir den Ansatz $\varphi = -\vec{E}_0 \cdot\vec{r} \ G(r,R)$ mit den resultierenden Randbedingungen $G(r=R)=0$ und $G(r\rightarrow\infty
+) =1$, welcher nach Einsetzen in die \textsc{Laplace}-Gleichung folgende homogene DGL für $G$ liefert:
+
+\begin{equation*}
+\Delta\varphi = -\vec{E}_0\cdot\vec{r} \ \left(\frac{4}{r} \ \diff{G}{r} \ + \ \ddiff{G}{r}\right) = 0
+\end{equation*}
+\ \\
+Diese lösen wir mit dem Ansatz $ G \sim r^n$:
+
+
+\begin{align*}
+& 4n + n(n+1) = 0\\
+\Rightarrow & n_1 = 0, n_2=3\\
+\Rightarrow & G = C_1 + \frac{C_2}{r^3}\\
+\ \\
+Rb.: & G(r\rightarrow\infty) = 1 \quad \Rightarrow \quad C_1 = 1\\
+& G(r=R) = 0 \quad \Rightarrow \quad C_2 = -R^3 
+\end{align*}
+
+Also ergibt sich für $\varphi$:
+
+\begin{equation*}
+\varphi = \vec{E}_0 \ + \ \frac{\vec{p} \cdot\vec{r}}{4\pi\epsilon_0 r^3} \quad
+ \text{ mit } \quad \frac{\vec{p}}{4\pi\epsilon_0} = \vec{E}_0 \cdot R^3
+\end{equation*}
+
+Das äußere elektrische Feld induziert also offensichtlich ein Dipolmoment in der Kugel, welches für den zusätzlichen Term in $\varphi$ verantwortlich ist.
+
