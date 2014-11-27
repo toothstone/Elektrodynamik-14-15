@@ -1,6 +1,6 @@
 \documentclass[a4paper,12pt,portrait]{book}	  
 \title{Theoretische Elektrodynamik}
-\author{Matthias Vojta\\ \\ \"ubertragen von\\Sebastian Schmidt, Lukas K\"orber und Friedrich Zahn}
+\author{Matthias Vojta\\ \\ \"ubertragen von\\Sebastian Schmidt und Lukas K\"orber}
 \date{Wintersemester 2014/2015}
 
   
@@ -8,9 +8,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{mathtools}
-\usepackage{amsthm}
-\usepackage{amssymb}	 
-\usepackage{graphicx}      
+\usepackage{amssymb}	     
 \usepackage{fancyhdr}
 \usepackage{xcolor}
 \usepackage[upright]{fourier}
@@ -24,19 +22,23 @@
 
 
 %layout options
+\definecolor{dblue}{HTML}{183CE0}
+\definecolor{hblue}{HTML}{0E75F7}
 \sectionfont{\color{hblue}}
 \chapterfont{\color{dblue}}
 \pagestyle{headings}
 \setlength\parindent{0pt}
 
-
+%defined commands
 \input{operators_TP-ED.tex}
-\input{environments.tex}
 
 	
 \begin{document}
+
 \maketitle
+
 \tableofcontents
+
 \input{lectures/001.tex}
 \input{lectures/002.tex}
 \input{lectures/003.tex}
