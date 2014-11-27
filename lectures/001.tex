@@ -2,19 +2,19 @@
 Gegenstand der Vorlesung ist die (klassische) Theorie der Elektrischen Felder ausgehend von den \textsc{Maxwell}-Gleichungen (1864):
 
 \begin{equation*}
-\text{div} \ \bm{B}=0
+\div \bm{B}=0
 \end{equation*}
 
 \begin{equation*}
-\text{rot} \ \bm{E}+\pdiff{\bm{B}}{t}=0
+\rot  \bm{E}+\pdiff{\bm{B}}{t}=0
 \end{equation*}
 
 \begin{equation*}
-\varepsilon_0\text{div} \ \bm{E}=\rho
+\varepsilon_0\div \bm{E}=\rho
 \end{equation*}
 
 \begin{equation*}
-\frac{1}{\mu_0}\text{rot} \ \bm{B}-\varepsilon_0\pdiff{\bm{E}}{t}=\bm{j}
+\frac{1}{\mu_0}\rot \bm{B}-\varepsilon_0\pdiff{\bm{E}}{t}=\bm{j}
 \end{equation*}
 
 für die Felder $\bm{E}$ und $\bm{B}$ in Abhängigkeit von Ladungs- und Stromverteilung $\rho(\bm{r},t)$ und $\bm{j}(\bm{r},t)$  sollen physikalische Erscheinungen geschildert werden.\\
@@ -90,7 +90,7 @@ $\nabla |\bm{r}|=\frac{\bm{r}}{|\bm{r}|}=\bm{e}_r\\
 \linebreak
 Die Divergenz div $\bm{E}=\nabla\cdot\bm{E}$ ist ein Skalar unter Koordinatentransformation und kann als \textbf{lokale Quellenstärke} interpretiert werden. Häufig benötigt man auch den \textsc{Laplace}-Operator, der die \emph{zweite Ableitung} repräsentiert.\\
 \begin{equation*}
-\mathrm{div\ grad\ } \varphi=\nabla^2\varphi=\Delta\varphi
+\mathrm{div\ grad\ } \varphi=\nabla^2\varphi=\bigtriangleup\varphi
 \end{equation*}
 \underline{Beispiele:}\\
 \linebreak
@@ -130,7 +130,7 @@ Der Satz von \textsc{Gauss} verknüpft Eigenschaften im Inneren eines Volumens m
 \linebreak
 \textbf{e. \textsc{Green}'scher Satz}\\
 \begin{equation*}
-\Int{V}{}{(\varphi\Delta\psi-\psi\Delta\varphi)}{V}=\Oint{\partial V}{}{(\varphi\nabla\psi-\psi\nabla\varphi)}{\vec{A}}
+\Int{V}{}{(\varphi\bigtriangleup\psi-\psi\bigtriangleup\varphi)}{V}=\Oint{\partial V}{}{(\varphi\nabla\psi-\psi\nabla\varphi)}{\vec{A}}
 \end{equation*}
 \linebreak
 \textbf{f. \textsc{Stokes}'scher Satz}\\
