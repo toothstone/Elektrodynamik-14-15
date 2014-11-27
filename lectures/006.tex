@@ -6,35 +6,35 @@ Wenn wir stationäre Ströme betrachten, dann gilt ebenso wie in der Elektrostat
 Da für das $\vec{B}$-Feld unter diesen Bedingungen gilt, dass rot $\vec{B} = \mu_0 \ \vec{j}$, ist es nicht möglich ein $\psi$ zu finden, sodass grad $\psi = \vec{B}$. Anstattdessen macht man sich die Quellenfreiheit eines Wirbelfelds zu nutze und führt ein Vektorpotential $\vec{A}(\vec{r})$ ein, sodass:
 
 \begin{equation*}
-\vec{B}(\vec{r}) = \text{rot } \vec{A}(\vec{r})
+\vec{B}(\vec{r}) = \rot \vec{A}(\vec{r})
 \end{equation*}
 
-$\vec{B}$ bestimmt $\vec{A}$ bis auf Eichtransformation $\vec{A}\ \rightarrow \ \vec{A} \ + \ \text{grad } \vec{chi}$ eindeutig, da beide Vektorpotentiale das selbe $\vec{B}$-Feld liefern. Bei spezieller Wahl von $\chi$ spricht man von fixierter Eichung.\
-Mit der Einführung von $\vec{A}$ folgt mit $\frac{1}{\mu_0}\ \text{rot } \vec{B} = \vec{j}$:
+$\vec{B}$ bestimmt $\vec{A}$ bis auf Eichtransformation $\vec{A}\ \rightarrow \ \vec{A} \ + \ \grad \vec{chi}$ eindeutig, da beide Vektorpotentiale das selbe $\vec{B}$-Feld liefern. Bei spezieller Wahl von $\chi$ spricht man von fixierter Eichung.\
+Mit der Einführung von $\vec{A}$ folgt mit $\frac{1}{\mu_0}\ \rot \vec{B} = \vec{j}$:
 
 \begin{equation*}
-\frac{1}{\mu_0}\ (\text{rot rot }\vec{A})=\vec{j} \quad \text{bzw.} \quad \text{grad div }\vec{A}\ - \ \Delta\vec{A}=\mu_0 \ \vec{j}
+\frac{1}{\mu_0}\ (\rot\rot\vec{A})=\vec{j} \quad \text{bzw.} \quad \grad\div \vec{A}\ - \ \bigtriangleup\vec{A}=\mu_0 \ \vec{j}
 \end{equation*}
 
 Es bietet sich an, die Eichung div $\vec{A} = 0$ (\textsc{Coulomb}-Eichung) zu wählen, sodass folgt:
 
 \begin{equation*}
--\Delta\vec{A}=\mu_0 \ \vec{j}
+-\bigtriangleup\vec{A}=\mu_0 \ \vec{j}
 \end{equation*}
 
-Eine ähnliche Gleichung haben wir mit der \textsc{Poisson}-Gleichung $-\epsilon_0 \ \Delta\varphi = \rho$ in der Elektrostatik hergeleitet und diese mit $\varphi = \frac{1}{4\pi\epsilon_0}\Int{}{}{V'}\frac{\rho(\vec{r})}{|\vec{r}-\vec{r}'|}$ gelöst.\ \\
+Eine ähnliche Gleichung haben wir mit der \textsc{Poisson}-Gleichung $-\epsilon_0 \ \bigtriangleup\varphi = \rho$ in der Elektrostatik hergeleitet und diese mit $\varphi = \frac{1}{4\pi\epsilon_0}\Int{}{}{V'}\frac{\rho(\vec{r})}{|\vec{r}-\vec{r}'|}$ gelöst.\ \\
 Analog erhalten wir auch die Lösung für $\vec{A}$:
 
 \begin{align*}
 \vec{A}(\vec{r}) = \frac{\mu_0}{4\pi}\Int{}{}{V'} \ \frac{\vec{j}(\vec{r})}{|\vec{r}-\vec{r}'|} \qquad \text{mit div }\vec{A} = 0 \\
 \ \\
-\vec{B}(\vec{r}) = \text{rot } \vec{A}(\vec{r}) = \frac{\mu_0}{4\pi}\ \Int {}{}{V'} \ \frac{\vec{j}(\vec{r})\times (\vec{r}-\vec{r}')}{|\vec{r}-\vec{r}'|^3}
+\vec{B}(\vec{r}) = \rot \vec{A}(\vec{r}) = \frac{\mu_0}{4\pi}\ \Int {}{}{V'} \ \frac{\vec{j}(\vec{r})\times (\vec{r}-\vec{r}')}{|\vec{r}-\vec{r}'|^3}
 \end{align*}
 
 Die Kontrolle, ob div $\vec{A} =0$ ist, ergibt:
 
 \begin{equation*}
-\text{div }\vec{A}(\vec{r}) = \frac{\mu_0}{4\pi} \ \Int{}{}{V''}\ \frac{1}{r''} \ \underbrace{\text{div }\vec{j(\vec{r}+\vec{r}''})}_{=0}=0 \qquad \text{mit } \vec{r}'' = \vec{r}'-\vec{r}
+\div\vec{A}(\vec{r}) = \frac{\mu_0}{4\pi} \ \Int{}{}{V''}\ \frac{1}{r''} \ \underbrace{\div\vec{j(\vec{r}+\vec{r}''})}_{=0}=0 \qquad \text{mit } \vec{r}'' = \vec{r}'-\vec{r}
 \end{equation*}
 
 \section{Leiterschleifen}
@@ -45,7 +45,7 @@ Für mehrere Leiter $\mathcal{L}_n$ folgt demnach für das Vektorpotential:
 \begin{align*}
 \vec{A}(\vec{r}) &= \frac{\mu_0}{4\pi}\ \sum_n \ I_n \ \int\limits_{\mathcal{L}_n} \frac{\mathrm{d}\vec{r}'}{|\vec{r}-\vec{r}'|}\\
 \ \\
-\overset{\vec{B}= \text{rot } \vec{A}}{\Rightarrow} \quad \vec{B}(\vec{r}) &= \frac{\mu_0}{4\pi} \ \sum_n \ I_n \int\limits_{\mathcal{L}_n} \frac{\mathrm{d}\vec{r}' \times (\vec{r}-\vec{r}')}{|\vec{r}-\vec{r}'|^3}
+\overset{\vec{B}= \rot\vec{A}}{\Rightarrow} \quad \vec{B}(\vec{r}) &= \frac{\mu_0}{4\pi} \ \sum_n \ I_n \int\limits_{\mathcal{L}_n} \frac{\mathrm{d}\vec{r}' \times (\vec{r}-\vec{r}')}{|\vec{r}-\vec{r}'|^3}
 \end{align*}
 \ \\
 Diese Gleichung zur Bestimmung des $\vec{B}$-Feldes einer beliebigen Anordnung dünner Leiter nennt man das \textsc{Biot-Savart}-Gesetz.\
@@ -104,9 +104,9 @@ Umformen ergibt:
 (zum Vergleich das Potential eines Elektrischen Dipols: $\varphi(\vec{r}) = \frac{1}{4\pi\epsilon_0} \cdot \frac{\vec{p}\cdot\vec{r}}{r^3}$)
 \ \\
 \begin{align*}
-\vec{B}(\vec{r}) = \text{rot } \vec{A}(\vec{r}) &= - \frac{\mu_0 I}{4\pi} \ \nabla \times \left(A_F\times\nabla\frac{1}{r}\right) \ = \ \frac{\mu_0}{4\pi} \ \cdot \ 3(\vec{m}\cdot\vec{r})\vec{r} \ - \ \vec{m}r^2\\
+\vec{B}(\vec{r}) = \rot\vec{A}(\vec{r}) &= - \frac{\mu_0 I}{4\pi} \ \nabla \times \left(A_F\times\nabla\frac{1}{r}\right) \ = \ \frac{\mu_0}{4\pi} \ \cdot \ 3(\vec{m}\cdot\vec{r})\vec{r} \ - \ \vec{m}r^2\\
 \ \\
-&= \ \underbrace{\vec{A}_F \ \Delta\frac{1}{r}}_{(*)} \quad - \quad \underbrace{(\vec{A}_F
+&= \ \underbrace{\vec{A}_F \ \bigtriangleup\frac{1}{r}}_{(*)} \quad - \quad \underbrace{(\vec{A}_F
 \cdot\nabla)\ \nabla \ \frac{1}{r}}_{= \ \vec{A}_F (\nabla \circ \nabla) \frac{1}{r}}
 \end{align*}
 
