@@ -20,7 +20,7 @@ Setzen wir nun dies in die Gleichung für die Ladungserhaltung ein:
 Da dies für für alle möglichen Volumina gelten soll, folgt daraus die \textbf{Kontinuitätsgleichung}:
 
 \begin{equation*}
-\dot{\rho} + \text{div} \ \vec{j} = 0
+\dot{\rho} + \div\vec{j} = 0
 \end{equation*} 
 
 Für den Grenzfall eines unendlich großen Volumens gilt zunächst $\vec{j}\rightarrow 0$ auf der Oberfläche, woraus man auf die für diesen Grenzfall logische Konsequenz schließen kann, dass
@@ -43,8 +43,8 @@ Mit der eingeführten Stromdichte $\vec{j}$ kann man nun auch den Ausdruck der \
 Die \textsc{Maxwell}-Gleichungen wurden 1864 vom schottischen Physiker James Clerk \textsc{Maxwell} aufgestellt und bilden ein Differentialgleichungssystem für die Felder  $\vec{B}(\vec{r})$ und $\vec{E}(\vec{r})$. Zusammen mit der Kontinuitätsgleichung beschreiben sie die gesamte (klassische) Elektrodynamik, da $\rho$ und $\vec{j}$ die Quellen und Wirbel des $ \ \vec{B} \ $- und $ \ \vec{E} \ $-Feldes eindeutig bestimmen:
 
 \begin{align*}
-\text{div} \ \vec{B} &= 0 \qquad\qquad\qquad\quad \epsilon_0\text{div} \ \vec{E} = \rho \\
-\text{rot} \ \vec{E} + \dot{\vec{B}} &= 0 \qquad\qquad \frac{1}{\mu_0}\text{rot} \ \vec{B} - \epsilon_0\dot{\vec{E}} = \vec{j}
+\div \vec{B} &= 0 \qquad\qquad\qquad\quad \epsilon_0\div \vec{E} = \rho \\
+\rot \vec{E} + \dot{\vec{B}} &= 0 \qquad\qquad \frac{1}{\mu_0}\text{rot} \ \vec{B} - \epsilon_0\dot{\vec{E}} = \vec{j}
 \end{align*}
 
 
@@ -85,24 +85,24 @@ Da wir gefordert hatten, dass unsere gewünschten Gleichungen invariant unter de
 
 \begin{enumerate}
 \item
-\underline{$++$ Skalar} \quad $\rho,\text{div} \ \vec{E}\\
+\underline{$++$ Skalar} \quad $\rho,\div \vec{E}\\
 \\
-\Rightarrow \rho = \epsilon_0 \cdot \text{div} \ \vec{E} \qquad (\epsilon_0$  ist beliebige Konstante)
+\Rightarrow \rho = \epsilon_0 \cdot \div\vec{E} \qquad (\epsilon_0$  ist beliebige Konstante)
 
 \item
-\underline{$--$ Vektor} \quad $\vec{j}, \text{rot} \ \vec{B},\dot{\vec{B}}\\
+\underline{$--$ Vektor} \quad $\vec{j}, \rot \vec{B},\dot{\vec{B}}\\
 \\
-\Rightarrow \vec{j} = \alpha\cdot\dot{E} + \frac{1}{\mu_0}\cdot\text{rot} \ \vec{B}  \qquad (\alpha,\frac{1}{\mu_0}$ sind beliebige Konstanten)
+\Rightarrow \vec{j} = \alpha\cdot\dot{E} + \frac{1}{\mu_0}\cdot\rot \vec{B}  \qquad (\alpha,\frac{1}{\mu_0}$ sind beliebige Konstanten)
 
 \item
-\underline{$--$ Skalar} \quad $\text{div} \ \vec{B}\\ 
+\underline{$--$ Skalar} \quad $\div \vec{B}\\ 
 \\
-\Rightarrow \ 0 = \text{div} \ \vec{B}$
+\Rightarrow \ 0 = \div \vec{B}$
 
 \item
-\underline{$++$ Vektor} \quad $\text{rot} \ \vec{E},\dot{\vec{B}}\\
+\underline{$++$ Vektor} \quad $\rot\vec{E},\dot{\vec{B}}\\
 \\
-\Rightarrow \ 0 = \text{rot} \ \vec{E} + \beta\cdot\dot{\vec{B}} \qquad (\beta$  ist beliebige Konstante)
+\Rightarrow \ 0 = \rot \vec{E} + \beta\cdot\dot{\vec{B}} \qquad (\beta$  ist beliebige Konstante)
 \\
 \\
 
@@ -151,7 +151,7 @@ $\epsilon_0$ erhält man nun daraus über die Fundamentalbeziehung im SI-System:
 Die Konstante $\alpha$ erhalten wir, in dem wir von Gleichung (2) die Divergenz bilden und dann div $\vec{j}$ aus der Kontinuitätsgleichung einsetzen:
 
 \begin{equation*}
-(\epsilon_0 + \alpha) \ \pdiff{}{t} \ \text{div} \ \vec{E} \overset{!}{=} 0 \; \Rightarrow \; \alpha = -\epsilon_0 
+(\epsilon_0 + \alpha) \ \pdiff{}{t} \ \div \vec{E} \overset{!}{=} 0 \; \Rightarrow \; \alpha = -\epsilon_0 
 \end{equation*}
 
 \item
@@ -172,10 +172,10 @@ woraus folgt:
 Die integrale Formulierung der \textsc{Maxwell}-Gleichungen ist äquivalent zu der differentiellen und ergibt sich entweder aus Volumen- oder Flächenintegration auf beiden Seiten der entsprechenden Gleichung und dann der Anwendung der Integralsätze von \textsc{Gauss} oder \textsc{Stokes}:
 \ \\
 \begin{align*}
-\text{i)} \quad & \epsilon_0 \ \text{div} \ \vec{E} = \rho & \Leftrightarrow \qquad\qquad & \epsilon_0\oiint \mathrm{d}\vec{A} \cdot\vec{E} = Q_{\text{in}} \\
-\text{ii)} \quad & \text{div} \ \vec{B} = 0 & \Leftrightarrow \qquad\qquad & \oiint \mathrm{d}\vec{A}\cdot\vec{B} = 0 \\
-\text{iii)} \quad & \text{rot} \ \vec{E} + \dot{\vec{B}} = 0 & \Leftrightarrow \qquad\qquad & \oint\limits_{\partial A} \mathrm{d}\vec{r}\cdot\vec{E} \ + \ \iint\limits_A \mathrm{d}\vec{A}\cdot\dot{\vec{B}} = 0 \\
-\text{iv)} \quad & \frac{1}{\mu_0} \ \text{rot} \ \vec{B} - \epsilon_0 \dot{\vec{E}} = \vec{j} & \Leftrightarrow \qquad\qquad & \frac{1}{\mu_0}\oint\limits_{\partial A}\mathrm{d}\vec{r}\cdot\vec{B} \ - \ \epsilon_0\iint\limits_A\mathrm{d}\vec{A}\cdot\dot{\vec{E}} = I_{\text{in}}
+\text{i)} \quad & \epsilon_0 \ \div \vec{E} = \rho & \Leftrightarrow \qquad\qquad & \epsilon_0\oiint \mathrm{d}\vec{A} \cdot\vec{E} = Q_{\text{in}} \\
+\text{ii)} \quad & \div\vec{B} = 0 & \Leftrightarrow \qquad\qquad & \oiint \mathrm{d}\vec{A}\cdot\vec{B} = 0 \\
+\text{iii)} \quad & \rot \vec{E} + \dot{\vec{B}} = 0 & \Leftrightarrow \qquad\qquad & \oint\limits_{\partial A} \mathrm{d}\vec{r}\cdot\vec{E} \ + \ \iint\limits_A \mathrm{d}\vec{A}\cdot\dot{\vec{B}} = 0 \\
+\text{iv)} \quad & \frac{1}{\mu_0} \ \rot \vec{B} - \epsilon_0 \dot{\vec{E}} = \vec{j} & \Leftrightarrow \qquad\qquad & \frac{1}{\mu_0}\oint\limits_{\partial A}\mathrm{d}\vec{r}\cdot\vec{B} \ - \ \epsilon_0\iint\limits_A\mathrm{d}\vec{A}\cdot\dot{\vec{E}} = I_{\text{in}}
 \end{align*}
 
 \underline{Bemerkung:}
