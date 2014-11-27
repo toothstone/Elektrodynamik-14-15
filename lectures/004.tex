@@ -51,13 +51,13 @@ Aufgrund der der charakteristischen Richtungsabhängigkeit ist es sinnvoll, das 
 Wobei $G$ die \textsc{Green}'sche Funktion ist, welche die \textsc{Poisson}-Gleichung mit $\delta$-förmiger Inhomogenität löst:
 
 \begin{equation*}
--\epsilon_0 \ \Delta G(\vec{r}) = \delta(\vec{r})
+-\epsilon_0 \ \bigtriangleup G(\vec{r}) = \delta(\vec{r})
 \end{equation*}
 
-Als nächstes separieren wir die Winkel- und Richtungsabhängigkeit des Differentialoperators $\Delta$, welches sich am besten explizit in Kugelkoordinaten vornehmen lässt.
+Als nächstes separieren wir die Winkel- und Richtungsabhängigkeit des Differentialoperators $\bigtriangleup$, welches sich am besten explizit in Kugelkoordinaten vornehmen lässt.
 
 \begin{equation*}
-\Delta = \frac{1}{r} \pddiff{}{r}  \; +\; \underbrace{\frac{1}{r^2 \sin\theta} \pdiff{}{\theta} \sin\theta \; \pdiff{}{\theta} \; + \; \frac{1}{r^2 \sin^2\theta} \ \pddiff{}{\phi}}_{=: \frac{1}{r^2}\Lambda(\theta,\phi)}
+\bigtriangleup = \frac{1}{r} \pddiff{}{r}  \; +\; \underbrace{\frac{1}{r^2 \sin\theta} \pdiff{}{\theta} \sin\theta \; \pdiff{}{\theta} \; + \; \frac{1}{r^2 \sin^2\theta} \ \pddiff{}{\phi}}_{=: \frac{1}{r^2}\Lambda(\theta,\phi)}
 \end{equation*}
 
 Nun wenden wir auf die Differentialgleichung
@@ -130,7 +130,7 @@ f = (\theta,\phi) &= \sum_{l=0}^{\infty} \sum_{m=-l}^{l} f_{lm} Y_{lm}(\theta,\p
 \text{mit } f_{lm} &= \langle Y_{lm},f\rangle = \int\d(\cos\theta) \int\d\phi \ Y^{*}_{lm}(\theta,\phi)f(\theta,\phi)
 \end{align*}
 
-Somit lässt sich auch mit ihnen die allgemeine Lösung der \textsc{Laplace}-Gleichung $\Delta\varphi=0$ darstellen: 
+Somit lässt sich auch mit ihnen die allgemeine Lösung der \textsc{Laplace}-Gleichung $\bigtriangleup\varphi=0$ darstellen: 
 
 \begin{equation*}
 \varphi(r,\theta,\phi) = \sum_{l=0}^{\infty}\sum_{m=-l}^{\infty} \left(A_l \cdot r^l + B_l \cdot r^{-l-1}\right) Y_{lm}(\theta,\phi)
