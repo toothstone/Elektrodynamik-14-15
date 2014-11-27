@@ -103,7 +103,7 @@ Das äußere elektrische Feld induziert also offensichtlich ein Dipolmoment in d
 
 \section{Mehrere Leiter}
 
-Wir betrachten mehrere Leiter im Raum mit den Oberflächen $\mathcal{F}_i$. Erneut gilt die Tatsache, dass es keine Raumladungen gibt ($\bigtriangleup\varphi = 0$) und die Randbedingungen für die Leiteroberflächen ($\varphi = \varphi_i$ auf den $\mathcal{F}_i, \ \varphi_0 = 0$ wird willkürlich festgelegt).\
+Wir betrachten mehrere Leiter im Raum mit den Oberflächen $\mathcal{S}_i$. Erneut gilt die Tatsache, dass es keine Raumladungen gibt ($\bigtriangleup\varphi = 0$) und die Randbedingungen für die Leiteroberflächen ($\varphi = \varphi_i$ auf den $\mathcal{S}_i, \ \varphi_0 = 0$ wird willkürlich festgelegt).\
 Nun gilt aufgrund der Linearität der \textsc{Maxwell}-Gleichungen für das Gesamtpotential:
 
 \begin{equation*}
@@ -111,13 +111,13 @@ Nun gilt aufgrund der Linearität der \textsc{Maxwell}-Gleichungen für das Gesa
 \end{equation*}
 
 Die $G_k$ hängen dabei von der Geometrie der Leiteranordnung ab.\
-Wenn wir nun die Quellen auf den $\mathcal{F}_i$ mit in die Betrachtung mit einbeziehen, erhalten wir: 
+Wenn wir nun die Quellen auf den $\mathcal{S}_i$ mit in die Betrachtung mit einbeziehen, erhalten wir: 
 
 \begin{align*}
-\sigma &= \epsilon_0 \vec{E}_n\big|_{\mathcal{F}_i}  = -\epsilon_0 \pdiff{\varphi}{n}\Bigg|_{\mathcal{F}_i} = - \epsilon_0 \sum_k \pdiff{G_K(\vec{r})}{n}\Bigg|_{\mathcal{F}_i} \ \varphi_k \\
+\sigma &= \epsilon_0 \vec{E}_n\big|_{\mathcal{S}_i}  = -\epsilon_0 \pdiff{\varphi}{n}\Bigg|_{\mathcal{S}_i} = - \epsilon_0 \sum_k \pdiff{G_K(\vec{r})}{n}\Bigg|_{\mathcal{S}_i} \ \varphi_k \\
 \ \\
-\Rightarrow Q_i &= \Oiint{S_i}{}{A} \ \sigma = -\epsilon_0\sum_k\Oiint{\mathcal{F}_i}{}{\vec{A}}\  \cdot \ \pdiff{G_K(\vec{r})}{\vec{r}} \ \varphi_k\\
-&=: \sum_k C_{ik} \varphi_k \quad \text{ mit } \quad C_{ik} = -\epsilon_0 \Oiint{\mathcal{F}_i}{}{\vec{A}} \ \cdot \ \pdiff{G_k}{\vec{r}}
+\Rightarrow Q_i &= \Oiint{\mathcal{S}_i}{}{A} \ \sigma = -\epsilon_0\sum_k\Oiint{\mathcal{S}_i}{}{\vec{A}}\  \cdot \ \pdiff{G_K(\vec{r})}{\vec{r}} \ \varphi_k\\
+&=: \sum_k C_{ik} \varphi_k \quad \text{ mit } \quad C_{ik} = -\epsilon_0 \Oiint{\mathcal{S}_i}{}{\vec{A}} \ \cdot \ \pdiff{G_k}{\vec{r}}
 \end{align*}
 
 
