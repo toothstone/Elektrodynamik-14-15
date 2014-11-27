@@ -51,20 +51,20 @@ Für mehrere Leiter $\mathcal{L}_n$ folgt demnach für das Vektorpotential:
 Diese Gleichung zur Bestimmung des $\vec{B}$-Feldes einer beliebigen Anordnung dünner Leiter nennt man das \textsc{Biot-Savart}-Gesetz.\
 \\
 \ \\
-Betrachten wir nun bei mehreren geschlossenen Leiterschleifen den magnetischen Fluss auf deren Oberflächen $\mathcal{F}_m$:
+Betrachten wir nun bei mehreren geschlossenen Leiterschleifen den magnetischen Fluss auf deren Oberflächen $\mathcal{S}_m$:
 
 \begin{equation*}
-\Phi = \Iint{\mathcal{F}_m}{}{\vec{A}_{\mathcal{F}_m}}\cdot\vec{B} = \Oint{\partial\mathcal{F}_m}{}{\vec{r}}\cdot\vec{A}
+\Phi = \Iint{\mathcal{S}_m}{}{\vec{A}_{\mathcal{S}_m}}\cdot\vec{B} = \Oint{\partial\mathcal{S}_m}{}{\vec{r}}\cdot\vec{A}
 \end{equation*}
 
 Mit \textsc{Biot-Savart} ergibt sich:
 
 \begin{equation*}
-\Phi = \frac{\mu_0}{4\pi}\ \sum_n \ I_n \ \Oint{\partial\mathcal{F}_m}{}{\vec{r}}\ \cdot \ \Oint{\partial\mathcal{F}_n}{}{\vec{r}'}\frac{1}{|\vec{r}-\vec{r}'|} \ =: \ \sum_n \ L_{mn} \ I_n
+\Phi = \frac{\mu_0}{4\pi}\ \sum_n \ I_n \ \Oint{\partial\mathcal{S}_m}{}{\vec{r}}\ \cdot \ \Oint{\partial\mathcal{S}_n}{}{\vec{r}'}\frac{1}{|\vec{r}-\vec{r}'|} \ =: \ \sum_n \ L_{mn} \ I_n
 \end{equation*}
 
 \begin{equation*}
-\text{mit } L_{mn} = \frac{\mu_0}{4\pi} \ \Oint{\partial\mathcal{F}_m}{}{\vec{r}}\ \Oint{\partial\mathcal{F}_n}{}{\vec{r}'}\frac{1}{|\vec{r}-\vec{r}'|}
+\text{mit } L_{mn} = \frac{\mu_0}{4\pi} \ \Oint{\partial\mathcal{S}_m}{}{\vec{r}}\ \Oint{\partial\mathcal{S}_n}{}{\vec{r}'}\frac{1}{|\vec{r}-\vec{r}'|}
 \end{equation*}
 
 Die $L_{mn}$ sind die sogenannten \textbf{Induktionskoeffizienten}, welche ebenso wie die Kapazitätskoeefizienten symmetrisch sind: $L_{mn} = L_{nm}$. Für $m=n$ redet man von \textbf{Selbstinduktivitäten} der Leiter, welche allerdings  nicht mit der obigen Formel berechnet werden können, da dann die Näherung der "dünnen" Leiter zusammenbricht.
