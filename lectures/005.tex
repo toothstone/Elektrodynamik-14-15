@@ -100,3 +100,28 @@ Also ergibt sich für $\varphi$:
 
 Das äußere elektrische Feld induziert also offensichtlich ein Dipolmoment in der Kugel, welches für den zusätzlichen Term in $\varphi$ verantwortlich ist.
 
+\section{Mehrere Leiter}
+
+Wir betrachten mehrere Leiter im Raum mit den Oberflächen $\mathcal{F}_i$. Erneut gilt die Tatsache, dass es keine Raumladungen gibt ($\Delta\varphi = 0$) und die Randbedingungen für die Leiteroberflächen ($\varphi = \varphi_i$ auf den $\mathcal{F}_i, \ \varphi_0 = 0$ wird willkürlich festgelegt).\
+Nun gilt aufgrund der Linearität der \textsc{Maxwell}-Gleichungen für das Gesamtpotential:
+
+\begin{equation*}
+\varphi (\vec{r}) = \sum_k \ G_k(\vec{r}) \ \varphi_k
+\end{equation*}
+
+Die $G_k$ hängen dabei von der Geometrie der Leiteranordnung ab.\
+Wenn wir nun die Quellen auf den $\mathcal{F}_i$ mit in die Betrachtung mit einbeziehen, erhalten wir: 
+
+\begin{align*}
+\sigma &= \epsilon_0 \vec{E}_n\big|_{\mathcal{F}_i}  = -\epsilon_0 \pdiff{\varphi}{n}\Bigg|_{\mathcal{F}_i} = - \epsilon_0 \sum_k \pdiff{G_K(\vec{r})}{n}\Bigg|_{\mathcal{F}_i} \ \varphi_k \\
+\ \\
+\Rightarrow Q_i &= \Oiint{S_i}{}{A} \ \sigma = -\epsilon_0\sum_k\Oiint{\mathcal{F}_i}{}{\vec{A}}\  \cdot \ \pdiff{G_K(\vec{r})}{\vec{r}} \ \varphi_k\\
+&=: \sum_k C_{ik} \varphi_k \quad \text{ mit } \quad C_{ik} = -\epsilon_0 \Oiint{\mathcal{F}_i}{}{\vec{A}} \ \cdot \ \pdiff{G_k}{\vec{r}}
+\end{align*}
+
+
+Die $C_{ik}$ nennen wir die \textbf{Kapazitätskoeffizienten}. Für sie gilt $C_{ik} = C_{ki}$. Speziell für zwei sich umschließende Leiter ($\hat{=}$ Kondensator) folgt daraus:
+
+\begin{equation*}
+Q_1 = C_{11}\varphi_1 \quad (\text{und } Q_0 = -Q_1) \quad \hat{=} \ Q=C \cdot U
+\end{equation*}
