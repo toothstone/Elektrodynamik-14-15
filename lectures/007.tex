@@ -30,14 +30,25 @@ Daraus folgt zunächst für die \textsc{Maxwell}-Gleichungen:
 Die erhaltene partielle Differentialgleichung ist die sogenannte \textbf{Wellengleichung}, welche sich auch analog für das $\vec{B}$-Feld herleiten lässt. Das Symbol $\Box$ wird auch als \textbf{Wellen-} oder \textbf{\textsc{D'Alembert}-Operator} bezeichnet.
 
 
-\section{Lösungen der Wellengleichungen}
+\section{Lösungen der Wellengleichung}
 
 $\Box U = 0$
 
 \begin{enumerate}\bfseries
-\item \textbf{eindimensionale Lösung} ($\vec{r}\  \rightarrow \ x$)
+\item eindimensionale Lösung ($\vec{r}\  \rightarrow \ x$)
 \begin{equation*}
-\left(\frac{1}{c^2} \ \pddiff{}{t} \ - \ - \pddiff{}{x}\right)\ U(x,t) \ = \ 0 \ = \ \left(\frac{1}{c}\ \partial_t \ - \ \partial_x\right)\left(\frac{1}{c} \ \partial_t \ + \ \partial_x\right) \ U(x,t)
+\left(\frac{1}{c^2} \ \pddiff{}{t} \ - \ - \pddiff{}{x}\right)\ U(x,t) \ = \ 0 \ = \ \left(\frac{1}{c}\ \partial_t \ + \ \partial_x\right)\left(\frac{1}{c} \ \partial_t \ - \ \partial_x\right) \ U(x,t)
+\end{equation*}
+
+\begin{enumerate}
+\item $\left(\frac{1}{c}\partial_t+\partial_x\right)U(x,t) = 0 \quad\Rightarrow\quad \partial_t U = - \ c \partial_x U \quad\Rightarrow\quad U = (u_1(x-ct))$
+\item $\left(\frac{1}{c}\partial_t-\partial_x\right)U(x,t) = 0 \quad\Rightarrow\quad \partial_t U =\quad c \partial_x U \quad\Rightarrow\quad U = (u_2(x+ct))$
+\end{enumerate}
+
+mit zwei beliebigen Funktionen $u_1,u_2$, welche gegebene Anfangsbedingungen $U(t=0,x) \ , \ \partial_t U(t=0,x)$ der vollständigen Lösung erfüllen:
+
+\begin{equation*}
+U = u_1(x-ct) + u_2(x+ct)
 \end{equation*}
 
 \end{enumerate}
