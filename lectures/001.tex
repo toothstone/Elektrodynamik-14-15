@@ -2,29 +2,29 @@
 Gegenstand der Vorlesung ist die (klassische) Theorie der Elektrischen Felder ausgehend von den \textsc{Maxwell}-Gleichungen (1864):
 
 \begin{equation*}
-\div \bm{B}=0
+\div \vec{B}=0
 \end{equation*}
 
 \begin{equation*}
-\rot  \bm{E}+\pdiff{\bm{B}}{t}=0
+\rot  \vec{E}+\pdiff{\vec{B}}{t}=0
 \end{equation*}
 
 \begin{equation*}
-\varepsilon_0\div \bm{E}=\rho
+\varepsilon_0\div \vec{E}=\rho
 \end{equation*}
 
 \begin{equation*}
-\frac{1}{\mu_0}\rot \bm{B}-\varepsilon_0\pdiff{\bm{E}}{t}=\bm{j}
+\frac{1}{\mu_0}\rot \vec{B}-\varepsilon_0\pdiff{\vec{E}}{t}=\vec{j}
 \end{equation*}
 
-für die Felder $\bm{E}$ und $\bm{B}$ in Abhängigkeit von Ladungs- und Stromverteilung $\rho(\bm{r},t)$ und $\bm{j}(\bm{r},t)$  sollen physikalische Erscheinungen geschildert werden.\\
+für die Felder $\vec{E}$ und $\vec{B}$ in Abhängigkeit von Ladungs- und Stromverteilung $\rho(\vec{r},t)$ und $\vec{j}(\vec{r},t)$  sollen physikalische Erscheinungen geschildert werden.\\
 Die Elektrodynamik ist ein Teil des Standardmodells der Teilchenphysik, das einheitlich Teilichen und ihre Wechselwirkungen beschreibt.\\
 Klassische Elektrodynamik ist ein Grenzfall der Quantenelektrodynamik (gültig für kleine Impuls- und Energiebeträge, große Brechungszahlen für Photonen).\\
 Sie ist im Einklang mit der der speziellen Relativitätstheorie (c ist implizit in den \textsc{Maxwell}-Gleichungen enthalten). Viele interessante Effekte von Materie können mit klassischer Theorie nicht beschrieben werden.\\
 Zum Beispiel: Wann sind Atome stabil? Wann ist Eisen ferromagnetisch? Warum wird z.B. Blei bei tiefen Temperaturen supraleitend? Für diese Fragen werden Quanteneffekte wichtig.
 
 \chapter{Mathematische Hilfsmittel}
-\emph{Literaturtipp:} Mathematischer Einführungskurs Physik\\
+\textbf{Literaturtipp:} Mathematischer Einführungskurs Physik\\
 \linebreak
 
 \section{Skalar- und Vektorfelder}
@@ -32,7 +32,7 @@ Felder entsprechen Größen, die an jedem Raumpunkt einen bestimmten Wert haben,
 \begin{enumerate}
 \item skalare Felder: $\phi=\phi(x,y,z,t)$\\ \linebreak
 Bsp.: Temperatur, Druck, Ladung, Energie
-\item Vektorfelder: $\bm{E}=\bm{E}(x,y,z,t)$\\ \linebreak
+\item Vektorfelder: $\vec{E}=\vec{E}(x,y,z,t)$\\ \linebreak
 Bsp.: Geschwindigkeitsverteilung in einem strömenden Gas, Wärmestromdichte
 \end{enumerate}
 
@@ -42,64 +42,64 @@ Integriert man über ein Vektorfeld, spielt die Richtungsinformation eine entsch
 \linebreak
 \textbf{a. Linienintegrale}\\
 \begin{equation*}
-\varphi=\int\limits_{C}\bm{E}(\bm{r})\mathrm{d}\bm{r}
+\varphi=\int\limits_{C}\vec{E}(\vec{r})\d\vec{r}
 \end{equation*}
-Wir parametrisieren die Kurve durch $\bm{r}=\bm{r}(\tau)$ und erhalten somit
+Wir parametrisieren die Kurve durch $\vec{r}=\vec{r}(\tau)$ und erhalten somit
 \begin{equation*}
-\varphi=\int\limits_{\tau_0}^{\tau_1}\bm{E}(\bm{r}(\tau))\diff{\bm{r}}{\tau}\mathrm{d}\tau
+\varphi=\int\limits_{\tau_0}^{\tau_1}\vec{E}(\vec{r}(\tau))\diff{\vec{r}}{\tau}\d \tau
 \end{equation*}
 Ein Speziallfall des Linienintegrals ist das sogenannte \textbf{geschlossene Linienintegral}, welches durch $\oint$ gekennzeichnet wird.\\
 \linebreak
 \textbf{b. Flächenintegrale}\\
 \begin{equation*}
-\Phi=\iint\limits_{S}\bm{B}\cdot\mathrm{d}\bm{A} \ \ \ \mathrm{mit\ } \mathrm{d}\vec{A}=\mathrm{d}A\cdot\vec{n}
+\Phi=\iint\limits_{S}\vec{B}\cdot\d \vec{A} \ \ \ \text{mit } \d\vec{A}=\d A\cdot\vec{n}
 \end{equation*}
-Ganz analog zu \textbf{a.} kann die Fläche $\bm{r}=\bm{r}(u,v)$ parametrisiert werden. Es ist jedoch beim Bilden der Funktionaldeterminante auf die Richtung des Flächenelements zu achten. Die beiden möglichen Lösungen unterscheiden sich natürlich nur um ein Vorzeichen. Wir erhalten also
+Ganz analog zu \textbf{a.} kann die Fläche $\vec{r}=\vec{r}(u,v)$ parametrisiert werden. Es ist jedoch beim Bilden der Funktionaldeterminante auf die Richtung des Flächenelements zu achten. Die beiden möglichen Lösungen unterscheiden sich natürlich nur um ein Vorzeichen. Wir erhalten also
 \begin{equation*}
-\Phi=\int\limits_{v_1}^{v_2}\int\limits_{u_1}^{u_2}\bm{B}(u,v)\cdot\left(\pdiff{\bm{r}}{u}\times\pdiff{\bm{r}}{v}\right)\mathrm{d}u\mathrm{d}v
+\Phi=\int\limits_{v_1}^{v_2}\int\limits_{u_1}^{u_2}\vec{B}(u,v)\cdot\left(\pdiff{\vec{r}}{u}\times\pdiff{\vec{r}}{v}\right)\d u\d v
 \end{equation*}
 Physikalisch lässt sich ein Flächenintegral als sogenannter \textbf{Fluss} interpretieren.\\
 \linebreak
 \textbf{c. Volumenintegrale}\\
 \linebreak
 \begin{equation*}
-Q=\iiint\limits_G\mathrm{d}V\cdot\rho(\bm{r})=\iiint\limits_G\mathrm{d}^3r\cdot\rho(\bm{r})=
+Q=\iiint\limits_G\d V\cdot\rho(\vec{r})=\iiint\limits_G\d ^3 r\cdot\rho(\vec{r})=
 \end{equation*}
-Beim Volumenintegral wird wiederum (nicht wie beim Flächenintegral) das Vorzeichen des Volumenelements vernachlässigt, da physikalisch die \emph{Richtung} des Volumens nur sehr selten wirklich von Bedeutung ist. Mit entsprechender Parametrisierung $\vec{r}=\vec{r}(u,v,w)$ ergibt sich
+Beim Volumenintegral wird wiederum (nicht wie beim Flächenintegral) das Vorzeichen des Volumenelements vernachlässigt, da physikalisch die \textbf{Richtung} des Volumens nur sehr selten wirklich von Bedeutung ist. Mit entsprechender Parametrisierung $\vec{r}=\vec{r}(u,v,w)$ ergibt sich
 \begin{equation*}
-q=\int\limits_{w_1}^{w_2}\int\limits_{v_1}^{v_2}\int\limits_{u_1}^{u_2}\rho(u,v,w)\cdot\left|\pdiff{\bm{r}}{u}\cdot\left(\pdiff{\bm{r}}{v}\times\pdiff{\bm{r}}{w}\right)\right|\mathrm{d}u\mathrm{d}v\mathrm{d}w
+q=\int\limits_{w_1}^{w_2}\int\limits_{v_1}^{v_2}\int\limits_{u_1}^{u_2}\rho(u,v,w)\cdot\left|\pdiff{\vec{r}}{u}\cdot\left(\pdiff{\vec{r}}{v}\times\pdiff{\vec{r}}{w}\right)\right|\d u\d v\d w
 \end{equation*}
 
 \section{Vektorielle Ableitungen und Integrale}
 \textbf{a. Gradient}\\
 \linebreak
-Der Gradient $\mathrm{grad\ }\varphi\ $ eines Skalarfeldes beschreibt dessen Änderung und steht senkrecht auf den Äquipotentialflächen (oder allgemeiner: Niveaumengen). Der Gradient lässt sich durch den Nabla-Operator ausdrücken und lautet in karthesischen Koordinaten: 
+Der Gradient $\grad\varphi\ $ eines Skalarfeldes beschreibt dessen Änderung und steht senkrecht auf den Äquipotentialflächen (oder allgemeiner: Niveaumengen). Der Gradient lässt sich durch den Nabla-Operator ausdrücken und lautet in karthesischen Koordinaten: 
 \begin{equation*}
-\nabla=\pdiff{}{x}\bm{e}_x+\pdiff{}{y}\bm{e}_y+\pdiff{}{z}\bm{e}_z
+\nabla=\pdiff{}{x}\vec{e}_x+\pdiff{}{y}\vec{e}_y+\pdiff{}{z}\vec{e}_z
 \end{equation*}
 Wichtig ist, dass $\nabla$ ein vektorieller Differenzialoperator ist. Er folgt Ableitungsregeln, wie etwa der Kettenregel, und $\nabla\varphi$ verhält sich unter Koordinatentransformation wie ein Vektor.\\
 \linebreak
-Andere Schreibweisen: $\pdiff{}{\bm{r}},\ \partial_{\bm{r}},\ \nabla_{\bm{r}}$\\
+Andere Schreibweisen: $\pdiff{}{\vec{r}},\ \partial_{\vec{r}},\ \nabla_{\vec{r}}$\\
 \linebreak
 \underline{Beispiele:}\\
 \linebreak
-$\nabla |\bm{r}|=\frac{\bm{r}}{|\bm{r}|}=\bm{e}_r\\
-\nabla \frac{1}{|\bm{r}|}=-\frac{1}{r^2}\bm{e}_r$\\
+$\nabla |\vec{r}|=\frac{\vec{r}}{|\vec{r}|}=\vec{e}_r\\
+\nabla \frac{1}{|\vec{r}|}=-\frac{1}{r^2}\vec{e}_r$\\
 \linebreak\linebreak
 \textbf{b. Divergenz} (Quellenstärke eines Vektorfeldes)\\
 \linebreak
-Die Divergenz div $\bm{E}=\nabla\cdot\bm{E}$ ist ein Skalar unter Koordinatentransformation und kann als \textbf{lokale Quellenstärke} interpretiert werden. Häufig benötigt man auch den \textsc{Laplace}-Operator, der die \emph{zweite Ableitung} repräsentiert.\\
+Die Divergenz div $\vec{E}=\nabla\cdot\vec{E}$ ist ein Skalar unter Koordinatentransformation und kann als \textbf{lokale Quellenstärke} interpretiert werden. Häufig benötigt man auch den \textsc{Laplace}-Operator, der die \textbf{zweite Ableitung} repräsentiert.\\
 \begin{equation*}
-\mathrm{div\ grad\ } \varphi=\nabla^2\varphi=\bigtriangleup\varphi
+\div\grad \varphi=\nabla^2\varphi=\bigtriangleup\varphi
 \end{equation*}
 \underline{Beispiele:}\\
 \linebreak
-div $\bm{r}=3$ (Anzahl der Dimensionen)\\
-div $(\varphi\bm{A})=\nabla\cdot(\varphi\bm{A})=\bm{A}(\nabla\varphi)+\varphi(\nabla\bm{A})=\bm{A}\cdot\mathrm{grad\ }\varphi+\varphi\cdot\mathrm{div\ }\bm{A}$\\
+div $\vec{r}=3$ (Anzahl der Dimensionen)\\
+div $(\varphi\vec{A})=\nabla\cdot(\varphi\vec{A})=\vec{A}(\nabla\varphi)+\varphi(\nabla\vec{A})=\vec{A}\cdot\grad \varphi+\varphi\cdot\div\vec{A}$\\
 \linebreak
 \textbf{c. Rotation} (Wirbelstärke eines Vektorfeldes)\\
 \linebreak
-Die Rotation rot $\bm{B}=\nabla\times\bm{B}$
+Die Rotation rot $\vec{B}=\nabla\times\vec{B}$
 
 \begin{equation*}
 \nabla\times\vec{B}=\begin{vmatrix}
@@ -112,19 +112,19 @@ B_x & B_y & B_z
 kann als \textbf{lokale Wirbelstärke} verstanden werden. Ihre Komponenten lassen sich auch als
 
 \begin{equation*}
-(\nabla\times\bm{B})_i=\sum\limits_{j,k}\epsilon_{ijk}\cdot\pdiff{}{x_j}\cdot B_k
+(\nabla\times\vec{B})_i=\sum\limits_{j,k}\epsilon_{ijk}\cdot\pdiff{}{x_j}\cdot B_k
 \end{equation*}
 
 darstellen wobei $\epsilon_{ijk}\ $ der total antisymetrische Tensor 3. Stufe ist.\\
 \linebreak
 \underline{Beispiele:}\\
 \linebreak
-$\bm{v}=\bm{\omega}\times\bm{r} \ \Rightarrow \ \nabla\times\bm{v}=2\bm{\omega}$\\
-$\nabla\times\bm{r}=0$\\
+$\vec{v}=\vec{\omega}\times\vec{r} \ \Rightarrow \ \nabla\times\vec{v}=2\vec{\omega}$\\
+$\nabla\times\vec{r}=0$\\
 \linebreak\linebreak
 \textbf{d. \textsc{Gauss}'scher Satz}\\
 \begin{equation*}
-\iiint\limits_V\mathrm{div\ }\vec{E}\cdot\mathrm{d}V=\oiint\limits_{\partial V}\vec{E}\cdot\mathrm{d}\vec{A}
+\iiint\limits_V\div\vec{E}\cdot\d V=\oiint\limits_{\partial V}\vec{E}\cdot\d \vec{A}
 \end{equation*}
 Der Satz von \textsc{Gauss} verknüpft Eigenschaften im Inneren eines Volumens mit dem Verhalten auf dem Rand.\\
 \linebreak
@@ -135,11 +135,11 @@ Der Satz von \textsc{Gauss} verknüpft Eigenschaften im Inneren eines Volumens m
 \linebreak
 \textbf{f. \textsc{Stokes}'scher Satz}\\
 \begin{equation*}
-\iint\limits_S\mathrm{rot\ }\vec{B}\cdot\mathrm{d}\vec{A}=\oint\limits_{\partial A}\vec{B}\cdot\mathrm{d}\vec{r}
+\iint\limits_S\rot\vec{B}\cdot\d\vec{A}=\oint\limits_{\partial A}\vec{B}\cdot\d\vec{r}
 \end{equation*}
 Analog zu \textsc{Gauss}'schen Satz verknüft der Satz von \textsc{Stokes} das Verhalten eines Feldes auf einer Fläche mit dem auf dem Rand der Fläche. Für geschlossene Flächen gilt
 \begin{equation*}
-\oiint\limits_{S=\partial V}\mathrm{rot\ }\vec{B}\cdot\mathrm{d}\vec{A}=0
+\oiint\limits_{S=\partial V}\rot\vec{B}\cdot\d\vec{A}=0
 \end{equation*}
 
 \section{Differentialoperatoren in krummlinigen Koordinaten}
@@ -201,7 +201,7 @@ Die Delta-Distribution ist über folgende Eigenschaften definiert:
 
 \item
 \begin{equation*}
-\int\limits_{\vec{r}_0\in V}\mathrm{d}V \ \delta({\vec{r}-\vec{r}_0}) = 1
+\int\limits_{\vec{r}_0\in V}\d V \ \delta({\vec{r}-\vec{r}_0}) = 1
 \end{equation*}
 \end{enumerate}
 
@@ -215,7 +215,7 @@ Bei höherdimensionalen Deltadistributionen gilt allerdings nur in kartesischen 
 Faltet man die Delta-Distribution mit einer Funktion $f(\vec{r})$, so ergibt sich aus ihren Eigenschaften:
 
 \begin{equation*}
-\int\limits_{\vec{r}_0\in V}\mathrm{d}V \ \delta({\vec{r}-\vec{r}_0}) \ f(\vec{r}) = f(\vec{r}_0)
+\int\limits_{\vec{r}_0\in V}\d V \ \delta({\vec{r}-\vec{r}_0}) \ f(\vec{r}) = f(\vec{r}_0)
 \end{equation*}
 
 \section{\textsc{Green}'sche Funktion zur Lösung inhomogener linearer DGL}
@@ -237,13 +237,13 @@ L \ G(x,x') = \delta (x-x') \; [= \delta(x_1-x_1')\cdot\dotsc\cdot\delta(x_n - x
 Wenn $g$ bekannt ist, dann kann die Lösung für beliebige Inhomogenität durch Superposition gewonnen werden.
 
 \begin{equation*}
-\phi (x) = \int\mathrm{d}x' \ G(x,x') \rho(x')
+\phi (x) = \int\d x' \ G(x,x') \rho(x')
 \end{equation*}
 
 Den Beweis hierfür erhält man leicht durch Einsetzen:
 
 \begin{equation*}
-L \ \phi(x) = \int\mathrm{d}x' \ L \ G(x,x') \rho(x') = \rho(x)
+L \ \phi(x) = \int\d x' \ L \ G(x,x') \rho(x') = \rho(x)
 \end{equation*}
 
 
