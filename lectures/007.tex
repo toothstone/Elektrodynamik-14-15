@@ -1,0 +1,44 @@
+\chapter{Elektromagnetische Wellen}
+
+\section{Wellengleichung}
+
+Bisher haben wir in der Elektrostatik und in unserer Betrachtung von Stationären Strömen nur Fälle behandelt, bei denen galt:
+
+\begin{equation*}
+\rho(\vec{r})\neq 0, \vec{j}(\vec{r})\neq 0, \dot{\vec{E}}=0, \dot{\vec{B}}=0
+\end{equation*}
+
+Jetzt wollen wir elektromagnetische Wellen im Vakuum , also ohne Quellen, betrachten. Daher muss gelten: 
+
+\begin{equation*}
+\rho=0, \vec{j}=0,\dot{\vec{E}}\neq 0,\dot{\vec{B}}\neq 0
+\end{equation*}
+
+Daraus folgt zunächst für die \textsc{Maxwell}-Gleichungen:
+
+\begin{align*}
+\div \vec{E} &=0 \qquad \qquad\div \vec{B} = 0\\
+\rot  \vec{E} &= -\dot{\vec{B}} \qquad\quad \ \rot \vec{B} = \epsilon_0\mu_0 \dot{\vec{E}}\\
+\end{align*}
+
+\begin{align*}
+\Rightarrow & \rot\dot{\vec{B}} = \epsilon_0\mu_0\ddot{\vec{E}} = -\rot\rot\vec{E} = -\nabla\underbrace{(\nabla\cdot\vec{E})}_{\div\vec{E}=0} \ + \ \nabla^2 \vec{E}\\
+\ \\
+\overset{\epsilon_0\mu_0 = \frac{1}{c^2}}{\Rightarrow} &\qquad \left(\frac{1}{c^2} \ \pddiff{}{t} \ - \ \bigtriangleup\right)\vec{E} =: \Box\vec{E} = 0
+\end{align*}
+
+Die erhaltene partielle Differentialgleichung ist die sogenannte \textbf{Wellengleichung}, welche sich auch analog für das $\vec{B}$-Feld herleiten lässt. Das Symbol $\Box$ wird auch als \textbf{Wellen-} oder \textbf{\textsc{D'Alembert}-Operator} bezeichnet.
+
+
+\section{Lösungen der Wellengleichungen}
+
+$\Box U = 0$
+
+\ \\
+\begin{enumerate}\bfseries
+\item \textbf{eindimensionale Lösung} ($\vec{r}\  \rightarrow \ x$)
+\begin{equation*}
+\left(\frac{1}{c^2} \ \pddiff{}{t} \ - \ - \pddif{}{x}\right)\ U(x,t) \ = \ 0 \ = \ \left(\frac{1}{c}\ \partial_t \ - \ \partial_x\right)\left(\frac{1}{c} \ \partial_t \ + \ \partial_x\right) \ U(x,t)
+\end{equation*}
+
+\end{enumerate}
