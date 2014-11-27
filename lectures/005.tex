@@ -1,6 +1,6 @@
 \section{Randbedingungen}
 
-Die allgemeine Lösung der \textsc{Poisson}-Gleichung $\epsilon_0 \Delta \varphi = \rho$ hängt von ihren Randbedingungen ab. Die vollständige Lösung erhält man durch Addition der allgemeinen Lösung der zugehörigen homogenen Differentialgleichung und einer partikulären Lösung der inhomogenen Gleichung: $\quad \varphi = \varphi_p + \varphi_h$. Es bietet sich an die Randbedingungen in den homogenen Teil einzubauen (bisher haben wir immer angenommen, dass $\varphi (\infty) = 0$). Mathematisch liefert uns eine einzige Randbedingung auf einem geschlossenen Rand R eine physikalisch eindeutige Lösung für eine Differentialgleichung 2. Ordnung, da es sich durch den geschlossenen Rand effektiv um zwei Randbedingungen handelt. Wir unterscheiden dabei verschiedene gängige Varianten sich dem Problem zu nähern:
+Die allgemeine Lösung der \textsc{Poisson}-Gleichung $\epsilon_0 \bigtriangleup \varphi = \rho$ hängt von ihren Randbedingungen ab. Die vollständige Lösung erhält man durch Addition der allgemeinen Lösung der zugehörigen homogenen Differentialgleichung und einer partikulären Lösung der inhomogenen Gleichung: $\quad \varphi = \varphi_p + \varphi_h$. Es bietet sich an die Randbedingungen in den homogenen Teil einzubauen (bisher haben wir immer angenommen, dass $\varphi (\infty) = 0$). Mathematisch liefert uns eine einzige Randbedingung auf einem geschlossenen Rand R eine physikalisch eindeutige Lösung für eine Differentialgleichung 2. Ordnung, da es sich durch den geschlossenen Rand effektiv um zwei Randbedingungen handelt. Wir unterscheiden dabei verschiedene gängige Varianten sich dem Problem zu nähern:
 
 
 \begin{enumerate}
@@ -51,14 +51,14 @@ Wir betrachten eine Punktladung $Q$, welche sich im Abstand $a$ von einer ebenen
 Demzufolge erhalten wir die \textsc{Poisson}-Gleichung:
 
 \begin{equation*}
--\epsilon_0 \ \Delta\varphi = Q \ \delta(\vec{r}-a\vec{e}_x)
+-\epsilon_0 \ \bigtriangleup\varphi = Q \ \delta(\vec{r}-a\vec{e}_x)
 \end{equation*}
 
 mit der Randbedingung $\varphi(x=0) = 0$ auf der Leiteroberfläche.\
-Wir wissen, dass die Feldlinien der Punktladung senkrecht auf die Leiteroberfläche aufkommen müssen. Daher können wir uns fragen, wie man eben jenes Feldlinienbild beschreiben könnte. Man erhält es durch das Einbringen einer zweiten, gedachten Ladung $-Q$ bei $-a\vec{e}_x$, sodass die gesamte Anordnung für x$>0$ das gesuchte Feldlinienbild ergibt. Die imaginäre Punktladung bei $-a\vec{e}_x$ nennt man \textbf{Spiegelladung}. Die Begründung für dieses Phänomen ist, das das Einbringen einer Leiteroberfläche in ein gegebenes Potential $\varphi (\vec{r})$ entlang einer Äquipotentialfläche das Feld außerhalb des Leiters nicht ändert. Dort gilt weiterhin $-\epsilon_0 \Delta\varphi = \rho$ unverändert und die Randbedingungen sind effektiv identisch zu der Gleichung, welche das Feldlinienbild mithilfe der Spiegelladung beschreibt. Diese lautet hier:
+Wir wissen, dass die Feldlinien der Punktladung senkrecht auf die Leiteroberfläche aufkommen müssen. Daher können wir uns fragen, wie man eben jenes Feldlinienbild beschreiben könnte. Man erhält es durch das Einbringen einer zweiten, gedachten Ladung $-Q$ bei $-a\vec{e}_x$, sodass die gesamte Anordnung für x$>0$ das gesuchte Feldlinienbild ergibt. Die imaginäre Punktladung bei $-a\vec{e}_x$ nennt man \textbf{Spiegelladung}. Die Begründung für dieses Phänomen ist, das das Einbringen einer Leiteroberfläche in ein gegebenes Potential $\varphi (\vec{r})$ entlang einer Äquipotentialfläche das Feld außerhalb des Leiters nicht ändert. Dort gilt weiterhin $-\epsilon_0 \bigtriangleup\varphi = \rho$ unverändert und die Randbedingungen sind effektiv identisch zu der Gleichung, welche das Feldlinienbild mithilfe der Spiegelladung beschreibt. Diese lautet hier:
 
 \begin{equation*}
-- \epsilon_0\Delta\varphi = Q \left(\delta(\vec{r}-a\vec{e}_x) \ - \ \delta(\vec{r}+a\vec{e}_x)\right)
+- \epsilon_0\bigtriangleup\varphi = Q \left(\delta(\vec{r}-a\vec{e}_x) \ - \ \delta(\vec{r}+a\vec{e}_x)\right)
 \end{equation*}
 
 welche für das Potential liefert:
@@ -72,12 +72,12 @@ welche für das Potential liefert:
 \underline{B) Kugeloberfläche in einem asymptotisch homogenen Feld}\
 \\
 \ \\
-Wir betrachten eine leitende Kugel mit dem Radius $R$, welche sich im Ursprung des Koordinatensystems in einem homogenen elektrischen Feld $\vec{E}_0$ befindet. Für $|\vec{r}|>R$ gilt dementsprechend: $\Delta\varphi = 0$ mit den Randbedingunge $\varphi(|\vec{r}| = R) = \varphi_0 := 0$ und $\varphi(|\vec{r}|\rightarrow\infty) = -\vec{E}_0\cdot\vec{r}$ (Homogenität des Feldes). Aus Symmetrieüberlegungen erhalten wir außerdem, dass $\varphi(\vec{r},R,\vec{E}_0)$ linear in $\vec{E}_0$ sein muss.\
+Wir betrachten eine leitende Kugel mit dem Radius $R$, welche sich im Ursprung des Koordinatensystems in einem homogenen elektrischen Feld $\vec{E}_0$ befindet. Für $|\vec{r}|>R$ gilt dementsprechend: $\bigtriangleup\varphi = 0$ mit den Randbedingunge $\varphi(|\vec{r}| = R) = \varphi_0 := 0$ und $\varphi(|\vec{r}|\rightarrow\infty) = -\vec{E}_0\cdot\vec{r}$ (Homogenität des Feldes). Aus Symmetrieüberlegungen erhalten wir außerdem, dass $\varphi(\vec{r},R,\vec{E}_0)$ linear in $\vec{E}_0$ sein muss.\
 Dementsprechend wählen wir den Ansatz $\varphi = -\vec{E}_0 \cdot\vec{r} \ G(r,R)$ mit den resultierenden Randbedingungen $G(r=R)=0$ und $G(r\rightarrow\infty
 ) =1$, welcher nach Einsetzen in die \textsc{Laplace}-Gleichung folgende homogene DGL für $G$ liefert:
 
 \begin{equation*}
-\Delta\varphi = -\vec{E}_0\cdot\vec{r} \ \left(\frac{4}{r} \ \diff{G}{r} \ + \ \ddiff{G}{r}\right) = 0
+\bigtriangleup\varphi = -\vec{E}_0\cdot\vec{r} \ \left(\frac{4}{r} \ \diff{G}{r} \ + \ \ddiff{G}{r}\right) = 0
 \end{equation*}
 \ \\
 Diese lösen wir mit dem Ansatz $ G \sim r^n$:
@@ -103,7 +103,7 @@ Das äußere elektrische Feld induziert also offensichtlich ein Dipolmoment in d
 
 \section{Mehrere Leiter}
 
-Wir betrachten mehrere Leiter im Raum mit den Oberflächen $\mathcal{F}_i$. Erneut gilt die Tatsache, dass es keine Raumladungen gibt ($\Delta\varphi = 0$) und die Randbedingungen für die Leiteroberflächen ($\varphi = \varphi_i$ auf den $\mathcal{F}_i, \ \varphi_0 = 0$ wird willkürlich festgelegt).\
+Wir betrachten mehrere Leiter im Raum mit den Oberflächen $\mathcal{F}_i$. Erneut gilt die Tatsache, dass es keine Raumladungen gibt ($\bigtriangleup\varphi = 0$) und die Randbedingungen für die Leiteroberflächen ($\varphi = \varphi_i$ auf den $\mathcal{F}_i, \ \varphi_0 = 0$ wird willkürlich festgelegt).\
 Nun gilt aufgrund der Linearität der \textsc{Maxwell}-Gleichungen für das Gesamtpotential:
 
 \begin{equation*}
