@@ -1,0 +1,145 @@
+\chapter{Energie- und Impulsbilanz des em. Feldes}
+
+\section{Bilanzgleichungen}
+
+Wir betrachten in einem Volumen $V$ die \textbf{Observable} $A$, für die wir auch gan allgemein eine Dichte definieren wollen:
+
+\begin{equation}
+A=\Int{V}{}{V} \ a =  \quad \Rightarrow \quad a := \diff{A}{V} \quad \text{ist die Dichte von } A
+\end{equation}
+
+Anschaulich kann man sagen, dass sich die zeitliche Änderung von $A$ in den Volumen aus seiner Erzeugungsrate $N_A$ und seinem Strom $I_A$ aus dem Volumen heraus zusammensetzt:
+
+\begin{equation*}
+\dot{A}(t) \ = \ - I_A \ + \ N_A
+\end{equation*}
+
+Analog zur Dichte $a$ von $A$ wollen wir nun auch für den Strom $I_A$ eine Stromdichte $\vec{j}_a$ durch die Oberfläche $\partial V$ und für die Erzeugungsrate $N_A$ eine Erzeugungsdichte $\nu_a$ im Volumen $V$ definieren, sodass gilt:
+
+\begin{equation*}
+\Int{V}{}{V} \ \partial_t \ a = -\Oiint{\partial V}{}{\vec{F}} \cdot\vec{j}_a \ + \ \Int{V}{}{V} \ \nu_a \ = \ \Int{V}{}{V} \left(- \ \div\vec{j}_a \ + \ \nu_a\right)
+\end{equation*} 
+
+Daraus folgt die \textbf{allgemeine Bilanzgleichung}:
+
+\begin{equation*}
+\dot{a} \ +  \div\vec{j}_a \  =  \ \nu_a
+\end{equation*}
+
+Falls $A$ eine Erhaltungsgröße ist, gilt:
+
+\begin{equation*}
+N_A = 0, \nu_a = 0 \quad \Rightarrow \quad \dot{a}  \ + \div \vec{j}_a \ = \ 0 \quad \Rightarrow \quad \dot{A} = -\Oiint{\partial V}{}{\vec{F}}\cdot\vec{j}_a
+\end{equation*}
+
+FÜr den Grenzfall, dass $V\rightarrow\infty$, folgt, dass $\dot{A}=0$ und somit $A =$ const., was das erwartete Verhalten einer ERhaltungsgröße widerspiegelt.
+
+\section{Energiebilanz}
+
+Auf eine Punktladung $Q$ wirkt die Kraft $\vec{F}_L = Q(\vec{v}\times\vec{B} \ + \ \vec{E})$ worüber man die Leistung des Feldes an der Ladung $N = \vec{F}\cdot\vec{v}$ ableiten kann.\
+Für eine Energieänderung des em. Feldes gilt dememtsprechend:
+
+\begin{equation*}
+\dot{W}_{em} \ = \ -\vec{v}\cdot\vec{F}_L = -Q \ \cdot \ \vec{v} \ \vec{E}
+\end{equation*}
+
+Für eine Änderung der Energiedichte $\nu_{em}$ folgt daraus bei mehreren Ladungsträgerarten:
+
+\begin{equation*}
+\nu_{em} \ =  \ - \sum_i \ \rho_i \ \vec{v}_i \ \vec{E} \ = \ - \vec{j}\cdot\vec{E}
+\end{equation*}
+
+Damit lautet die Bilanzgleichung, welche in diesem Zusammenhang auch  \textbf{\textsc{Poynting}-Theorem} genannt wird:
+
+\begin{equation*}
+\pdiff{w}{t} \ + \ \div \vec{S}_P \ = \ \nu \ = \ -\vec{j} \cdot \vec{E}
+\end{equation*}
+
+wobei $w$ die Energiedichte und $\vec{S}_P$ die Energiestromdichte (auch \textbf{\textsc{Poynting}-Vektor} genannt) ist.\
+$w$ und $\vec{S}_P$ hängen vom $\vec{E}$- und $\vec{B}$-Feld ab, also sind diese nach \textsc{Maxwell} zu bestimmen:
+
+\begin{align*}
+\nu \ &= -\vec{j}\cdot\vec{E} = \epsilon_0 \ \dot{\vec{E}} \ \vec{E} \ - \ \frac{1}{\mu_0} \left(\nabla\times\vec{B}\right) \cdot \vec{E}\\
+&= \partial_t \left(\frac{\epsilon_0}{2} \vec{E}^2\right) \ - \frac{1}{\mu_0} \nabla \cdot (\vec{B}\times\vec{E}) \ - \ \frac{1}{\mu_0} \vec{B}\cdot \underbrace{(\nabla\times\vec{B})}_{= \dot{\vec{B}}}\\
+&= \frac{1}{2}\partial_t \left(\epsilon_0\vec{E}^2 \ + \ \frac{1}{\mu_0}\vec{B}^2\right) \ - \ \frac{1}{\mu_0}\nabla \cdot (\vec{B}\times\vec{E})
+\end{align*}
+
+Der Vergleich mit dem \textsc{Poynting}-Theorem ergibt:
+
+\begin{align*}
+w \ &= \ \frac{1}{2} \left(\epsilon_0\vec{E}^2 \ + \ \frac{1}{\mu_0}\vec{B}^2\right)\\
+\vec{S}_P \ &= \ \frac{1}{\mu_0} \ \vec{E}\times\vec{B} 
+\end{align*}
+
+\ \\
+\ \\
+\underline{Beispiel zur Erzeugungsdichte $\nu$:}$\qquad$ \textsc{Ohm}'sches Gesetz $\vec{j} = \sigma \cdot \vec{E}$
+
+\begin{equation*}
+\nu \ = \ - \sigma \ \cdot \ \vec{E}^2 \ = \ - \frac{\vec{j}^2}{\sigma}
+\end{equation*}
+
+Der erhaltene Ausdruck für die Erzeugungsdichte entspricht der \textbf{\textsc{Ohm}'schen Wärme}.
+
+\section{Elektrostatische Feldenergie}
+
+\begin{equation*}
+W_e \ = \ \Int{}{}{V} \frac{\epsilon_0}{2} \vec{E}^2 \ = \ - \Int{}{}{V} \frac{\epsilon_0}{2} \vec{E}^2 \ \grad\varphi
+\end{equation*}
+
+Nutze zur Umformung partielle Integration mit dem Satz von \textsc{Gauss}:
+
+\begin{align*}
+\Rightarrow W_e &= \Int{}{}{V} \frac{\epsilon_0}{2} \ (\nabla \cdot \vec{E}) \varphi \ - \ \underbrace{\Oiint{}{}{\vec{A}} \cdot \frac{\epsilon_0}{2}\vec{E}\varphi}_{=0 \text{ im gesamten Raum}} \\
+\\
+&= \ \frac{1}{2} \ \Int{}{}{V} \varphi \cdot \rho \quad = \quad \frac{1}{2} \Int{}{}{Q} \cdot \varphi
+\end{align*}
+
+Dies entspricht auch der Anschauung, dass Energie = Ladung $\cdot$ Potential.\
+Umschreiben ergibt:
+
+\begin{equation*}
+W_e \ = \ \frac{1}{2} \ \Int{}{}{V} \rho \cdot \varphi \ = \ \frac{1}{8\pi\epsilon_0} \ \int\d V\d V' \; \frac{\rho(\vec{r}) \ \rho(\vec{r}')}{|\vec{r}-\vec{r}'|}
+\end{equation*}
+
+\ \\
+\ \\
+Für eine Punktladung ergibt die erhaltene Gleichung: 
+
+\begin{align*}
+W_e \quad &= \quad \sum_{i\neq j} \ \frac{Q_i \ Q_j}{8\pi\epsilon_0 \ |\vec{r}-\vec{r}'|} \; + \; \text{\textbf{ Selbstenergie} für i = j}\\
+&= \quad \sum_{i<j} \ \frac{Q_i \ Q_j}{8\pi\epsilon_0 \ |\vec{r}-\vec{r}'|} \; + \; \text{ Selbstenergie für i = j}\\
+\end{align*}
+\ \\
+Für die Selbstenergie gilt zunächst für eine geladene Kugel mit dem Radus $a$: berechnen:
+
+\begin{equation*}
+W_e \ = \ \alpha \cdot \frac{Q^2}{8\pi\epsilon_0 \ a} \qquad \text{mit} \quad \alpha = \begin{cases}
+	\frac{6}{5} \quad \text{für homogene Kugel}\\
+	1 \quad \text{für Hohlkugel}
+  \end{cases}	
+\end{equation*}	
+
+Wenn man nun für diese Kugel den Grenzübergang zu einer Punktladung machen möchte und $a$ gegen 0 gehen lässt, so erhält man als Ergebnis, dass die Selbstenergie einer Punktladung unendlich sein müsste. An dieser Stelle ist die klassische Elektrodynamik nicht anwendbar, da sie als Kontinuumstheorie an ihre Grenzen stößt. Für Selbstenergie von Elementarteilchen ist also eine Erweiterung der Theorie der Elektrodynamik, welche ausschließlich auf den \textsc{Maxwell}-Gleichungen beruht, vonnöten, so wie es in der Quantenelektrodynamik behandelt wird.
+
+\section{Elektrostatische Energie einer Leiteranordnung}
+
+Da wir eine feste Leiteranordnung betrachten, folgt daraus, dass es keine Raumladungen gibt, sondern diese an die Leiteroberflächen gebunden sind.
+
+\begin{align*}
+& \quad W_e \ = \ \frac{1}{2} \ \Oiint{}{}{A} \sigma\cdot\varphi \  =  \frac{1}{2} \sum_i \ \varphi_i \ Q_i\\
+&\quad \text{wobei die }\varphi_i = \varphi \text{ auf den Leiteroberflächen konstant sind}
+\end{align*}
+
+\underline{Beispiel:} $\quad Q=Q_1=Q_2 \quad\Rightarrow\quad  W_e =\frac{1}{2}Q(\varphi_1-\varphi_2 ) = \frac{1}{2}QU = \frac{1}{2}CU^2 = \frac{1}{2}\frac{Q^2}{C}$\
+
+\ \\
+allgemein gilt: $Q_i \ = \ \sum_i \ C_{ik} \ \varphi_k$, sodass für die elektrostatische Energie folgt:
+
+
+\begin{equation*}
+\Rightarrow \quad W_e = \frac{1}{2} \sum_{ik} \ \varphi_i \ C_{ik} \ \varphi_k \ = 
+\ \frac{1}{2} \sum_{ik} \ Q_i \ \tilde{C}_{ik} \ Q_k
+\end{equation*}
+
+Da $W_e$ aufgrund von $W_e = \int\d V \ \frac{\epsilon_0}{2} \vec{E}^2$ immer gößer oder gleich 0 ist, folgt daraus, dass die $C_{ik}$ bzw. $\tilde{C}_{ik}$ positiv definit sein müssen (insbesindere gilt sogar: $C_{ii} > 0$ und $\tilde{C}_{ii} > 0$)
