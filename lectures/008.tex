@@ -142,4 +142,49 @@ allgemein gilt: $Q_i \ = \ \sum_i \ C_{ik} \ \varphi_k$, sodass für die elektro
 \ \frac{1}{2} \sum_{ik} \ Q_i \ \tilde{C}_{ik} \ Q_k
 \end{equation*}
 
-Da $W_e$ aufgrund von $W_e = \int\d V \ \frac{\epsilon_0}{2} \vec{E}^2$ immer gößer oder gleich 0 ist, folgt daraus, dass die $C_{ik}$ bzw. $\tilde{C}_{ik}$ positiv definit sein müssen (insbesindere gilt sogar: $C_{ii} > 0$ und $\tilde{C}_{ii} > 0$)
+Da $W_e$ aufgrund von $W_e = \int\d V \ \frac{\epsilon_0}{2} \vec{E}^2$ immer gößer oder gleich 0 ist, folgt daraus, dass die $C_{ik}$ bzw. $\tilde{C}_{ik}$ positiv definit sein müssen (insbesindere gilt sogar: $C_{ii} > 0$ und $\tilde{C}_{ii} > 0$)\\
+\ \\
+
+Wenn wir nun kleine Ladungsänderungen $\rho \rightarrow \rho +\d \rho, \varphi \rightarrow\varphi + \d\varphi$ betrachten erhalten wir:
+
+\begin{align*}
+\delta\varphi &= \ \frac{1}{4\pi\epsilon_0} \ \Int{}{}{V} \frac{\delta\rho(\vec{r})}{|\vec{r}-\vec{r}'|}\\
+\delta W_e &= \ \frac{1}{2} \ \Int{}{}{V} (\d\rho \ \varphi \; + \; \rho \ \d\varphi) \ = \ \frac{1}{4\pi\epsilon_0} \cdot\frac{1}{2}\cdot 2 \ \int\d V \d V' \ \frac{\rho(\vec{r}) \ \delta\rho(\vec{r}')}{|\vec{r}-\vec{r}'|}
+\end{align*}
+
+\begin{align*}
+\text{für Flächenladungen: } & \quad\delta W_e \ = \ \frac{1}{2}\Int{}{}{A}  \delta\sigma \ \varphi \ = \ \Int{}{}{A}  \sigma \ \delta\varphi\\
+\text{für Leiter: } & \quad\delta W_e \ = \frac{1}{2}\sum_i \ \delta(Q_i\varphi_i) \ = \ \sum_i \varphi_i \delta Q_i \ = \ \sum_i \ Q_i \ \delta\varphi_i
+\end{align*}
+
+\ \\
+\underline{Spezialfälle:}\\
+
+\begin{enumerate}
+
+\item Verschiebung von Ladungen entlang der Leiteroberfläche
+
+\begin{equation*}
+\delta Q_i = 0 \quad \Rightarrow \quad \delta W_e = 0
+\end{equation*}
+
+Da Verschiebung $\perp$ Kraft, ist auch die Arbeit 0.\\
+Daraus folgt, dass $W_e$ im Gleichgewicht Extremum (i.A. Minimum) annimmt (\textbf{\textsc{Thompson}'scher Satz}).
+
+\item Transport von Ladungen zwischen Leitern
+
+\begin{equation*}
+\delta Q_i \ \neq \ 0 \quad\Rightarrow\quad \delta W_e = \sum_i \ Q_i \ \delta\varphi_i \ = \ \sum_i \ \varphi_i \ \delta Q_i
+\end{equation*} 
+
+Beachte:
+
+\begin{align*}
+C_{ik} \ &= \ \frac{\partial^2 W_e}{\partial \varphi_i \ \partial\varphi_k} \qquad(\Rightarrow \ C_{ik} \ = \ C_{ki})\\
+Q_i \ &= \ \pdiff{W_e}{\varphi_i} \ = \ \sum_k \ C_{ik} \varphi_k\\
+\delta W_e \ &= \ \sum_i \ \pdiff{W_e(\varphi_k)}{\varphi_i} \ \delta\varphi_i \ = \ \d W_e \qquad (\text{totales Differential})
+\end{align*}
+
+
+
+\end{enumerate}
