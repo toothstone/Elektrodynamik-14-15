@@ -127,7 +127,14 @@ $\nabla\times\vec{r}=0$\\
 \iiint\limits_V\div\vec{E}\cdot\d V=\oiint\limits_{\partial V}\vec{E}\cdot\d \vec{A}
 \end{equation*}
 Der Satz von \textsc{Gauss} verknüpft Eigenschaften im Inneren eines Volumens mit dem Verhalten auf dem Rand.\\
-\linebreak
+
+Über den Satz von \textsc{Gauss} lässt sich auch die partielle Integration in drei Dimensionen umformen zu:
+
+\begin{equation*}
+\Int{V}{}{V} \ \pdiff{}{\vec{r}} (u\cdot v) = \Int{V}{}{V} \  \pdiff{u}{\vec{r}}\cdot v \ + \ \Int{V}{}{V} \  u \cdot\pdiff{v}{\vec{r}} \ = \ \Oiint{\partial V}{}{A} \  (u\cdot v)
+\end{equation*}
+
+\ \\
 \textbf{e. \textsc{Green}'scher Satz}\\
 \begin{equation*}
 \Int{V}{}{(\varphi\bigtriangleup\psi-\psi\bigtriangleup\varphi)}{V}=\Oint{\partial V}{}{(\varphi\nabla\psi-\psi\nabla\varphi)}{\vec{A}}
