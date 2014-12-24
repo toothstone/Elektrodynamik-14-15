@@ -1,0 +1,19 @@
+\section{Energie des stationären Magnetfelds}
+
+\begin{align*}
+W_m & \ \quad = \quad  \ \Int{}{}{V}\frac{1}{2\mu_0}\vec{B}^2 \ =  \ \Int{}{}{V} \frac{1}{2\mu_0} \vec{B}\times\rot\vec{A} \ = \ \Int{}{}{V} \frac{1}{2\mu_0} \ \left(\vec{B}\times\nabla\right) \overset{\downarrow}{\vec{A}}\\
+& \overset{\text{part. Int.}}{=}  \  \Int{}{}{V} \frac{1}{2\mu_0} \vec{A} \cdot\left(\nabla\times\vec{B}\right) \quad + \quad \text{Oberflächenintegral} \left(\rightarrow 0 \text{ für } V \rightarrow \infty\right)\\
+& \;\;\;\;\overset{\dot{\vec{E}}=0}{=} \ \frac{1}{2} \Int{}{}{V} \ \vec{j}\cdot\vec{A}
+\end{align*}
+
+Analog zum elektrostatischen Fall ergibt Umschreiben:
+
+\begin{equation*}
+W_m = \frac{\mu_0}{8\pi} \ \int\int\d V \d V' \ \frac{\vec{j}(\vec{r}) \ \vec{j}(\vec{r}')}{|\vec{r}-\vec{r}'|}
+\end{equation*}
+
+Für dünne linienförmige Leiter $\mathcal{L}_i$ gilt mit $\int\d V\vec{j} \rightarrow \int\d \vec{r} \cdot I$:
+
+\begin{equation*}
+W_m = \frac{1}{2} \cdot \sum_i I_i \Int{\mathcal{L}_i}{}{\vec{r}} \cdot \vec{A} \overset{\mathcal{L}_i \text{ geschlossen}}{=} \frac{1}{2}
+\end{equation*}
