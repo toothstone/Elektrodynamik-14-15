@@ -11,9 +11,69 @@ Analog zum elektrostatischen Fall ergibt Umschreiben:
 \begin{equation*}
 W_m = \frac{\mu_0}{8\pi} \ \int\int\d V \d V' \ \frac{\vec{j}(\vec{r}) \ \vec{j}(\vec{r}')}{|\vec{r}-\vec{r}'|}
 \end{equation*}
+\ \\
 
-Für dünne linienförmige Leiter $\mathcal{L}_i$ gilt mit $\int\d V\vec{j} \rightarrow \int\d \vec{r} \cdot I$:
+Für dünne linienförmige und geschlossene Leiterschleifen $\mathcal{L}_i$ gilt mit $\int\d V\vec{j} \rightarrow \int\d \vec{r} \cdot I$ und unter Anwendung des Satzes von \textsc{Stokes}:
 
 \begin{equation*}
-W_m = \frac{1}{2} \cdot \sum_i I_i \Int{\mathcal{L}_i}{}{\vec{r}} \cdot \vec{A} \overset{\mathcal{L}_i \text{ geschlossen}}{=} \frac{1}{2}
+W_m = \frac{1}{2} \cdot \sum_i I_i \Int{\mathcal{L}_i}{}{\vec{r}} \cdot \vec{A} \ = \ \frac{1}{2} \sum_i I_i \Phi_i
 \end{equation*}
+\ \\
+\ \\
+Allgemein folgt somit aus $\Phi_i = \sum_k L_{ik} I_k$:
+
+\begin{align*}
+W_m \ &= \ \frac{1}{2} \ \sum_{ik}  I_i L_{ik} I_k \ = \ \frac{1}{2} \ \sum_{ik} \Phi_i \tilde{L}_{ik} \Phi_k\\
+&= \ \frac{1}{2} \ \sum_{i\neq k} I_i I_k \ \underbrace{\frac{\mu_0}{4\pi} \ \Int{\mathcal{L}_i}{}{\vec{r}} \Int{\mathcal{L}_k}{}{\vec{r}'} \ \frac{1}{|\vec{r}-\vec{r}'|}}_{L_{ik}} \; + \; \text{Selbstenergie für } (i=k)
+\end{align*}
+
+Ähnlich wie im elektrostatischen Analogon stößt die klassische Elektrodynamik bei der Berechnung der Selbstenergien für ``dünne'' und somit sonst ideale Leiter an ihre Grenzen. Für eine Leiter schleife endlicher Dicke kann man die Selbstenergie jedoch wieder berechnen, sie beträgt:
+
+\begin{align*}
+& \ W_m  \ = \ \frac{1}{2} \ \cdot  \ L \ \cdot \ I^2 \\
+\text{mit } \ & \ L \ = \ \frac{\mu_0}{4\pi I^2}\ \Int{}{}{V'} \frac{\vec{j}(\vec{r})\vec{j}(\vec{r}')}{|\vec{r}-\vec{r}'|} \ = \ \frac{1}{I^2} \ \Int{}{}{V} \frac{\vec{B}^2}{\mu_0} \quad
+ \left( = \ \frac{\Phi}{I}\right) 
+\end{align*}
+
+\section{Beispiele für Energiestromdichten}
+
+\begin{enumerate}[label=\roman*]
+\item \underline{Stromdurchflossener gerader Leiter}\\
+\ \\
+\begin{equation*}
+\frac{1}{\mu_0} \rot \vec{B} \ = \ \vec{j} \ + \ \epsilon_0 \dot{\vec{E}}
+\end{equation*}
+
+Für $\dot{\vec{E}}=0$ und der integralen Formulierung $\Oint{}{}{\vec{r}} \cdot \vec{B} = \mu_0 I$ ebenjener \textsc{Maxwell}-Gleichung folgt, dass um den geraden Leiter ein tangentiales $\vec{B}$-Feld existiert:
+
+\begin{equation*}
+B \ = \ \frac{\mu_0 \ I}{2\pi \ r_{\perp}}
+\end{equation*}
+
+Mit dem \textsc{Ohm}'schen Gesetz $\vec{E} = \sigma \cdot\vec{j}$ folgt, dass das $\vec{E}$-Feld entlang des Leiters gerichtet sein muss. Somit gilt für die Energiestromdichte $\vec{S}_P = \frac{1}{\mu_0} \left(\vec{E}\times\vec{B}\right)$, dass sie radial nach innen gerichtet sein muss.\\
+\ \\
+Bei einem einfachen Stromkreis wird demnach die Energie nicht entlang der Leiter sondern über die erzeugten Feldern von der Spannungsquelle zum Verbraucher transportiert!\\
+\ \\
+Berechnet man nun außerdem das Flächenintegral über die Energiestromdichte, erhält man für den geraden Leiter:
+
+\begin{equation*}
+\Iint{}{}{\vec{A}_F}\cdot\vec{S}_P \ = \ 2\pi r_{\perp} l \ S_P \ = \ 2\pi r_{\perp} l \frac{1}{\mu_0}E\frac{\mu_0 I}{2\pi r_{\perp}} \ = \ l \cdot E \cdot I
+\end{equation*}
+
+Der erhaltene Ausdruck $N := l \cdot E \cdot I = U \cdot I$ ist somit anschaulich die abgestrahlte Energie pro Zeiteinheit und ist auch als \textbf{\textsc{Ohm}'scher Verlust} oder \textbf{\textsc{Ohm}'sche Wärme} bekannt.
+
+\ \\
+
+\item \underline{ideale parallele Doppelleiter mit entgegengesetzten Stromrichtungen}
+\ \\
+
+Hier betrachten wir gleich zu Beginn das Flächenintegral über der Energiestromdichte und setzen nur die Querschnittsfläche ein:
+
+\begin{align*}
+N \ &= \ \Int{}{}{\vec{A}_F} \cdot \vec{S}_P \ = \ \frac{1}{\mu_0} \left(\vec{E}\times\vec{B}\right) \ \overset{\text{stationär}}{=} \ - \frac{1}{\mu_0} \Int{}{}{\vec{A}_F} \cdot \left(\nabla \varphi \times \vec{B}\right)\\
+&= \ - \frac{1}{\mu_0} \Int{}{}{\vec{A}_F} \cdot \left(\nabla\times\left(\varphi\vec{B}\right)\right) \; + \; blub
+\end{align*}
+
+
+
+\end{enumerate}
