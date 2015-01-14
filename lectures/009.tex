@@ -106,10 +106,10 @@ W \ &= \ \frac{\epsilon_0}{2} \vec{E}^2 \; + \; \frac{1}{2\mu_0}\vec{B}^2 = \lef
 W \ &= \ \epsilon_0 \vec{E}_0^2 \ \cos^2\left(\vec{k}\vec{r}-\omega t\right)
 \end{align*}
 
-Räumliche oder zeitliche Mittelung: $\qquad\left(\overline{\cos^2(.)} = \frac{1}{2}(.)\right)$
+Räumliche oder zeitliche Mittelung: $\qquad\left(\langle\cos^2(.)\rangle = \frac{1}{2}(.)\right)$
 
 \begin{equation*}
-\overline{W} \ = \ \frac{\epsilon_0}{2} \ \vec{E}_0^2
+\langle W\rangle \ = \ \frac{\epsilon_0}{2} \ \vec{E}_0^2
 \end{equation*}
 
 \ \\
@@ -124,7 +124,7 @@ Räumliche oder zeitliche Mittelung: $\qquad\left(\overline{\cos^2(.)} = \frac{1
 nach Mittelung:
 
 \begin{equation*}
-\vec{S}_P \ = \ c \cdot \vec{e}_k \cdot \overline{w} \ = \ c \cdot \vec{e}_k \ \frac{\epsilon_0}{2} \ \vec{E}_0 \ \left( = \frac{1}{2\mu_0} \operatorname{Re} \ (\vec{E}\times\vec{B}^*)\right)
+\vec{S}_P \ = \ c \cdot \vec{e}_k \cdot \langle w\rangle \ = \ c \cdot \vec{e}_k \ \frac{\epsilon_0}{2} \ \vec{E}_0 \ \left( = \frac{1}{2\mu_0} \operatorname{Re} \ (\vec{E}\times\vec{B}^*)\right)
 \end{equation*}
 \ \\
 
@@ -169,14 +169,14 @@ Der Vergleich mit $\dot{\vec{g}} + \div\tens{T} = - \vec{f}_L$ ergibt:
 
 \begin{align*}
 \text{Impulsdichte} \qquad & \vec{g} \ = \ \epsilon_0 \ (\vec{E}\times\vec{B})\\
-\text{Impulsstromdichte} \qquad & \tens{T} \ = \ \epsilon_0 \ \left(\frac{\vec{E}^2}{2} \mathbb{1} \ - \ \vec{E}\circ\vec{E}\right) \ + \ \frac{1}{\mu_0} \ \left(\frac{\vec{B}^2}{2}\mathbb{1} \ - \ \vec{B}\circ\vec{B}\right)\\
-\text{Impulserzeugungsrate} \qquad - & \vec{f}_L \ = \ \nu_g
+\text{Impulsstromdichte} \qquad & \tens{T} \ = \ \epsilon_0 \ \left(\frac{\vec{E}^2}{2} \mathbbm{1} \ - \ \vec{E}\circ\vec{E}\right) \ + \ \frac{1}{\mu_0} \ \left(\frac{\vec{B}^2}{2}\mathbbm{1} \ - \ \vec{B}\circ\vec{B}\right)\\
+\text{Impulserzeugungsrate} \quad \ - & \vec{f}_L \ = \ \nu_g
 \end{align*}
 
 \ \\
 \underline{Diskussion:}
 
-\begin{enumerate}[label = \roman*]
+\begin{enumerate}[label = \roman*)]
 \item Impulsdichte:\
 
 \begin{equation*}
@@ -210,4 +210,68 @@ Volumenintegral + Satz von \textsc{Gauss} $ \quad \Rightarrow \quad \Oiint{}{}{\
 \ \\
 \textbf{Oberflächenkräfte}, Interpretation des Vorzeichens: Fläche schließt Ströme/Ladungen ein, auf die die Kräfte wirken
 \end{itemize}
+\end{enumerate}
+
+\section{Beispiele für Impulsbilanz}
+
+\begin{enumerate}[label=\roman*)]
+\item \underline{Plattenkondensator:}\\
+\ \\
+Wir betrachten einen unendlich ausgedehnten Plattenkondensator (Vernachlässigung von Randeffekten) welcher mit der Ladung $\pm Q$ beladen ist und das in ihm erzeugte $\vec{E}$-Feld entlang der x-Achse ausgerichtet ist. Es gilt:
+
+\begin{align*}
+& T_{ik} \ = \ \epsilon_0 \left(\frac{1}{2}\vec{E}^2\mathbbm{1} \ - \ \vec{E}\circ\vec{E}\right)_{ik}\\
+\Rightarrow \qquad & T_{xx} \ = \ -\frac{\epsilon_0}{2}\vec{E}^2, \ T_{yy} \ = \ T_{zz} \ = \ \frac{\epsilon_0}{2} \vec{E}^2\\
+& T_{xy} \ = \ T_{xz} \ = \ T_{yz} \ = \ 0
+\end{align*}
+
+Somit erhält man für die Kraft auf die linke Platte:
+
+\begin{equation*}
+(\vec{F}_L)_x \ = \ - \left( \Oiint{}{}{\vec{A}_F} \cdot \tens{T}\right)_x \ = \ {\vec{A}_F}_x \ T_{xx} \ = \ \frac{\epsilon_0}{2} A_F \vec{E}^2 \ = \ \frac{Q\cdot E}{2}  
+\end{equation*}
+\ \\
+\item \underline{Lange Spule:}\\
+\ \\
+Wir betrachten eine Spule in der x-y-Ebene welche mit ihrer Symmetrieachse (längs) entlang der x-Achse ausgerichtet ist.
+Für das $\vec{B}$-Feld entlang dieser Symmetrieachse gilt:
+
+\begin{align*}
+\vec{B} \ =& \ \mu_0 \ I \ \frac{N}{l} \ \vec{e}_x\\
+\Rightarrow \qquad T_{xx} \ =& \ - T_{yy} \ = \ -T_{zz} \ = \ - \frac{1}{2\mu_0}\vec{B}^2
+\end{align*}
+
+\begin{itemize}
+\item Spule quer teilen, Kraft auf linken Teil (x<0):
+
+\begin{equation*}
+(\vec{F}_L)_x \ = \ - \underbrace{{A_F}_x}_{= \pi R^2} \ T_{xx} \ = \ \frac{A_F}{2\mu_0}\vec{B}^2 \ = \ \frac{A_F \ \mu_0 \ (I \cdot N)^2}{2\ l^2} \quad \text{Anziehung}
+\end{equation*}
+
+\item Spule längs teilen, Kraft auf unteren Teil (y<0):
+
+\begin{equation*}
+(\vec{F}_L)_x \ = \ -\underbrace{{A_F}_y}_{=\pi R l} \ T_{yy} \ = \ -\frac{R \ l \ \vec{B}^2}{\mu_0} \quad \text{Anziehung}
+\end{equation*}
+
+Interpretieren wir nun diese Ergebnisse mithilfe von Feldlinien, so können wir insgesamt verallgemeinern, dass parallel zu den Feldlinien eine Zugkraft herrscht, wohingegen senkrecht zu ihnen gedrückt wird. 
+\end{itemize}
+
+\item \underline{Isotrope Strahlung in einem Hohlraum}
+
+Wir betrachten das Zeit- und Ortsmittel der Impulsstromdichte $\tens{T}$:
+
+\begin{align*}
+\langle\tens{T}\rangle \ &= \ \Big\langle \epsilon_0 \ \left(\frac{1}{2}\vec{E}^2\cdot\mathbbm{1} \ - \ \vec{E}\circ\vec{E}\right) \ + \ \frac{1}{\mu_0} \ \left(\frac{1}{2}\vec{B}^2\cdot\mathbbm{1} \ - \ \vec{B}\circ\vec{B}\right) \Big\rangle \ = \ T_0 \cdot \mathbbm{1}\\
+\operatorname{Spur} \tens{T} \ &= \ 3 T_0 \ = \ \epsilon_0 \ \left(\frac{3}{2}\vec{E}^2 \ - \ \vec{E}^2\right) \ + \ \frac{1}{\mu_0} \ \left(\frac{3}{2}\vec{B}^2 \ - \ \vec{B}^2\right) \ = \ \frac{\epsilon_0}{2}\vec{E}^2 \ - \ \frac{\epsilon_0}{2}\vec{B}^2 \\
+\text{mit } T_0 \ &= \ \frac{1}{3} w 
+\end{align*}
+
+Somit ist die Kraft auf die Wand:
+
+\begin{equation*}
+\Delta\vec{F}_L \ = \ -\Oiint{}{}{\vec{A}_F} \cdot\tens{T} \ = \ - \Delta A_F \cdot \langle\tens{T} \rangle \ = \ - \Delta A_F \cdot \frac{w}{3}
+\end{equation*}
+
+Dies entspricht dem Strahlungsdruck $p$ beim gerichtetem senkrechten Einfall auf die Wände in alle drei Raumrichtungen: $\quad p = \frac{1}{3}w$
 \end{enumerate}
