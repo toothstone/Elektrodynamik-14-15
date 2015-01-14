@@ -24,7 +24,7 @@ Allgemein folgt somit aus $\Phi_i = \sum_k L_{ik} I_k$:
 
 \begin{align*}
 W_m \ &= \ \frac{1}{2} \ \sum_{ik}  I_i L_{ik} I_k \ = \ \frac{1}{2} \ \sum_{ik} \Phi_i \tilde{L}_{ik} \Phi_k\\
-&= \ \frac{1}{2} \ \sum_{i\neq k} I_i I_k \ \underbrace{\frac{\mu_0}{4\pi} \ \Int{\mathcal{L}_i}{}{\vec{r}} \Int{\mathcal{L}_k}{}{\vec{r}'} \ \frac{1}{|\vec{r}-\vec{r}'|}}_{L_{ik}} \; + \; \text{Selbstenergie für } (i=k)
+&= \ \frac{1}{2} \ \sum_{i\neq k} I_i I_k \ \underbrace{\frac{\mu_0}{4\pi} \ \Int{\mathcal{L}_i}{}{\vec{r}} \Int{\mathcal{L}_k}{}{\vec{r}'} \ \frac{1}{|\vec{r}-\vec{r}'|}}_{\mathcal{L}_{ik}} \; + \; \text{Selbstenergie für } (i=k)
 \end{align*}
 
 Ähnlich wie im elektrostatischen Analogon stößt die klassische Elektrodynamik bei der Berechnung der Selbstenergien für ``dünne'' und somit sonst ideale Leiter an ihre Grenzen. Für eine Leiter schleife endlicher Dicke kann man die Selbstenergie jedoch wieder berechnen, sie beträgt:
@@ -71,9 +71,143 @@ Hier betrachten wir gleich zu Beginn das Flächenintegral über der Energiestrom
 
 \begin{align*}
 N \ &= \ \Int{}{}{\vec{A}_F} \cdot \vec{S}_P \ = \ \frac{1}{\mu_0} \left(\vec{E}\times\vec{B}\right) \ \overset{\text{stationär}}{=} \ - \frac{1}{\mu_0} \Int{}{}{\vec{A}_F} \cdot \left(\nabla \varphi \times \vec{B}\right)\\
-&= \ - \frac{1}{\mu_0} \Int{}{}{\vec{A}_F} \cdot \left(\nabla\times\left(\varphi\vec{B}\right)\right) \; + \; \Int{}{}{\vec{A}_F}\cdot\varphi\cdot\left(\underbrace{\nabla\times\vec{B}}_{=\vec{j}}\right)
+&= \ - \frac{1}{\mu_0} \Int{}{}{\vec{A}_F} \cdot \left(\nabla\times\left(\varphi\vec{B}\right)\right) \; + \; \Int{}{}{\vec{A}_F}\cdot\varphi\cdot\underbrace{\left(\nabla\times\vec{B}\right)}_{=\vec{j}}
 \end{align*}
 
+Nach Umformen mit \textsc{Stokes} erhält man für den ersten Summanden:
+
+\begin{equation*}
+\Oint{\partial A_F}{}{\vec{r}}  \cdot \varphi \vec{B}
+\end{equation*}
+
+doch dieser Anteil geht für $\partial A_F \rightarrow \infty$ schnell genug gegen Null. Somit folgt für die Leistung:
+
+\begin{equation*}
+\Rightarrow \; N \ = \ \Int{}{}{\vec{A}_F} \cdot \varphi \vec{j} \ = \ I \left(\varphi_1 - \varphi_2 \right) \ = \ I \cdot U_{12}
+\end{equation*}
+Beim Doppelleiter wird die Leistung entlang der Leiter transportiert.
+\end{enumerate}
 
 
+\section{Energie einer ebenen harmonischen Welle}
+
+Wir betrachten:
+
+\begin{align*}
+\vec{E} \ &= \ \vec{E}_0 \cdot \operatorname{Re} e^{i\left(\vec{k}\vec{r}-\omega t\right)} \qquad \text{mit} \qquad \vec{E}\perp\vec{k}, \; \vec{E}_0 \text{ reell}\\
+\vec{B} \ &= \ \frac{1}{c}\left(\vec{e}_k\times\vec{E}\right) \qquad \text{mit} \qquad \vec{e}_k = \frac{\vec{k}}{k}
+\end{align*}
+
+\underline{Energiedichte:}\\
+
+\begin{align*}
+W \ &= \ \frac{\epsilon_0}{2} \vec{E}^2 \; + \; \frac{1}{2\mu_0}\vec{B}^2 = \left[\frac{\epsilon_0}{2}\vec{E}_0^2 + \frac{1}{2\mu_0 c^2} \ \left(\vec{e}_k\times\vec{E}\right)^2\right] \cos^2\left(\vec{k}\vec{r}-\omega t\right)\\
+\ \\
+W \ &= \ \epsilon_0 \vec{E}_0^2 \ \cos^2\left(\vec{k}\vec{r}-\omega t\right)
+\end{align*}
+
+Räumliche oder zeitliche Mittelung: $\qquad\left(\overline{\cos^2(.)} = \frac{1}{2}(.)\right)$
+
+\begin{equation*}
+\overline{W} \ = \ \frac{\epsilon_0}{2} \ \vec{E}_0^2
+\end{equation*}
+
+\ \\
+\underline{Energiestromdichte:}
+
+\begin{align*}
+\vec{S}_P \ &= \ \frac{1}{\mu_0} \vec{E}\times\vec{B} \ = \ \frac{1}{\mu_0 c} \vec{E}_0 \times \left(\vec{e}_k\times\vec{E}_0\right) \ \cos^2\left(\vec{k}\vec{r}-\omega t\right)\\
+&= \ \epsilon_0 c \; \Bigg(\vec{e}_k\vec{E}_0^2 \ - \ \vec{E}_0\underbrace{\left(\vec{e}_k\cdot\vec{E}_0\right)}_{=0}\Bigg) \ \cos^2\left(\vec{k}\vec{r}-\omega t\right)\\
+\vec{S}_p \ &= \ c \ \vec{e}_k \ \epsilon_0 \ \vec{E}_0 \ \cos^2 \left(\vec{k}\vec{r}-\omega t\right) \ = \ c \cdot  \vec{e}_k \cdot w
+\end{align*}
+
+nach Mittelung:
+
+\begin{equation*}
+\vec{S}_P \ = \ c \cdot \vec{e}_k \cdot \overline{w} \ = \ c \cdot \vec{e}_k \ \frac{\epsilon_0}{2} \ \vec{E}_0 \ \left( = \frac{1}{2\mu_0} \operatorname{Re} \ (\vec{E}\times\vec{B}^*)\right)
+\end{equation*}
+\ \\
+
+\section{Impulsbilanz des elektromagnetischen Feldes}
+\ \\
+Impulsänderung = Kraft
+
+\begin{equation*}
+\Rightarrow \ \vec{F}_L \ = \ \dot{\vec{p}}_{\text{mech}} \ = \  \dot{\vec{p}}_{\text{elm}} \quad \text{(Impuls im em. Feld)}
+\end{equation*}
+\ \\
+\ \\
+\ \\
+
+Bilanzgleichung pro Volumen:
+
+\begin{align*}
+\pdiff{\vec{g}}{t} \; + \; \div \tens{T} & \ = \ - \vec{f}_L \\
+\ \\
+\text{mit} \qquad \vec{g} & \ - \ \text{Impulsdichte}\\
+\vec{f}_L & \ - \ \text{Lorentzkraftdichte} \quad \left( = \rho\vec{E} \ + \ \vec{j}\times\vec{B}\right)\\
+\tens{T} & \ - \ \text{Impulsstromdichte}
+\end{align*}
+
+$ - \vec{f}_L$ ist dementsprechend die elektromagnetische Impulserzeugungsrate pro Volumen $\nu_g$.
+$\vec{g}$ und $\tens{T}$ hängen im Allgemeinen von Feldern ab. \textsc{Maxwell} liefert uns:
+
+\begin{align*}
+- \vec{f}_L \ &= \ \epsilon_0 ( \nabla \cdot\overset{\downarrow}{\vec{E}} ) \ + \ \frac{1}{\mu_0} \ \vec{B} \times (\nabla \times \vec{B}) \ + \ \epsilon_0 \dot{\vec{E}} \times \vec{B}\\
+\overset{\text{Umformen}}{\Longrightarrow} \quad\vec{E}\times\vec{B} \ &= \ \partial_t ( \vec{E} \times \vec{B} ) \ - \ \vec{E}\times\dot{\vec{B}} \ =  \ \partial_t (\vec{E}\times\vec{B}) \ + \ \vec{E}\times (\nabla\times\vec{E})\\
+\vec{E}\times ( \nabla\times \overset{\downarrow}{\vec{E}} ) \ &= \ \nabla \ (\overset{\downarrow}{\vec{E}}\cdot\vec{E} ) \ - \ ( \vec{E}\cdot\nabla ) \ \overset{\downarrow}{\vec{E}} \ = \ \frac{1}{2}\nabla\vec{E}^2 \ - \ ( \vec{E}\cdot\nabla) \ \overset{\downarrow}{\vec{E}}
+\end{align*}
+
+Für $\vec{B}\times(\nabla\times\vec{B})$ analog, mit $(\nabla\cdot\overset{\downarrow}{\vec{B}})\vec{B}=0$. Insgesamt erhalten wir:
+
+\begin{equation*}
+(-\vec{f}_L)_k \ = \ \partial_t \ \epsilon_0 \ (\vec{E}\times\vec{B})_k \ - \ \pdiff{}{x_i} \epsilon_0 \ \left(\frac{\vec{E}^2}{2} \delta_{ik} \ - \ \vec{E}_i \vec{E}_k \right) \; + \; \pdiff{}{x_i} \frac{1}{\mu_0} \ \left(\frac{\vec{B}^2}{2}\delta_{ik} \ - \ \vec{B}_i \vec{B}_k \right) 
+\end{equation*}
+
+\ \\
+Der Vergleich mit $\dot{\vec{g}} + \div\tens{T} = - \vec{f}_L$ ergibt:
+
+\begin{align*}
+\text{Impulsdichte} \qquad & \vec{g} \ = \ \epsilon_0 \ (\vec{E}\times\vec{B})\\
+\text{Impulsstromdichte} \qquad & \tens{T} \ = \ \epsilon_0 \ \left(\frac{\vec{E}^2}{2} \mathbb{1} \ - \ \vec{E}\circ\vec{E}\right) \ + \ \frac{1}{\mu_0} \ \left(\frac{\vec{B}^2}{2}\mathbb{1} \ - \ \vec{B}\circ\vec{B}\right)\\
+\text{Impulserzeugungsrate} \qquad - & \vec{f}_L \ = \ \nu_g
+\end{align*}
+
+\ \\
+\underline{Diskussion:}
+
+\begin{enumerate}[label = \roman*]
+\item Impulsdichte:\
+
+\begin{equation*}
+\vec{g} \ = \ \epsilon_0\mu_0 \vec{S}_P \ = \ \frac{1}{c^2}\vec{S}_P
+\end{equation*} 
+
+Allgemeingültig für Feldtheorien bei Ausbreitung mit $c$, vgl. Relativitätstheorie.
+\begin{equation*}
+\text{für Welle gilt: } |\vec{S}_P| \ = \ c \cdot w \quad \Rightarrow \quad |\vec{g}| \ = \ \frac{w}{c} 
+\end{equation*}
+
+Zusammenhang mit Strahlungsdruck (Absorption einer em. Welle): 
+
+\begin{align*}
+\text{Impulsübertrag:  } \qquad & \Delta \vec{p} \ = \ \vec{g} \ \Delta V \ = \ \vec{g} \ c \ \Delta t \ \Delta A_F\\
+\text{Druck: } \qquad & \frac{|\Delta\vec{p}|}{\Delta t \ \Delta A_F} \ = \ c \ |\vec{g}| \ = \ w
+\end{align*}
+\ \\
+
+\item Impulsstromdichte: \\
+
+Tensor $\tens{T}$ mit folgenden Eigenschaften:
+
+\begin{itemize}
+\item $T_{ik}$ mit $k$ = Impulskomponente, $i$ = Transportrichtung
+\item $T_{ik} \ = \ T_{ki}$
+\item $ [T_{ik}] \ = \ [\vec{f}] \cdot [l] \ = \ \frac{[\vec{F}]}{[l]^2} \quad \Rightarrow \quad$ Druck, Spannung
+\item Stationäre Felder: $\quad \dot{\vec{g}} \ = \ 0 \quad \Rightarrow \quad \div \tens{T} \ = \ -\vec{f}_L$\\
+\ \\
+Volumenintegral + Satz von \textsc{Gauss} $ \quad \Rightarrow \quad \Oiint{}{}{\vec{A}_F} \cdot \tens{T} \ = \ - \vec{F}_L \quad$\\
+\ \\
+\textbf{Oberflächenkräfte}, Interpretation des Vorzeichens: Fläche schließt Ströme/Ladungen ein, auf die die Kräfte wirken
+\end{itemize}
 \end{enumerate}
