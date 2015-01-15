@@ -51,14 +51,14 @@ Wir betrachten eine Punktladung $Q$, welche sich im Abstand $a$ von einer ebenen
 Demzufolge erhalten wir die \textsc{Poisson}-Gleichung:
 
 \begin{equation*}
--\epsilon_0 \ \bigtriangleup\varphi = Q \ \delta(\vec{r}-a\vec{e}_x)
+-\epsilon_0 \ \laplace\varphi = Q \ \delta(\vec{r}-a\vec{e}_x)
 \end{equation*}
 
 mit der Randbedingung $\varphi(x=0) = 0$ auf der Leiteroberfläche.\
-Wir wissen, dass die Feldlinien der Punktladung senkrecht auf die Leiteroberfläche aufkommen müssen. Daher können wir uns fragen, wie man eben jenes Feldlinienbild beschreiben könnte. Man erhält es durch das Einbringen einer zweiten, gedachten Ladung $-Q$ bei $-a\vec{e}_x$, sodass die gesamte Anordnung für x$>0$ das gesuchte Feldlinienbild ergibt. Die imaginäre Punktladung bei $-a\vec{e}_x$ nennt man \textbf{Spiegelladung}. Die Begründung für dieses Phänomen ist, das das Einbringen einer Leiteroberfläche in ein gegebenes Potential $\varphi (\vec{r})$ entlang einer Äquipotentialfläche das Feld außerhalb des Leiters nicht ändert. Dort gilt weiterhin $-\epsilon_0 \bigtriangleup\varphi = \rho$ unverändert und die Randbedingungen sind effektiv identisch zu der Gleichung, welche das Feldlinienbild mithilfe der Spiegelladung beschreibt. Diese lautet hier:
+Wir wissen, dass die Feldlinien der Punktladung senkrecht auf die Leiteroberfläche aufkommen müssen. Daher können wir uns fragen, wie man eben jenes Feldlinienbild beschreiben könnte. Man erhält es durch das Einbringen einer zweiten, gedachten Ladung $-Q$ bei $-a\vec{e}_x$, sodass die gesamte Anordnung für x$>0$ das gesuchte Feldlinienbild ergibt. Die imaginäre Punktladung bei $-a\vec{e}_x$ nennt man \textbf{Spiegelladung}. Die Begründung für dieses Phänomen ist, das das Einbringen einer Leiteroberfläche in ein gegebenes Potential $\varphi (\vec{r})$ entlang einer Äquipotentialfläche das Feld außerhalb des Leiters nicht ändert. Dort gilt weiterhin $-\epsilon_0 \laplace\varphi = \rho$ unverändert und die Randbedingungen sind effektiv identisch zu der Gleichung, welche das Feldlinienbild mithilfe der Spiegelladung beschreibt. Diese lautet hier:
 
 \begin{equation*}
-- \epsilon_0\bigtriangleup\varphi = Q \left(\delta(\vec{r}-a\vec{e}_x) \ - \ \delta(\vec{r}+a\vec{e}_x)\right)
+- \laplace\varphi = Q \left(\delta(\vec{r}-a\vec{e}_x) \ - \ \delta(\vec{r}+a\vec{e}_x)\right)
 \end{equation*}
 
 welche für das Potential liefert:
@@ -77,7 +77,7 @@ Dementsprechend wählen wir den Ansatz $\varphi = -\vec{E}_0 \cdot\vec{r} \ G(r,
 ) =1$, welcher nach Einsetzen in die \textsc{Laplace}-Gleichung folgende homogene DGL für $G$ liefert:
 
 \begin{equation*}
-\bigtriangleup\varphi = -\vec{E}_0\cdot\vec{r} \ \left(\frac{4}{r} \ \diff{G}{r} \ + \ \ddiff{G}{r}\right) = 0
+\laplace\varphi = -\vec{E}_0\cdot\vec{r} \ \left(\frac{4}{r} \ \diff{G}{r} \ + \ \ddiff{G}{r}\right) = 0
 \end{equation*}
 \ \\
 Diese lösen wir mit dem Ansatz $ G \sim r^n$:

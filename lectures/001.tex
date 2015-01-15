@@ -90,7 +90,7 @@ $\nabla |\vec{r}|=\frac{\vec{r}}{|\vec{r}|}=\vec{e}_r\\
 \linebreak
 Die Divergenz div $\vec{E}=\nabla\cdot\vec{E}$ ist ein Skalar unter Koordinatentransformation und kann als \textbf{lokale Quellenstärke} interpretiert werden. Häufig benötigt man auch den \textsc{Laplace}-Operator, der die \textbf{zweite Ableitung} repräsentiert.\\
 \begin{equation*}
-\div\grad \varphi=\nabla^2\varphi=\bigtriangleup\varphi
+\div\grad \varphi \ = \ \nabla^2\varphi \ = \ \laplace\varphi
 \end{equation*}
 \underline{Beispiele:}\\
 \linebreak
@@ -137,7 +137,7 @@ Der Satz von \textsc{Gauss} verknüpft Eigenschaften im Inneren eines Volumens m
 \ \\
 \textbf{e. \textsc{Green}'scher Satz}\\
 \begin{equation*}
-\Int{V}{}{(\varphi\bigtriangleup\psi-\psi\bigtriangleup\varphi)}{V}=\Oint{\partial V}{}{(\varphi\nabla\psi-\psi\nabla\varphi)}{\vec{A}}
+\Int{V}{}{(\varphi\laplace\psi-\psi\laplace\varphi)}{V}=\Oint{\partial V}{}{(\varphi\nabla\psi-\psi\nabla\varphi)}{\vec{A}}
 \end{equation*}
 \linebreak
 \textbf{f. \textsc{Stokes}'scher Satz}\\

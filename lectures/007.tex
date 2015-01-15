@@ -24,15 +24,15 @@ Daraus folgt zunächst für die \textsc{Maxwell}-Gleichungen:
 \begin{align*}
 \Rightarrow & \rot\dot{\vec{B}} = \epsilon_0\mu_0\ddot{\vec{E}} = -\rot\rot\vec{E} = -\nabla\underbrace{(\nabla\cdot\vec{E})}_{\div\vec{E}=0} \ + \ \nabla^2 \vec{E}\\
 \ \\
-\overset{\epsilon_0\mu_0 = \frac{1}{c^2}}{\Rightarrow} &\qquad \left(\frac{1}{c^2} \ \pddiff{}{t} \ - \ \bigtriangleup\right)\vec{E} =: \Box\vec{E} = 0
+\overset{\epsilon_0\mu_0 = \frac{1}{c^2}}{\Rightarrow} &\qquad \left(\frac{1}{c^2} \ \pddiff{}{t} \ - \ \laplace\right)\vec{E} =: \Dalembert\vec{E} = 0
 \end{align*}
 
-Die erhaltene partielle Differentialgleichung ist die sogenannte \textbf{Wellengleichung}, welche sich auch analog für das $\vec{B}$-Feld herleiten lässt. Das Symbol $\Box$ wird auch als \textbf{Wellen-} oder \textbf{\textsc{D'Alembert}-Operator} bezeichnet.
+Die erhaltene partielle Differentialgleichung ist die sogenannte \textbf{Wellengleichung}, welche sich auch analog für das $\vec{B}$-Feld herleiten lässt. Das Symbol $\Dalembert$ wird auch als \textbf{Wellen-} oder \textbf{\textsc{D'Alembert}-Operator} bezeichnet.
 
 
 \section{Lösungen der Wellengleichung}
 
-$\Box U = 0$
+$\Dalembert U = 0$
 
 \begin{enumerate}[label=\textbf{\arabic* .}]
 \item \textbf{eindimensionale Lösung} ($\vec{r}\  \rightarrow \ x$)
@@ -60,7 +60,7 @@ Exponentialansatz:
 & U=U_0 e^{ik_x x}e^{ik_y y}e^{ik_z z}e^{-i\omega t} = U_0 e^{i(\vec{k}\vec{r}-\omega
 t)}\\
 \ \\
-\overset{\text{Einsetzen}}{\Rightarrow} &\quad\Box U = \left(\frac{1}{c^2} \ \pddiff{}{t} \ - \ \bigtriangleup\right)U = \left[\left(\frac{-i\omega}{c}\right)^2 \ - \ \left(i\vec{k}\right)^2\right]U = 0\\
+\overset{\text{Einsetzen}}{\Rightarrow} &\quad\Dalembert U = \left(\frac{1}{c^2} \ \pddiff{}{t} \ - \ \laplace\right)U = \left[\left(\frac{-i\omega}{c}\right)^2 \ - \ \left(i\vec{k}\right)^2\right]U = 0\\
 \Rightarrow \ \quad&\qquad \omega^2 \ = \ c^2 \vec{k}^2
 \end{align*}
 
@@ -88,7 +88,7 @@ Man hat somit wieder zwei freie Funktionen $\operatorname{Re}(U(\vec{k})), \oper
 
 \section{Polarisation}
 
-Betrachte die spezielle Lösung $\vec{E}_0 \cdot e^{i(\vec{k}\vec{r} - \omega t)}$ der Wellen gleichung $\Box \vec{E} = 0$. Bisher haben wir die Richtung von $\vec{E}_0$ beliebig angesehen. Dennoch gilt nach den \textsc{Maxwell}-Gleichungen:\
+Betrachte die spezielle Lösung $\vec{E}_0 \cdot e^{i(\vec{k}\vec{r} - \omega t)}$ der Wellengleichung $\Dalembert \vec{E} = 0$. Bisher haben wir die Richtung von $\vec{E}_0$ beliebig angesehen. Dennoch gilt nach den \textsc{Maxwell}-Gleichungen:\
 \\
 \ \\
 \underline{$\div\vec{E} = 0$:}

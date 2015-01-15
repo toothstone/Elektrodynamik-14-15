@@ -51,10 +51,10 @@ Damit erhalten wir aus der dritten \textsc{Maxwell}-Gleichung, dass rot $\vec{E}
 Mit div $\vec{E} = \frac{\rho}{\epsilon_0}$ erhält man daraus die \textbf{\textsc{Poisson}-Gleichung} der Elektrostatik:
 
 \begin{equation*}
-\bigtriangleup\varphi = - \frac{\rho}{\epsilon_0}
+\laplace\varphi = - \frac{\rho}{\epsilon_0}
 \end{equation*}
 
-Für $\bigtriangleup\varphi = 0$ nennt man die \textsc{Poisson}-Gleichung auch \textbf{\textsc{Laplace}-Gleichung}.
+Für $\laplace\varphi = 0$ nennt man die \textsc{Poisson}-Gleichung auch \textbf{\textsc{Laplace}-Gleichung}.
 
 \section{Kugelsymmetrische Ladungsverteilung}
 
@@ -102,8 +102,8 @@ Damit ergibt sich für das $\vec{E}$-Feld und das Potential:
 Die allgemeine Gleichung für die kontinuerliche Ladugnsverteilung ergibt sich aus der Lösung der \textsc{Poisson}-Gleichung mithilfe der bekannten \textsc{Green}'schen Funktion für eine Punktladung der Größe 1:\ $G(\vec{r}) = \frac{1}{4\pi\epsilon_0 \cdot |\vec{r}|}$\
 
 \begin{align*}
--\epsilon_0 \cdot \bigtriangleup\varphi &= \rho\\
-\Rightarrow -\epsilon_0 \cdot \bigtriangleup G(\vec{r}) &= \delta(\vec{r})\\
+-\epsilon_0 \cdot \laplace\varphi &= \rho\\
+\Rightarrow -\epsilon_0 \cdot \laplace G(\vec{r}) &= \delta(\vec{r})\\
 \end{align*}
 
 Dabei gilt: $G(\vec{r},\vec{r}') = G(\vec{r}-\vec{r}')$ aufgrund der Translationsinvarianz der \textsc{Green}-Funktion.
