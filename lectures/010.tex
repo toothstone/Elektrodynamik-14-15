@@ -11,7 +11,7 @@ Erinnerung: \textbf{Lorentzkraftdichte}
 Wir betrachten einen elektrischen Dipol am Ort $\vec{r}$, dessen Ladungen den Abstand $\vec{a}$ voneinander haben. Die Kraft auf ihn beträgt:
 
 \begin{equation*}
-\vec{F} \ = \ Q \cdot \vec{E}\left(\vec{r} \ + \ \frac{\vec{a}}{2}\right) \ - \ Q \cdot\vec{E} \left(\vec{r} \ - \ \frac{\vec{a}}{2}\right) \qquad =0 \text{ für $\vec{E}$ homogen}
+\vec{F} \ = \ Q \cdot \vec{E}\left(\vec{r} \ + \ \frac{\vec{a}}{2}\right) \ - \ Q \cdot\vec{E} \left(\vec{r} \ - \ \frac{\vec{a}}{2}\right) \qquad (=0 \text{ für $\vec{E}$ homogen})
 \end{equation*}
 
 Wir entwickeln diesen Ausdruck für das Dipollimit $|\vec{a}| \rightarrow 0$:
@@ -30,8 +30,56 @@ Den Ausdruck für das Drehmoment auf einen Dipol im elektrischen Feld erhalten w
 
 \section{Magnetischer Dipol}
 
-Wir betrachten einen Kreisstrom $I$ am Ort $\vec{r}$, welcher die Fläche $\vec{A}_F$ umschließt und somit ein Dipolmoment von $\vec{m} = I \cdot \vec{A}_F$ erzeugt. Die Kraft auf diesen magnetischen Dipol beträgt:
+Wir betrachten einen Kreisstrom $I$, dessen Mittelpunkt sich am Ort $\vec{r}$ befindet und welcher die Fläche $\vec{A}_F$ umschließt und somit ein Dipolmoment von $\vec{m} = I \cdot \vec{A}_F$ erzeugt. Die Kraft auf diesen magnetischen Dipol beträgt: ($\vec{r}'$ ist dabei ein Ort auf dem Rand des Kreisstroms)
 
 \begin{align*}
-blub
+\vec{F} \ &= \ \Int{}{}{V'} \ \vec{j}(\vec{r}') \times \vec{B}  \ = \ I \ \Oint{}{}{\vec{r}'} \times\vec{B} \qquad (= 0 \text{ für homogenes Feld})\\
+\vec{F} \ &= \ I \ \Oint{}{}{\vec{r}'} \times \vec{B}(\vec{r'} - \ \vec{r}'') \qquad\qquad \text{mit }\  \vec{r}''  = \ \vec{r}' - \ \vec{r} 
 \end{align*}
+
+Wir entwickeln für $|\vec{r}''| \ll |\vec{r}|$: 
+
+\begin{align*}
+\vec{F} \ &= \ I \ \Oint{}{}{\vec{r}'} \times \left[ \underbrace{\vec{B}(\vec{r})}_{=0} \ + \ \left(\vec{r}'' \cdot\pdiff{}{\vec{r}}\right)\vec{B}(\vec{r}\right]\\
+&= \ I \ \underbrace{\Oint{}{}{\vec{r}'}\times\left(\vec{r}'' \cdot \pdiff{}{\vec{r}}\right)}_{(*)}\vec{B}(\vec{r}) 
+\end{align*}
+
+Lösung des Integrals $(*)$:
+
+\begin{align*}
+\Oint{}{}{\vec{r}'} (\vec{r}''\cdot \ \vec{a}) & \quad = \quad \ \oint{}{}{\vec{r}'} \cdot (\vec{r'}- \ \underbrace{\vec{r}}_{=0}) \vec{a}\\
+& \overset{\text{Kap. 5.3}}{=} \ \frac{1}{2}\oint(\vec{r}'\times\d\vec{r}')\times\vec{a} \ + \ \frac{1}{2}\Oint{}{}{\vec{r}'}(\vec{r}'\cdot\vec{a})\\
+& \quad = \quad \ \vec{A}_F \times\vec{a}
+\end{align*}
+
+$\Rightarrow\quad$ Einsetzen:
+
+\begin{align*}
+\vec{F}  \ &= \ \underbrace{I \ (\vec{A}_F}_{\vec{m}} \times \nabla)\times \vec{B} \ \overset{\text{bac-cab}}{=} \ \nabla(\vec{m}\cdot\overset{\downarrow}{\vec{B}}) \ - \ \vec{m}(\underbrace{\nabla\cdot\overset{\downarrow}{\vec{B}}}_{=0})\\
+\vec{F}  \ &= \ \nabla(\vec{m}\cdot\vec{B}) \ \overset{\text{bac-cab}}{=} \ \vec{m} \times (\underbrace{\nabla\times\vec{B}}_{(**)}) \ + \ (\vec{m}\cdot\nabla)\vec{B}
+\end{align*}
+
+$(**)=0$, da $\dot{\vec{E}}=0$ und $\mu_0\vec{j}\rightarrow 0$ außerhalb der Quellen.\\
+Somit :
+
+\begin{equation*}
+\vec{F}  \ = \  (\vec{m}\cdot\nabla) \vec{B} \qquad\qquad (\text{vgl. el. Dipol: } \vec{F}  \ = \ (\vec{p}\cdot\nabla)\vec{E})
+\end{equation*}
+
+Für das Drehmoment auf den magnetischen Dipol gilt:
+
+\begin{align*}
+\vec{M}  \ &= \ \Int{}{}{V'} \vec{r}\times\left[\vec{j}(\vec{r}') \times \vec{B}(\vec{r}')\right] \ = \  I  \ \Oint{}{}{\vec{r}''} \times \left[\d\vec{r}' \times\vec{B}(\vec{r}')\right]\\
+ &= \ I \ \Oint{}{}{\vec{r}'}(\vec{r}''\cdot\vec{B}(\vec{r}')) \ - \ I \ \oint(\d\vec{r}'\cdot\vec{r}'')\vec{B}(\vec{r}')
+\end{align*}
+
+Näherung: $\vec{B}$ ist homogen. Auflösung der Integrale:
+
+\begin{align*}
+&\Oint{}{}{\vec{r}'} \cdot \vec{r}'' \ = \ \Oint{}{}{\vec{r}'}\cdot\vec{r}'  \ = \ \oint\frac{1}{2}\d(\vec{r}'^2)  \ = \ 0\\
+&\Oint{}{}{\vec{r}'} (\vec{r}''\cdot\ \vec{B})  \ = \ \vec{A}_F \times\vec{B} \qquad \text{wie in } (*)
+\end{align*}
+
+\begin{equation*}
+\Rightarrow \quad \vec{M}  \ = \ I\cdot \vec{A}_F \times \vec{B} \ = \ \vec{m}\times\vec{B} \qquad\qquad (\text{vgl. el. Dipol: } \vec{M}  \ = \ \vec{p}\times\vec{E})
+\end{equation*}
