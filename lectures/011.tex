@@ -147,3 +147,93 @@ Die Überprüfung der gefundenen Lösung erfolgt leicht durch Einsetzen in $ \ \
 \ \\
 Bemerkung:\\
 Auch die avancierte \textsc{Green}-Funktion $G^-$ erfüllt die inhomogenen Wellengleichungen $\ \Dalembert\varphi=\frac{\rho}{\epsilon_0}$ und $\ \Dalembert\vec{A} = \mu_0\vec{j}$. Dies liegt mathematisch daran, dass die Wellengleichungen $c$ quadratisch enthalten, das Potential aber nur linear. Da diese Lösung aber akausal ist und nur $G^+$ die Kausalität erhält, zeichnet ebenjene Wahl von $G^+$ die Richtung der Zeit aus.
+
+
+\section{\textsc{Hertz}'scher Dipol}
+
+Wir betrachten nun als konkretes Beispiel für eine zeitabhängige Quellenverteilung einen oszillierenden Dipol: zwei Ladungen $\pm Q$ befinden sich entlang einer Achse in variablen Abstand $\vec{a}(t)$ voneinander entfernt. Somit gilt für die Stromdichte $\vec{j} := \vec{J}\cdot\delta(\vec{r})$, dass $\vec{j}=\dot{\vec{a}}\cdot Q \cdot\delta(\vec{r}-\vec{r}_a)$ ist. Im Dipollimit $\vec{a}\rightarrow 0$ folgt somit $\vec{j}=\dot{\vec{p}}\cdot\delta(\vec{r})$.\\
+Allgemein gilt somit: $\vec{J}(t) = \Int{}{}{V} \vec{j}(\vec{r},t) = \dot{\vec{p}}$, oder genauer:
+
+\begin{align*}
+\dot{\vec{p}} \ = \ &\Int{}{}{V}\vec{r}\dot{\rho} \ = \ -\Int{}{}{V}\vec{r}\div\vec{j} \ = \ \Int{}{}{V}\left(\vec{j}\cdot\nabla\right)\cdot\vec{r} \ + \ \underbrace{\text{Oberflächenintegral}}_{\rightarrow 0} \\
+\overset{\nabla\circ\vec{r}=\mathbbm{1}}{=} \ &\Int{}{}{V}\vec{j}  \ = \ \vec{J}
+\end{align*}
+
+Nun wollen wir die  (abgestrahlten) Felder des oszillierenden Dipols berechnen, wozu wir zunächst die retardierten Potentiale aufstellen:
+
+\begin{equation*}
+\vec{A}(\vec{r},t) \ = \ \frac{\mu_0}{4\pi}\ \Int{}{}{V'} \ \frac{\delta(\vec{r})\vec{J}\left(t \ - \ \frac{|\vec{r}-\vec{r}'|}{c}\right)}{|\vec{r}-\vec{r}'|} \ = \ \frac{\mu_0}{4\pi}\ \frac{\dot{\vec{p}}\left(t\ - \ \frac{r}{c}\right)}{r}
+\end{equation*}
+
+$\varphi$ erhalten wir aus der Ladungsverteilung zu $\vec{j}$ und aus der \textsc{Lorentz}-Eichung:
+
+\begin{equation*}
+\varphi(\vec{r},t)  \ = \ -\frac{1}{4\pi\epsilon_0} \ \frac{\vec{r}}{r} \ \pdiff{}{r} \ \frac{\vec{p}\left(t\ - \ \frac{r}{c}\right)}{r} \ + \ \text{zeitunabhängiges Potential}
+\end{equation*}
+
+Jetzt können die Felder $\vec{B}=\rot\vec{A}$ und $\vec{E}=-\grad\varphi-\dot{\vec{A}}$ berechnet werden.\\
+$\left(\text{Notationshinweis: }\vec{p}|_{\text{ret}} \text{ steht für }\vec{p}\left(t-\frac{r}{c}\right)\right):$\\
+
+\begin{align*}
+\vec{B} \ &= \ \frac{\vec{r}}{r}\times\pdiff{\vec{A}}{r} \ = \ - \frac{\mu_0}{4\pi} \ \frac{\vec{r}}{r}\times \left(\frac{\ddot{\vec{p}}}{c}\ + \ \frac{\dot{\vec{p}}}{r}\right)_{\text{ret}}\\
+\ \\
+\vec{E} \ &= \ - \grad\varphi - \dot{\vec{A}} \ = \ -\grad\left(\frac{1}{4\pi\epsilon_0} \ \frac{\vec{r}}{r} \left[\frac{\vec{p}}{r^2} \ + \ \frac{\dot{\vec{p}}}{cr}\right]_{\text{ret}}\right) \ - \ \dot{\vec{A}}\\
+\ \\
+&= \ -\frac{1}{4\pi\epsilon_0 \cdot r} \left(\frac{\dot{\vec{p}}}{c^2} \ - \ \frac{\left(\ddot{\vec{p}}\cdot\vec{r}\right)\vec{r}}{c^2 \ r^2} \ + \ \frac{\dot{\vec{p}}}{c \ r} \ - \ 3 \frac{\left(\dot{\vec{p}}\cdot\vec{r}\right)\vec{r}}{c \ r^3} \ + \ \frac{\vec{p}}{r^2} \ - \ 3 \frac{\left(\vec{p}\cdot\vec{r}\right)\vec{r}}{r^4}\right)_{\text{ret}}
+\end{align*}
+
+\ \\
+\ \\
+\underline{Spezialfälle:}
+\begin{enumerate}[label=\roman*)]
+\item $\partial_t  \ = \ 0 \quad\ \; \qquad$ statischer Dipol
+
+\begin{align*}
+\Rightarrow \qquad \vec{B}  \ &= \ 0\\
+\vec{E} \ &= \ - \frac{1}{4\pi\epsilon_0 \ r^3}\left(\vec{p} \ - \ \frac{3(\vec{p}\cdot\vec{r})\cdot\vec{r}}{r^2}\right)
+\end{align*}
+
+\item $\vec{p} \ \sim \ e^{-i\omega t} \qquad$ harmonische Schwingung
+
+\begin{align*}
+\Rightarrow \qquad \partial_t \ &\rightarrow \ -i\omega\\
+\frac{1}{c}\partial_t \ &\rightarrow \ - \frac{i\omega}{c}  \ = \ -i \frac{2\pi}{\lambda}  \ = \ -ik
+\end{align*}
+
+Für den Fall der harmonischen Schwingung von $\vec{p}$ wollen wir nun die Abstandsbhängigkeit der Feldbeiträge betrachten. Dazu \grqq sortieren\grqq   wir die Beiträge nach ihren Ordnungen $\sigma(.)$:
+
+\begin{align*}
+\vec{B} \ &\sim \ - \frac{\mu_0 \vec{r}}{4\pi \ r^2} \times \Bigg(\underbrace{\sigma\left(\frac{\dot{\vec{p}}}{\lambda}\right)}_{\text{Fernfeld}} \; + \; \underbrace{\sigma\left(\frac{\dot{\vec{p}}}{r}\right)}_{\text{Nahfeld}}\Bigg)\\
+\vec{E} \ &\sim \ - \frac{1}{4\pi\epsilon_0} \cdot \left(\sigma\left(\frac{p}{\lambda^2}\right) \; + \; \sigma\left(\frac{r}{r \cdot \lambda}\right) \; + \; \sigma\left(\frac{p}{r^2}\right)\right)
+\end{align*}
+
+\ \\
+\textbf{Nahfeld:} $\quad r \ll \lambda$
+
+\begin{align*}
+\vec{B}(\vec{r},t)  \ &= \ \frac{\mu_0}{4\pi\ r^2} \ \left(\dot{\vec{p}} \times \frac{\vec{r}}{r}\right)_{\text{ret}}\\
+\vec{E}(\vec{r},t)  \ &= \ \frac{1}{4\pi\epsilon_0 \ r^2} \ \left(\frac{3(\vec{p}\cdot\vec{r})\vec{r}}{r^2} \ - \ \vec{p}\right)_{\text{ret}} 
+\end{align*}
+
+Für das Nahfeld verzichtet man häufig auf die Retardierung, da sie kaum ins Gewicht fällt:
+
+\begin{equation*}
+\vec{p} \ \sim \ e^{-i\omega\left(t-\frac{r}{c}\right)}  \ = \ e^{-i\omega t} \ \underbrace{\; e^{2\pi i \frac{r}{\lambda}}\;}_{1+2\pi i \frac{r}{\lambda}+\ldots \approx 1}
+\end{equation*}
+
+\ \\
+\textbf{Fernfeld:} $\quad r \gg \lambda \qquad\left(\frac{\vec{r}}{r} \ = \ \vec{e}_r\right)$
+
+\begin{align*}	
+\vec{B}(\vec{r},t)  \ &= \ \frac{\mu_0}{4\pi \ r \ c} \left(\dot{\vec{p}}\times\vec{e}_r\right)_{\text{ret}}\\
+\vec{E}(\vec{r},t)  \ &= \ \frac{\mu_0}{4\pi \ r} \left(\left(\ddot{\vec{p}}\cdot\vec{e}_r\right)\cdot\vec{e}_r \ - \ \ddot{\vec{p}}\right)_{\text{ret}}  \ = \ \frac{\mu_0}{4\pi \ r}\left(\ddot{\vec{p}}\times\vec{e}_r\right)_{\text{ret}}\times\vec{e}_r  \ = \ c\cdot\vec{B}\times\vec{e}_r
+\end{align*}
+
+Bei harmonisch schwingendem $\vec{p}$ breiten sich $\vec{E}$ und $\vec{B}$ also radial als transversale Welle aus:
+
+\begin{equation*}
+e^{-i\omega\left(t-\frac{r}{c}\right)}  \ = \ e^{i(kr-\omega t)} \qquad \text{mit } k  \ = \  \frac{\omega}{c}
+\end{equation*}
+
+Dabei fallen $|\vec{E}|$ und $|\vec{B}|$ nur mit $\frac{1}{r}$ ab!
+\end{enumerate}
