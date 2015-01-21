@@ -1,0 +1,149 @@
+\chapter{Felder zeitabhängiger Ladungs- und Stromverteilungen}
+
+Nun suchen nach allgemeinen Lösungen der \textsc{Maxwell}-Gleichungen:
+
+\begin{align*}
+\div \vec{B}  \ &= \ 0 \qquad ; \qquad \epsilon_0 \div\vec{E}  \ = \ \rho\\
+\rot\vec{E} \ + \ \dot{\vec{B}} \ &= \ 0 \qquad ; \qquad \frac{1}{\mu_0}\rot\vec{B}\ - \ \epsilon_0\dot{\vec{E}}  \ = \ \vec{j}
+\end{align*}
+
+\section{Viererpotential}
+
+Die Gleichung $\div \vec{B} = 0 $ wird erfüllt durch $\vec{B}=\rot\vec{A}$.\\
+Die Gleichung $\rot\vec{E} \ + \ \dot{\vec{B}} = 0 \; \Rightarrow \; \rot (\vec{E} + \dot{\vec{A}}) =0$ wird erfüllt durch $\vec{E} + \dot{\vec{A}}= - \grad\varphi$\\
+\ \\
+Somit können alle Felder durch das \textbf{Viererpotential} $(\varphi,\vec{A})$ ausgedrückt werden, sodass im Endeffekt immer 4 skalare Felder bestimmt werden müssen:
+
+\begin{align*}
+\vec{B} \ &= \ \rot \vec{A}\\
+\vec{E} \ &= \ - \grad \varphi - \dot{\vec{A}}
+\end{align*}
+
+Das Einsetzen in die \textsc{Maxwell}-Gleichungen und Ausnutzung des \textsc{d'Alembert}-Operators  $\Dalembert  =  \frac{1}{c^2}\pddiff{}{t} - \laplace$ liefert:
+
+\begin{align*}
+\div\vec{E}  \ &= \  \frac{\rho}{\epsilon_0} \qquad  & \rot \vec{B} \ - \ \epsilon_0\mu_0\vec{E}  \ = \ \mu_0\vec{j}\\
+-\laplace\varphi \ - \ \div\dot{\vec{A}}  \ &= \ \frac{\rho}{\epsilon_0}	\qquad	& \rot\rot\vec{A} \ + \ \frac{1}{c^2}\grad\dot{\varphi} \ + \ \frac{1}{c^2} \ddot{\vec{A}}  \ = \ \mu_0\vec{j}\\
+&& \nabla(\nabla\vec{A}) \ - \ \laplace\vec{A} \ + \ \frac{1}{c^2}\ddot{\vec{A}} \ + \ \frac{1}{c^2}\partial_t \ \nabla\varphi  \ = \ \mu_0\vec{j}\\
+\ \\
+\Dalembert\varphi  \ - \ \partial_t\left(\frac{1}{c^2}\partial_t\ \varphi \ + \ \nabla\vec{A}\right)  \ &= \ \frac{\rho}{\epsilon_0}  \qquad &
+\Dalembert\vec{A} \ + \ \nabla\left(\frac{1}{c^2} \partial_t \ \varphi \ + \ \nabla\vec{A}\right) \ = \ \mu_0\vec{j}
+\end{align*}
+
+\ \\
+
+Die Potentiale sind damit aber nicht eindeutig, sondern nur bis auf eine beliebige Eichung der Form $\vec{A}\rightarrow\vec{A}+\grad\chi$ und $\varphi \rightarrow\varphi-\partial_t\chi$ genau bestimmt. Eine \textbf{gleichwertige Umeichung} von $\vec{A}$ und $\varphi$ lässt die Felder unter solche einer Transformation invariant. Die Eichtransformation enthält genau eine skalare Funktion $\chi$, anders gesprochen eine skalare Bedingung. Für uns günstig ist die sogenannte \textbf{\textsc{Lorentz}-Eichung}, da sie die Felder invariant unter \textsc{Lorentz}-Transformation lässt und sie somit geeignet bleiben für relativistische Probleme. Die \textsc{Lorentz}-Transformation hat folgende Gestalt:
+
+\begin{equation*}
+\frac{1}{c^2} \ \pdiff{\varphi}{t} \ + \ \div \vec{A}  \ = \ 0
+\end{equation*} 
+
+Mit der \textsc{Lorentz-Eichung} erhält man als Gleichungen für die Potentiale:
+
+\begin{equation*}
+\Dalembert\varphi  \ = \ \frac{\rho}{\epsilon_0}	\qquad ; \qquad		\Dalembert\vec{A}  \ = \ \mu_0\vec{j} 
+\end{equation*}
+
+Hieran lässt sich auch einfach überprüfen, dass man die Gleichungen für die statischen Probleme leicht aus denen mit Zeitabhängigkeit erhalten kann mittels $\partial_t \rightarrow 0; \ \Dalembert \rightarrow \laplace$:
+
+\begin{equation*}
+\laplace\varphi  \ = \ \frac{\rho}{\epsilon_0}\text{ (s. Kap.4)}; \qquad	\laplace\vec{A} \ = \ -\mu_0\vec{j} \text{ (s. Kap.5)} 	
+\end{equation*}
+
+\ \\
+\ \\
+
+\underline{Wichtige Eichungen:}
+
+\begin{enumerate}[label=\roman*)]
+
+\item \textbf{\textsc{Lorentz}-Eichung}
+
+\begin{equation*}
+\frac{1}{c^2} \partial_t \ \varphi \ + \ \div\vec{A} \ = \ 0
+\end{equation*}
+
+Die \textsc{Lorentz}-Eichung fixiert die Potentiale nicht; eine Umeichung der Form $\Dalembert\chi=0$ ist immer noch möglich.
+
+\item \textbf{\textsc{Coulomb}-Eichung}
+
+\begin{align*}
+\div\vec{A} \ = \ 0 \qquad\qquad \Rightarrow \qquad\qquad -\laplace\varphi \ &= \ \frac{\rho}{\epsilon_0}\\
+\Dalembert\vec{A} \ &= \ \mu_0\vec{j} \  - \ \frac{1}{c^2}\ \frac{\partial^2 \ \varphi}{\partial t \partial \vec{r}} 
+\end{align*}
+
+Die \textsc{Coulomb}-Eichung ist hier dieselbe wie in der Elektrostatik plus entsprechende Korrekturen.
+
+\item \textbf{Transversale Wellen}
+
+\begin{align*}
+\varphi \ = \ 0 \qquad\qquad\Rightarrow\qquad\qquad \frac{1}{c^2}\ddot{\vec{A}}\ + \ \rot\rot\vec{A} \ &= \ \mu_0\vec{j}\\
+- \frac{\partial^2 \ \vec{A}}{\partial t \partial \vec{r}}  \ &= \ \frac{\rho}{\epsilon_0} 
+\end{align*}
+\end{enumerate}
+
+\section{Retardierte Potentiale}
+
+Wir haben nun eine inhomogene, lineare Differentialgleichung der Form $\Dalembert u \ = \ \xi$ vorliegen, zu deren Lösung wir die \textsc{Green}'sche Funktion $G(\vec{r},\vec{r}',t,t')$ heranziehen, welche die DGL $\;\Dalembert G = 4\pi \delta(\vec{r}-\vec{r}')\delta(t-t')$ löst.\\
+Da $G$ translationsinvariant sein soll, kann es nur von $\vec{r}-\vec{r}'$ und $t-t'$ abhängen. Weiterhin erhalten wir aus der Rotationssymmetrie des Problems, dass $G$ nur von $|\vec{R}|$ abhängen kann.\\
+Zur weiteren Lösung der DGL $\; \Dalembert G = 4\pi\delta(\vec{r}-\vec{r}')\delta(t-t')$ bilden wir nun ihre \textsc{Fourier}-Transformierte (s.Kap.2):
+
+\begin{align*}
+\left(\pddiff{}{\vec{R}} \ - \ \frac{1}{c^2}(i\omega)^2\right)G\left(\vec{R},\omega\right)  \ &= \ 4\pi\delta(\vec{R})\;\Bigg | \; \frac{\omega}{c} \ = \ k; \text{ benutze Kugelkoord.}\\
+\ddiff{}{R}G_k(R) \ + \ k^2 G_k(R) \ &= \ 4\pi\delta(R) \ \Bigg |\cdot R \neq 0\\
+\ddiff{}{R}(R \ G_k) \ + \ k^2 \cdot (R \ G_k) \ &= \ 0 \quad\qquad\text{homogene DGL}\\
+\ \\
+\text{Lsg.: } R \ G_k(R) \ &= \ A\cdot e^{ikR} \ + \ A\cdot e^{-ikR}
+\end{align*}
+
+Die Inhomogenität $\delta(\vec{R})$ ist daher sehr wichtig nahe $\vec{R}=0$. Dort ist $k \cdot R \ll 1$, wodurch $k^2 \cdot R \ G_k$ vernachlässigbar wird gegenüber $\ddiff{}{R}(R\cdot G_k)$. Dann reduziert sich die DGL auf:
+
+\begin{equation*}
+\laplace_R G_k(R)  \ = \ - 4 \pi \delta(\vec{R})
+\end{equation*}
+
+Im Grenzwert $\lim\limits_{kR \rightarrow 0}{G_k(R)}  \ = \ \frac{1}{R}$ ist die allgemeine Lösung für $G$ also:
+
+\begin{equation*}
+G_k  \ = \ A \cdot G_k^+(R) \ + \ B\cdot G_k^- (R), \quad G_k^{\pm}  \ = \ \frac{e^{\pm i k R}}{R},\quad A+B=1
+\end{equation*}
+
+Nun können wir $G_k^{\pm}(R)$ rücktransformieren zu $G^{\pm}(\vec{R},\tau)$:
+
+\begin{equation*}
+G^{\pm}(\vec{R},\tau)  \ = \  \frac{1}{2\pi} \Int{-\infty}{\infty}{\omega} \frac{e^{-\pm i\omega\tau}}{R}\cdot e^{-i\omega\tau}  \ = \ \frac{1}{R}\delta\left(\tau\mp \frac{R}{c}\right) \qquad \left(\text{mit }k=\frac{\omega}{c}\right)
+\end{equation*}
+
+Bezogen auf unser Anfangsproblem entspräche diese Lösung:
+
+\begin{equation*}
+G^{\pm}(\vec{r},t,\vec{r}',t')  \ = \ \frac{\delta\left(t' \ - \ \left(t \mp \frac{|\vec{r}-\vec{r}'|}{c}\right)\right)}{|\vec{r}-\vec{r}'|}
+\end{equation*}
+
+Der Unterschied zwischen $G^+$ und $G^-$ liegt in den Randbedingungen in der Zeit. Anschaulich beschreibt $G$ die Reaktion des Systems bei $(\vec{r},t)$ aufgrund einer Störung (Inhomogenität) bei $(\vec{r}',t')$. Um die Kausalität nicht zu verletzen, muss demzufolge $G(t<t')=0$ gelten. Dies ist erfüllt für die \textbf{retardierte \textsc{Green}'sche Funktion} $G^+$, da hier die Wirkung \underline{nach} der Ursache auftritt und sich mit Lichtgeschwindigkeit ausbreitet (Verzögerung $\tau = \frac{R}{c}$). $G^-$ nennt man auch die \textbf{avancierte \textsc{Green}'sche Funktion}, aber aus naheliegenden Gründen wird sie hier nicht weiter behandelt.\\
+Die (kausale) Lösung unserer inhomogenen DGL vom Anfang $\Dalembert u = \xi$ lautet damit:
+
+\begin{equation*}
+u(\vec{r},t) \ = \ \underbrace{u_0(\vec{r},t)}_{\text{homogene Lsg.}} \ + \ \frac{1}{4\pi}\int\d V' \d t' G^+(\vec{r},t,\vec{r}',t')\xi (\vec{r}',t')
+\end{equation*}
+
+\ \\
+\ \\
+
+Diese Lösung können wir nun auf unsere DGLn zur Bestimmung des Viererpotentials $\Dalembert\varphi = \frac{\rho}{\epsilon_0}$ und $\Dalembert\vec{A}= \mu_0\vec{j}$ anwenden:\\
+Für eine räumlich begrenzte Quellenverteilung und der Randbedingung, dass die Felder im Unendlichen gegen Null gehen, erhalten wir, wenn wir als homogene Lösungen $\varphi_0=0$ und $\vec{A}_0=0$ setzen, folgende allgemeine Lösung der \textsc{Maxwell}-Gleichungen:
+
+\begin{align*}
+\varphi(\vec{r},t)  \ &= \ \frac{1}{4\pi\epsilon_0} \ \Int{}{}{V'} \ \frac{\rho\left(\vec{r'}, t \ - \ \frac{|\vec{r}-\vec{r}'|}{c}\right)}{|\vec{r}-\vec{r}'|}\\
+\ \\
+\vec{A}(\vec{r},t)  \ &= \ \ \frac{\mu_0}{4\pi} \ \ \Int{}{}{V'} \ \frac{\vec{j}\left(\vec{r}',t \ - \ \frac{|\vec{r}-\vec{r}'|}{c}\right)}{|\vec{r}-\vec{r}'|} 
+\end{align*}
+
+Die obigen Gleichungen beschreiben \textbf{retardierte Potentiale}, welche folgendermaßen interpretiert werden können:\\
+$\rho$ und $\vec{j}$ sind die Ursachen für die Wirkungen $\varphi$ und $\vec{A}$, welche allerdings eine Laufzeitverzögerung von $\frac{|\vec{r}-\vec{r}'|}{c}$ aufweisen.\\
+\ \\
+
+Die Überprüfung der gefundenen Lösung erfolgt leicht durch Einsetzen in $ \ \Dalembert\varphi=\frac{\rho}{\epsilon_0}$ und $\ \Dalembert\vec{A} = \mu_0\vec{j}$. Setzt man sie außerdem in die \textsc{Lorentz}-Eichung $\frac{1}{c^2}\partial_t \ \varphi + \div\vec{A} =0$ ein, so führt dieses auf die Kontinuitätsgleichung $\dot{\rho} + \div\vec{j}=0$.\\
+\ \\
+Bemerkung:\\
+Auch die avancierte \textsc{Green}-Funktion $G^-$ erfüllt die inhomogenen Wellengleichungen $\ \Dalembert\varphi=\frac{\rho}{\epsilon_0}$ und $\ \Dalembert\vec{A} = \mu_0\vec{j}$. Dies liegt mathematisch daran, dass die Wellengleichungen $c$ quadratisch enthalten, das Potential aber nur linear. Da diese Lösung aber akausal ist und nur $G^+$ die Kausalität erhält, zeichnet ebenjene Wahl von $G^+$ die Richtung der Zeit aus.
