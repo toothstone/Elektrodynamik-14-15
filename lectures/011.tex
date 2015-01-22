@@ -237,3 +237,52 @@ e^{-i\omega\left(t-\frac{r}{c}\right)}  \ = \ e^{i(kr-\omega t)} \qquad \text{mi
 
 Dabei fallen $|\vec{E}|$ und $|\vec{B}|$ nur mit $\frac{1}{r}$ ab!
 \end{enumerate}
+
+
+\section{Energieabstrahlung des \textsc{Hertz}'schen Dipols}
+
+\textbf{Energiedichte:}
+
+\begin{equation*}
+w  \ = \ \frac{\epsilon_0}{2} \vec{E}^2  \ +  \ \frac{1}{2\mu_0} \vec{B}^2  \ = \ \frac{\vec{B^2}}{\mu_0}
+\end{equation*}
+
+\ \\
+\textbf{Energiestromdichte:}
+
+\begin{align*}
+\vec{S}_P  \ &= \ \frac{1}{\mu_0} (\vec{E}\times\vec{B})  \ = \ \frac{c}{\mu_0} (\vec{B}\times\vec{e}_r\times\vec{B})  \ = \  \frac{c}{\mu_0}\Big(\vec{e}_r\vec{B}^2 \ - \ \vec{B}(\underbrace{\vec{n}\cdot\vec{B}}_{=0})\Big)  \ = \ c\cdot\vec{e}_r\cdot w\\
+|\vec{S}_P|  \ &= \ \frac{\mu_0}{(4\pi)^2c}\cdot \frac{\left(\ddot{\vec{p}}\times\vec{e}_r\right)^2}{r^2} \ = \ \frac{\mu_0}{(4\pi)^2c}\cdot\frac{\ddot{\vec{p}}^2\sin^2\theta}{r^2} \qquad \left(\text{mit } \theta = \sphericalangle(\ddot{\vec{p}},\vec{S}_P)\right)
+\end{align*}
+
+Man sieht hieran leicht, dass senkrecht zur Dipolachse am stärksten ausgestrahlt wird (da auch $\ddot{\vec{p}}\perp \vec{a}$).
+
+\ \\
+\textbf{Frequenzabhängigkeit der abgestrahlten Leistung:}
+
+\begin{equation*}
+|\vec{S}_P|  \ \sim \ |\ddot{\vec{p}}|^2 \ \sim p^2 \ \omega^4
+\end{equation*}
+
+Diese Frequenzabhängigkeit ist charakteristisch für Dipolstrahlung.
+
+\ \\
+\textbf{Abgestrahlte Leistung:}
+
+\begin{align*}
+N  \ &= \ \Iint{}{}{\vec{A}_F} \cdot \vec{S}_P  \ = \ \Int{}{}{\Omega}r^2 \ \frac{\mu_0}{(4\pi)^2c}\cdot\frac{\ddot{\vec{p}}^2\sin^2\theta}{r^2}  \ = \ \frac{\mu_0\ddot{\vec{p}}^2}{(4\pi)^2c} \ \Int{}{}{\Omega}\sin^2\theta\\
+&= \ \frac{\mu_0\ddot{\vec{p}}^2}{(4\pi)^2c} \Int{0}{2\pi}{\phi}\Int{-1}{1}{\cos\theta} \ (1 \ - \ \cos^2\theta) \ = \ \frac{\mu_0\ddot{\vec{p}}^2}{(4\pi)^2c} \cdot 2\pi \cdot \left(2-\frac{2}{3}\right) \ = \ \frac{2}{3} \ \frac{\mu_0}{4\pi c} \ddot{\vec{p}}^2_{\text{ret}}
+\end{align*}
+
+Wenn wir einen harmonisch oszillierenden Dipol betrachten, so gilt für $\ddot{\vec{p}}$:
+
+\begin{align*}
+\vec{p}  \ &= \ \vec{p}_0 \cos\omega t \qquad \Rightarrow \qquad \ddot{\vec{p}}  \ = \ \omega^4\vec{p}_0^2\cos^2\omega t\\
+\Rightarrow \langle\ddot{\vec{p}}\rangle_T  \ &= \  \omega^4\vec{p}_0^2 \langle\cos^2\omega t\rangle_T  \ = \ \frac{1}{2} \omega^4 \vec{p}_0^2
+\end{align*}
+
+Damit gilt also für die (über eine Periode gemittelte) abgestrahlte Leistung:
+
+\begin{equation*}
+\langle N \rangle_T  \ = \  \frac{\mu_0 \ \omega^4\ \vec{p}_0^2}{12\pi \ c}
+\end{equation*}
