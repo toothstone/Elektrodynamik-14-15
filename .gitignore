@@ -3,4 +3,5 @@
 *.log
 *.gz
 *.toc
+*.ahk
 build/
