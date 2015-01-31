@@ -39,6 +39,21 @@ Die Kontrolle, ob div $\vec{A} =0$ ist, ergibt:
 
 \section{Leiterschleifen}
 
+\begin{wrapfigure}[]{l}[0cm]{0cm}
+	\raisebox{0pt}[\dimexpr\height-1\baselineskip\relax]{
+		\colorbox{hgrey}{
+			\begin{tikzpicture}
+			
+				\draw[ultra thick] plot[smooth, tension=.8] coordinates {(1.7,-0.1) (1.9,1.5) (2.4,3) };	
+				\draw[->] (0,0) -- node[above left]{$\vec{r}'$} (2,2);
+				\draw[->] (0,0) -- node[below right]{$\ \vec{r}$} (4,1) ;
+			
+			
+			\end{tikzpicture}
+		}
+	}
+	\caption{Ausschnitt einer Leiterschleife}
+\end{wrapfigure}
 Wir betrachten einen Leiter der Dicke $d$ an der Position $\vec{r}'$. Für "dünne" Leiter, d.h. $d \ll |\vec{r}-\vec{r}'|$, kann man d$V' \vec{j}(\vec{r})$ vereinfachen zu: d$\vec{r}' \cdot I$, wobei das Längenelement d$\vec{r}'$ entlang des Leiters verlaufen soll.\
 Für mehrere Leiter $\mathcal{L}_n$ folgt demnach für das Vektorpotential:
 

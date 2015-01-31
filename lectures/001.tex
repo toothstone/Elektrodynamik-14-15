@@ -24,42 +24,132 @@ Sie ist im Einklang mit der der speziellen Relativitätstheorie (c ist implizit 
 Zum Beispiel: Wann sind Atome stabil? Wann ist Eisen ferromagnetisch? Warum wird z.B. Blei bei tiefen Temperaturen supraleitend? Für diese Fragen werden Quanteneffekte wichtig.
 
 \chapter{Mathematische Hilfsmittel}
-\textbf{Literaturtipp:} Mathematischer Einführungskurs Physik\\
-\linebreak
 
 \section{Skalar- und Vektorfelder}
-Felder entsprechen Größen, die an jedem Raumpunkt einen bestimmten Wert haben, der zeitabhängig sein kann.\\
-\begin{enumerate}
-\item skalare Felder: $\phi=\phi(x,y,z,t)$\\ \linebreak
-Bsp.: Temperatur, Druck, Ladung, Energie
-\item Vektorfelder: $\vec{E}=\vec{E}(x,y,z,t)$\\ \linebreak
-Bsp.: Geschwindigkeitsverteilung in einem strömenden Gas, Wärmestromdichte
-\end{enumerate}
+
+Felder entsprechen Größen, die an jedem Raumpunkt einen bestimmten Wert haben, der zeitabhängig sein kann.\\ \linebreak
+
+\begin{wrapfigure}[]{r}[0cm]{0cm}
+	\raisebox{0pt}[\dimexpr\height-1\baselineskip\relax]{
+		\colorbox{hgrey}{
+			\begin{tikzpicture}
+			\draw[->](0,0)-- (4,0) node[right]{$x$};
+			\draw[->](0,0)--(0,3) node[above]{$y$};
+			\draw (3,3) node[right]{$T(x,y)$};
+			\draw plot[smooth, tension=.8] coordinates {(0.5,1.5)(2,0.7)(3.5,0.4)} node[right]{$T=20^{\circ}$} ;
+			\draw plot[smooth, tension=.8] coordinates {(0.5,2.2)(2,1.1)(3.5,0.8)} node[right]{$T=40^{\circ}$} ;
+			\draw plot[smooth, tension=.8] coordinates {(0.5,3)(2,1.6)(3.5,1.2)} node[right]{$T=60^{\circ}$} ;
+			\end{tikzpicture}
+		}
+	}
+	\caption{Isothermen}
+\end{wrapfigure}
+
+\textbf{a. skalare Felder}\ $\phi=\phi(x,y,z,t)$\\ 
+
+
+Jedem Raumpunkt wird ein Wert in Form einer (reellen) Zahl zugeordnet, wie zum Beispiel Temperatur, Druck, Ladung oder Energie. Flächen oder Linien mit konstantem Wert nennt man Äquipotentialflächen beziehungsweise -linien.\\ \linebreak\linebreak
+
+\begin{wrapfigure}[]{r}[0cm]{0cm}
+	\raisebox{0pt}[\dimexpr\height-1\baselineskip\relax]{
+		\colorbox{hgrey}{
+			\begin{tikzpicture}
+			
+			\draw[->](0,0)-- (4,0) node[right]{$x$};
+			\draw[->](0,0)--(0,3) node[above]{$y$};
+			\draw (3,3) node[right]{$\vec{F}(x,y)$};
+			\foreach \x/\angle in {0.5/20, 1.5/40} {
+				\foreach \y in {0.5, 1.5, 2.5} {
+					\fill (\x,\y) circle[radius=1pt];
+					\draw[->,thick]  (\x, \y) -- ++(\angle:1);
+				}
+			}
+			\foreach \x/\angle in {2.5/60, 3.5/80} {
+				\foreach \y in {0.5, 1.5} {
+					\fill (\x,\y) circle[radius=1pt];
+					\draw[->,thick]  (\x, \y) -- ++(\angle:1);
+				}
+			}
+			\end{tikzpicture}
+		}
+	}
+	\caption{Kraftfeld}
+\end{wrapfigure}
+
+
+\textbf{b. Vektorfelder}\ $\vec{E}=\vec{E}(x,y,z,t)$\\
+
+Jedem Raumpunkt wird ein Vektor zugeordnet, der lokal die Richtung des Feldes beschreibt, wie etwa ein Geschwindigkeits- oder Kraftfeld. Vektorfelder lassen sich durch Feldlinien veranschaulichen, entlang derer sich zum Beispiel ein Teilchen bewegt, das die entsprechende Kraft erfährt.
+
 
 \section{Integrale auf Feldern}
 Integrale über skalare Felder werden wie bekannt bebildet; sie sind zu vermeiden.\\
 Integriert man über ein Vektorfeld, spielt die Richtungsinformation eine entscheidende Rolle. Man unterscheidet je nach Dimension des Parameterbereichs von Linien-, Flächen- und Volumenintegralen.\\
 \linebreak
-\textbf{a. Linienintegrale}\\
+
+
+\textbf{a. Linienintegrale}
+
 \begin{equation*}
 \varphi=\int\limits_{C}\vec{E}(\vec{r})\d\vec{r}
 \end{equation*}
+
+\begin{wrapfigure}[]{r}[0cm]{0cm}
+	\raisebox{0pt}[\dimexpr\height-1\baselineskip\relax]{
+		\colorbox{hgrey}{
+			\begin{tikzpicture}
+			
+			\draw[->](0,0)-- (4,0) node[right]{$x$};
+			\draw[->](0,0)--(0,3) node[above]{$y$};
+			\draw[->](1.2,0.8)--(1,2) node[above]{$\vec{E}$};
+			\draw[->](2,2.3)--(2.4,3) node[right]{$\vec{E}$};
+			\draw(2,1.8) node{$C$};
+			\draw[thick] plot[smooth, tension=.8] coordinates {(1.2,0.8)(2,2.3)(3.5,3)};
+			\filldraw[black] (3.5,3) circle (2pt) node[right]{$\vec{r}(\tau_2)$};
+			\filldraw[black] (1.2,0.8) circle (2pt) node[below left]{$\vec{r}(\tau_1)$};
+			
+			\end{tikzpicture}
+		}
+	}
+	\caption{Linienintegral}
+\end{wrapfigure}
 Wir parametrisieren die Kurve durch $\vec{r}=\vec{r}(\tau)$ und erhalten somit
 \begin{equation*}
 \varphi=\int\limits_{\tau_0}^{\tau_1}\vec{E}(\vec{r}(\tau))\diff{\vec{r}}{\tau}\d \tau
 \end{equation*}
 Ein Speziallfall des Linienintegrals ist das sogenannte \textbf{geschlossene Linienintegral}, welches durch $\oint$ gekennzeichnet wird.\\
 \linebreak
+
+
+\begin{wrapfigure}[10]{r}[0cm]{0cm}
+	\raisebox{0pt}[\dimexpr\height-1\baselineskip\relax]{
+		\colorbox{hgrey}{
+			\begin{tikzpicture}
+			
+			\draw plot[smooth, tension=.8] coordinates {(3,0) (5,1.4) (1.5,2) (0,1) (0,0) (3,0) };	
+			\draw[->] (2,1)--(2,3) node[left]{$\Delta\vec{A}_i$};
+			\draw[->] (2,1)--(3,2.8) node[right]{$\vec{E}(\vec{r}_i)$};
+			\draw (0.5,0.5) node[right]{$\mathcal{F}$};
+			
+			
+			\end{tikzpicture}
+		}
+	}
+	\caption{Flächenintegral}
+\end{wrapfigure}
+
+
 \textbf{b. Flächenintegrale}\\
 \begin{equation*}
 \Phi=\iint\limits_{S}\vec{B}\cdot\d \vec{A} \ \ \ \text{mit } \d\vec{A}=\d A\cdot\vec{n}
 \end{equation*}
+
+
 Ganz analog zu \textbf{a.} kann die Fläche $\vec{r}=\vec{r}(u,v)$ parametrisiert werden. Es ist jedoch beim Bilden der Funktionaldeterminante auf die Richtung des Flächenelements zu achten. Die beiden möglichen Lösungen unterscheiden sich natürlich nur um ein Vorzeichen. Wir erhalten also
 \begin{equation*}
 \Phi=\int\limits_{v_1}^{v_2}\int\limits_{u_1}^{u_2}\vec{B}(u,v)\cdot\left(\pdiff{\vec{r}}{u}\times\pdiff{\vec{r}}{v}\right)\d u\d v
 \end{equation*}
-Physikalisch lässt sich ein Flächenintegral als sogenannter \textbf{Fluss} interpretieren.\\
-\linebreak
+
 \textbf{c. Volumenintegrale}\\
 \linebreak
 \begin{equation*}

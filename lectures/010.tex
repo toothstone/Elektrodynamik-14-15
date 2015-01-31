@@ -7,7 +7,23 @@ Erinnerung: \textbf{Lorentzkraftdichte}
 \end{equation*}
 
 \section{Elektrischer Dipol}
-
+\begin{wrapfigure}[12]{l}[0cm]{0cm}
+	\raisebox{0pt}[\dimexpr\height-1\baselineskip\relax]{
+		\colorbox{hgrey}{
+			\begin{tikzpicture}
+			
+	\draw[ultra thick] (-1,1)--node[above right]{$\vec{a}$}(1,-1);
+	\filldraw[black] (-1,1) circle (2pt) node[above left]{$+Q$};
+	\filldraw[black] (1,-1) circle (2pt) node[below right]{$-Q$};
+	\filldraw[black] (-1.5,-2.5) circle (2pt) node[below left]{$0$};
+	\draw[->] (-1.5,-2.5) -- node[below right]{$\vec{r}$} (-0.1,-0.1);
+			
+			
+			\end{tikzpicture}
+		}
+	}
+	\caption{elektrischer Dipol}
+\end{wrapfigure}
 Wir betrachten einen elektrischen Dipol am Ort $\vec{r}$, dessen Ladungen den Abstand $\vec{a}$ voneinander haben. Die Kraft auf ihn beträgt:
 
 \begin{equation*}
@@ -29,12 +45,30 @@ Den Ausdruck für das Drehmoment auf einen Dipol im elektrischen Feld erhalten w
 \end{align*}
 
 \section{Magnetischer Dipol}
-
+\begin{wrapfigure}[10]{l}[0cm]{0cm}
+	\raisebox{0pt}[\dimexpr\height-1\baselineskip\relax]{
+		\colorbox{hgrey}{
+			\begin{tikzpicture}
+			
+				\draw[ultra thick, -latex] (0,0) [partial ellipse=40:410:2cm and 0.5cm];
+				\draw (1.6,0.4) node[above right]{$I$};
+				\filldraw[black] (-1.5,-2.5) circle (2pt) node[below left]{$0$};
+				\draw[->] (-1.5,-2.5) -- node[below right]{$\vec{r}$} (0,0);
+				\draw[->] (-1.5,-2.5) -- node[left]{$\vec{r}'$} (-2,-0.2);
+				\draw[->] (-0.1,0) -- node[above]{$\ \ \vec{r}''$} (-1.8,0);
+			
+			
+			\end{tikzpicture}
+		}
+	}
+	\caption{magnetischer Dipol}
+\end{wrapfigure}
 Wir betrachten einen Kreisstrom $I$, dessen Mittelpunkt sich am Ort $\vec{r}$ befindet und welcher die Fläche $\vec{A}_F$ umschließt und somit ein Dipolmoment von $\vec{m} = I \cdot \vec{A}_F$ erzeugt. Die Kraft auf diesen magnetischen Dipol beträgt: ($\vec{r}'$ ist dabei ein Ort auf dem Rand des Kreisstroms)
 
 \begin{align*}
-\vec{F} \ &= \ \Int{}{}{V'} \ \vec{j}(\vec{r}') \times \vec{B}  \ = \ I \ \Oint{}{}{\vec{r}'} \times\vec{B} \qquad (= 0 \text{ für homogenes Feld})\\
-\vec{F} \ &= \ I \ \Oint{}{}{\vec{r}'} \times \vec{B}(\vec{r'} - \ \vec{r}'') \qquad\qquad \text{mit }\  \vec{r}''  = \ \vec{r}' - \ \vec{r} 
+\vec{F} \ &= \ \Int{}{}{V'} \ \vec{j}(\vec{r}') \times \vec{B}  \ = \ I \ \Oint{}{}{\vec{r}'} \times\vec{B} \qquad \\
+&(= 0 \text{ für homogenes Feld})\\
+\vec{F} \ &= \ I \ \Oint{}{}{\vec{r}'} \times \vec{B}(\vec{r'} - \ \vec{r}'') \qquad \text{mit }\  \vec{r}''  = \ \vec{r}' - \ \vec{r} 
 \end{align*}
 
 Wir entwickeln für $|\vec{r}''| \ll |\vec{r}|$: 

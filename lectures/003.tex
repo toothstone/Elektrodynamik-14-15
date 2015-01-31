@@ -1,12 +1,30 @@
 \section{Induktionsgesetz für Leiterschleifen}
 
+\begin{wrapfigure}[]{l}[0cm]{0cm}
+	\raisebox{0pt}[\dimexpr\height-1\baselineskip\relax]{
+		\colorbox{hgrey}{
+			\begin{tikzpicture}
+			
+			\draw[thick,->] (3.2,0) arc (60:420:1);
+			\draw[dotted,->] (3,0.9) arc (80:440:1.8);
+			\draw[->] (3.7,-1)--node[right]{$\mathrm{d}\vec{r}$}(3.85,0) ;
+			\draw[->] (3.7,-1)--(4.45,-1.15)node[right]{$\vec{v}\cdot\Delta t$} ;
+			\draw (2.65,-.9) node{$A$};
+			
+			
+			\end{tikzpicture}
+		}
+	}
+	\caption{Flächenänderung}
+\end{wrapfigure}
 Zunächst definieren wir den magnetischen Fluss $\Phi$ durch eine Fläche $\vec{A}$ im Raum:
 
 \begin{equation*}
 \Phi := \iint\limits_A\mathrm{d}\vec{A}\cdot\vec{B}
 \end{equation*}
 
-Man sieht leicht, dass sich der Fluss $\Phi$ bei Flächenänderung und Änderung der magnetischen Flussdichte $\vec{B}$ ändert:
+Man sieht leicht, dass sich der Fluss $\Phi$ bei Flächenänderung und Änderung der magnetischen Flussdichte $\vec{B}$ ändert:\\
+
 
 \begin{align*}
 \Delta\Phi &=  \Delta\left(\iint\mathrm{d}\vec{A}\cdot\vec{B}\right) = \iint\limits_A\mathrm{d}\vec{A}\cdot\Delta\vec{B} \; + \; \iint\limits_{\Delta A}\mathrm{d}\vec{A}\cdot\vec{B}\\
@@ -121,13 +139,36 @@ Aus dieser allgemeinen Form lässt sich natürlich auch im umgekehrten Falle das
 
 \section{Feld eines elektrischen Dipols}
 
+\begin{wrapfigure}[17]{r}[0cm]{0cm}
+	\raisebox{0pt}[\dimexpr\height-1\baselineskip\relax]{
+		\colorbox{hgrey}{
+			\begin{tikzpicture}
+			
+				 \draw[->](0,0)-- node[left]{$\vec{r}$} (0,2.8) ;
+				 \draw[->](0,0)--node[right]{$\ \vec{r}+\vec{a}$}(2.85,2.8);
+				 \draw[->](0.2,3)-- node[above]{$\vec{a}$}(2.75,3);
+				 \filldraw[black] (0,0) circle (2pt) node[below left]{$0$};
+				 \filldraw[black] (0,3) circle (2pt) node[above]{$+Q$};
+				 \filldraw[black] (3,3) circle (2pt) node[above]{$-Q$};
+			
+			
+			\end{tikzpicture}
+		}
+	}
+	\caption{elektrischer Dipol}
+\end{wrapfigure}
 Ein Dipol besteht aus zwei gleich großen, entgegengesetzt geladenen Ladungen $\pm Q $, welche  einen festen Abstand $\vec{a}$ voneinander entfernt sind. Daher ergibt es Sinn, als charakteristische Eigenschaft des Dipols das \textbf{Dipolmoment} $\vec{p}$ wie folgt zu definieren:
 
 \begin{equation*}
 \vec{p} := Q \cdot \vec{a}
 \end{equation*}
+
 \begin{equation*}
-\text{Dipollimit: } \quad |\vec{a}| \ \rightarrow \ 0, \ Q \ \rightarrow \ \infty \ \Rightarrow \ |\vec{p}| = \ \text{const.}
+\text{Dipollimit: } \quad |\vec{a}| \ \rightarrow \ 0, \ Q \ \rightarrow \ \infty 
+\end{equation*}
+
+\begin{equation*}
+\Rightarrow \ |\vec{p}| = \ \text{const.}
 \end{equation*}
 
 Für das Potentialfeld eines solchen Dipols gilt offensichtlich:
@@ -137,7 +178,7 @@ Für das Potentialfeld eines solchen Dipols gilt offensichtlich:
 \end{equation*}
 
 Für große Abstände von diesem Dipol, d.h. $\vec{r}\gg\vec{a}$ wollen wir das Potentialfeld \textsc{Taylor}-entwickeln, um besser mit ihm arbeiten zu können.\
-Dazu betrachten wir den Term $\frac{1}{|\vec{r}+\vec{a}|}$ ein wenig genauer:
+Dazu betrachten wir den Term $\frac{1}{|\vec{r}+\vec{a}|}$ ein wenig genauer:\\
 
 \begin{equation*}
 \frac{1}{|\vec{r}+\vec{a}|} \cong \frac{1}{|\vec{r}|} + \left(\vec{a}\cdot\pdiff{}{\vec{r}}\right) \ \frac{1}{|\vec{r}|} = \frac{1}{|\vec{r}|}-\vec{a}\cdot\frac{\vec{r}}{|\vec{r}|^3}

@@ -87,10 +87,36 @@ Man hat somit wieder zwei freie Funktionen $\operatorname{Re}(U(\vec{k})), \oper
 
 
 \section{Polarisation}
-
+\begin{wrapfigure}[]{r}[0cm]{0cm}
+	\raisebox{0pt}[\dimexpr\height-1\baselineskip\relax]{
+		\colorbox{hgrey}{
+			\begin{tikzpicture}
+			
+			\draw[->] (0,0,0)-- (5,0,0) node[right]{$t$};
+			\draw[->] (0,0,0)-- (0,2,0) node[above]{$\vec{E}(t)$};
+			\draw[->] (0,0,0)-- (0,0,2) node[below left]{$\vec{B}(t)$};
+			
+			\draw[scale=1,domain=0:4.6,smooth,variable=\t,blue] plot ({\t},{cos(1.5*deg(\t))},{0});
+			\foreach \t in{0,0.3,...,4.6}{
+				\draw[color=blue, opacity=0.7,->]
+				(\t,0,0) -- ({\t},{cos(1.5*deg(\t))},{0});
+			}
+			
+			\draw[scale=1,domain=0:4.6,smooth,variable=\t,red] plot ({\t},{0},{cos(1.5*deg(\t))});
+			\foreach \t in{0,0.3,...,4.6}{
+				\draw[color=red, opacity=0.7,->]
+				(\t,0,0) -- ({\t},{0},{cos(1.5*deg(\t))});
+			}
+			
+			
+			\end{tikzpicture}
+		}
+	}
+	\caption{elektromagnetische Welle}
+\end{wrapfigure}
 Betrachte die spezielle Lösung $\vec{E}_0 \cdot e^{i(\vec{k}\vec{r} - \omega t)}$ der Wellengleichung $\Dalembert \vec{E} = 0$. Bisher haben wir die Richtung von $\vec{E}_0$ beliebig angesehen. Dennoch gilt nach den \textsc{Maxwell}-Gleichungen:\
 \\
-\ \\
+\ \\ \linebreak\linebreak\linebreak\linebreak
 \underline{$\div\vec{E} = 0$:}
 
 \begin{equation*}
@@ -106,6 +132,7 @@ Betrachte die spezielle Lösung $\vec{E}_0 \cdot e^{i(\vec{k}\vec{r} - \omega t)
 \end{align*}
 
 Daraus folgt, dass elektromagnetische Wellen transversal sind.\
+
 Nun kann man noch zwei Fälle für den Vektor $\vec{E}_0$ bzw. $\vec{B}_0$ unterscheiden:
 
 \begin{enumerate}[label=\textbf{\arabic* .}]
