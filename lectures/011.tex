@@ -339,3 +339,172 @@ Der direkte Vergleich zwischen dem Fernfeld des \textsc{Hertz}'schen Dipols und 
 \end{align*}
 
 Den Ausdruck $\frac{\vec{e}_r\cdot\vec{r}'}{c}$ in $\dot{\vec{q}}$ kann man als die Laufzeit innerhalb der Quellen verstehen.
+
+
+\section{Multipolentwicklung des Fernfelds}
+
+Im vorigen Kapitel haben wir das Strahlungsfeld einer räumlich begrenzten Quellenverteilung mit beliebiger Zeitabhängigkeit betrachtet. Jetzt setzen wir uns mit dem Spezialfall auseinander, dass $\vec{j}\sim e^{-i\omega t}$ gilt:
+
+\begin{equation*}
+\vec{j}\left(t-\frac{r}{c} + \frac{\vec{e}_r \cdot\vec{r}'}{c}\right) \ \sim \ e^{-i\omega\left(t-\frac{r}{c}\right)} \ e^{-i\frac{\omega}{c} \vec{e}_r\cdot\vec{r}'}
+\end{equation*}
+
+Wir entwickeln diesen Ausdruck für das Fernfeld $(r\gg a, r \gg \lambda)$ mit der zusätzlichen Annahme, dass es sich um eine "kleine Quelle" handelt $(\lambda\gg a)$:
+
+\begin{align*}
+&\frac{\omega}{c} \vec{e}_r \cdot \vec{r} \sim \frac{\omega}{c}a' \ = \  \frac{2\pi a}{\lambda} \ll 1 \quad\text{(Laufzeit in Quelle $\ll$ Periodendauer)}\\
+\Rightarrow\quad &\vec{j}\left(t-\frac{r}{c}+\frac{\vec{e}_r\cdot\vec{r}'}{c}\right) \ \approx \ \vec{j}\left(t-\frac{r}{c}\right) \ + \ \frac{\vec{e}_r\cdot\vec{r}'}{c}\partial_t\vec{j}\left(t-\frac{r}{c}\right) \ + \ \ldots\\
+&\dot{\vec{q}}  \ = \ \underbrace{\Int{}{}{V'}\vec{j}\left(\vec{r}',t-\frac{r}{c}\right)}_{=\dot{\vec{p}}_{\text{ret}}} \ + \ \frac{1}{c} \ \partial_t \Int{}{}{V'}\left(\vec{e}_r\cdot\vec{r}'\right) \ \vec{j} \left(\vec{r}', t- \frac{r}{c}\right) \ + \ \ldots
+\end{align*}
+
+Umformen ergibt:
+
+\begin{align*}
+\Int{}{}{V'} \left(\vec{e}_r\cdot\vec{r}'\right) \ \vec{j}  \ &= \ \frac{1}{2}\Int{}{}{V'} \left[\left(\vec{e}_r\cdot\vec{r}'\right)\vec{j} \ - \ \left(\vec{e}_r \cdot \vec{j}\right)\vec{r}'\right] \ + \ \Int{}{}{V'} \left[\left(\vec{e}_r\cdot\vec{r}'\right)\vec{j} \ + \ \left(\vec{e}_r\cdot\vec{j}\right)\vec{r}'\right]\\
+&= \ -\vec{e}_r \times\underbrace{\frac{1}{2}\Int{}{}{V'}\left(\vec{r}'\times\vec{j}\right)}_{=\vec{m}} \ + \ \frac{\vec{e}_r}{2} \ \frac{1}{3} \dot{\tens{D}}'
+\end{align*}
+
+Denn:
+
+\begin{align*}
+\dot{\tens{D}} \ &= \ \Int{}{}{V}\underbrace{\dot{\rho}}_{-\nabla\vec{j}} \left(3\vec{r}\circ\vec{r} \ - \ \mathbbm{1} \vec{r}^2\right)  \ \overset{\text{part. Int.}}{=} \ \Int{}{}{V} \left(\vec{j}\cdot\nabla\right) \ \left(3\vec{r}\circ\vec{r} \ - \ \mathbbm{1}\vec{r}^2\right)\\
+&= \ \Int{}{}{V}\left(3\vec{j}\circ\vec{r} \ + \ 3\vec{r}\circ\vec{j} \ - \ 2 \cdot \mathbbm{1} \ \left(\vec{j}\cdot\vec{r}\right)\right) \qquad\qquad(*)
+\end{align*}
+
+Wir definieren:
+
+\begin{align*}
+\tens{D}'  \ &= \ \tens{D} \ + \ \mathbbm{1}\frac{\operatorname{Spur} \tens{D}}{3}  \ = \  \Int{}{}{V}\rho \ 3 \vec{r}\circ\vec{r}\\
+\dot{\tens{D}} \ &= \ \Int{}{}{V}\left(3\vec{j}\circ\vec{r} \ + \ 3 \vec{r}\circ\vec{j}\right)
+\end{align*}
+
+
+Somit gilt für die Komponenten von $(*)$:
+
+\begin{align*}
+\left[\left(\vec{j}\cdot\nabla\right) \ \left(3\vec{r}\circ\vec{r} \ - \ \mathbbm{1} \vec{r}^2\right)\right]_{ij}  \ &= \ j_k \partial_k\ \left(3 r_i r_j \ - \ \delta_{ij} r_l r_l\right)\\
+&= \ j_k \left(3\delta_{ij}r_j \ + \ 3r_i\delta_{jk} \ - \ \delta_{ij} 2 r_l \delta_{lk}\right)\\
+&= \ 3j_i r_j \ + \ 3 r_i j_j \ - \ \delta_{ij} 2 j_k r_k
+\end{align*}
+
+Nun brauchen wir noch:
+
+\begin{equation*}
+\left[\left(\vec{m}\times\vec{e}_r\right)\times\vec{e}_r\right]\times\vec{e}_r  \ = \ \left[\vec{e}_r(\vec{m}\cdot\vec{e}_r) \ - \ \vec{m}(\underbrace{\vec{e_r}\cdot\vec{e}_r}_{=1})\right] \times \vec{e}_r \ = \ - \vec{m}\times\vec{e}_r
+\end{equation*}
+
+Und:
+
+\begin{equation*}
+\vec{e_r}\cdot\tens{D}'\times\vec{e}_r  \ = \ \vec{e}_r \cdot\tens{D}'\times\vec{e}_r \ + \ \underbrace{\vec{e}_r \ \mathbbm{1} \times\vec{e}_r}_{=\vec{e}_r\times\vec{r}_r =0} \ \frac{\operatorname{Spur}\tens{D}'}{3}  \ = \ \vec{e}_r\cdot\tens{D}\times\vec{e}_r
+\end{equation*}
+
+\begin{equation*}
+\dot{\vec{q}}  \ = \  \left(\dot{\vec{p}} \ + \ \dot{\vec{m}} \times\frac{\vec{e}_r}{c} \ + \frac{\vec{e}_r}{6c}\cdot \ddot{\tens{
+D}}\right)_{\text{ret}}
+\end{equation*}
+
+Somit folgt für die Felder einer kleinen Quelle:
+
+\begin{align*}
+\vec{B}  \ &= \ \frac{\mu_0}{4\pi \ c r} \left(\ddot{\vec{p}}\times\vec{e}_r \ + \ \frac{1}{c} \left(\ddot{\vec{m}}\times
+\vec{e}_r\right) \times\vec{e}_r \ + \ \frac{1}{6c}\vec{e}_r\cdot\dddot{\tens{D}} \times\vec{e}_r\right)_{\text{ret}}\\
+\vec{E}  \ &= \ \frac{\mu_0}{4\pi \ c} \Bigg(\underbrace{\left(\ddot{\vec{p}}\times\vec{e}_r\right)\times\vec{e}_r}_{\text{el. Dipol}} \ - \ \underbrace{\frac{1}{c}\left(\ddot{\vec{m}\times\vec{e}_r}\right)}_{\text{mag. Dipol}} \ + \ \underbrace{\frac{1}{6c}\left(\vec{e}_r\cdot\dddot{\tens{D}}\times\vec{e}_r\right)\times\vec{e}_r}_{\text{el. Quadrupol}}\Bigg)_{\text{ret}}
+\end{align*}
+
+Die Felder des magnetischen Dipols und des elektrischen Quadrupols kommen eine Ordnung später als der elektrische Dipol; sie sind also um $\frac{a}{\lambda}$ kleiner. Die Richtungsabhängigkeit der Felder (und damit auch von der Energiestromdichte) haben folgende Form:
+
+[Hier noch de Bildsche einfügge]
+
+\section{Strahlung einer bewegten Punktladung}
+
+Wir wollen nun die im letzten Kapitel hergeleiteten Formeln auf das Beispiel einer bewegten Punktladung anwenden. Es gilt für die retardierten Potentiale:
+
+\begin{equation*}
+\begin{pmatrix}
+\varphi\\
+\vec{A}
+\end{pmatrix}
+\left(\vec{r},t\right) \ = \ \begin{pmatrix}
+\frac{1}{\epsilon_0}\\
+\mu_0
+\end{pmatrix}
+\ \Int{}{}{V'}\frac{1}{4\pi|\vec{r}-\vec{r}'|} \ \begin{pmatrix}
+\rho\\
+\vec{j}
+\end{pmatrix}
+\left(\vec{r}', t \ - \ t \ + \ \frac{|\vec{r}-\vec{r}'|}{c}\right)
+\end{equation*}
+
+Für den Spezialfall einer Punktladung gilt:
+
+\begin{align*}
+\rho(\vec{r},t)  \ &= \ Q \ \delta\left(\vec{r}-\vec{R}(t)\right)\\
+\vec{j}(\vec{r},t)  \ &= \ Q \ \vec{R}(t) \ \delta\left(\vec{r}-\vec{R}(t)\right) 
+\end{align*}
+
+Einsetzen ergibt:
+
+\begin{align*}
+\varphi(\vec{r},t)  \ = \ \frac{Q}{4\pi\epsilon_0} \ \int\d V'\d t' \frac{\delta(\vec{r}-\vec{R}(t'))}{|\vec{r}-\vec{r}'|} \ \delta\left(t'-t + \frac{|\vec{r}-\vec{r}'|}{c}\right)  \ = \ \frac{Q}{4\pi\epsilon_0}\Int{}{}{t'} \ \frac{1}{|\vec{r}-\vec{R}(t')|} \ \delta\underbrace{\left(t'-t+\frac{|\vec{r}-\vec{R}(t')|}{c}\right)}_{(**)}
+\end{align*}
+
+Die Ausbreitung mit Lichtgeschwindigkeit kann man anhand eines Lichtkegels veranschaulichen:
+
+[Grafick]
+
+Um die Rechnung weiterzuführen benötigt man:
+
+\begin{equation*}
+\delta(f(x))  \ = \  \sum_i \ \frac{\delta(x-x_i)}{\left|\pdiff{f}{x}\right|_{x=x_i}} \qquad\text{wobei $x_i$ die Nullstellen von $f$ sind}
+\end{equation*}
+
+
+Somit gilt für das Potential:
+
+\begin{equation*}
+\varphi(\vec{r},t)  \ = \ \frac{Q}{4\pi\epsilon_0}\cdot \frac{1}{|\vec{r}-\vec{R}(t_0)|} \cdot \left(1\ - \ \frac{\dot{\vec{R}}(t_0) \cdot (\vec{r}-\vec{R}(t_0))}{c \ |\vec{r}-\vec{R}(t_0)|}\right)^{-1}
+\end{equation*}\\
+
+Setzen wir nun für den Ausdruck $\vec{r}-\vec{R}$ die Abkürzung $\vec{r}''$ und für $\dot{\vec{R}}$ den Ausdruck $\vec{V}$ ein, erhalten wir die sogenannten \textbf{Liénard-Wiechert-Potentiale}:
+
+\begin{align*}
+\Rightarrow \quad \varphi(\vec{r},t)  \ &= \ \frac{Q}{4\pi\epsilon_0} \ \left[\frac{1}{|\vec{r}-\vec{R}| \ - \ \frac{\dot{\vec{R}}}{c} \cdot (\vec{r}-\vec{R})}\right]_{\text{ret}}  \ = \ \frac{Q}{4\pi\epsilon_0} \ \left(\frac{1}{r'' \ - \ \frac{ \vec{V}\cdot \vec{r}''}{c}}\right)_{\text{ret}}\\
+\ \\
+\vec{A}(\vec{r},t) \ &= \ \frac{\mu_0 \ Q}{4\pi} \ \left[\frac{\dot{\vec{R}}}{|\vec{r}-\vec{R}| \ - \ \frac{\dot{\vec{R}}}{c}(\vec{r}-\vec{R})}\right]_{\text{ret}}  \ = \  \frac{\mu_0 \ Q}{4\pi} \ \left(\frac{\vec{V}}{r'' \ - \ \frac{\vec{V}\cdot\vec{r}''}{c}}\right)_{\text{ret}} 
+\end{align*}	
+
+
+\section{Strahlungsbremsung}
+
+Wir wollen in diesem Kapitel eine Punktladung auf einer Bahn 
+$\vec{R}(t)$ im nichtrelativistischen Falle betrachten. Dafür berechnen wir zunächst alle benötigten Größen:
+
+\begin{align*}
+\rho  \ &= \ Q \delta(\vec{r}-\vec{R}(t))\\
+\vec{j}  \ &= \ Q \  \dot{\vec{R}} \ \delta(\vec{r}-\vec{R}(t))\\
+\vec{p} \ &= \ \Int{}{}{V}r\rho  \ = \  Q \ \vec{R}(t)\\
+\vec{m}  \ &= \ \frac{1}{2} \Int{}{}{V} \vec{r}\times\vec{j}  \ = \ \frac{1}{2}\Int{}{}{V}\vec{r}\times\dot{\vec{R}}\ Q \ \delta(\vec{r}-\vec{R}(t)) \ = \ \frac{Q}{2} \vec{R}\times\dot{\vec{R}}\\
+\dot{\tens{D}}'  \ &= \ 3 \Int{}{}{V} \left(\vec{r}\circ\vec{j} \ + \ \vec{j}\circ\vec{r}\right)  \ = \ 3Q \ \left(\vec{R}\circ\dot{\vec{R}} \ + \ \dot{\vec{R}}\circ\vec{R}\right)
+\end{align*}
+
+Wie man leicht erkennt hat eine \underline{bewegte} Punktladung auch Multipolmomente. Nun nutzen wir die Dipolnäherung aus Kapitel 9.4 für die abgestrahlte Leistung:
+
+\begin{equation*}
+N  \ = \  \frac{\mu_0}{6\pi \ c} \ddot{\vec{p}}^2  \ = \  \underbrace{\frac{\mu_0 \ Q^2}{6\pi \ c}}_{:=\alpha} \ \dot{\vec{v}}^2 \qquad \left(\text{Gültig für } \frac{v}{c}\ll 1\right)
+\end{equation*}
+
+Für $\dot{\vec{v}}\neq 0$ verliert das Teilchen also Bewegungsenergie in Form von abgestrahlter elektromagnetischer Leistung. Es wirkt also eine Bremskraft:
+
+\begin{align*}
+\Delta W_{\text{elm}}  \ = \ \Int{}{}{t} N  \ &= \ - \Delta W_{\text{mech}}  \ = \  - \Int{}{}{t} \vec{F}_S\cdot\vec{v}\\
+\alpha \Int{}{}{t}\dot{\vec{v}}^2  \ &= \ - \Int{}{}{t}\vec{v}\cdot\vec{F}_s \ \overset{\text{part. Int.}}{=} \ - \alpha\Int{}{}{t}\ddot{\vec{v}}\vec{v} \ + \ \left.\alpha\vec{v}\dot{\vec{v}}\right|^{t_2}_{t_1} 
+\end{align*}
+
+Der Randterm verschwindet dabei für oszillierende Bewegungen, sodass man die Bremskraft $\vec{F}_S$ explizit ausrechnen kann mit:
+
+\begin{equation*}
+\vec{F}_S \ = \ \alpha \ddot{\vec{v}}  \ = \ \frac{Q^2}{6\pi\epsilon_0 \ c^3} \dddot{\vec{R}}
+\end{equation*}
+
+Diese Formel ist allerdings nur anwendbar, wenn $\vec{F}_S$ eine kleine Korrektur ist.
