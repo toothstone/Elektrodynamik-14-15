@@ -286,3 +286,56 @@ Damit gilt also für die (über eine Periode gemittelte) abgestrahlte Leistung:
 \begin{equation*}
 \langle N \rangle_T  \ = \  \frac{\mu_0 \ \omega^4\ \vec{p}_0^2}{12\pi \ c}
 \end{equation*}
+
+\section{Strahlungsfeld einer räumlich begrenzten Quellenverteilung}
+
+Wir betrachten nun eine beliebige Quellenverteilung am Ort $\vec{r}'$ mit der maximalen räumlichen Ausdehnung $a$. Es gilt ganz allgemein für das Vektorpotential am Ort $\vec{r}$:
+
+\begin{equation*}
+\vec{A}(\vec{r},t) \ = \ \frac{\mu_0}{4\pi}\Int{}{}{V'} \ \frac{\vec{j}\left(\vec{r}',t\ - \ \frac{|\vec{r}-\vec{r}'|}{c}\right)}{|\vec{r}-\vec{r}'|}
+\end{equation*}
+
+Wir entwickeln nun den Ausdruck $\frac{1}{|\vec{r}-\vec{r}'|}$ für das Fernfeld $(r\gg q, |\vec{r}| \gg |\vec{r}'|)$:
+
+\begin{align*}
+\frac{1}{|\vec{r}-\vec{r}|}  \ &= \ \frac{1}{r} \ + \ \frac{\vec{r}\cdot\vec{r}'}{r^3} \ + \ \ldots \ \approx \ \frac{1}{r} \quad \text{(Dipolnäherung)}\\
+|\vec{r}-\vec{r}'|  \ &= \ r \ - \ \frac{\vec{r}\cdot\vec{r}'}{r} \ + \ \ldots \ \approx \ r \ - \ \vec{e}_r \cdot \vec{r}'\\
+\Rightarrow \quad \vec{A}(\vec{r},t)  \ &= \ \frac{\mu_0}{4\pi \ r} \underbrace{\Int{}{}{V'} \vec{j} \left(\vec{r}',t \ - \ \frac{r}{c} \ + \ \frac{\vec{e}_r\cdot\vec{r}'}{c}\right)}_{\equiv \dot{\vec{q}}\left(t \ - \ \frac{r}{c},\vec{e}_r\right)}
+\end{align*}
+
+Zum Vergleich: Das Vektorpotential für einen \textsc{Hertz}'schen Dipol ergab:
+
+\begin{equation*}
+\vec{A}  \ = \ \frac{\mu_0}{4\pi \ r} \ \dot{\vec{p}}\left(t \ - \ \frac{r}{c}\right)
+\end{equation*}
+
+Das $\vec{B}$-Feld erhalten wir aus dem eben gewonnenen Ausdruck für $\vec{A}$ durch $\vec{B}=\rot\vec{A}$:
+
+\begin{align*}
+\pdiff{}{\vec{r}}\left[\frac{1}{r} f \left(t-\frac{r}{c},\vec{e}_r\right)\right] \ &= \ \Bigg[\underbrace{-\frac{\vec{e}_r}{c}\partial_t}_{\sigma\left(\frac{1}{\lambda}\right)} \ - \ \underbrace{\frac{\vec{e}_r}{r}}_{\sigma\left(\frac{1}{r}\right)} \ + \ \underbrace{\pdiff{}{\vec{r}}\left(\vec{e}_r\cdot\pdiff{}{\vec{e}_r}\right)}_{\sigma\left(\frac{1}{r}\right)}\Bigg ] \left(\frac{1}{r}f\right) \ \approx \ - \frac{\vec{e}_r}{c} \partial_t \left(\frac{1}{r}f\right)\\
+\ \\
+\overset{r\gg\lambda}{\Rightarrow} \qquad \vec{B}  \ &= \ -\frac{\vec{e}_r}{c}\times\dot{\vec{A}}  \ = \  \frac{\mu_0}{4\pi \ c} \cdot \frac{\ddot{\vec{q}}\times\vec{e}_r}{r}
+\end{align*}
+
+Das $\vec{E}$-Feld erhalten wir aus der inhomogenen \textsc{Maxwell}-Gleichung: $\frac{1}{\mu_0}\rot\vec{B}= \vec{j} + \epsilon_0\dot{\vec{E}}$. Unter Beachtung, dass $\vec{j}=0$ außerhalb der Quellenverteilung ist, erhalten wir zunächst für $\dot{\vec{E}}$:
+
+\begin{align*}
+\dot{\vec{E}}  \ &= \ c^2 \ \rot\vec{B} \ \approx \ - \frac{\vec{e}_r}{c}\partial_t\times c^2 \vec{B}\\
+\Rightarrow\qquad \vec{E} \ &= \ c\vec{B}\times\vec{e}_r  \ = \ \frac{\mu_0}{4\pi} \cdot \frac{\left(\ddot{\vec{q}}\times\vec{e}_r\right)\times\vec{e}_r}{r}
+\end{align*}
+
+Wir erhalten also wieder eine transversale Welle der Felder $\vec{E}$ und $\vec{B}$, welche beide mit $\frac{1}{r}$ abfallen. (Korrekturen aus höheren Termen fallen dabei schneller ab.)\\
+Für die Energiestromdichte gilt damit:
+
+\begin{equation*}
+\vec{S}_P \ = \ \frac{1}{\mu_0} (\vec{E}\times\vec{B})  \ = \  \vec{e}_r \ \frac{\mu_0}{(4\pi)^2 c} \ \frac{\left(\ddot{\vec{q}}\times\vec{e}_r\right)^2}{r^2}
+\end{equation*}
+
+Der direkte Vergleich zwischen dem Fernfeld des \textsc{Hertz}'schen Dipols und dem Strahlungsfeld einer beliebigen Ladungsverteilung zeigt uns, dass mit $\dot{\vec{p}}\leftrightarrow\dot{\vec{q}}$ alle Fernfeldformeln identisch sind:
+
+\begin{align*}
+&\text{\textsc{Hertz}'scher Dipol:} \qquad\qquad\qquad\ \; \text{allgemein:}&\\
+&\dot{\vec{p}}_{\text{ret}}  \ = \ \Int{}{}{V'} \vec{j}\left(\vec{r}',t-\frac{r}{c}\right) \qquad \qquad \dot{\vec{q}}  \ = \ \Int{}{}{V'}\vec{j}\left(\vec{r}',t-\frac{r}{c}+\frac{\vec{e}_r\cdot\vec{r}'}{c}\right)
+\end{align*}
+
+Den Ausdruck $\frac{\vec{e}_r\cdot\vec{r}'}{c}$ in $\dot{\vec{q}}$ kann man als die Laufzeit innerhalb der Quellen verstehen.
