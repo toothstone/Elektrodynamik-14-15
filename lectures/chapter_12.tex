@@ -1,0 +1,82 @@
+\chapter{Dispersion}
+
+\section{Allgemeines über Wellen in leitenden Medien}
+
+Ausgangspunkt unserer Betrachtungen in diesem Kapitel werden die linearen Materialgesetze und das \textsc{Ohm}'sche Gesetz sein:
+
+\begin{equation*}
+\vec{D}  \ = \ \epsilon \vec{E}, \qquad\qquad\vec{j}_0  \ = \ \sigma\vec{E}
+\end{equation*}
+
+Die \textsc{Maxwell}-Gleichungen liefern uns zusätzlich:
+
+\begin{align*}
+\frac{1}{\mu_0}\rot\vec{B}  \ &= \  \vec{j}_0 \ + \ \dot{\vec{D}}  \ = \ \sigma\vec{E} \ + \ \epsilon\vec{E} \qquad\Big| \ \partial_t\\
+\frac{1}{\mu_0}\rot\dot{\vec{B}} \ &= \ \sigma\dot{\vec{E}} \ + \ \epsilon\ddot{\vec{E}}\\
+\ \\
+&\left(\rot\vec{E} \ = \ -\dot{\vec{B}}, \quad \epsilon\div\vec{E} \ = \ \rho_0  \ = \ 0\right)\\
+\ \\
+-\frac{1}{\mu_0} \rot\rot \vec{E}  \ &= \ - \frac{1}{\mu}(\left(\grad\underbrace{\div\vec{E}}_{=0} \ + \ \laplace\vec{E}\right)  \ = \ \sigma\dot{\vec{E}} \ + \ \epsilon\ddot{\vec{E}}\\
+\ \\
+\Rightarrow \quad 0  \ &= \ \frac{1}{\mu_0}\laplace\vec{E} \ + \ \sigma\dot{\vec{E}}\ + \ \epsilon\ddot{\vec{E}} 
+\end{align*}
+
+Zur Lösung der erhaltenen DGL wählen wir den Ansatz der ebenen Welle für $\vec{E}$. $\quad(\vec{E} \ = \ \vec{E}_0 e^{i(\vec{k}\vec{r}-\omega t)}$\\
+Einsetzen liefert uns:
+
+\begin{align*}
+&\frac{1}{\mu_0} \left(i\vec{k}\right)^2  \ = \ -i \omega \sigma \ + \  \left(i\omega\right)^2\epsilon\\
+\Rightarrow\quad &\vec{k}^2 \ = \ \mu_0\epsilon_0\omega^2 \ \left(\epsilon_r \ + \ \frac{i\sigma}{\epsilon_0\omega}\right) \ = \ \frac{\omega^2}{c_0^2} \ \underbrace{\left(\epsilon_r \ + \ \frac{i\sigma}{\epsilon_0 \omega}\right)}_{=:\tilde{\epsilon}_r}
+\end{align*}
+
+
+Die Aufspaltung der gesamten Stromdichte $\vec{j}$ in die freien Ströme $\vec{j}_0$ und die Polarisationsströme $\vec{j}_P$ ist dabei für alle $\omega>0$ willkürlich, insbesondere aber für große $\omega$.\\
+Die Auftrennung des komplexen Wertes $\tilde{\epsilon}_r(\omega)$ in ein reelles $\epsilon_r$ und ein imaginäres $\frac{i\sigma}{\epsilon_0\omega}$ ist dabei ebenso nur im Limes $\omega\rightarrow\infty$ eindeutig, da sonst bereits $\epsilon_r(\omega)$ und $\sigma(\omega)$ an sich schon komplex sein können.\\
+\ \\
+Wir definieren uns: 
+
+\begin{equation*}
+\vec{k}^2 \ = \ \frac{\omega^2}{c^2}\tilde{n}^2; \qquad \tilde{n}(\omega)  \ = \  \sqrt{\epsilon_r(\omega} \ = \ n \cdot (1 \ + \ i\kappa) \qquad\text{mit } n, \kappa \text{ reell}
+\end{equation*}
+
+In den Grenzfällen bedeutet dies:
+
+\begin{align*}
+\frac{\sigma}{\epsilon_0\omega}&\gg\epsilon_r \quad \text{bzw.} \quad \omega\ll \frac{\sigma}{\epsilon} \quad\Rightarrow\quad \epsilon_r \text{ vernachlässigen }\Rightarrow \text{ quasistatischer Fall}\\
+\frac{\sigma}{\epsilon_0\omega}&\ll\epsilon_r \quad\text{bzw.}\quad \omega\gg\frac{\sigma}{\epsilon} \quad\Rightarrow\quad \sigma\text{ vernachlässigen }\Rightarrow\text{ Dielektrikum}
+\end{align*}
+\ \\
+\underline{Interpretation von $\tilde{n}$:}\\
+\ \\
+Eine in den Leiter eindringende Welle besteht hauptsächlich aus zwei Komponenten: der Wellenausbreitung im Medium und dem exponentiellen Abklingen in ihm. Dies ist leicht zu sehen, da $\omega$ reell ist und $\vec{k}=\vec{k}_0 + i\vec{k}_1$ sich aus einem reellen und imaginären Part zusammensetzt:
+
+\begin{align*}
+|\vec{k}_0| \ &= \  \frac{2\pi}{\lambda} \qquad \qquad \lambda \ \ldots \ \text{ Wellenlänge}\\
+|\vec{k}_1| \ &= \  \frac{1}{\delta} \qquad \qquad \delta \ \ldots\ \text{ Abklinglänge}\\
+\ \\
+\Rightarrow \quad \vec{E}  \ &= \ \vec{E}_0 \ e^{i\left(\vec{k}_0\vec{r}-\omega t\right)} \ e^{-\vec{k}_1 \vec{r}} 
+\end{align*}
+
+$\vec{k}_0$ und $\vec{k}_1$ müssen dabei nicht notwendigerweise parallel sein; sie ergeben sich stattdessen aus Randbedingungen, wie z.B. der Stetigkeit verschiedener Komponenten an Grenzflächen. Die Beträge hingegen müssen aus der Dispersionsrelation bestimmt werden.
+\ \\
+\ \\
+\underline{Bemerkung:}\\
+\ \\
+Formal wären auch komplexe $\omega$ möglich, welche einem zeitlichen Abklingen entsprächen.
+\ \\
+\ \\
+Betrachten wir nun den Grenzfall, das wir eine Welle mit einer Kreisfrequenz $\omega \rightarrow 0$ auf eine Leiteroberfläche schicken. Daraus folgt zunächst direkt:
+
+\begin{equation*}
+\frac{\sigma}{\omega} \rightarrow \infty, \quad \tilde{n} \ = \ \sqrt{\epsilon_r + \frac{i\sigma}{\epsilon_0 \omega}}\rightarrow\infty, \quad n\rightarrow\infty,\quad n\kappa\rightarrow\infty
+\end{equation*}
+
+Das Reflexionsverhalten erhalten wir nun mithilfe der \textsc{Fresnel}'schen Formeln (wobei $n_1$ in diesem Falle 1 sei):
+
+\begin{equation*}
+a^r  \ = \  \frac{1 \ - \ \frac{\mu_1 n_2}{\mu_2 n_1}}{1 \ + \ \frac{\mu_1 n_2}{\mu_2 n_1}} \ = \ \frac{1 \ - \ \tilde{n}}{1\ + \ \tilde{n}} \ \rightarrow\  -1
+\end{equation*}
+
+Es kommt also zur Vollständigen Reflexion, analog zur Totalreflexion. Der Leiter ist also undurchsichtig für Wellen mir $\omega \rightarrow 0$. Für sichtbares Licht können wir leider noch keine Aussage treffen, da es dort wesentlich komplizierter ist.
+
+\section{Dispersion in Dielektrika}
