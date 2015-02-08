@@ -53,8 +53,8 @@ Wir nehmen nun an, dass die Leiterschleife $\mathcal{S}_i$ über einen Widerstan
 Durch die Quasistationarität kommt es, wie man aus obiger Gleichung entnehmen kann, nur zu einer induktiven, aber keiner kapazitiven Kopplung.\\
 Speziell für eine Schleife gilt: $\dot{U}=L\ddot{I}+R\dot{I}+\frac{1}{C}I$. Dabei kann man mehrere Fälle unterscheiden:
 \ \\
-\begin{enumerate}[label=\roman*)]
-\item \underline{$U=0\qquad$ Eigenschwingung:}\\
+\begin{enumerate}[label=\roman*]
+\item $U=0\qquad$ Eigenschwingung:
 \ \\
 Wir wählen für die verbleibende DGL den Ansatz:
 \begin{equation*}
@@ -64,7 +64,7 @@ I \ = \ I_0 \ e^{i\omega_0 t} \quad\Rightarrow\quad -\omega_0^2 L \ + \ i\omega_
 Für $R=0$ gilt für $\omega_0=\sqrt{\frac{1}{LC}}$, ansonsten tritt eine Dämpfung der Schwingung auf.
 \ \\\
 
-\item \underline{$U=U_0 \ e^{i\omega t} \qquad$ erzwungene Schwingung:}\\
+\item $U=U_0 \ e^{i\omega t} \qquad$ erzwungene Schwingung:	
 \ \\
 Wir wählen erneut den Ansatz $I=I_0 e^{i\omega t}$
 
@@ -91,10 +91,42 @@ Die Mittelung dieser Energie über eine Periode liefert uns mit $\langle N \rang
 \langle N \rangle  \ &= \ U_0 \ I_0 \ \Big\langle\cos (\omega t) \ \cos(\omega t \ + \ \phi) \Big\rangle  \ = \  \frac{1}{2}U_0 \ I_0 \ \Big\langle\left(\cos(2\omega t \ + \ \phi) \ + \cos (\phi)\right)\Big\rangle  \ = \ U_{\text{eff}} \ I_{\text{eff}} \ \cos(\phi)
 \end{align*}
 
-
+\newpage
 \section{Drahtwellen}
 
-[Büldschn]
+\begin{wrapfigure}[]{l}[0cm]{0cm}
+	\raisebox{0pt}[\dimexpr\height-1\baselineskip\relax]{
+		\colorbox{hgrey}{
+			\begin{tikzpicture}
+			%Drähte
+			\draw(-2,-1)-- (-2,1) ;
+			\draw(-1.8,-1)--(-1.8,1);
+			\draw(1.8,-1)--(1.8,1);
+			\draw(2,-1)--(2,1);
+			%Integrationsweg
+			\draw[ultra thick, red] (-1.9,-0.7)node[left]{$x$}--(-1.9,0.7) node[left]{$x+\Delta x$};
+			\draw[ultra thick, red] (1.9,-0.7)--(1.9,0.7);
+			\draw[ultra thick, red,->] (1.9,0.7)--(-.1,0.7);
+			\draw[ultra thick, red] (0,-0.7)--(1.9,-0.7);
+			\draw[ultra thick, red,->] (-1.9,-0.7)--(0.1,-0.7);
+			\draw[ultra thick, red] (0,0.7)--(-1.9,0.7);
+			%Spannung
+			\draw (-1.9,-1.1)--(-1.9,-1.4);
+			\draw (1.9,-1.1)--(1.9,-1.4);
+			\draw (-1.9,-1.4)--(-0.2,-1.4);
+			\draw (1.9,-1.4)--(0.2,-1.4);
+			\draw[->] (-0.3,-1.7)--(0.3,-1.1);			
+			\draw (0,-1.4) circle(0.2cm);
+			\draw (0.15,-1.4) node[below right]{$U(x)$};
+			%Strom
+			\draw[color=dblue,->] (-1.5,.4)--(-1.5,-.4);
+			\draw[color=dblue,->] (2.3,-.4)--node[right]{$I(x,t)$}(2.3,.4);
+			\end{tikzpicture}
+		}
+	}
+	\caption{Doppelleiter}
+\end{wrapfigure}
+
 Wir betrachten zwei parallele Leiter der Dicke $d$, durch die in entgegengesetzte Richtung der Strom $I$ fließt. Um einfacher über das Problem reden zu können, definieren wir uns zunächst die Größen der Leiter pro Längeneinheit:
 
 \begin{align*}
@@ -145,7 +177,7 @@ Diese beiden Gleichungen lassen sich nun zu sogenannten \textbf{Telegraphengleic
 
 Diese Gleichung wollen wir nun für folgende zwei Fälle genauer untersuchen:
 
-\begin{enumerate}[label=\roman*)]
+\begin{enumerate}[label=\roman*]
 \item \underline{Ideale Leitung:} $\qquad r=0, \; \; g=0$
 \ \\
 \ \\
@@ -202,8 +234,8 @@ Ausgangspunkt unserer Betrachtungen sollen in diesem Kapitel wieder die \textsc{
 Wenn wir nun die Annahme machen, dass die Leitungsströme $\vec{j}_L$ nahezu sämtliche Stromdichten ausmachen $(\vec{j}_L\rightarrow\vec{j})$ erhalten wir:
 
 \begin{align*}
-&\rot \vec{j} \ = \ \sigma \rot\vec{E}  \ = \ -\sigma\dot{\vec{B}}\\
-\Rightarrow \quad &\frac{1}{\mu} \ \rot\rot \vec{B} \ = \ -\sigma \dot{\vec{B}}  \ = \ \frac{1}{\mu}\Big(\grad\underbrace{\div\vec{B}}_{=0} \ - \ \laplace\vec{B}\Big)
+\rot \vec{j} \ = \ \sigma \rot\vec{E}  \ = \ -\sigma\dot{\vec{B}}\\
+\Rightarrow \frac{1}{\mu} \ \rot\rot \vec{B} \ = \ -\sigma \dot{\vec{B}}  \ = \ \frac{1}{\mu}\left(\grad\underbrace{\div\vec{B}}_{=0} \ - \ \laplace\vec{B}\right)
 \end{align*}
 
 Über analoge Vorgehensweisen für $\vec{E}$ und $\vec{j}$ erhalten wir schlussendlich folgende drei Differentialgleichungen:
@@ -229,10 +261,43 @@ Wenn wir nun ohne Beschränkung der Allgemeinheit annehmen, dass $\vec{k}\parall
 
 Die Felder und Ströme fallen innerhalb des Leiters also exponentiell ab. Der Ausdruck $\delta\sim \frac{1}{\sqrt{\omega}}$ lässt sich also dementsprechend als \textbf{Eindringtiefe} verstehen.
 
-[nochn Bildschn]
-
+\begin{wrapfigure}[]{l}[0cm]{0cm}
+	\raisebox{0pt}[\dimexpr\height-1\baselineskip\relax]{
+		\colorbox{hgrey}{
+			\begin{tikzpicture}
+			%Achsen
+			\draw[->](0,0)--(4,0)  node[below right]{$x$};
+			\draw[->](0,-.5)--(0,3)node[above right]{$\vec{B}$};
+				\draw[red,ultra thick] plot[smooth, tension=.8] coordinates {(0,2.5)(1,-0.3)(2.5,0.3)(3.5,0.2)(4,0.15)};
+			\end{tikzpicture}
+		}
+}
+	\caption{Leiter in $z$-Richtung}
+\end{wrapfigure}
 Ein Beispiel für dieses Verhalten von Feldern und Strömen in Leitern ist die Entstehung von Wirbelströmen in von einem Magnetfeld durchsetzten Eisenkern. Dieser fungiert als Abschirmstrom und verhindert somit das tiefe Durchdringen des Kerns durch das Magnetfeld. In technischen Anwendungen wie z.B. dem Transformator wird dem entgegengewirkt, indem die Leitfähigkeit $\sigma$ durch Lamellierung stark abgesenkt wird.\\
-\ \\
+\ \\ \linebreak
+
+\begin{wrapfigure}[]{r}[0cm]{0cm}
+	\raisebox{0pt}[\dimexpr\height-1\baselineskip\relax]{
+		\colorbox{hgrey}{
+			\begin{tikzpicture}
+			%Achsen
+			\draw (-1,-2)--(-1,2);
+			\draw (1,-2)--(1,2);
+			\draw[red, ultra thick, -latex] (0,1.8) [partial ellipse=60:430:.8cm and 0.2cm];
+			\draw[red] (0,1.6)node[below right]{$\vec{B}$};
+			\fill[pattern=north west lines] plot[smooth, tension=.8] coordinates {(0,-2)(.5,-1.5)(0.9,0)(1,-0.01)(1,-2)};
+			\fill[pattern=north east lines] plot[smooth, tension=.8] coordinates {(0,-2)(-.5,-1.5)(-0.9,0)(-1,-0.01)(-1,-2)};
+			\draw plot[smooth, tension=.8] coordinates {(0,-2)(-.5,-1.5)(-0.9,-0.01)(-1,0.3)};
+			\draw (1.3,-1) node{$\vec{j}$};
+			\draw plot[smooth, tension=.8] coordinates {(0,-2)(.5,-1.5)(0.9,-0.01)(1,0.3)};
+			\draw (1.3,-1) node{$\vec{j}$};
+			\draw[->] (-1.3,-1.5)-- node[left]{$\vec{E}$}(-1.3,-0.5);
+			\end{tikzpicture}
+		}
+	}
+	\caption{Skin-Effekt im Leiter}
+\end{wrapfigure}
 Ein anderes Beispiel ist der sogenannte \textbf{Skin-Effekt}, welcher dafür sorgt, dass Wechselströme an der Drahtoberfläche fließen. Der Widerstand eines Drahtes bei Skin-Effekt lässt sich folgendermaßen berechnen:
 
 \begin{equation*}

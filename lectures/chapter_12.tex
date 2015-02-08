@@ -22,6 +22,7 @@ Die \textsc{Maxwell}-Gleichungen liefern uns zusätzlich:
 \end{align*}
 
 Zur Lösung der erhaltenen DGL wählen wir den Ansatz der ebenen Welle für $\vec{E}$. $\quad(\vec{E} \ = \ \vec{E}_0 e^{i(\vec{k}\vec{r}-\omega t)})$\\
+\newpage
 Einsetzen liefert uns:
 
 \begin{align*}
@@ -80,7 +81,19 @@ a^r  \ = \  \frac{1 \ - \ \frac{\mu_1 n_2}{\mu_2 n_1}}{1 \ + \ \frac{\mu_1 n_2}{
 Es kommt also zur Vollständigen Reflexion, analog zur Totalreflexion. Der Leiter ist also undurchsichtig für Wellen mir $\omega \rightarrow 0$. Für sichtbares Licht können wir leider noch keine Aussage treffen, da es dort wesentlich komplizierter ist.
 
 \section{Dispersion in Dielektrika}
-
+\begin{wrapfigure}[]{r}[0cm]{0cm}
+	\raisebox{0pt}[\dimexpr\height-1\baselineskip\relax]{
+		\colorbox{hgrey}{
+			\begin{tikzpicture}
+			\filldraw[opacity = .4, pattern = north east lines] (-2,0)--(2,0)--(0,3)--(-2,0);
+			\draw[ultra thick] (-2.5,1)--(-1,1.5);	
+			\draw[ultra thick,dblue] (-1,1.5)--(1.1,1.3)--(2.5,0.7);
+			\draw[ultra thick,red] (-1,1.5)--(0.9,1.6)--(2.5,1.3);
+			\end{tikzpicture}
+		}
+	}
+	\caption{Disperion im Prisma}
+\end{wrapfigure}
 Allgemein bedeutet Dispersion die Abhängigkeit der Brechzahl $n$ von der Frequenz der einfallenden Welle: $\qquad n = n (\omega)$\\
 Als \textbf{"normale" Dispersion} bezeichnet man dabei ein Verhalten, bei dem $n(\omega)$ mit $\omega$ wächst.
 Zur Erklärung der Dispersion nutzt man elementar die Theorie, dass  durch das elektrische Feld der elektromagnetischen Welle atomare Dipole aus ihrer anfänglichen Ruhelage induziert werden. Genauer gesagt werden atomare Ladungen um den Betrag $r$ ausgelenkt, sodass ein Dipolmoment von $\vec{p}=e\cdot\vec{r}$ entsteht. Damit können  wir für diese Ladungen im Potential $V$ folgende Bewegungsgleichung aufstellen:
@@ -88,7 +101,19 @@ Zur Erklärung der Dispersion nutzt man elementar die Theorie, dass  durch das e
 \begin{equation*}
 m \ \ddot{\vec{r}} \ + \ \pdiff{V(\vec{r})}{\vec{r}} \ = \ -e \ \vec{E}_{\text{lok}}
 \end{equation*}
-
+\ \\
+\begin{wrapfigure}[10]{l}[0cm]{0cm}
+	\raisebox{0pt}[\dimexpr\height-1\baselineskip\relax]{
+		\colorbox{hgrey}{
+			\begin{tikzpicture}
+			\draw[->] (-2,0)--(2,0) node[below]{$\vec{r}$};
+			\draw[->] (0,0)--(0,3) node[above]{$V(\vec{r})$};
+			\draw (-1.5,2.5) parabola bend (0,0) (1.5,2.5) ;
+			\end{tikzpicture}
+		}
+	}
+	\caption{Bindungsenergie}
+\end{wrapfigure}
 Für kleine Auslenkungen können wir das Potential, also die Bindungsenergie, harmonisch nähern:
 
 \begin{align*}
@@ -121,14 +146,31 @@ Stellen wir dies nun nach $n$ um erhalten wir somit die Abhängigkeit $n(\omega)
 n^2 \ = \ \frac{\mathcal{N} \ e^2}{\epsilon_0 m \left(\omega_0^{,2} \ - \ \omega^2\right)} \qquad \qquad \text{mit} \qquad \omega_0^{,2} \ = \ \omega_0^2\ \left(1 \ - \ \frac{\mathcal{N} \ e^2}{3 \epsilon_0 m \omega_0^2}\right)
 \end{equation*}
 
-[Bild]
+\begin{wrapfigure}[9]{r}[0cm]{0cm}
+	\raisebox{0pt}[\dimexpr\height-1\baselineskip\relax]{
+		\colorbox{hgrey}{
+			\begin{tikzpicture}
+			\draw[->] (-.1,0)--(6,0) node[below]{$\omega$};
+			\draw[->] (0,-2)--node[left]{$0$}(0,2) node[left]{$n^2$};
+			\draw (-.1,.5)--(.1,.5);
+			\draw (3,-.1)node[below left]{$\omega_0$}--(3,.1);
+			\draw[dotted] (0,0.5)node[left]{$1$}--(6,.5);
+			\draw[dotted] (3,-2)--(3,2);
+			\draw[red] plot[smooth, tension=.8] coordinates {(0,.6)(2,.9)(2.8,2)};		
+			\draw[red] plot[smooth, tension=.8] coordinates {(6,.4)(4,0)(3.2,-2)};				
+			\end{tikzpicture}
+		}
+	}
+	\caption{Bindungsenergie}
+\end{wrapfigure}
 Anschaulich repräsentiert $\omega'$ den Einfluss der Inhomogenität des Feldes. Die erhaltene Abhängigkeit $n(\omega)$ können wir nun für verschiedene Fälle diskutieren:
 
 \begin{align*}
-\omega \ < \ \omega^{,}_0:& \qquad n^2 \ > \ 1 \qquad \Rightarrow\qquad \vec{p},\vec{E} \text{ in Phase}\\
+\omega \ < \ \omega^{,}_0:& \qquad n^2 \ > \ 1,\ \vec{p},\vec{E} \text{ in Phase}\\
 \omega \ = \ \omega^{,}_0:& \qquad \text{Resonanz}\\
 \omega \ > \ \omega^{,}_0:& \qquad \vec{p},\vec{E} \text{ antiphasig}\\
-\omega \rightarrow \omega^{,}_0:& \qquad n^2 \ \rightarrow \ 1, \vec{p} \ \rightarrow \ 0 \; \text{ atomare Dipole können nicht  folgen}
+\omega \rightarrow \omega^{,}_0:& \qquad n^2 \ \rightarrow \ 1, \vec{p} \rightarrow 0,\\
+ & \qquad \text{ atomare Dipole können nicht  folgen}
 \end{align*}
 
 Zudem ist für einen kleinen Bereich oberhalb von $\omega'_0$ das Quadrat der Brechzahl negativ. Da daraus $k^2 = \frac{\omega^2}{c^2} n^2 < 0$ folgt, muss gelten, dass $k=ik'$ komplex ist. Damit wird aus $e^{ikx} \rightarrow e^{-k'x}$; das Feld fällt also im inneren des Dielektrikums analog zur Totalreflexion exponentiell ab.\\
@@ -162,6 +204,26 @@ Damit wird der Ausdruck für die Dispersion $\tilde{n}(\omega)$ schlussendlich z
 \end{equation*}
 
 \section{Anomale Dispersion}
+\begin{wrapfigure}[]{r}[0cm]{0cm}
+	\raisebox{0pt}[\dimexpr\height-1\baselineskip\relax]{
+		\colorbox{hgrey}{
+			\begin{tikzpicture}
+			%1
+			\draw[->] (-.1,0)node[left]{$0$}--(6,0) node[below]{$\omega$};
+			\draw[->] (0,-.5)--(0,2) node[left]{$\tilde{n}^2$};
+			\draw (-.1,.5)--(.1,.5);
+			\draw (3,-.1)node[below left]{$\Omega$}--(3,.1);
+			\draw[dotted] (0,0.5)node[left]{$1$}--(6,.5);
+			\draw[dotted] (3,-.5)--(3,2);
+			\draw[red] plot[smooth, tension=.8] coordinates {(0,.6)(2,.9)(2.8,2)};		
+			\draw[red] plot[smooth, tension=.8] coordinates {(6,.4)(4,0)(3.35,-.5)};	
+			\draw[dblue] (3,1) node[right]{$\ \ \gamma>0$};
+			\draw[dblue] plot[smooth, tension=.8] coordinates {(0,.6)(2,.9)(2.8,1.5)(3.15,-.2)(4,.2)(6,.4)} ;			
+			\end{tikzpicture}
+		} 
+	}
+	\caption{anomale Dispersion}
+\end{wrapfigure}
 
 Wir betrachten nun die Umgebung einer beliebigen Resonanzstelle etwas genauer und nehmen an, dass die Dämpfung $\gamma_k$ vernachlässigbar gegenüber $\omega_k$ ist. Wenn wir nur diese eine Resonanzstelle untersuchen, reicht die Vereinfachung $\omega_k \rightarrow \Omega, \ \gamma_k \rightarrow\gamma, \ a \cdot f_k \rightarrow A$. Alle anderen Beiträge zum komplexen Brechungsindex $\tilde{n}(\omega)$ seien außerdem nur  langsam veränderlich und näherungsweise reell; wir bezeichnen sie als $\overline{n}(\omega)$. Für geringe $\gamma$ erhalten wir somit wieder den normalen Dispersionsfall:
 
@@ -175,7 +237,6 @@ Die Dämfung $\gamma$ wird dann wichtig, wenn das Produkt $\gamma\omega \ \maths
 \gamma\Omega \ \mathsmaller{\mathsmaller{\gtrsim}} \ |\Omega \ - \ \omega| \cdot 2\Omega \qquad \Rightarrow \qquad \frac{\gamma}{2} \ \mathsmaller{\mathsmaller{\gtrsim}} \ |\Omega \ - \ \omega|
 \end{equation*}
 
-[hier drei Bild]
 Unter diesen Bedingungen folgt für $n(\omega)$, dass es an der Resonanzstelle bei gleichzeitig starker Dämpfung \emph{abfällt}. Dieses Verhalten wird auch als \textbf{anomale Dispersion} bezeichnet.\\
 Mathematisch können wir diesen Fall der nicht zu kleinen Dämpfung, für die $\frac{A}{\gamma\Omega}\ll \overline{n}^2$ gilt, folgendermaßen behandeln:
 
@@ -187,7 +248,6 @@ n  \ &= \ \overline{n} \ + \ \frac{A}{2\overline{n}} \; \frac{\Omega^2 \ - \ \om
 \ \\
 n \cdot \kappa  \ &= \ \frac{A}{2\overline{n}} \; \frac{\gamma\omega}{\left(\Omega^2-\omega^2\right)^2 \ + \ \gamma^2\omega^2} 
 \end{align*}
-[vllt. noch ein Bild]
 
 \section{Metalldispersion}
 
@@ -284,7 +344,7 @@ Im \emph{idealen Fall} ist $n_0=1$ und es liegt keine Dämpfung vor ($\gamma=0$)
 
 Dies gilt unabhängig von $\vec{k}$ und könnte eine longitudinale Welle repräsentieren. Diese hätte kein Magnetfeld, da $\dot{\vec{B}}= - \rot\vec{E} = - \vec{k}\times\vec{E}= 0$ und damit $\vec{B}=0$ bis auf Integrationskonstante gilt.\\
 Im \emph{realen Fall} existiert allerdings Dämpfung und und räumliche Dispersion $\epsilon(\omega,\vec{k})$, daher muss eine longitudinale Welle einen anderen physikalischen Ursprung haben. Um diesen zu klären, kehren wir noch einmal zum Begriff \ \grqq Plasmafrequenz\grqq{}  zurück.  Dieser rührt von der Tatsache her, dass sich die Elektronenwolke im Leiter wie ein Plasma, also ein Gas aus ionisierten Teilchen verhält. Lenkt man nun diese Leitungselektronen um den Betrag $\Delta x \sim e^{ikx}$ aus, so entstehen lokale Ladungsdichtegradienten. Diese rufen wiederum ein $\vec{E}$-Feld hervor, welches seinerseits eine rücktreibende Kraft auf die ausgelenkten Elektronen ausübt. Dies hat zur Folge, dass es zu longitudinalen Oszillationen des Elektronengases mit der Plasmafrequenz als Eigenfrequenz kommt, welche man dann als \grqq longitudinale Welle\grqq{} oder auch \textbf{\grqq Plasmon\grqq{}} bezeichnet.  Es handelt sich dabei also um eine Plasmaschwingung durch eine Dichtewelle der Leitungselektronen.
-[Bild]
+
 
 \section{Gruppengeschwindigkeit}
 
@@ -304,7 +364,29 @@ Der erhaltene Ausdruck besteht dementsprechend aus zwei Teilen:\\
 \item einem langsam veränderlichen Teil, auch \textbf{Modulation} genannt, dessen Oszillation sich mit der \textbf{Gruppengeschwindigkeit} $c_{\text{Gr}} = \frac{\Delta \omega}{\Delta k}$ verschiebt.
 \end{enumerate}
 
-[hier definitiv ein Bild hin]
+\begin{wrapfigure}[12]{r}[0cm]{0cm}
+	\raisebox{0pt}[\dimexpr\height-1\baselineskip\relax]{
+		\colorbox{hgrey}{
+			\begin{tikzpicture}
+			
+			\draw[->] (-3,0)--(3,0) node[right]{$x$};
+			\draw[->] (0,-2)--(0,2) node[above]{$U(x)$};
+
+			
+			\draw[scale=1.8,domain=-1.5:1.5,smooth,variable=\t,red] plot ({\t},{cos(1.5*deg(\t))},{0});
+			\draw[scale=1.8,domain=-1.5:1.5,smooth,variable=\t,red] plot ({\t},{-cos(1.5*deg(\t))},{0});
+			\draw[scale=1.8,domain=-1.5:1.5,smooth,variable=\t,blue] plot ({\t},{cos(1.5*deg(\t))*(cos(12*deg(\t)))});
+
+			\draw (-1.9,-.2)--(-1.9,.2);
+			\draw (-2,-1) node{$-\frac{\pi}{\Delta k}$};
+			\draw (1.9,-.2)--(1.9,.2);
+			\draw (1.9,-1) node{$\frac{\pi}{\Delta k}$};
+			\draw[|-|,dblue] (.9,2)--(1.9,2) node[right]{$\lambda \ll \frac{\pi}{\Delta k}$};			
+			\end{tikzpicture}
+		}
+	}
+	\caption{Wellenpaket}
+\end{wrapfigure}
 
 Für ein allgemeines Wellenpaket gilt:
 
@@ -319,7 +401,7 @@ Wir beginnen unsere Betrachtung zum Zeitpunkt $t=0$:
 U(\vec{r},t=0) \ = \ e^{i\vec{k}_0 \cdot\vec{r}} \; \underbrace{\int\d^3 k' \ \tilde{U}(\vec{k}_0 + \vec{k}') \ e^{i\vec{k}'\cdot\vec{r}}}_{=: \phi(\vec{r})}
 \end{equation*}
 
-$\phi(\vec{r})$ ist dabei nur langsam veränderlich auf einer Skala $|\Delta \vec{r}| = \frac{1}{|\Delta \vec{k}|} \gg \frac{\lambda}{2\pi}= \frac{1}{|\vec{k}_0|}$.\\
+$\phi(\vec{r})$ ist dabei nur langsam veränderlich auf einer Skala $|\Delta \vec{r}| = \frac{1}{|\Delta \vec{k}|} \gg \frac{\lambda}{2\pi}= \frac{1}{|\vec{k}_0|}$.\\ \newpage
 Für jeden anderen Zeitpunkt $t \neq 0$ gilt:
 
 \begin{align*}

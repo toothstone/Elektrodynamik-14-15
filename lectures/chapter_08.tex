@@ -12,11 +12,11 @@ Erinnerung: \textbf{Lorentzkraftdichte}
 		\colorbox{hgrey}{
 			\begin{tikzpicture}
 			
-	\draw[ultra thick] (-1,1)--node[above right]{$\vec{a}$}(1,-1);
-	\filldraw[black] (-1,1) circle (2pt) node[above left]{$+Q$};
-	\filldraw[black] (1,-1) circle (2pt) node[below right]{$-Q$};
-	\filldraw[black] (-1.5,-2.5) circle (2pt) node[below left]{$0$};
-	\draw[->] (-1.5,-2.5) -- node[below right]{$\vec{r}$} (-0.1,-0.1);
+			\draw[ultra thick] (-1,1)--node[above right]{$\vec{a}$}(1,-1);
+			\filldraw[black] (-1,1) circle (2pt) node[above left]{$+Q$};
+			\filldraw[black] (1,-1) circle (2pt) node[below right]{$-Q$};
+			\filldraw[black] (-1.5,-2.5) circle (2pt) node[below left]{$0$};
+			\draw[->] (-1.5,-2.5) -- node[below right]{$\vec{r}$} (-0.1,-0.1);
 			
 			
 			\end{tikzpicture}
@@ -50,12 +50,12 @@ Den Ausdruck für das Drehmoment auf einen Dipol im elektrischen Feld erhalten w
 		\colorbox{hgrey}{
 			\begin{tikzpicture}
 			
-				\draw[ultra thick, -latex] (0,0) [partial ellipse=40:410:2cm and 0.5cm];
-				\draw (1.6,0.4) node[above right]{$I$};
-				\filldraw[black] (-1.5,-2.5) circle (2pt) node[below left]{$0$};
-				\draw[->] (-1.5,-2.5) -- node[below right]{$\vec{r}$} (0,0);
-				\draw[->] (-1.5,-2.5) -- node[left]{$\vec{r}'$} (-2,-0.2);
-				\draw[->] (-0.1,0) -- node[above]{$\ \ \vec{r}''$} (-1.8,0);
+			\draw[ultra thick, -latex] (0,0) [partial ellipse=40:410:2cm and 0.5cm];
+			\draw (1.6,0.4) node[above right]{$I$};
+			\filldraw[black] (-1.5,-2.5) circle (2pt) node[below left]{$0$};
+			\draw[->] (-1.5,-2.5) -- node[below right]{$\vec{r}$} (0,0);
+			\draw[->] (-1.5,-2.5) -- node[left]{$\vec{r}'$} (-2,-0.2);
+			\draw[->] (-0.1,0) -- node[above]{$\ \ \vec{r}''$} (-1.8,0);
 			
 			
 			\end{tikzpicture}
@@ -104,7 +104,7 @@ Für das Drehmoment auf den magnetischen Dipol gilt:
 
 \begin{align*}
 \vec{M}  \ &= \ \Int{}{}{V'} \vec{r}\times\left[\vec{j}(\vec{r}') \times \vec{B}(\vec{r}')\right] \ = \  I  \ \Oint{}{}{\vec{r}''} \times \left[\d\vec{r}' \times\vec{B}(\vec{r}')\right]\\
- &= \ I \ \Oint{}{}{\vec{r}'}(\vec{r}''\cdot\vec{B}(\vec{r}')) \ - \ I \ \oint(\d\vec{r}'\cdot\vec{r}'')\vec{B}(\vec{r}')
+&= \ I \ \Oint{}{}{\vec{r}'}(\vec{r}''\cdot\vec{B}(\vec{r}')) \ - \ I \ \oint(\d\vec{r}'\cdot\vec{r}'')\vec{B}(\vec{r}')
 \end{align*}
 
 Näherung: $\vec{B}$ ist homogen. Auflösung der Integrale:
@@ -124,7 +124,7 @@ Wir betrachten zwei Ladungsverteilungen mit den Dichten $\rho_1$ und $\rho_2$, w
 
 \begin{equation*}
 W_e \ = \ \frac{1}{8\pi\epsilon_0}\int\d V \d V' \frac{\left(\rho_1(\vec{r}) \ + \ \rho
-_2(\vec{r})\right)\left(\rho_1 (\vec{r}') \ + \ \rho_2(\vec{r}')\right)}{|\vec{r} \ - \ \vec{r}'|}
+	_2(\vec{r})\right)\left(\rho_1 (\vec{r}') \ + \ \rho_2(\vec{r}')\right)}{|\vec{r} \ - \ \vec{r}'|}
 \end{equation*}
 
 Betrachten wir nun die Wechselwirkungsenergie zwischen 1 und 2, wozu wir annehmen, dass $\rho_1$ ein "äußeres" Potential $\varphi_1$ erzeugt, welches mit $\rho_2$ wechselwirkt:

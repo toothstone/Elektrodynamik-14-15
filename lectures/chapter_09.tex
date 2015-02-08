@@ -56,30 +56,30 @@ Hieran lässt sich auch einfach überprüfen, dass man die Gleichungen für die 
 \underline{Wichtige Eichungen:}
 
 \begin{enumerate}[label=\roman*)]
-
-\item \textbf{\textsc{Lorentz}-Eichung}
-
-\begin{equation*}
-\frac{1}{c^2} \partial_t \ \varphi \ + \ \div\vec{A} \ = \ 0
-\end{equation*}
-
-Die \textsc{Lorentz}-Eichung fixiert die Potentiale nicht; eine Umeichung der Form $\Dalembert\chi=0$ ist immer noch möglich.
-
-\item \textbf{\textsc{Coulomb}-Eichung}
-
-\begin{align*}
-\div\vec{A} \ = \ 0 \qquad\qquad \Rightarrow \qquad\qquad -\laplace\varphi \ &= \ \frac{\rho}{\epsilon_0}\\
-\Dalembert\vec{A} \ &= \ \mu_0\vec{j} \  - \ \frac{1}{c^2}\ \frac{\partial^2 \ \varphi}{\partial t \partial \vec{r}} 
-\end{align*}
-
-Die \textsc{Coulomb}-Eichung ist hier dieselbe wie in der Elektrostatik plus entsprechende Korrekturen.
-
-\item \textbf{Transversale Wellen}
-
-\begin{align*}
-\varphi \ = \ 0 \qquad\qquad\Rightarrow\qquad\qquad \frac{1}{c^2}\ddot{\vec{A}}\ + \ \rot\rot\vec{A} \ &= \ \mu_0\vec{j}\\
-- \frac{\partial^2 \ \vec{A}}{\partial t \partial \vec{r}}  \ &= \ \frac{\rho}{\epsilon_0} 
-\end{align*}
+	
+	\item \textbf{\textsc{Lorentz}-Eichung}
+	
+	\begin{equation*}
+	\frac{1}{c^2} \partial_t \ \varphi \ + \ \div\vec{A} \ = \ 0
+	\end{equation*}
+	
+	Die \textsc{Lorentz}-Eichung fixiert die Potentiale nicht; eine Umeichung der Form $\Dalembert\chi=0$ ist immer noch möglich.
+	
+	\item \textbf{\textsc{Coulomb}-Eichung}
+	
+	\begin{align*}
+	\div\vec{A} \ = \ 0 \qquad\qquad \Rightarrow \qquad\qquad -\laplace\varphi \ &= \ \frac{\rho}{\epsilon_0}\\
+	\Dalembert\vec{A} \ &= \ \mu_0\vec{j} \  - \ \frac{1}{c^2}\ \frac{\partial^2 \ \varphi}{\partial t \partial \vec{r}} 
+	\end{align*}
+	
+	Die \textsc{Coulomb}-Eichung ist hier dieselbe wie in der Elektrostatik plus entsprechende Korrekturen.
+	
+	\item \textbf{Transversale Wellen}
+	
+	\begin{align*}
+	\varphi \ = \ 0 \qquad\qquad\Rightarrow\qquad\qquad \frac{1}{c^2}\ddot{\vec{A}}\ + \ \rot\rot\vec{A} \ &= \ \mu_0\vec{j}\\
+	- \frac{\partial^2 \ \vec{A}}{\partial t \partial \vec{r}}  \ &= \ \frac{\rho}{\epsilon_0} 
+	\end{align*}
 \end{enumerate}
 
 \section{Retardierte Potentiale}
@@ -186,56 +186,56 @@ $\left(\text{Notationshinweis: }\vec{p}|_{\text{ret}} \text{ steht für }\vec{p}
 \ \\
 \underline{Spezialfälle:}
 \begin{enumerate}[label=\roman*)]
-\item $\partial_t  \ = \ 0 \quad\ \; \qquad$ statischer Dipol
-
-\begin{align*}
-\Rightarrow \qquad \vec{B}  \ &= \ 0\\
-\vec{E} \ &= \ - \frac{1}{4\pi\epsilon_0 \ r^3}\left(\vec{p} \ - \ \frac{3(\vec{p}\cdot\vec{r})\cdot\vec{r}}{r^2}\right)
-\end{align*}
-
-\item $\vec{p} \ \sim \ e^{-i\omega t} \qquad$ harmonische Schwingung
-
-\begin{align*}
-\Rightarrow \qquad \partial_t \ &\rightarrow \ -i\omega\\
-\frac{1}{c}\partial_t \ &\rightarrow \ - \frac{i\omega}{c}  \ = \ -i \frac{2\pi}{\lambda}  \ = \ -ik
-\end{align*}
-
-Für den Fall der harmonischen Schwingung von $\vec{p}$ wollen wir nun die Abstandsbhängigkeit der Feldbeiträge betrachten. Dazu \grqq sortieren\grqq   wir die Beiträge nach ihren Ordnungen $\sigma(.)$:
-
-\begin{align*}
-\vec{B} \ &\sim \ - \frac{\mu_0 \vec{r}}{4\pi \ r^2} \times \Bigg(\underbrace{\sigma\left(\frac{\dot{\vec{p}}}{\lambda}\right)}_{\text{Fernfeld}} \; + \; \underbrace{\sigma\left(\frac{\dot{\vec{p}}}{r}\right)}_{\text{Nahfeld}}\Bigg)\\
-\vec{E} \ &\sim \ - \frac{1}{4\pi\epsilon_0} \cdot \left(\sigma\left(\frac{p}{\lambda^2}\right) \; + \; \sigma\left(\frac{r}{r \cdot \lambda}\right) \; + \; \sigma\left(\frac{p}{r^2}\right)\right)
-\end{align*}
-
-\ \\
-\textbf{Nahfeld:} $\quad r \ll \lambda$
-
-\begin{align*}
-\vec{B}(\vec{r},t)  \ &= \ \frac{\mu_0}{4\pi\ r^2} \ \left(\dot{\vec{p}} \times \frac{\vec{r}}{r}\right)_{\text{ret}}\\
-\vec{E}(\vec{r},t)  \ &= \ \frac{1}{4\pi\epsilon_0 \ r^2} \ \left(\frac{3(\vec{p}\cdot\vec{r})\vec{r}}{r^2} \ - \ \vec{p}\right)_{\text{ret}} 
-\end{align*}
-
-Für das Nahfeld verzichtet man häufig auf die Retardierung, da sie kaum ins Gewicht fällt:
-
-\begin{equation*}
-\vec{p} \ \sim \ e^{-i\omega\left(t-\frac{r}{c}\right)}  \ = \ e^{-i\omega t} \ \underbrace{\; e^{2\pi i \frac{r}{\lambda}}\;}_{1+2\pi i \frac{r}{\lambda}+\ldots \approx 1}
-\end{equation*}
-
-\ \\
-\textbf{Fernfeld:} $\quad r \gg \lambda \qquad\left(\frac{\vec{r}}{r} \ = \ \vec{e}_r\right)$
-
-\begin{align*}	
-\vec{B}(\vec{r},t)  \ &= \ \frac{\mu_0}{4\pi \ r \ c} \left(\dot{\vec{p}}\times\vec{e}_r\right)_{\text{ret}}\\
-\vec{E}(\vec{r},t)  \ &= \ \frac{\mu_0}{4\pi \ r} \left(\left(\ddot{\vec{p}}\cdot\vec{e}_r\right)\cdot\vec{e}_r \ - \ \ddot{\vec{p}}\right)_{\text{ret}}  \ = \ \frac{\mu_0}{4\pi \ r}\left(\ddot{\vec{p}}\times\vec{e}_r\right)_{\text{ret}}\times\vec{e}_r  \ = \ c\cdot\vec{B}\times\vec{e}_r
-\end{align*}
-
-Bei harmonisch schwingendem $\vec{p}$ breiten sich $\vec{E}$ und $\vec{B}$ also radial als transversale Welle aus:
-
-\begin{equation*}
-e^{-i\omega\left(t-\frac{r}{c}\right)}  \ = \ e^{i(kr-\omega t)} \qquad \text{mit } k  \ = \  \frac{\omega}{c}
-\end{equation*}
-
-Dabei fallen $|\vec{E}|$ und $|\vec{B}|$ nur mit $\frac{1}{r}$ ab!
+	\item $\partial_t  \ = \ 0 \quad\ \; \qquad$ statischer Dipol
+	
+	\begin{align*}
+	\Rightarrow \qquad \vec{B}  \ &= \ 0\\
+	\vec{E} \ &= \ - \frac{1}{4\pi\epsilon_0 \ r^3}\left(\vec{p} \ - \ \frac{3(\vec{p}\cdot\vec{r})\cdot\vec{r}}{r^2}\right)
+	\end{align*}
+	
+	\item $\vec{p} \ \sim \ e^{-i\omega t} \qquad$ harmonische Schwingung
+	
+	\begin{align*}
+	\Rightarrow \qquad \partial_t \ &\rightarrow \ -i\omega\\
+	\frac{1}{c}\partial_t \ &\rightarrow \ - \frac{i\omega}{c}  \ = \ -i \frac{2\pi}{\lambda}  \ = \ -ik
+	\end{align*}
+	
+	Für den Fall der harmonischen Schwingung von $\vec{p}$ wollen wir nun die Abstandsbhängigkeit der Feldbeiträge betrachten. Dazu \grqq sortieren\grqq   wir die Beiträge nach ihren Ordnungen $\sigma(.)$:
+	
+	\begin{align*}
+	\vec{B} \ &\sim \ - \frac{\mu_0 \vec{r}}{4\pi \ r^2} \times \Bigg(\underbrace{\sigma\left(\frac{\dot{\vec{p}}}{\lambda}\right)}_{\text{Fernfeld}} \; + \; \underbrace{\sigma\left(\frac{\dot{\vec{p}}}{r}\right)}_{\text{Nahfeld}}\Bigg)\\
+	\vec{E} \ &\sim \ - \frac{1}{4\pi\epsilon_0} \cdot \left(\sigma\left(\frac{p}{\lambda^2}\right) \; + \; \sigma\left(\frac{r}{r \cdot \lambda}\right) \; + \; \sigma\left(\frac{p}{r^2}\right)\right)
+	\end{align*}
+	
+	\ \\
+	\textbf{Nahfeld:} $\quad r \ll \lambda$
+	
+	\begin{align*}
+	\vec{B}(\vec{r},t)  \ &= \ \frac{\mu_0}{4\pi\ r^2} \ \left(\dot{\vec{p}} \times \frac{\vec{r}}{r}\right)_{\text{ret}}\\
+	\vec{E}(\vec{r},t)  \ &= \ \frac{1}{4\pi\epsilon_0 \ r^2} \ \left(\frac{3(\vec{p}\cdot\vec{r})\vec{r}}{r^2} \ - \ \vec{p}\right)_{\text{ret}} 
+	\end{align*}
+	
+	Für das Nahfeld verzichtet man häufig auf die Retardierung, da sie kaum ins Gewicht fällt:
+	
+	\begin{equation*}
+	\vec{p} \ \sim \ e^{-i\omega\left(t-\frac{r}{c}\right)}  \ = \ e^{-i\omega t} \ \underbrace{\; e^{2\pi i \frac{r}{\lambda}}\;}_{1+2\pi i \frac{r}{\lambda}+\ldots \approx 1}
+	\end{equation*}
+	
+	\ \\
+	\textbf{Fernfeld:} $\quad r \gg \lambda \qquad\left(\frac{\vec{r}}{r} \ = \ \vec{e}_r\right)$
+	
+	\begin{align*}	
+	\vec{B}(\vec{r},t)  \ &= \ \frac{\mu_0}{4\pi \ r \ c} \left(\dot{\vec{p}}\times\vec{e}_r\right)_{\text{ret}}\\
+	\vec{E}(\vec{r},t)  \ &= \ \frac{\mu_0}{4\pi \ r} \left(\left(\ddot{\vec{p}}\cdot\vec{e}_r\right)\cdot\vec{e}_r \ - \ \ddot{\vec{p}}\right)_{\text{ret}}  \ = \ \frac{\mu_0}{4\pi \ r}\left(\ddot{\vec{p}}\times\vec{e}_r\right)_{\text{ret}}\times\vec{e}_r  \ = \ c\cdot\vec{B}\times\vec{e}_r
+	\end{align*}
+	
+	Bei harmonisch schwingendem $\vec{p}$ breiten sich $\vec{E}$ und $\vec{B}$ also radial als transversale Welle aus:
+	
+	\begin{equation*}
+	e^{-i\omega\left(t-\frac{r}{c}\right)}  \ = \ e^{i(kr-\omega t)} \qquad \text{mit } k  \ = \  \frac{\omega}{c}
+	\end{equation*}
+	
+	Dabei fallen $|\vec{E}|$ und $|\vec{B}|$ nur mit $\frac{1}{r}$ ab!
 \end{enumerate}
 
 
@@ -401,7 +401,7 @@ Und:
 
 \begin{equation*}
 \dot{\vec{q}}  \ = \  \left(\dot{\vec{p}} \ + \ \dot{\vec{m}} \times\frac{\vec{e}_r}{c} \ + \frac{\vec{e}_r}{6c}\cdot \ddot{\tens{
-D}}\right)_{\text{ret}}
+		D}}\right)_{\text{ret}}
 \end{equation*}
 
 Somit folgt für die Felder einer kleinen Quelle:

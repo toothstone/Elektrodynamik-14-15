@@ -1,0 +1,465 @@
+\chapter{Energie- und Impulsbilanz des em. Feldes}
+
+\section{Bilanzgleichungen}
+
+Wir betrachten in einem Volumen $V$ die \textbf{Observable} $A$, für die wir auch gan allgemein eine Dichte definieren wollen:
+
+\begin{equation}
+A=\Int{V}{}{V} \ a =  \quad \Rightarrow \quad a := \diff{A}{V} \quad \text{ist die Dichte von } A
+\end{equation}
+
+Anschaulich kann man sagen, dass sich die zeitliche Änderung von $A$ in den Volumen aus seiner Erzeugungsrate $N_A$ und seinem Strom $I_A$ aus dem Volumen heraus zusammensetzt:
+
+\begin{equation*}
+\dot{A}(t) \ = \ - I_A \ + \ N_A
+\end{equation*}
+
+Analog zur Dichte $a$ von $A$ wollen wir nun auch für den Strom $I_A$ eine Stromdichte $\vec{j}_a$ durch die Oberfläche $\partial V$ und für die Erzeugungsrate $N_A$ eine Erzeugungsdichte $\nu_a$ im Volumen $V$ definieren, sodass gilt:
+
+\begin{equation*}
+\Int{V}{}{V} \ \partial_t \ a = -\Oiint{\partial V}{}{\vec{F}} \cdot\vec{j}_a \ + \ \Int{V}{}{V} \ \nu_a \ = \ \Int{V}{}{V} \left(- \ \div\vec{j}_a \ + \ \nu_a\right)
+\end{equation*} 
+
+Daraus folgt die \textbf{allgemeine Bilanzgleichung}:
+
+\begin{equation*}
+\dot{a} \ +  \div\vec{j}_a \  =  \ \nu_a
+\end{equation*}
+
+Falls $A$ eine Erhaltungsgröße ist, gilt:
+
+\begin{equation*}
+N_A = 0, \nu_a = 0 \quad \Rightarrow \quad \dot{a}  \ + \div \vec{j}_a \ = \ 0 \quad \Rightarrow \quad \dot{A} = -\Oiint{\partial V}{}{\vec{F}}\cdot\vec{j}_a
+\end{equation*}
+
+FÜr den Grenzfall, dass $V\rightarrow\infty$, folgt, dass $\dot{A}=0$ und somit $A =$ const., was das erwartete Verhalten einer ERhaltungsgröße widerspiegelt.
+
+\section{Energiebilanz}
+
+Auf eine Punktladung $Q$ wirkt die Kraft $\vec{F}_L = Q(\vec{v}\times\vec{B} \ + \ \vec{E})$ worüber man die Leistung des Feldes an der Ladung $N = \vec{F}\cdot\vec{v}$ ableiten kann.\
+Für eine Energieänderung des em. Feldes gilt dememtsprechend:
+
+\begin{equation*}
+\dot{W}_{em} \ = \ -\vec{v}\cdot\vec{F}_L = -Q \ \cdot \ \vec{v} \ \vec{E}
+\end{equation*}
+
+Für eine Änderung der Energiedichte $\nu_{em}$ folgt daraus bei mehreren Ladungsträgerarten:
+
+\begin{equation*}
+\nu_{em} \ =  \ - \sum_i \ \rho_i \ \vec{v}_i \ \vec{E} \ = \ - \vec{j}\cdot\vec{E}
+\end{equation*}
+
+Damit lautet die Bilanzgleichung, welche in diesem Zusammenhang auch  \textbf{\textsc{Poynting}-Theorem} genannt wird:
+
+\begin{equation*}
+\pdiff{w}{t} \ + \ \div \vec{S}_P \ = \ \nu \ = \ -\vec{j} \cdot \vec{E}
+\end{equation*}
+
+wobei $w$ die Energiedichte und $\vec{S}_P$ die Energiestromdichte (auch \textbf{\textsc{Poynting}-Vektor} genannt) ist.\
+$w$ und $\vec{S}_P$ hängen vom $\vec{E}$- und $\vec{B}$-Feld ab, also sind diese nach \textsc{Maxwell} zu bestimmen:
+
+\begin{align*}
+\nu \ &= -\vec{j}\cdot\vec{E} = \epsilon_0 \ \dot{\vec{E}} \ \vec{E} \ - \ \frac{1}{\mu_0} \left(\nabla\times\vec{B}\right) \cdot \vec{E}\\
+&= \partial_t \left(\frac{\epsilon_0}{2} \vec{E}^2\right) \ - \frac{1}{\mu_0} \nabla \cdot (\vec{B}\times\vec{E}) \ - \ \frac{1}{\mu_0} \vec{B}\cdot \underbrace{(\nabla\times\vec{B})}_{= \dot{\vec{B}}}\\
+&= \frac{1}{2}\partial_t \left(\epsilon_0\vec{E}^2 \ + \ \frac{1}{\mu_0}\vec{B}^2\right) \ - \ \frac{1}{\mu_0}\nabla \cdot (\vec{B}\times\vec{E})
+\end{align*}
+
+Der Vergleich mit dem \textsc{Poynting}-Theorem ergibt:
+
+\begin{align*}
+w \ &= \ \frac{1}{2} \left(\epsilon_0\vec{E}^2 \ + \ \frac{1}{\mu_0}\vec{B}^2\right)\\
+\vec{S}_P \ &= \ \frac{1}{\mu_0} \ \vec{E}\times\vec{B} 
+\end{align*}
+
+\ \\
+\ \\
+\underline{Beispiel zur Erzeugungsdichte $\nu$:}$\qquad$ \textsc{Ohm}'sches Gesetz $\vec{j} = \sigma \cdot \vec{E}$
+
+\begin{equation*}
+\nu \ = \ - \sigma \ \cdot \ \vec{E}^2 \ = \ - \frac{\vec{j}^2}{\sigma}
+\end{equation*}
+
+Der erhaltene Ausdruck für die Erzeugungsdichte entspricht der \textbf{\textsc{Ohm}'schen Wärme}.
+
+\section{Elektrostatische Feldenergie}
+
+\begin{equation*}
+W_e \ = \ \Int{}{}{V} \frac{\epsilon_0}{2} \vec{E}^2 \ = \ - \Int{}{}{V} \frac{\epsilon_0}{2} \vec{E}^2 \ \grad\varphi
+\end{equation*}
+
+Nutze zur Umformung partielle Integration mit dem Satz von \textsc{Gauss}:
+
+\begin{align*}
+\Rightarrow W_e &= \Int{}{}{V} \frac{\epsilon_0}{2} \ (\nabla \cdot \vec{E}) \varphi \ - \ \underbrace{\Oiint{}{}{\vec{A}} \cdot \frac{\epsilon_0}{2}\vec{E}\varphi}_{=0 \text{ im gesamten Raum}} \\
+\\
+&= \ \frac{1}{2} \ \Int{}{}{V} \varphi \cdot \rho \quad = \quad \frac{1}{2} \Int{}{}{Q} \cdot \varphi
+\end{align*}
+
+Dies entspricht auch der Anschauung, dass Energie = Ladung $\cdot$ Potential.\
+Umschreiben ergibt:
+
+\begin{equation*}
+W_e \ = \ \frac{1}{2} \ \Int{}{}{V} \rho \cdot \varphi \ = \ \frac{1}{8\pi\epsilon_0} \ \int\d V\d V' \; \frac{\rho(\vec{r}) \ \rho(\vec{r}')}{|\vec{r}-\vec{r}'|}
+\end{equation*}
+
+\ \\
+\ \\
+Für eine Punktladung ergibt die erhaltene Gleichung: 
+
+\begin{align*}
+W_e \quad &= \quad \sum_{i\neq j} \ \frac{Q_i \ Q_j}{8\pi\epsilon_0 \ |\vec{r}-\vec{r}'|} \; + \; \text{\textbf{ Selbstenergie} für i = j}\\
+&= \quad \sum_{i<j} \ \frac{Q_i \ Q_j}{8\pi\epsilon_0 \ |\vec{r}-\vec{r}'|} \; + \; \text{ Selbstenergie für i = j}\\
+\end{align*}
+\ \\
+Für die Selbstenergie gilt zunächst für eine geladene Kugel mit dem Radus $a$: berechnen:
+
+\begin{equation*}
+W_e \ = \ \alpha \cdot \frac{Q^2}{8\pi\epsilon_0 \ a} \qquad \text{mit} \quad \alpha = \begin{cases}
+\frac{6}{5} \quad \text{für homogene Kugel}\\
+1 \quad \text{für Hohlkugel}
+\end{cases}	
+\end{equation*}	
+
+Wenn man nun für diese Kugel den Grenzübergang zu einer Punktladung machen möchte und $a$ gegen 0 gehen lässt, so erhält man als Ergebnis, dass die Selbstenergie einer Punktladung unendlich sein müsste. An dieser Stelle ist die klassische Elektrodynamik nicht anwendbar, da sie als Kontinuumstheorie an ihre Grenzen stößt. Für Selbstenergie von Elementarteilchen ist also eine Erweiterung der Theorie der Elektrodynamik, welche ausschließlich auf den \textsc{Maxwell}-Gleichungen beruht, vonnöten, so wie es in der Quantenelektrodynamik behandelt wird.
+
+\section{Elektrostatische Energie einer Leiteranordnung}
+
+Da wir eine feste Leiteranordnung betrachten, folgt daraus, dass es keine Raumladungen gibt, sondern diese an die Leiteroberflächen gebunden sind.
+
+\begin{align*}
+& \quad W_e \ = \ \frac{1}{2} \ \Oiint{}{}{A} \sigma\cdot\varphi \  =  \frac{1}{2} \sum_i \ \varphi_i \ Q_i\\
+&\quad \text{wobei die }\varphi_i = \varphi \text{ auf den Leiteroberflächen konstant sind}
+\end{align*}
+
+\underline{Beispiel:} $\quad Q=Q_1=Q_2 \quad\Rightarrow\quad  W_e =\frac{1}{2}Q(\varphi_1-\varphi_2 ) = \frac{1}{2}QU = \frac{1}{2}CU^2 = \frac{1}{2}\frac{Q^2}{C}$\
+
+\ \\
+allgemein gilt: $Q_i \ = \ \sum_i \ C_{ik} \ \varphi_k$, sodass für die elektrostatische Energie folgt:
+
+
+\begin{equation*}
+\Rightarrow \quad W_e = \frac{1}{2} \sum_{ik} \ \varphi_i \ C_{ik} \ \varphi_k \ = 
+\ \frac{1}{2} \sum_{ik} \ Q_i \ \tilde{C}_{ik} \ Q_k
+\end{equation*}
+
+Da $W_e$ aufgrund von $W_e = \int\d V \ \frac{\epsilon_0}{2} \vec{E}^2$ immer gößer oder gleich 0 ist, folgt daraus, dass die $C_{ik}$ bzw. $\tilde{C}_{ik}$ positiv definit sein müssen (insbesindere gilt sogar: $C_{ii} > 0$ und $\tilde{C}_{ii} > 0$)\\
+\ \\
+
+Wenn wir nun kleine Ladungsänderungen $\rho \rightarrow \rho +\d \rho, \varphi \rightarrow\varphi + \d\varphi$ betrachten erhalten wir:
+
+\begin{align*}
+\delta\varphi &= \ \frac{1}{4\pi\epsilon_0} \ \Int{}{}{V} \frac{\delta\rho(\vec{r})}{|\vec{r}-\vec{r}'|}\\
+\delta W_e &= \ \frac{1}{2} \ \Int{}{}{V} (\d\rho \ \varphi \; + \; \rho \ \d\varphi) \ = \ \frac{1}{4\pi\epsilon_0} \cdot\frac{1}{2}\cdot 2 \ \int\d V \d V' \ \frac{\rho(\vec{r}) \ \delta\rho(\vec{r}')}{|\vec{r}-\vec{r}'|}
+\end{align*}
+
+\begin{align*}
+\text{für Flächenladungen: } & \quad\delta W_e \ = \ \frac{1}{2}\Int{}{}{A}  \delta\sigma \ \varphi \ = \ \Int{}{}{A}  \sigma \ \delta\varphi\\
+\text{für Leiter: } & \quad\delta W_e \ = \frac{1}{2}\sum_i \ \delta(Q_i\varphi_i) \ = \ \sum_i \varphi_i \delta Q_i \ = \ \sum_i \ Q_i \ \delta\varphi_i
+\end{align*}
+
+\ \\
+\underline{Spezialfälle:}\\
+
+\begin{enumerate}
+	
+	\item Verschiebung von Ladungen entlang der Leiteroberfläche
+	
+	\begin{equation*}
+	\delta Q_i = 0 \quad \Rightarrow \quad \delta W_e = 0
+	\end{equation*}
+	
+	Da Verschiebung $\perp$ Kraft, ist auch die Arbeit 0.\\
+	Daraus folgt, dass $W_e$ im Gleichgewicht Extremum (i.A. Minimum) annimmt (\textbf{\textsc{Thompson}'scher Satz}).
+	
+	\item Transport von Ladungen zwischen Leitern
+	
+	\begin{equation*}
+	\delta Q_i \ \neq \ 0 \quad\Rightarrow\quad \delta W_e = \sum_i \ Q_i \ \delta\varphi_i \ = \ \sum_i \ \varphi_i \ \delta Q_i
+	\end{equation*} 
+	
+	Beachte:
+	
+	\begin{align*}
+	C_{ik} \ &= \ \frac{\partial^2 W_e}{\partial \varphi_i \ \partial\varphi_k} \qquad(\Rightarrow \ C_{ik} \ = \ C_{ki})\\
+	Q_i \ &= \ \pdiff{W_e}{\varphi_i} \ = \ \sum_k \ C_{ik} \varphi_k\\
+	\delta W_e \ &= \ \sum_i \ \pdiff{W_e(\varphi_k)}{\varphi_i} \ \delta\varphi_i \ = \ \d W_e \qquad (\text{totales Differential})
+	\end{align*}
+\end{enumerate}
+
+\section{Energie des stationären Magnetfelds}
+
+\begin{align*}
+W_m & \ \quad = \quad  \ \Int{}{}{V}\frac{1}{2\mu_0}\vec{B}^2 \ =  \ \Int{}{}{V} \frac{1}{2\mu_0} \vec{B}\times\rot\vec{A} \ = \ \Int{}{}{V} \frac{1}{2\mu_0} \ \left(\vec{B}\times\nabla\right) \overset{\downarrow}{\vec{A}}\\
+& \overset{\text{part. Int.}}{=}  \  \Int{}{}{V} \frac{1}{2\mu_0} \vec{A} \cdot\left(\nabla\times\vec{B}\right) \quad + \quad \text{Oberflächenintegral} \left(\rightarrow 0 \text{ für } V \rightarrow \infty\right)\\
+& \;\;\;\;\overset{\dot{\vec{E}}=0}{=} \ \frac{1}{2} \Int{}{}{V} \ \vec{j}\cdot\vec{A}
+\end{align*}
+
+Analog zum elektrostatischen Fall ergibt Umschreiben:
+
+\begin{equation*}
+W_m = \frac{\mu_0}{8\pi} \ \int\int\d V \d V' \ \frac{\vec{j}(\vec{r}) \ \vec{j}(\vec{r}')}{|\vec{r}-\vec{r}'|}
+\end{equation*}
+\ \\
+
+Für dünne linienförmige und geschlossene Leiterschleifen $\mathcal{L}_i$ gilt mit $\int\d V\vec{j} \rightarrow \int\d \vec{r} \cdot I$ und unter Anwendung des Satzes von \textsc{Stokes}:
+
+\begin{equation*}
+W_m = \frac{1}{2} \cdot \sum_i I_i \Int{\mathcal{L}_i}{}{\vec{r}} \cdot \vec{A} \ = \ \frac{1}{2} \sum_i I_i \Phi_i
+\end{equation*}
+\ \\
+\ \\
+Allgemein folgt somit aus $\Phi_i = \sum_k L_{ik} I_k$:
+
+\begin{align*}
+W_m \ &= \ \frac{1}{2} \ \sum_{ik}  I_i L_{ik} I_k \ = \ \frac{1}{2} \ \sum_{ik} \Phi_i \tilde{L}_{ik} \Phi_k\\
+&= \ \frac{1}{2} \ \sum_{i\neq k} I_i I_k \ \underbrace{\frac{\mu_0}{4\pi} \ \Int{\mathcal{L}_i}{}{\vec{r}} \Int{\mathcal{L}_k}{}{\vec{r}'} \ \frac{1}{|\vec{r}-\vec{r}'|}}_{\mathcal{L}_{ik}} \; + \; \text{Selbstenergie für } (i=k)
+\end{align*}
+
+Ähnlich wie im elektrostatischen Analogon stößt die klassische Elektrodynamik bei der Berechnung der Selbstenergien für ``dünne'' und somit sonst ideale Leiter an ihre Grenzen. Für eine Leiter schleife endlicher Dicke kann man die Selbstenergie jedoch wieder berechnen, sie beträgt:
+
+\begin{align*}
+& \ W_m  \ = \ \frac{1}{2} \ \cdot  \ L \ \cdot \ I^2 \\
+\text{mit } \ & \ L \ = \ \frac{\mu_0}{4\pi I^2}\ \Int{}{}{V'} \frac{\vec{j}(\vec{r})\vec{j}(\vec{r}')}{|\vec{r}-\vec{r}'|} \ = \ \frac{1}{I^2} \ \Int{}{}{V} \frac{\vec{B}^2}{\mu_0} \quad
+\left( = \ \frac{\Phi}{I}\right) 
+\end{align*}
+
+\section{Beispiele für Energiestromdichten}
+
+\begin{enumerate}[label=\roman*]
+	\item \underline{Stromdurchflossener gerader Leiter}\\
+	\ \\
+	\begin{equation*}
+	\frac{1}{\mu_0} \rot \vec{B} \ = \ \vec{j} \ + \ \epsilon_0 \dot{\vec{E}}
+	\end{equation*}
+	
+	Für $\dot{\vec{E}}=0$ und der integralen Formulierung $\Oint{}{}{\vec{r}} \cdot \vec{B} = \mu_0 I$ ebenjener \textsc{Maxwell}-Gleichung folgt, dass um den geraden Leiter ein tangentiales $\vec{B}$-Feld existiert:
+	
+	\begin{equation*}
+	B \ = \ \frac{\mu_0 \ I}{2\pi \ r_{\perp}}
+	\end{equation*}
+	
+	Mit dem \textsc{Ohm}'schen Gesetz $\vec{E} = \sigma \cdot\vec{j}$ folgt, dass das $\vec{E}$-Feld entlang des Leiters gerichtet sein muss. Somit gilt für die Energiestromdichte $\vec{S}_P = \frac{1}{\mu_0} \left(\vec{E}\times\vec{B}\right)$, dass sie radial nach innen gerichtet sein muss.\\
+	\ \\
+	Bei einem einfachen Stromkreis wird demnach die Energie nicht entlang der Leiter sondern über die erzeugten Feldern von der Spannungsquelle zum Verbraucher transportiert!\\
+	\ \\
+	Berechnet man nun außerdem das Flächenintegral über die Energiestromdichte, erhält man für den geraden Leiter:
+	
+	\begin{equation*}
+	\Iint{}{}{\vec{A}_F}\cdot\vec{S}_P \ = \ 2\pi r_{\perp} l \ S_P \ = \ 2\pi r_{\perp} l \frac{1}{\mu_0}E\frac{\mu_0 I}{2\pi r_{\perp}} \ = \ l \cdot E \cdot I
+	\end{equation*}
+	
+	Der erhaltene Ausdruck $N := l \cdot E \cdot I = U \cdot I$ ist somit anschaulich die abgestrahlte Energie pro Zeiteinheit und ist auch als \textbf{\textsc{Ohm}'scher Verlust} oder \textbf{\textsc{Ohm}'sche Wärme} bekannt.
+	
+	\ \\
+	
+	\item \underline{ideale parallele Doppelleiter mit entgegengesetzten Stromrichtungen}
+	\ \\
+	
+	Hier betrachten wir gleich zu Beginn das Flächenintegral über der Energiestromdichte und setzen nur die Querschnittsfläche ein:
+	
+	\begin{align*}
+	N \ &= \ \Int{}{}{\vec{A}_F} \cdot \vec{S}_P \ = \ \frac{1}{\mu_0} \left(\vec{E}\times\vec{B}\right) \ \overset{\text{stationär}}{=} \ - \frac{1}{\mu_0} \Int{}{}{\vec{A}_F} \cdot \left(\nabla \varphi \times \vec{B}\right)\\
+	&= \ - \frac{1}{\mu_0} \Int{}{}{\vec{A}_F} \cdot \left(\nabla\times\left(\varphi\vec{B}\right)\right) \; + \; \Int{}{}{\vec{A}_F}\cdot\varphi\cdot\underbrace{\left(\nabla\times\vec{B}\right)}_{=\vec{j}}
+	\end{align*}
+	
+	Nach Umformen mit \textsc{Stokes} erhält man für den ersten Summanden:
+	
+	\begin{equation*}
+	\Oint{\partial A_F}{}{\vec{r}}  \cdot \varphi \vec{B}
+	\end{equation*}
+	
+	doch dieser Anteil geht für $\partial A_F \rightarrow \infty$ schnell genug gegen Null. Somit folgt für die Leistung:
+	
+	\begin{equation*}
+	\Rightarrow \; N \ = \ \Int{}{}{\vec{A}_F} \cdot \varphi \vec{j} \ = \ I \left(\varphi_1 - \varphi_2 \right) \ = \ I \cdot U_{12}
+	\end{equation*}
+	Beim Doppelleiter wird die Leistung entlang der Leiter transportiert.
+\end{enumerate}
+
+
+\section{Energie einer ebenen harmonischen Welle}
+
+Wir betrachten:
+
+\begin{align*}
+\vec{E} \ &= \ \vec{E}_0 \cdot \operatorname{Re} e^{i\left(\vec{k}\vec{r}-\omega t\right)} \qquad \text{mit} \qquad \vec{E}\perp\vec{k}, \; \vec{E}_0 \text{ reell}\\
+\vec{B} \ &= \ \frac{1}{c}\left(\vec{e}_k\times\vec{E}\right) \qquad \text{mit} \qquad \vec{e}_k = \frac{\vec{k}}{k}
+\end{align*}
+
+\underline{Energiedichte:}\\
+
+\begin{align*}
+W \ &= \ \frac{\epsilon_0}{2} \vec{E}^2 \; + \; \frac{1}{2\mu_0}\vec{B}^2 = \left[\frac{\epsilon_0}{2}\vec{E}_0^2 + \frac{1}{2\mu_0 c^2} \ \left(\vec{e}_k\times\vec{E}\right)^2\right] \cos^2\left(\vec{k}\vec{r}-\omega t\right)\\
+\ \\
+W \ &= \ \epsilon_0 \vec{E}_0^2 \ \cos^2\left(\vec{k}\vec{r}-\omega t\right)
+\end{align*}
+
+Räumliche oder zeitliche Mittelung: $\qquad\left(\langle\cos^2(.)\rangle = \frac{1}{2}(.)\right)$
+
+\begin{equation*}
+\langle W\rangle \ = \ \frac{\epsilon_0}{2} \ \vec{E}_0^2
+\end{equation*}
+
+\ \\
+\underline{Energiestromdichte:}
+
+\begin{align*}
+\vec{S}_P \ &= \ \frac{1}{\mu_0} \vec{E}\times\vec{B} \ = \ \frac{1}{\mu_0 c} \vec{E}_0 \times \left(\vec{e}_k\times\vec{E}_0\right) \ \cos^2\left(\vec{k}\vec{r}-\omega t\right)\\
+&= \ \epsilon_0 c \; \Bigg(\vec{e}_k\vec{E}_0^2 \ - \ \vec{E}_0\underbrace{\left(\vec{e}_k\cdot\vec{E}_0\right)}_{=0}\Bigg) \ \cos^2\left(\vec{k}\vec{r}-\omega t\right)\\
+\vec{S}_p \ &= \ c \ \vec{e}_k \ \epsilon_0 \ \vec{E}_0 \ \cos^2 \left(\vec{k}\vec{r}-\omega t\right) \ = \ c \cdot  \vec{e}_k \cdot w
+\end{align*}
+
+nach Mittelung:
+
+\begin{equation*}
+\vec{S}_P \ = \ c \cdot \vec{e}_k \cdot \langle w\rangle \ = \ c \cdot \vec{e}_k \ \frac{\epsilon_0}{2} \ \vec{E}_0 \ \left( = \frac{1}{2\mu_0} \operatorname{Re} \ (\vec{E}\times\vec{B}^*)\right)
+\end{equation*}
+\ \\
+
+\section{Impulsbilanz des elektromagnetischen Feldes}
+\ \\
+Impulsänderung = Kraft
+
+\begin{equation*}
+\Rightarrow \ \vec{F}_L \ = \ \dot{\vec{p}}_{\text{mech}} \ = \  \dot{\vec{p}}_{\text{elm}} \quad \text{(Impuls im em. Feld)}
+\end{equation*}
+\ \\
+\ \\
+\ \\
+
+Bilanzgleichung pro Volumen:
+
+\begin{align*}
+\pdiff{\vec{g}}{t} \; + \; \div \tens{T} & \ = \ - \vec{f}_L \\
+\ \\
+\text{mit} \qquad \vec{g} & \ - \ \text{Impulsdichte}\\
+\vec{f}_L & \ - \ \text{Lorentzkraftdichte} \quad \left( = \rho\vec{E} \ + \ \vec{j}\times\vec{B}\right)\\
+\tens{T} & \ - \ \text{Impulsstromdichte}
+\end{align*}
+
+$ - \vec{f}_L$ ist dementsprechend die elektromagnetische Impulserzeugungsrate pro Volumen $\nu_g$.
+$\vec{g}$ und $\tens{T}$ hängen im Allgemeinen von Feldern ab. \textsc{Maxwell} liefert uns:
+
+\begin{align*}
+- \vec{f}_L \ &= \ \epsilon_0 ( \nabla \cdot\overset{\downarrow}{\vec{E}} ) \ + \ \frac{1}{\mu_0} \ \vec{B} \times (\nabla \times \vec{B}) \ + \ \epsilon_0 \dot{\vec{E}} \times \vec{B}\\
+\overset{\text{Umformen}}{\Longrightarrow} \quad\vec{E}\times\vec{B} \ &= \ \partial_t ( \vec{E} \times \vec{B} ) \ - \ \vec{E}\times\dot{\vec{B}} \ =  \ \partial_t (\vec{E}\times\vec{B}) \ + \ \vec{E}\times (\nabla\times\vec{E})\\
+\vec{E}\times ( \nabla\times \overset{\downarrow}{\vec{E}} ) \ &= \ \nabla \ (\overset{\downarrow}{\vec{E}}\cdot\vec{E} ) \ - \ ( \vec{E}\cdot\nabla ) \ \overset{\downarrow}{\vec{E}} \ = \ \frac{1}{2}\nabla\vec{E}^2 \ - \ ( \vec{E}\cdot\nabla) \ \overset{\downarrow}{\vec{E}}
+\end{align*}
+
+Für $\vec{B}\times(\nabla\times\vec{B})$ analog, mit $(\nabla\cdot\overset{\downarrow}{\vec{B}})\vec{B}=0$. Insgesamt erhalten wir:
+
+\begin{equation*}
+(-\vec{f}_L)_k \ = \ \partial_t \ \epsilon_0 \ (\vec{E}\times\vec{B})_k \ - \ \pdiff{}{x_i} \epsilon_0 \ \left(\frac{\vec{E}^2}{2} \delta_{ik} \ - \ \vec{E}_i \vec{E}_k \right) \; + \; \pdiff{}{x_i} \frac{1}{\mu_0} \ \left(\frac{\vec{B}^2}{2}\delta_{ik} \ - \ \vec{B}_i \vec{B}_k \right) 
+\end{equation*}
+
+\ \\
+Der Vergleich mit $\dot{\vec{g}} + \div\tens{T} = - \vec{f}_L$ ergibt:
+
+\begin{align*}
+\text{Impulsdichte} \qquad & \vec{g} \ = \ \epsilon_0 \ (\vec{E}\times\vec{B})\\
+\text{Impulsstromdichte} \qquad & \tens{T} \ = \ \epsilon_0 \ \left(\frac{\vec{E}^2}{2} \mathbbm{1} \ - \ \vec{E}\circ\vec{E}\right) \ + \ \frac{1}{\mu_0} \ \left(\frac{\vec{B}^2}{2}\mathbbm{1} \ - \ \vec{B}\circ\vec{B}\right)\\
+\text{Impulserzeugungsrate} \quad \ - & \vec{f}_L \ = \ \nu_g
+\end{align*}
+
+\ \\
+\underline{Diskussion:}
+
+\begin{enumerate}[label = \roman*)]
+	\item Impulsdichte:\
+	
+	\begin{equation*}
+	\vec{g} \ = \ \epsilon_0\mu_0 \vec{S}_P \ = \ \frac{1}{c^2}\vec{S}_P
+	\end{equation*} 
+	
+	Allgemeingültig für Feldtheorien bei Ausbreitung mit $c$, vgl. Relativitätstheorie.
+	\begin{equation*}
+	\text{für Welle gilt: } |\vec{S}_P| \ = \ c \cdot w \quad \Rightarrow \quad |\vec{g}| \ = \ \frac{w}{c} 
+	\end{equation*}
+	
+	Zusammenhang mit Strahlungsdruck (Absorption einer em. Welle): 
+	
+	\begin{align*}
+	\text{Impulsübertrag:  } \qquad & \Delta \vec{p} \ = \ \vec{g} \ \Delta V \ = \ \vec{g} \ c \ \Delta t \ \Delta A_F\\
+	\text{Druck: } \qquad & \frac{|\Delta\vec{p}|}{\Delta t \ \Delta A_F} \ = \ c \ |\vec{g}| \ = \ w
+	\end{align*}
+	\ \\
+	
+	\item Impulsstromdichte: \\
+	
+	Tensor $\tens{T}$ mit folgenden Eigenschaften:
+	
+	\begin{itemize}
+		\item $T_{ik}$ mit $k$ = Impulskomponente, $i$ = Transportrichtung
+		\item $T_{ik} \ = \ T_{ki}$
+		\item $ [T_{ik}] \ = \ [\vec{f}] \cdot [l] \ = \ \frac{[\vec{F}]}{[l]^2} \quad \Rightarrow \quad$ Druck, Spannung
+		\item Stationäre Felder: $\quad \dot{\vec{g}} \ = \ 0 \quad \Rightarrow \quad \div \tens{T} \ = \ -\vec{f}_L$\\
+		\ \\
+		Volumenintegral + Satz von \textsc{Gauss} $ \quad \Rightarrow \quad \Oiint{}{}{\vec{A}_F} \cdot \tens{T} \ = \ - \vec{F}_L \quad$\\
+		\ \\
+		\textbf{Oberflächenkräfte}, Interpretation des Vorzeichens: Fläche schließt Ströme/Ladungen ein, auf die die Kräfte wirken
+	\end{itemize}
+\end{enumerate}
+
+\section{Beispiele für Impulsbilanz}
+
+\begin{enumerate}[label=\roman*)]
+	\item \underline{Plattenkondensator:}\\
+	\ \\
+	Wir betrachten einen unendlich ausgedehnten Plattenkondensator (Vernachlässigung von Randeffekten) welcher mit der Ladung $\pm Q$ beladen ist und das in ihm erzeugte $\vec{E}$-Feld entlang der x-Achse ausgerichtet ist. Es gilt:
+	
+	\begin{align*}
+	& T_{ik} \ = \ \epsilon_0 \left(\frac{1}{2}\vec{E}^2\mathbbm{1} \ - \ \vec{E}\circ\vec{E}\right)_{ik}\\
+	\Rightarrow \qquad & T_{xx} \ = \ -\frac{\epsilon_0}{2}\vec{E}^2, \ T_{yy} \ = \ T_{zz} \ = \ \frac{\epsilon_0}{2} \vec{E}^2\\
+	& T_{xy} \ = \ T_{xz} \ = \ T_{yz} \ = \ 0
+	\end{align*}
+	
+	Somit erhält man für die Kraft auf die linke Platte:
+	
+	\begin{equation*}
+	(\vec{F}_L)_x \ = \ - \left( \Oiint{}{}{\vec{A}_F} \cdot \tens{T}\right)_x \ = \ {\vec{A}_F}_x \ T_{xx} \ = \ \frac{\epsilon_0}{2} A_F \vec{E}^2 \ = \ \frac{Q\cdot E}{2}  
+	\end{equation*}
+	\ \\
+	\item \underline{Lange Spule:}\\
+	\ \\
+	Wir betrachten eine Spule in der x-y-Ebene welche mit ihrer Symmetrieachse (längs) entlang der x-Achse ausgerichtet ist.
+	Für das $\vec{B}$-Feld entlang dieser Symmetrieachse gilt:
+	
+	\begin{align*}
+	\vec{B} \ =& \ \mu_0 \ I \ \frac{N}{l} \ \vec{e}_x\\
+	\Rightarrow \qquad T_{xx} \ =& \ - T_{yy} \ = \ -T_{zz} \ = \ - \frac{1}{2\mu_0}\vec{B}^2
+	\end{align*}
+	
+	\begin{itemize}
+		\item Spule quer teilen, Kraft auf linken Teil (x<0):
+		
+		\begin{equation*}
+		(\vec{F}_L)_x \ = \ - \underbrace{{A_F}_x}_{= \pi R^2} \ T_{xx} \ = \ \frac{A_F}{2\mu_0}\vec{B}^2 \ = \ \frac{A_F \ \mu_0 \ (I \cdot N)^2}{2\ l^2} \quad \text{Anziehung}
+		\end{equation*}
+		
+		\item Spule längs teilen, Kraft auf unteren Teil (y<0):
+		
+		\begin{equation*}
+		(\vec{F}_L)_x \ = \ -\underbrace{{A_F}_y}_{=\pi R l} \ T_{yy} \ = \ -\frac{R \ l \ \vec{B}^2}{\mu_0} \quad \text{Anziehung}
+		\end{equation*}
+		
+		Interpretieren wir nun diese Ergebnisse mithilfe von Feldlinien, so können wir insgesamt verallgemeinern, dass parallel zu den Feldlinien eine Zugkraft herrscht, wohingegen senkrecht zu ihnen gedrückt wird. 
+	\end{itemize}
+	
+	\item \underline{Isotrope Strahlung in einem Hohlraum}
+	
+	Wir betrachten das Zeit- und Ortsmittel der Impulsstromdichte $\tens{T}$:
+	
+	\begin{align*}
+	\langle\tens{T}\rangle \ &= \ \Big\langle \epsilon_0 \ \left(\frac{1}{2}\vec{E}^2\cdot\mathbbm{1} \ - \ \vec{E}\circ\vec{E}\right) \ + \ \frac{1}{\mu_0} \ \left(\frac{1}{2}\vec{B}^2\cdot\mathbbm{1} \ - \ \vec{B}\circ\vec{B}\right) \Big\rangle \ = \ T_0 \cdot \mathbbm{1}\\
+	\operatorname{Spur} \tens{T} \ &= \ 3 T_0 \ = \ \epsilon_0 \ \left(\frac{3}{2}\vec{E}^2 \ - \ \vec{E}^2\right) \ + \ \frac{1}{\mu_0} \ \left(\frac{3}{2}\vec{B}^2 \ - \ \vec{B}^2\right) \ = \ \frac{\epsilon_0}{2}\vec{E}^2 \ - \ \frac{\epsilon_0}{2}\vec{B}^2 \\
+	\text{mit } T_0 \ &= \ \frac{1}{3} w 
+	\end{align*}
+	
+	Somit ist die Kraft auf die Wand:
+	
+	\begin{equation*}
+	\Delta\vec{F}_L \ = \ -\Oiint{}{}{\vec{A}_F} \cdot\tens{T} \ = \ - \Delta A_F \cdot \langle\tens{T} \rangle \ = \ - \Delta A_F \cdot \frac{w}{3}
+	\end{equation*}
+	
+	Dies entspricht dem Strahlungsdruck $p$ beim gerichtetem senkrechten Einfall auf die Wände in alle drei Raumrichtungen: $\quad p = \frac{1}{3}w$
+\end{enumerate}

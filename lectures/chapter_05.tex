@@ -44,9 +44,9 @@ Die Kontrolle, ob div $\vec{A} =0$ ist, ergibt:
 		\colorbox{hgrey}{
 			\begin{tikzpicture}
 			
-				\draw[ultra thick] plot[smooth, tension=.8] coordinates {(1.7,-0.1) (1.9,1.5) (2.4,3) };	
-				\draw[->] (0,0) -- node[above left]{$\vec{r}'$} (2,2);
-				\draw[->] (0,0) -- node[below right]{$\ \vec{r}$} (4,1) ;
+			\draw[ultra thick] plot[smooth, tension=.8] coordinates {(1.7,-0.1) (1.9,1.5) (2.4,3) };	
+			\draw[->] (0,0) -- node[above left]{$\vec{r}'$} (2,2);
+			\draw[->] (0,0) -- node[below right]{$\ \vec{r}$} (4,1) ;
 			
 			
 			\end{tikzpicture}
@@ -122,7 +122,7 @@ Umformen ergibt:
 \vec{B}(\vec{r}) = \rot\vec{A}(\vec{r}) &= - \frac{\mu_0 I}{4\pi} \ \nabla \times \left(A_F\times\nabla\frac{1}{r}\right) \ = \ \frac{\mu_0}{4\pi} \ \cdot \ 3(\vec{m}\cdot\vec{r})\vec{r} \ - \ \vec{m}r^2\\
 \ \\
 &= \ \underbrace{\vec{A}_F \ \laplace\frac{1}{r}}_{(*)} \quad - \quad \underbrace{(\vec{A}_F
-\cdot\nabla)\ \nabla \ \frac{1}{r}}_{= \ \vec{A}_F (\nabla \circ \nabla) \frac{1}{r}}
+	\cdot\nabla)\ \nabla \ \frac{1}{r}}_{= \ \vec{A}_F (\nabla \circ \nabla) \frac{1}{r}}
 \end{align*}
 
 $(*) = 4\pi\delta(\vec{r})$ wird im Fernfeld vernachlässigt
