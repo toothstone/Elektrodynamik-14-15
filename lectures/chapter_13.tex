@@ -80,9 +80,9 @@ Da $\mathrm{d}s^2$ lorentzinvariant ist, sind raum- und zeitartige Abstände abs
 
 Als \textbf{Eigenzeit} eines Beobachters oder Teilchens bezeichnet man die Zeit, die von der Uhr angezeigt wird, die sich mit ihm mitbewegt. Dabei kann der Beobachter beliebig bewegt (sogar beschleunigt) sein. Eine Uhr mit einem fest verbundenen Koordinatensystem, das nicht unbedingt ein Inertialsystem sein muss, definiert ihr \emph{momentanes Inertialsystem}.
 \begin{align*}
-\mathrm{d}s^2 &= c^2\mathrm{d}t^2 - \mathrm{d}\vec{r}^2 = c\mathrm{d}t_E^2-0\\
-\mathrm{d}t_E^2 &= \mathrm{d}t^2\left(1-\frac{1}{c^2}\left(\diff{\vec{r}}{t}\right)^2\right)=\mathrm{d}t^2\left(1-\frac{v^2}{c^2}\right)\\
-\Rightarrow \mathrm{d}t &= \frac{\mathrm{d}t_E}{\sqrt{1-\frac{v^2}{c^2}}}\geq \mathrm{d}t_E
+\mathrm{d}s^2 &= c^2\mathrm{d}t^2 - \mathrm{d}\vec{r}^2 = c\mathrm{d}\tau^2-0\\
+\mathrm{d}\tau^2 &= \mathrm{d}t^2\left(1-\frac{1}{c^2}\left(\diff{\vec{r}}{t}\right)^2\right)=\mathrm{d}t^2\left(1-\frac{v^2}{c^2}\right)\\
+%\Rightarrow \mathrm{d}t &= \frac{\mathrm{d}\tau}{\sqrt{1-\frac{v^2}{c^2}}}\geq \mathrm{d}\tau
 \end{align*}
 Die letzte Zeile bezeichnet den Effekt der \emph{Zeitdilatation}.\\ \linebreak
 
@@ -230,13 +230,13 @@ Damit wir eine lorentz-invariante Mechanik formulieren können, müssen wir die 
 \dot{\vec{r}} \quad \rightarrow \quad \vec{v}\\
 \dot{\vec{p}}\quad\rightarrow\quad\vec{F}
 \end{align*}
-mit der Eigenzeit $t_E$ bilden. 
+mit der Eigenzeit $\tau$ bilden. 
 \begin{equation*}
-\diff{}{t}\quad\rightarrow\quad\diff{}{t_E}=\gamma\diff{}{t}
+\diff{}{t}\quad\rightarrow\quad\diff{}{\tau}=\gamma\diff{}{t}
 \end{equation*}
 So ergibt sich sofort die \emph{Vierergeschwindigkeit}
 \begin{align*}
-u^\mu &= \diff{x^\mu}{t_E} = \gamma(c,\vec{v})\\
+u^\mu &= \diff{x^\mu}{\tau} = \gamma(c,\vec{v})\\
 \text{mit}\quad u^\mu u_\mu &= \frac{1}{\gamma^2}(c,\vec{v})\cdot (c,-\vec{v}) = \frac{c^2-v^2}{1-\frac{v^2}{c^2}} = c^2,
 \end{align*}
 deren Betrag immer gleich $c$ ist. Wir multiplizieren $u^\mu$ nun einfach mit der (invarianten) Ruhemasse $m_0$ und erhalten den \emph{Viererimpuls}
@@ -246,13 +246,13 @@ p^\mu = m_0 u^\mu = \gamma m_0 \left(c,\vec{v}\right)\qquad\text{mit}\quad p_\mu
 
 Eine weitere Zeitableitung wird uns die \emph{Viererkraft} liefern. Für die Ortskomponenten gilt
 \begin{equation*}
-\diff{}{t_E}\vec{p}=\gamma\diff{}{t}\vec{p}=\gamma\vec{F}.
+\diff{}{\tau}\vec{p}=\gamma\diff{}{t}\vec{p}=\gamma\vec{F}.
 \end{equation*}
 Für $u_\mu F^\mu =0$ ergibt sich
 \begin{equation*}
 F^\mu = \gamma\left(\frac{\vec{v}\vec{F}}{c},\vec{F}\right).
 \end{equation*}
-Betrachten wir nun noch die Energie. Nullkomponente $F^0 = \diff{p^\mu}{t_E}$ liefert
+Betrachten wir nun noch die Energie. Nullkomponente $F^0 = \diff{p^\mu}{\tau}$ liefert
 \begin{equation*}
 \diff{}{t}\gamma m_0c^2 =:\vec{v}\cdot\vec{F},
 \end{equation*}
