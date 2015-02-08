@@ -16,12 +16,12 @@ Die \textsc{Maxwell}-Gleichungen liefern uns zusätzlich:
 \ \\
 &\left(\rot\vec{E} \ = \ -\dot{\vec{B}}, \quad \epsilon\div\vec{E} \ = \ \rho_0  \ = \ 0\right)\\
 \ \\
--\frac{1}{\mu_0} \rot\rot \vec{E}  \ &= \ - \frac{1}{\mu}(\left(\grad\underbrace{\div\vec{E}}_{=0} \ + \ \laplace\vec{E}\right)  \ = \ \sigma\dot{\vec{E}} \ + \ \epsilon\ddot{\vec{E}}\\
+-\frac{1}{\mu_0} \rot\rot \vec{E}  \ &= \ - \frac{1}{\mu}\Big(\grad\underbrace{\div\vec{E}}_{=0} \ + \ \laplace\vec{E}\Big)  \ = \ \sigma\dot{\vec{E}} \ + \ \epsilon\ddot{\vec{E}}\\
 \ \\
 \Rightarrow \quad 0  \ &= \ \frac{1}{\mu_0}\laplace\vec{E} \ + \ \sigma\dot{\vec{E}}\ + \ \epsilon\ddot{\vec{E}} 
 \end{align*}
 
-Zur Lösung der erhaltenen DGL wählen wir den Ansatz der ebenen Welle für $\vec{E}$. $\quad(\vec{E} \ = \ \vec{E}_0 e^{i(\vec{k}\vec{r}-\omega t)}$\\
+Zur Lösung der erhaltenen DGL wählen wir den Ansatz der ebenen Welle für $\vec{E}$. $\quad(\vec{E} \ = \ \vec{E}_0 e^{i(\vec{k}\vec{r}-\omega t)})$\\
 Einsetzen liefert uns:
 
 \begin{align*}
@@ -80,3 +80,278 @@ a^r  \ = \  \frac{1 \ - \ \frac{\mu_1 n_2}{\mu_2 n_1}}{1 \ + \ \frac{\mu_1 n_2}{
 Es kommt also zur Vollständigen Reflexion, analog zur Totalreflexion. Der Leiter ist also undurchsichtig für Wellen mir $\omega \rightarrow 0$. Für sichtbares Licht können wir leider noch keine Aussage treffen, da es dort wesentlich komplizierter ist.
 
 \section{Dispersion in Dielektrika}
+
+Allgemein bedeutet Dispersion die Abhängigkeit der Brechzahl $n$ von der Frequenz der einfallenden Welle: $\qquad n = n (\omega)$\\
+Als \textbf{"normale" Dispersion} bezeichnet man dabei ein Verhalten, bei dem $n(\omega)$ mit $\omega$ wächst.
+Zur Erklärung der Dispersion nutzt man elementar die Theorie, dass  durch das elektrische Feld der elektromagnetischen Welle atomare Dipole aus ihrer anfänglichen Ruhelage induziert werden. Genauer gesagt werden atomare Ladungen um den Betrag $r$ ausgelenkt, sodass ein Dipolmoment von $\vec{p}=e\cdot\vec{r}$ entsteht. Damit können  wir für diese Ladungen im Potential $V$ folgende Bewegungsgleichung aufstellen:
+
+\begin{equation*}
+m \ \ddot{\vec{r}} \ + \ \pdiff{V(\vec{r})}{\vec{r}} \ = \ -e \ \vec{E}_{\text{lok}}
+\end{equation*}
+
+Für kleine Auslenkungen können wir das Potential, also die Bindungsenergie, harmonisch nähern:
+
+\begin{align*}
+V(\vec{r})  \ &= \ V(0) \ + \ \frac{m\omega_0^2}{2}\vec{r}^2 \ + \ \ldots\\
+\ \\
+\Rightarrow \qquad m \left(\ddot{\vec{r}} \ + \ \omega_0^2\vec{r}\right)  \ &= \ - e \ \vec{E}_{\text{lok}}
+\end{align*}
+
+Da das elektrische Feld $\vec{E}_{\text{lok}}$ durch die elektromagnetische Welle hervorgerufen wird und somit mit $\vec{E}_{\text{lok}} = \vec{E}_0 e^{-i\omega t}$ oszilliert, erhalten wir für $\vec{r}$ eine erzwungene Schwingung mit der Erregerfrequenz $\omega$. Daher wählen wir für $\vec{r}$ den Ansatz $\vec{r}= \vec{r}_0 e^{-i\omega t}$:
+
+\begin{align*}
+m\left(-\omega^2 \ + \ \omega_0^2\right) \ \vec{r}  \ &= \ -e \ \vec{E}_{\text{lok}}\\
+\Rightarrow \qquad \vec{r}  \ &= \ -\frac{e}{m\left(\omega^2_0 \ - \ \omega^2\right)} \ \vec{E}_{\text{lok}}\\
+\ \\
+\Rightarrow \qquad \vec{p}  \ &= \ \frac{e^2}{m\left(\omega_0^2 \ - \ \omega^2\right)} \ \vec{E}_{\text{lok}}  \ =: \ \alpha (\omega) \ \epsilon_0 \ \vec{E}_{\text{lok}}
+\end{align*}
+
+Die Größe $\alpha$ wird auch als \textbf{atomare Polarisierbarkeit} bezeichnet.\\
+Mit dem Gesetz von \textsc{Clausius - Mosotti} aus dem Kapitel 11 folgt nun das \textbf{Gesetz von \textsc{Lorenz - Lorentz}}:
+
+\begin{align*}
+\frac{\epsilon_r \ - \ 1}{\epsilon_r \ + \ 2} \ &= \ \frac{1}{3} \mathcal{N} \cdot \alpha \qquad\qquad \text{mit }\mathcal{N}= \text{ Dichte der atomaren Dipole}\\
+\ \\
+\Rightarrow\qquad \frac{n^2 \ - \ 1}{n^2 \ + \ 2} \ &= \ \frac{1}{3} \ \frac{\mathcal{N} \ e^2}{\epsilon_0 m \left(\omega_0^2 \ - \ \omega^2\right)}
+\end{align*}
+
+Stellen wir dies nun nach $n$ um erhalten wir somit die Abhängigkeit $n(\omega)$ für normale Dispersion:
+
+\begin{equation*}
+n^2 \ = \ \frac{\mathcal{N} \ e^2}{\epsilon_0 m \left(\omega_0^{,2} \ - \ \omega^2\right)} \qquad \qquad \text{mit} \qquad \omega_0^{,2} \ = \ \omega_0^2\ \left(1 \ - \ \frac{\mathcal{N} \ e^2}{3 \epsilon_0 m \omega_0^2}\right)
+\end{equation*}
+
+[Bild]
+Anschaulich repräsentiert $\omega'$ den Einfluss der Inhomogenität des Feldes. Die erhaltene Abhängigkeit $n(\omega)$ können wir nun für verschiedene Fälle diskutieren:
+
+\begin{align*}
+\omega \ < \ \omega^{,}_0:& \qquad n^2 \ > \ 1 \qquad \Rightarrow\qquad \vec{p},\vec{E} \text{ in Phase}\\
+\omega \ = \ \omega^{,}_0:& \qquad \text{Resonanz}\\
+\omega \ > \ \omega^{,}_0:& \qquad \vec{p},\vec{E} \text{ antiphasig}\\
+\omega \rightarrow \omega^{,}_0:& \qquad n^2 \ \rightarrow \ 1, \vec{p} \ \rightarrow \ 0 \; \text{ atomare Dipole können nicht  folgen}
+\end{align*}
+
+Zudem ist für einen kleinen Bereich oberhalb von $\omega'_0$ das Quadrat der Brechzahl negativ. Da daraus $k^2 = \frac{\omega^2}{c^2} n^2 < 0$ folgt, muss gelten, dass $k=ik'$ komplex ist. Damit wird aus $e^{ikx} \rightarrow e^{-k'x}$; das Feld fällt also im inneren des Dielektrikums analog zur Totalreflexion exponentiell ab.\\
+\ \\
+Bis hierher haben wir bei unseren Betrachtungen immer sehr ideale Bedingungen vorausgesetzt, nämlich dass die atomaren Dipole ungedämpft oszillieren. Im Realen muss diese Dämpfung allerdings mitbeachtet werden, da dem System dissipativ Energie verloren geht. Mit der Einführung einer Dämfungskonstanten $\gamma$ ehrhalten wir nun folgende DGL, welche wir abermals mit dem Ansatz $\vec{r}= \vec{r}_0 e^{-i\omega t}$ lösen:
+
+\begin{align*}
+m \ \left(\ddot{\vec{r}} \ + \ \omega_0^2 \vec{r} \ + \ \gamma \dot{\vec{r}}\right)  \ &= \ -e \ \vec{E}_{\text{lok}}\\
+m \ \left(\omega_0^2 \ - \ \omega^2 \ - \ i \gamma\omega\right)\vec{r} \ = \ -e \ \vec{E}_{\text{lok}}
+\end{align*}
+
+Effektiv wird  also $\omega^2$ zu $\omega^2 + i\gamma\omega$. Stellen wir nun obige Gleichung wieder mithilfe des Gesetzes von \textsc{Clausius - Mosotti} um und verwenden dabei wieder wie zuvor den Ausdruck $\omega^{,}_0$ erhalten wir für die komplexen Brechungsindex $\tilde{n}= n (1+i\kappa)$ den Ausdruck:
+
+\begin{equation*}
+\tilde{n}^2 \ = \ 1 \ + \ \frac{\mathcal{N} \ e^2}{\epsilon_0 m \left(\omega^{,2}_0 - \omega^2 - i \gamma\omega\right)}
+\end{equation*}
+
+Weiterhin muss man bei einem realen Material bedenken, dass es nicht nur einen sondern mehrere Oszillatoren gibt. Damit verändern sich unsere Größen zu:
+
+\begin{align*}
+\omega^{,}_0 \ &\rightarrow \ \omega_k\\
+\gamma \ &\rightarrow \ \gamma_k\\
+\frac{\mathcal{N} \ e^2}{\epsilon_0 m} \ &\rightarrow \ a \cdot f_k \qquad\qquad \text{mit}  &\sum_k \ f_k  \ &= \ 1 \quad \text{  (Oszillatorenstärke)}\\
+& &a \ &= \ \Bigg\langle\frac{\mathcal{N}\ e^2}{\epsilon_0 m}\Bigg\rangle
+\end{align*}
+
+Damit wird der Ausdruck für die Dispersion $\tilde{n}(\omega)$ schlussendlich zu:
+
+\begin{equation*}
+\tilde{n}^2 \ = \ 1 \ + \ a \cdot\sum_k \ \frac{f_k}{\omega_k^2 \ - \ \omega^2 \ - \ i\gamma_k\omega}
+\end{equation*}
+
+\section{Anomale Dispersion}
+
+Wir betrachten nun die Umgebung einer beliebigen Resonanzstelle etwas genauer und nehmen an, dass die Dämpfung $\gamma_k$ vernachlässigbar gegenüber $\omega_k$ ist. Wenn wir nur diese eine Resonanzstelle untersuchen, reicht die Vereinfachung $\omega_k \rightarrow \Omega, \ \gamma_k \rightarrow\gamma, \ a \cdot f_k \rightarrow A$. Alle anderen Beiträge zum komplexen Brechungsindex $\tilde{n}(\omega)$ seien außerdem nur  langsam veränderlich und näherungsweise reell; wir bezeichnen sie als $\overline{n}(\omega)$. Für geringe $\gamma$ erhalten wir somit wieder den normalen Dispersionsfall:
+
+\begin{equation*}
+\tilde{n}^2  \ = \  \overline{n}^2 \ + \ \frac{A}{\Omega^2 \ - \ \omega^2 \ - \ i\gamma\omega}
+\end{equation*}
+
+Die Dämfung $\gamma$ wird dann wichtig, wenn das Produkt $\gamma\omega \ \mathsmaller{\mathsmaller{\gtrsim}} \ |\Omega^2 - \omega^2|$ wird. Beziehen wir dabei mit in die Betrachtung ein, dass $\omega\approx\Omega$ gilt, folgt daraus:
+
+\begin{equation*}
+\gamma\Omega \ \mathsmaller{\mathsmaller{\gtrsim}} \ |\Omega \ - \ \omega| \cdot 2\Omega \qquad \Rightarrow \qquad \frac{\gamma}{2} \ \mathsmaller{\mathsmaller{\gtrsim}} \ |\Omega \ - \ \omega|
+\end{equation*}
+
+[hier drei Bild]
+Unter diesen Bedingungen folgt für $n(\omega)$, dass es an der Resonanzstelle bei gleichzeitig starker Dämpfung \emph{abfällt}. Dieses Verhalten wird auch als \textbf{anomale Dispersion} bezeichnet.\\
+Mathematisch können wir diesen Fall der nicht zu kleinen Dämpfung, für die $\frac{A}{\gamma\Omega}\ll \overline{n}^2$ gilt, folgendermaßen behandeln:
+
+\begin{align*}
+\tilde{n} \ &= \ \left(\overline{n}^2 \ + \ \frac{A}{\Omega^2 \ - \ \omega^2 \ - \ i \gamma\omega}\right)^{\frac{1}{2}}  \ = \  \overline{n} \  \left( 1 \ + \ \frac{A}{\overline{n}^2 \ \left(\Omega^2 \ - \ \omega^2 \ - \ i \gamma \omega\right)}\right)^{\frac{1}{2}}\\
+&\simeq \ \overline{n} \ \left(1 \ + \ \frac{1}{2}\;\frac{A}{\overline{n}^2\left(\Omega^2 \ - \ \omega^2 \ - \ i \gamma\omega\right)}\right)\\
+\ \\
+n  \ &= \ \overline{n} \ + \ \frac{A}{2\overline{n}} \; \frac{\Omega^2 \ - \ \omega^2}{\left(\Omega^2-\omega^2\right)^2 \ + \ \gamma^2\omega^2}\\
+\ \\
+n \cdot \kappa  \ &= \ \frac{A}{2\overline{n}} \; \frac{\gamma\omega}{\left(\Omega^2-\omega^2\right)^2 \ + \ \gamma^2\omega^2} 
+\end{align*}
+[vllt. noch ein Bild]
+
+\section{Metalldispersion}
+
+Bisher hatten wir nur dielektrische Isolatoren betrachtet, in denen nur gebundene Elektronen vorliegen, für welche $\omega_k \neq 0$ gilt. Nun wollen wir uns auch mit metallischen Leiter befassen, in welchen sowohl gebundene als auch freie Elektronen vorkommen. Für Letztere gilt $\omega_k = 0$, woraus gleich zu Beginn folgt:
+
+\begin{equation*}
+\tilde{n}^2  \ = \ \tilde{\epsilon}_r  \ = \ 1 \ + \ \underbrace{a\cdot\sum_k \ \frac{f_k}{\omega_k^2 - \omega^2 - i \gamma_k\omega}}_{\text{gebundene Elektronen}} \quad - \quad \underbrace{\frac{\left(\nicefrac{\mathcal{N}e^2}{\epsilon_0m}\right)_L}{\omega^2 + i\gamma_L\omega}}_{\text{Leitungselektronen}}
+\end{equation*}
+
+Aus Kapitel 12.1 wissen wir bereits, dass für $\tilde{\epsilon}_r$ außerdem noch $\tilde{\epsilon}_r = \epsilon_r + \frac{i\sigma}{\omega\epsilon_0}$ gilt. Setze man nun die beiden Gleichungen gleich und stellt um, so erhält man für die Leitfähigkeit $\sigma$ die Abhängigkeit:
+
+\begin{equation*}
+\sigma(\omega) \ = \ \frac{i\left(\nicefrac{\mathcal{N}e^2}{m}\right)_L}{\omega + i \gamma_L} \qquad \overset{\omega\rightarrow0}{\longrightarrow}\qquad \sigma_0  \ = \ \frac{\left(\nicefrac{\mathcal{N}e^2}{m}\right)_L}{\gamma_L}	
+\end{equation*}
+
+Der erhaltene Ausdruck $\sigma_0$ entspricht der Gleichstromleitfähigkeit, wie sie auch von der \textbf{\textsc{Drude}-Theorie der Metalle} abgeleitet werden kann. Diese geht von folgender Kräftebilanz auf die freien Elektronen im Leiter aus:
+
+\begin{align*}
+\underbrace{-e\ \vec{E}}_{\textsc{Coulomb}} \quad - \quad \underbrace{m \gamma_L\vec{v}}_{\text{Reibung}}  \ \overset{!}{=} \ 0\\
+\Rightarrow \qquad \vec{v}  \ = \  -\frac{e \ \vec{E}}{m \gamma_L} 
+\end{align*}
+
+Die Geschwindigkeit $\vec{v}$ setzen wir nun in die Stromdichte $\vec{j} = \rho\vec{v} = -e \mathcal{N}_L \vec{v}$ ein:
+
+\begin{align*}
+\vec{j}  \ &= \ -e^2 \frac{\mathcal{N}_L}{m\gamma_L} \ \vec{E} \ \overset{!}{=} \ \underbrace{\sigma_0 \ \vec{E}}_{\text{\textsc{Ohm}'sches Gesetz}}\\
+\Rightarrow \qquad \sigma_0  \ &= \ \frac{\mathcal{N}_L \ e^2}{m \ \gamma_L} \qquad\qquad\text{wie oben}
+\end{align*}
+
+Die Dämpfungskonstante $\gamma_L = \gamma$ kann im Zusammenhang mit diesem Modell als Frequenz der Stöße der Elektronen an den Atomrümpfen im Leiter verstanden werden. Das Reziproke dieser Stoßfrequenz $\frac{1}{\gamma}=: \tau$  ist dementsprechend die Stoßzeit, also die mittlere Dauer der "freien" Bewegung der Elektronen. Im Wechselfeld erhält man für die Leitfähigkeit in Abhängigkeit von der Frequenz ebenso wie oben $\sigma(\omega) = \frac{\sigma_0}{1-i\omega\gamma_L}$\\
+\ \\
+Mit diesem Wissen können wir nun für Leiter folgendes formulieren:
+
+\begin{equation*}
+\tilde{\epsilon}_r \ = \ n_0^2 \ - \ \frac{\omega_{\text{Pl}}^2}{\omega^2 \ + \ i\gamma\omega} \qquad \text{mit}\qquad \omega_{\text{Pl}}^2  \ = \  \left(\frac{\mathcal{N}\ e^2}{\epsilon_0 \ m}\right)_L \ = \ \frac{\sigma_0\gamma}{\epsilon_0}
+\end{equation*}
+
+$n_0$ repräsentiert dabei den Beitrag der gebundenen Elektronen im Leiter und der neu eingeführte Ausdruck $\omega_{\text{Pl}}$ ist die sogenannte \textbf{Plasmafrequenz}, welche im folgenden Kapitel näher erläutert werden soll. Typische Materialfrequenzen $\gamma\ll\omega_{\text{Pl}}\ll\omega_L$ sind z.B. für Kupfer:
+
+\begin{equation*}
+\gamma \ \approx \ 10^{14} \ s^{-1}, \quad \omega_{\text{Pl}} \ \approx \ 3\cdot 10^{16} \ s^{-1}
+\end{equation*}
+
+\ \\
+Damit lässt sich nun das gesamte Frequenzspektrum  in drei Bereiche aufteilen:\\
+\ \\
+\begin{enumerate}[label=\roman*)]
+\item \underline{$\omega \ \ll \gamma$} \qquad\qquad\qquad \; Radiowellen:\\
+
+\begin{align*}
+\tilde{\epsilon}_r \ &\approx \ n_0^2 \ - \ \frac{\omega_{\text{Pl}^2}}{i\gamma\omega} \ \approx \ i \frac{\sigma_0}{\epsilon_0\omega} \qquad \text{(quasistatisch, s. Kap. 12.1)}\\
+k \ &= \ \frac{\omega}{c} \ n  \ = \ \frac{\omega}{c} \ \sqrt{\frac{i\sigma}{\epsilon_0\omega}} \ = \ \sqrt{i\gamma_0\omega\sigma_0} \quad \Rightarrow \quad \text{Skin-Effekt}
+\end{align*}
+\ \\
+
+\item \underline{$\gamma\ll\omega\ll\omega_{\text{Pl}}$} \qquad \qquad sichtbares Licht:\\
+
+\begin{equation*}
+\tilde{\epsilon}_r \ \approx \ n_0^2 \ - \ \underbrace{\frac{\omega_{\text{Pl}}^2}{\omega^2}}_{\gg 1} \ \approx \ - \frac{\omega_{\text{Pl}}^2}{\omega^2} \quad \Rightarrow\quad \tilde{n} \ = \ i \ n \kappa, \; k \ = \ i k'
+\end{equation*}
+ 
+Analog zur Totalreflexion kommt es hier also auch zu einem exponentiellen Abfall im Leiter.\\
+Die räumliche Dispersion $\epsilon(\omega,k)$ wurde hierbei vernachlässigt und es kommt zum sogenannten \textbf{anomalen Skin-Effekt}, da die Eindringtiefe $\delta$ viel kleiner als die mittlere freie Weglänge $\frac{v}{\gamma}$ ist.\\ 
+
+\item \underline{$\omega \gg \omega_{\text{Pl}}$} \qquad\qquad\qquad Röntgenwellen:\\
+\begin{equation*}
+\left(\frac{\omega_{\text{Pl}}}{\omega}\right)^2 \ \ll \ 1 \quad\Rightarrow\quad \epsilon_r \ \approx \ n_0^2
+\end{equation*}
+
+In diesem Falle wir der Einfluss der Leitungselektronen unwichtig und das Material erhält sich wie ein Dielektrikum.
+\end{enumerate}
+
+\section{Longitudinale Wellen}
+
+Wir betrachten einen Leiter ohne makroskopische Ladung, sodass für die \textsc{Maxwell}-Gleichung gilt: $\div\vec{D}=0$. Für eine elektromagnetische Welle in dem Leiter mit $\vec{E}=\vec{E}_ e^{i(\vec{k}\vec{r}-\omega t)}$ folgt damit:
+
+\begin{equation*}
+\div \vec{B} \ = \ \div(\epsilon\vec{E})  \ = \ i\vec{k}\cdot \epsilon\vec{E} \ \overset{!}{=} \ 0
+\end{equation*}
+
+Bisher hatten wir daraus immer gefolgert, dass $\vec{k}\cdot\vec{E}=0$ sein muss und die Welle daher transversal ist. Allerdings wäre rein mathematisch auch die Lösung $\epsilon=0$ für diese Gleichung möglich. Könnte die Welle dann also auch longitudinal sein?\\
+Der Versuch zeigt, dass $\vec{k}\parallel\vec{E}$ und somit $\epsilon =0$ möglich ist, aber bei welchen Frequenzen ist dies der Fall? Dazu betrachten wir:
+
+
+\begin{equation*}
+\tilde{\epsilon}_r  \ = \ n_0^2 \ - \ \frac{\omega_{\text{Pl}}^2}{\omega^2 \ + \ i \gamma\omega}
+\end{equation*}
+
+Im \emph{idealen Fall} ist $n_0=1$ und es liegt keine Dämpfung vor ($\gamma=0$) dann ergibt sich:
+
+\begin{equation*}
+\tilde{\epsilon}_r \ = \ 1 \ - \left(\frac{\omega_{\text{Pl}}}{\omega}\right)^2 \quad\Rightarrow\quad \epsilon_r \ = \ 0 \text{ bei } \omega \ = \ \omega_{\text{Pl}}
+\end{equation*}
+
+Dies gilt unabhängig von $\vec{k}$ und könnte eine longitudinale Welle repräsentieren. Diese hätte kein Magnetfeld, da $\dot{\vec{B}}= - \rot\vec{E} = - \vec{k}\times\vec{E}= 0$ und damit $\vec{B}=0$ bis auf Integrationskonstante gilt.\\
+Im \emph{realen Fall} existiert allerdings Dämpfung und und räumliche Dispersion $\epsilon(\omega,\vec{k})$, daher muss eine longitudinale Welle einen anderen physikalischen Ursprung haben. Um diesen zu klären, kehren wir noch einmal zum Begriff \ \grqq Plasmafrequenz\grqq{}  zurück.  Dieser rührt von der Tatsache her, dass sich die Elektronenwolke im Leiter wie ein Plasma, also ein Gas aus ionisierten Teilchen verhält. Lenkt man nun diese Leitungselektronen um den Betrag $\Delta x \sim e^{ikx}$ aus, so entstehen lokale Ladungsdichtegradienten. Diese rufen wiederum ein $\vec{E}$-Feld hervor, welches seinerseits eine rücktreibende Kraft auf die ausgelenkten Elektronen ausübt. Dies hat zur Folge, dass es zu longitudinalen Oszillationen des Elektronengases mit der Plasmafrequenz als Eigenfrequenz kommt, welche man dann als \grqq longitudinale Welle\grqq{} oder auch \textbf{\grqq Plasmon\grqq{}} bezeichnet.  Es handelt sich dabei also um eine Plasmaschwingung durch eine Dichtewelle der Leitungselektronen.
+[Bild]
+
+\section{Gruppengeschwindigkeit}
+
+Für eine harmonische Welle der Form $U \sim e^{ik(x-\frac{\omega}{k}t)}$ hatten wir uns bereits den Begriff der Phasengeschwindigkeit $c_{\text{Ph}} = \frac{\omega}{k}$ definiert, welche im Vakuum $c_{\text{Ph}}=c_0$ und im Medium $c_{\text{Ph}}= \frac{C_0}{n(\omega)}$ ist.\\
+\ \\
+Nun betrachten wir die Überlagerung zweier Wellen mit den Frequenzen $\omega_{\nicefrac{1}{2}} = \omega \pm \frac{\Delta\omega}{2}$. Weiterhin sei $\Delta\omega\ll\omega, \; k_{\nicefrac{1}{2}} = k \pm \frac{\Delta k}{2}, \; \Delta k \ll k$, sodass wir für die durch die Überlagerung entstandene Welle erhalten:
+
+\begin{align*}
+U(x,t) \ &= \ e^{i(k_1 x -\omega_1 t)} \; + \; e^{i(k_2 x - \omega_2 t)} \; = \; e^{i(kx-\omega t)} \cdot \left(e^{i\left(\frac{\Delta k}{2}x - \frac{\Delta \omega}{2}t \right)} \; + \; e^{-i\left(\frac{\Delta k}{2}x - \frac{\Delta \omega}{2}t\right)}\right)\\
+&= \ 2 \ e^{ik(x-\frac{\omega}{k} t)} \ \cos\left(\frac{\Delta k}{2}\left(x \ - \ \frac{\Delta \omega}{\Delta k}t\right)\right)
+\end{align*}
+
+Der erhaltene Ausdruck besteht dementsprechend aus zwei Teilen:\\
+\begin{enumerate}[label=\roman*)]
+\item einem schnell veränderlichen Teil, dessen Oszillation sich mit der Phasengeschwindigkeit $c_{\text{Ph}} =\frac{\omega}{k}$ verschiebt und
+
+\item einem langsam veränderlichen Teil, auch \textbf{Modulation} genannt, dessen Oszillation sich mit der \textbf{Gruppengeschwindigkeit} $c_{\text{Gr}} = \frac{\Delta \omega}{\Delta k}$ verschiebt.
+\end{enumerate}
+
+[hier definitiv ein Bild hin]
+
+Für ein allgemeines Wellenpaket gilt:
+
+\begin{equation*}
+U(\vec{r},t)  \ = \ \int\d^3 k  \tilde{U}(\vec{k}) \ e^{i(\vec{k}\vec{r}-\omega t)}
+\end{equation*}
+
+Der Wellenvektor $\vec{k}$ lässt sich dabei in zwei Teile aufteilen: ein zentrales $\vec{k}_0$ und ein $\vec{k}'$, für welches gilt: $|\vec{k}'| \mathsmaller{\mathsmaller{\lesssim}} \Delta k$, wobei $\Delta k$ die Breite der $\vec{k}$-Verteilung um $\vec{k}_0$ ist.\\
+Wir beginnen unsere Betrachtung zum Zeitpunkt $t=0$:
+
+\begin{equation*}
+U(\vec{r},t=0) \ = \ e^{i\vec{k}_0 \cdot\vec{r}} \; \underbrace{\int\d^3 k' \ \tilde{U}(\vec{k}_0 + \vec{k}') \ e^{i\vec{k}'\cdot\vec{r}}}_{=: \phi(\vec{r})}
+\end{equation*}
+
+$\phi(\vec{r})$ ist dabei nur langsam veränderlich auf einer Skala $|\Delta \vec{r}| = \frac{1}{|\Delta \vec{k}|} \gg \frac{\lambda}{2\pi}= \frac{1}{|\vec{k}_0|}$.\\
+Für jeden anderen Zeitpunkt $t \neq 0$ gilt:
+
+\begin{align*}
+\omega(\vec{k}) \ &= \ \underbrace{\omega(\vec{k}_0)}_{=:\omega_0} \ + \ \left.\left(\vec{k}' \ \pdiff{}{\vec{k}}\right)\omega\right|_{k_0} \ + \ \frac{1}{2} \ \left.\left(\vec{k}'\pdiff{}{\vec{k}}\right)^2\omega\right|_{k_0} \ + \ \ldots\\
+\ \\
+U(\vec{r},t)  \ &= \ e^{i(\vec{k}_0\vec{r}-\omega_0 t)} \; \int\d^3 k' \ \tilde{U}(\vec{k}_0 + \vec{k}') \ e^{i\vec{k}\left(\left.\vec{r}-\pdiff{\omega}{\vec{k}}\right|_{k_0} \cdot t\right)} \ \underbrace{e^{-\frac{1}{2}\left.\left(\vec{k}' \cdot \pdiff{}{\vec{k}}\right)^2\omega\right|_{k_0} \cdot t}}_{\text{zunächst } \rightarrow 1 \; \; (*)}\\
+&= \ e^{i(\vec{k}_0\vec{r} - \omega_0 t)} \ \phi\left(\vec{r} \ - \ \left.\pdiff{\omega}{\vec{k}}\right|_{k_0} \cdot t \right)
+\end{align*}
+
+Damit erhalten wir also für die allgemeine Phasengeschwindigkeit $c_{\text{Ph}} = \frac{\omega_0}{k_0}$ (bzw. $\vec{c}_{\text{Ph}} = \frac{\vec{k}_0}{k_0^2}\omega_0$) und für die allgemeine Gruppengeschwindigkeit $\vec{c}_{\text{Gr}} = \left.\pdiff{\omega}{\vec{k}}\right|_{k_0}$\\
+Die physikalische Bedeutung der Gruppengeschwindigkeit ist die Ausbreitung des Energietransports mit ihr, daher gilt im Allgemeinen für die Energiestromdichte: $\vec{S}_P = c_{\text{Gr}} \cdot w \cdot \vec{e}_r$. Also kann höchstens mit der Gruppengeschwindigkeit auch physikalische Wirkungen übertragen werden, weshalb in der Nachrichtentechnik auch häufig von "Signalgeschwindigkeit" geredet wird. Für sie gilt \emph{immer} $c_{\text{Gr}} \leq c_0$, wohingegen die Phasengeschwindigkeit $c_{\text{Ph}}$ auch größer als  $c_0$ sein kann.\\ 
+\ \\
+In der Herleitung der allgemeinen Phasen- bzw. Gruppengeschwindigkeit haben wir an einer Stelle die \textsc{Taylor}-Entwicklung schon vor dem Term quadratischer Ordnung $(*)$ abgebrochen, allerdings kann dieser und auch folgende nicht zu allen Zeiten vernachlässigt werden. Die Näherung \grqq{}$\left(\pdiff{}{\vec{k}}\right)^2\omega\rightarrow 0$\grqq{} ist ungültig, wenn $\left(\vec{k}'\pdiff{}{\vec{k}}\right)^2\omega \cdot t \mathsmaller{\mathsmaller{\gtrsim}} 1$ gilt, bzw. $t \mathsmaller{\mathsmaller{\gtrsim}} \left((\Delta k)^2 \pddiff{\omega}{\vec{k}}\right)^{-1}$.\\
+Dann gilt:
+
+\begin{equation*}
+U(\vec{r},t) \ = \  e^{i(\vec{k}_0\vec{r}-\omega_0 t)} \ \phi(\vec{r} - \vec{c}_{\text{Gr}} \cdot t,t)
+\end{equation*}
+
+Durch die explizite Zeitabhängigkeit von $\phi$ kommt es zu Signalverzerrungen und man muss in diesem Falle die Gruppengeschwindigkeit anders definieren:
+
+\begin{align*}
+\vec{r}_S \ &= \ \langle\vec{r}\rangle \ = \ \frac{\Int{}{}{V} \ \vec{r} \ |U(\vec{r},t)|^2}{\Int{}{}{V} \ |U(\vec{r},t)|^2} \ =: \  \vec{r}_0 \ + \ \vec{c}_{\text{Gr}} t \qquad \text{Schwerpunkt des Wellenpakets}\\
+\ \\
+\vec{c}_{\text{Gr}}  \ &= \ \frac{\int\d^3 k \ \pdiff{\omega}{k} \ |\tilde{U}(\vec{k})|^2}{\int\d^3 k \ |\tilde{U}(\vec{k})|^2} \ = \ \Bigg\langle\pdiff{\omega}{\vec{k}}\Bigg\rangle
+\end{align*}
+
+\ \\
+Für den dispersionsfreien Fall folgt für die Phasengeschwindigkeit $c_{\text{Ph}} =: c = \text{const.}$ und die Gruppengeschwindigkeit folgender einfacher Zusammenhang:
+
+\begin{equation*}
+\vec{c}_{\text{Gr}} \ = \ \pdiff{\omega}{\vec{k}} \ = \ \vec{e}_k\cdot c \quad\Rightarrow\quad c_{\text{Gr}} \ = \ c_{\text{Ph}}
+\end{equation*}
+
+Allerdings sind auch noch in diesem Falle Verzerrungen möglich, und zwar wenn $\pdiff{}{\vec{k}}\circ\pdiff{\omega}{\vec{k}}\neq 0$, d.h. wenn c richtungsabhängig ist.
