@@ -9,12 +9,13 @@
 \usepackage{amsmath}
 \usepackage{mathtools}
 \usepackage{amssymb}
+\usepackage{calc}
 \usepackage{fancyhdr}
 \usepackage{xcolor}
 \usepackage{fourier}
 \usepackage[frak=mma]{mathalfa}
 \usepackage{sectsty}
-\usepackage{lipsum}
+\usepackage{empheq}
 \usepackage{bm}
 \usepackage{bbm}
 \usepackage{enumitem}
@@ -22,7 +23,6 @@
 \usepackage{ulem}
 \usepackage{relsize}
 \usepackage{nicefrac}
-
 \usepackage{wrapfig}
 \usepackage{tikz}
 \usetikzlibrary{patterns}
@@ -37,35 +37,37 @@
 \definecolor{dblue}{HTML}{183CE0}
 \definecolor{hblue}{HTML}{0E75F7}
 \definecolor{hgrey}{HTML}{FAFAFA}
+\definecolor{bblue}{HTML}{CBE3FD}
 \sectionfont{\color{hblue}}
 \chapterfont{\color{dblue}}
 \pagestyle{headings}
 \setlength\parindent{0pt}
 
+
 %defined commands
 \input{operators_TP-ED.tex}
 
+\setlist[enumerate,1]{label =\textbf{\roman*)}}
+\setlist[enumerate,2]{label =\alph*)}
+\setcounter{chapter}{-1}
 	
 \begin{document}
-
 \maketitle
-
 \tableofcontents
 
-\input{lectures/chapter_01}
-\input{lectures/chapter_02}
-\input{lectures/chapter_03}
-\input{lectures/chapter_04}
-\input{lectures/chapter_05}
-\input{lectures/chapter_06}
-\input{lectures/chapter_07}
-\input{lectures/chapter_08}
-\input{lectures/chapter_09}
-\input{lectures/chapter_10}
-\input{lectures/chapter_11}
-\input{lectures/chapter_12}
-\input{lectures/chapter_13}
-\input{lectures/chapter_14}
-
+\input{chapter/00.tex}
+\input{chapter/01.tex}
+\input{chapter/02.tex}
+\input{chapter/03.tex}
+\input{chapter/04.tex}
+\input{chapter/05.tex}
+\input{chapter/06.tex}
+\input{chapter/07.tex}
+\input{chapter/08.tex}
+\input{chapter/09.tex}
+\input{chapter/10.tex}
+\input{chapter/11.tex}
+\input{chapter/12.tex}
+\input{chapter/13.tex}
 
 \end{document}

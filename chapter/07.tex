@@ -1,4 +1,4 @@
-\chapter{Kraftwirkung auf Ladungen und Ströme}
+\chapter[Kraftwirkungen]{Kraftwirkungen auf Ladungen und Ströme}
 
 Erinnerung: \textbf{Lorentzkraftdichte}
 
@@ -12,11 +12,11 @@ Erinnerung: \textbf{Lorentzkraftdichte}
 		\colorbox{hgrey}{
 			\begin{tikzpicture}
 			
-			\draw[ultra thick] (-1,1)--node[above right]{$\vec{a}$}(1,-1);
-			\filldraw[black] (-1,1) circle (2pt) node[above left]{$+Q$};
-			\filldraw[black] (1,-1) circle (2pt) node[below right]{$-Q$};
-			\filldraw[black] (-1.5,-2.5) circle (2pt) node[below left]{$0$};
-			\draw[->] (-1.5,-2.5) -- node[below right]{$\vec{r}$} (-0.1,-0.1);
+	\draw[ultra thick] (-1,1)--node[above right]{$\vec{a}$}(1,-1);
+	\filldraw[black] (-1,1) circle (2pt) node[above left]{$+Q$};
+	\filldraw[black] (1,-1) circle (2pt) node[below right]{$-Q$};
+	\filldraw[black] (-1.5,-2.5) circle (2pt) node[below left]{$0$};
+	\draw[->] (-1.5,-2.5) -- node[below right]{$\vec{r}$} (-0.1,-0.1);
 			
 			
 			\end{tikzpicture}
@@ -50,12 +50,12 @@ Den Ausdruck für das Drehmoment auf einen Dipol im elektrischen Feld erhalten w
 		\colorbox{hgrey}{
 			\begin{tikzpicture}
 			
-			\draw[ultra thick, -latex] (0,0) [partial ellipse=40:410:2cm and 0.5cm];
-			\draw (1.6,0.4) node[above right]{$I$};
-			\filldraw[black] (-1.5,-2.5) circle (2pt) node[below left]{$0$};
-			\draw[->] (-1.5,-2.5) -- node[below right]{$\vec{r}$} (0,0);
-			\draw[->] (-1.5,-2.5) -- node[left]{$\vec{r}'$} (-2,-0.2);
-			\draw[->] (-0.1,0) -- node[above]{$\ \ \vec{r}''$} (-1.8,0);
+				\draw[ultra thick, -latex] (0,0) [partial ellipse=40:410:2cm and 0.5cm];
+				\draw (1.6,0.4) node[above right]{$I$};
+				\filldraw[black] (-1.5,-2.5) circle (2pt) node[below left]{$0$};
+				\draw[->] (-1.5,-2.5) -- node[below right]{$\vec{r}$} (0,0);
+				\draw[->] (-1.5,-2.5) -- node[left]{$\vec{r}'$} (-2,-0.2);
+				\draw[->] (-0.1,0) -- node[above]{$\ \ \vec{r}''$} (-1.8,0);
 			
 			
 			\end{tikzpicture}
@@ -82,7 +82,7 @@ Lösung des Integrals $(*)$:
 
 \begin{align*}
 \Oint{}{}{\vec{r}'} (\vec{r}''\cdot \ \vec{a}) & \quad = \quad \ \oint{}{}{\vec{r}'} \cdot (\vec{r'}- \ \underbrace{\vec{r}}_{=0}) \vec{a}\\
-& \overset{\text{Kap. 5.3}}{=} \ \frac{1}{2}\oint(\vec{r}'\times\d\vec{r}')\times\vec{a} \ + \ \frac{1}{2}\Oint{}{}{\vec{r}'}(\vec{r}'\cdot\vec{a})\\
+& \overset{\text{Kap. 4.3}}{=} \ \frac{1}{2}\oint(\vec{r}'\times\d\vec{r}')\times\vec{a} \ + \ \frac{1}{2}\Oint{}{}{\vec{r}'}(\vec{r}'\cdot\vec{a})\\
 & \quad = \quad \ \vec{A}_F \times\vec{a}
 \end{align*}
 
@@ -104,7 +104,7 @@ Für das Drehmoment auf den magnetischen Dipol gilt:
 
 \begin{align*}
 \vec{M}  \ &= \ \Int{}{}{V'} \vec{r}\times\left[\vec{j}(\vec{r}') \times \vec{B}(\vec{r}')\right] \ = \  I  \ \Oint{}{}{\vec{r}''} \times \left[\d\vec{r}' \times\vec{B}(\vec{r}')\right]\\
-&= \ I \ \Oint{}{}{\vec{r}'}(\vec{r}''\cdot\vec{B}(\vec{r}')) \ - \ I \ \oint(\d\vec{r}'\cdot\vec{r}'')\vec{B}(\vec{r}')
+ &= \ I \ \Oint{}{}{\vec{r}'}(\vec{r}''\cdot\vec{B}(\vec{r}')) \ - \ I \ \oint(\d\vec{r}'\cdot\vec{r}'')\vec{B}(\vec{r}')
 \end{align*}
 
 Näherung: $\vec{B}$ ist homogen. Auflösung der Integrale:
@@ -118,13 +118,13 @@ Näherung: $\vec{B}$ ist homogen. Auflösung der Integrale:
 \Rightarrow \quad \vec{M}  \ = \ I\cdot \vec{A}_F \times \vec{B} \ = \ \vec{m}\times\vec{B} \qquad\qquad (\text{vgl. el. Dipol: } \vec{M}  \ = \ \vec{p}\times\vec{E})
 \end{equation*}
 
-\section{Multipolentwicklung der elektrischen Wechselwirkungsenergie}
+\section[Multipolentwicklung der Feldenergie]{Multipolentwicklung der elektrischen Wechselwirkungsenergie}
 
 Wir betrachten zwei Ladungsverteilungen mit den Dichten $\rho_1$ und $\rho_2$, welche sich im Abstand $l$ voneinander befinden. Die gemeinsame elektrische Feldenergie beträgt:
 
 \begin{equation*}
-W_e \ = \ \frac{1}{8\pi\epsilon_0}\int\d V \d V' \frac{\left(\rho_1(\vec{r}) \ + \ \rho
-	_2(\vec{r})\right)\left(\rho_1 (\vec{r}') \ + \ \rho_2(\vec{r}')\right)}{|\vec{r} \ - \ \vec{r}'|}
+W_e \ = \ \frac{1}{8\pi\epsilon_0}\int\d V \int\d V' \frac{\left(\rho_1(\vec{r}) \ + \ \rho
+_2(\vec{r})\right)\left(\rho_1 (\vec{r}') \ + \ \rho_2(\vec{r}')\right)}{|\vec{r} \ - \ \vec{r}'|}
 \end{equation*}
 
 Betrachten wir nun die Wechselwirkungsenergie zwischen 1 und 2, wozu wir annehmen, dass $\rho_1$ ein "äußeres" Potential $\varphi_1$ erzeugt, welches mit $\rho_2$ wechselwirkt:
@@ -139,8 +139,8 @@ Wir benennen nun der Einfachheit halber $\varphi_1$ in $\varphi$ und $\rho_2$ in
 \varphi(\vec{r})  \ &= \  \varphi(0) \ + \ \left.\left(\vec{r}\cdot\pdiff{}{\vec{r}}\right)\varphi\right|_0 \ + \ \frac{1}{2}\ \sum_{i,j} x_i x_j \ \left.\frac{\partial ^2}{\partial x_i  \partial x_j}\varphi\right|_0 \ + \ \ldots \\
 \ \\
 \Rightarrow \quad W \ &= \ \Int{}{}{V}\rho(\vec{r})\left[\varphi(0) \ + \ \left.\left(\vec{r}\cdot\pdiff{}{\vec{r}}\right)\varphi\right|_0 \ + \ \frac{1}{2} \sum_{i,j}x_i x_j \left.\frac{\partial^2}{\partial x_i \partial x_j}\varphi\right|_0 \ + \ \ldots\right]\\
-&= \ Q\cdot\varphi(0) \ + \ \vec{p}\cdot\left.\pdiff{}{\vec{r}}\varphi\right|_0 \ + \ \frac{1}{2}\sum_{i,j}\left(D_{ij} \ + \ \delta_{ij}\Int{}{}{V}\rho\vec{r}\right)\left.\frac{\partial^2}{\partial x_i \partial x_i}\varphi\right|_0 \ + \ \ldots\\
-\text{mit} \quad D_{ij} \ &= \ \Int{}{}{V} \rho \ \left(3x_i x_j\ - \ \delta_{ij}\vec{r}^2\right)
+&= \ Q\cdot\varphi(0) \ + \ \vec{p}\cdot\left.\pdiff{}{\vec{r}}\varphi\right|_0 \ + \ \frac{1}{2}\sum_{i,j}\left(D_{ij} \ + \ \delta_{ij}\Int{}{}{V}\rho\vec{r}\right)\left.\frac{\partial^2}{\partial x_i \partial x_j}\varphi\right|_0 \ + \ \ldots\\
+\text{mit} \quad D_{ij} \ &= \ \Int{}{}{V} \rho \ \left(3x_i x_j\ - \ \vec{r}^2\delta_{ij}\right)
 \end{align*}
 
 Nach dem Umformen des Ausdrucks:
@@ -156,7 +156,7 @@ W \ = \ Q\cdot\varphi(\vec{r}) \ + \ \vec{p}\cdot\nabla\varphi(\vec{r})  \ = \ \
 \end{equation*}
 
 \ \\
-\textbf{Verschieben} dieser Ladungsverteilung von $\vec{r}$ nach $\vec{r} + \delta\vec{r}$ liefert uns den mulitpolentwickelten Ausdruck für die Kraft auf die Ladungsverteilung. Dabei bleibt allerdings der Bezugspunkt für $\vec{p},\tens{D}$ unverändert. Es gilt für die verrichtete Arbeit:
+\textbf{Verschieben} dieser Ladungsverteilung von $\vec{r}$ nach $\vec{r} + \delta\vec{r}$ liefert uns den multipolentwickelten Ausdruck für die Kraft auf die Ladungsverteilung. Dabei bleibt allerdings der Bezugspunkt für $\vec{p},\tens{D}$ unverändert. Es gilt für die verrichtete Arbeit:
 
 \begin{align*}
 \delta A \ &= \ \vec{F} \cdot \delta\vec{r} \ = \ -\delta W \\
@@ -164,8 +164,8 @@ W \ = \ Q\cdot\varphi(\vec{r}) \ + \ \vec{p}\cdot\nabla\varphi(\vec{r})  \ = \ \
 \Rightarrow \quad \vec{F} \ &= \ Q \ \vec{E} \ + \ \left(\vec{p}\cdot\nabla\right)\vec{E} \ + \ \frac{1}{6}\left(\nabla\cdot\tens{D}\cdot\nabla\right)\vec{E}
 \end{align*}
 
-\ \\
-\textbf{Drehen} der Ladungsverteilung um $\vec{r}$ mit dem Winkel $\delta\vec{\alpha}$ liefert uns den multipolentwickelten Ausdruck für das Drehmoment auf die Ladungsverteilung. es gilt für die verrichtete Arbeit:
+\newpage
+\textbf{Drehen} der Ladungsverteilung um $\vec{r}$ mit dem Winkel $\delta\vec{\alpha}$ liefert uns den multipolentwickelten Ausdruck für das Drehmoment auf die Ladungsverteilung. Es gilt für die verrichtete Arbeit:
 
 \begin{equation*}
 \delta A  \ = \ \vec{M}\cdot\delta\vec{\alpha}  \ = \ - \delta W \quad\Rightarrow \quad \vec{M}  \ = \ - \pdiff{W}{\vec{\alpha}}

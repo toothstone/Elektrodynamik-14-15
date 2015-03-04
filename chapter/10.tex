@@ -9,11 +9,11 @@ Ausgangspunkt der folgenden Betrachtungen sollen wieder die \textsc{Maxwell}-Gle
 \rot\vec{E}+\dot{\vec{B}}  \ &= 0  &\frac{1}{\mu_0}\rot\vec{B}-\epsilon_0\dot{\vec{E}}  \ &= \ \vec{j}  
 \end{align*}
 
-Die Idee der Quasistationärität ist, dass die Zeitabhängigkeit langsam ist, wodurch man $\epsilon_0\dot{\vec{E}}\ll\vec{j}$ nähern kann. damit kommt es zur \textbf{effektiven Entkopplung} von $\vec{E}$ und $\vec{B}$ in der felderzeugenden Quelle.\\
+Die Idee der Quasistationärität ist, dass die Zeitabhängigkeit langsam ist, wodurch man $\epsilon_0\dot{\vec{E}}\ll\vec{j}$ nähern kann. Damit kommt es zur \textbf{effektiven Entkopplung} von $\vec{E}$ und $\vec{B}$ in der felderzeugenden Quelle.\\
 Mit der quasistationären Näherung gilt also:
 
 \begin{equation*}
-\rot\vec{B} \ = \ \mu_0\vec{j} \quad\Rightarrow\quad -\laplace\vec{A}  \ = \ \mu_0\vec{j} \qquad \text{mit $\div \vec{A}=0$, (\textsc{Coumlomb}-Eichung)}
+\rot\vec{B} \ = \ \mu_0\vec{j} \quad\Rightarrow\quad -\laplace\vec{A}  \ = \ \mu_0\vec{j} \qquad \text{mit $\div \vec{A}=0$ (\textsc{Coumlomb}-Eichung)}
 \end{equation*}
 
 Exakt wäre:
@@ -22,15 +22,16 @@ Exakt wäre:
 \Dalembert\vec{A}  \ = \  \left(\frac{1}{c^2}\partial^2_t \ - \ \laplace\right)\vec{A}  \ = \  \mu_0\vec{j}
 \end{equation*}
 
-
-Anschaulich entspricht also die Vernachlässigung von $\dot{\vec{E}}$ einer Vernachlässigung der Retardierdung: $\Dalembert \approx - \laplace$.\\
 \ \\
+Anschaulich entspricht also die Vernachlässigung von $\dot{\vec{E}}$ einer Vernachlässigung der Retardierdung: $\Dalembert \approx - \laplace$.
+
+\newpage
 Damit man die quasistationäre Näherung anwenden darf, muss folgenden Bedingung erfüllt sein:
 
 \begin{align*}
 & \partial_t \ \sim \ -i\omega \ \sim \ -i\frac{2\pi}{\tau}\\
 & \partial_{\vec{r}} \ \sim \ \sigma\left(\frac{1}{l}\right) \qquad \text{l \ldots charakteristische Länge für Änderung des Feldes}\\
-\Rightarrow \quad & \frac{1}{c^2}\partial_t^2\ll\laplace \quad \text{entspricht} \quad \frac{\omega^2}{c^2}\ll\frac{^1}{l^2}\\
+\Rightarrow \quad & \frac{1}{c^2}\partial_t^2\ll\laplace \quad \text{entspricht} \quad \frac{\omega^2}{c^2}\ll\frac{1}{l^2}\\
 \Rightarrow \quad &\left(\frac{2\pi \ l}{c\tau}\right)^2\ll 1 \quad\text{bzw.}\quad\left(\frac{2\pi \ l}{\lambda}\right)^2\ll 1
 \end{align*}
 
@@ -43,18 +44,19 @@ Wir betrachten nun mehrere Leiterschleifen $\mathcal{S}_i$ durch die  die Ström
 (U_{\text{ind}})_i  \ = \ -\dot{\Phi}_i \quad \text{mit} \quad \Phi_i (t)  \ = \ \Int{\mathcal{S}_i}{}{\vec{A}_F}\cdot\vec{B}(t)  \ = \ \sum_k L_{ik} I_k(t)
 \end{equation*}
 
-Wir nehmen nun an, dass die Leiterschleife $\mathcal{S}_i$ über einen Widerstand $R_i$ und über eine Kapazität $C_i$ verfügt und an eine Spannungsquelle $U_i$ angeschlossen ist. Dann folgt mit den \textsc{Kirchhoff}-Gesetzen:
+Wir nehmen nun an, dass die Leiterschleife $\mathcal{S}_i$ über einen Widerstand $R_i$ und über eine Kapazität $C_i$ verfügt und an eine Spannungsquelle $U_i$ angeschlossen ist. Dann folgt mit den \textsc{Kirchhoff}-Gesetzen:\\
 
 \begin{align*}
 - & U_i \ + \ R_i \ I_i \ + \ \frac{Q_i}{C_i} \ = \ U_{\text{ind}}  \ = \ -\diff{}{t} \sum_k \ L_{ik} \ I_k\\
 \Rightarrow \quad & \dot{U}_i  \ = \ R_i \ \dot{I}_i \ + \ \frac{I_i}{C_i} \ + \ \sum_k \ L_{ik} \ \ddot{I}_k
 \end{align*}
-
+\ \\
 Durch die Quasistationarität kommt es, wie man aus obiger Gleichung entnehmen kann, nur zu einer induktiven, aber keiner kapazitiven Kopplung.\\
 Speziell für eine Schleife gilt: $\dot{U}=L\ddot{I}+R\dot{I}+\frac{1}{C}I$. Dabei kann man mehrere Fälle unterscheiden:
-\ \\
-\begin{enumerate}[label=\roman*]
-\item $U=0\qquad$ Eigenschwingung:
+
+\newpage
+\begin{enumerate}
+\item \textbf{ Eigenschwingung:}\qquad $U=0$\\
 \ \\
 Wir wählen für die verbleibende DGL den Ansatz:
 \begin{equation*}
@@ -64,7 +66,7 @@ I \ = \ I_0 \ e^{i\omega_0 t} \quad\Rightarrow\quad -\omega_0^2 L \ + \ i\omega_
 Für $R=0$ gilt für $\omega_0=\sqrt{\frac{1}{LC}}$, ansonsten tritt eine Dämpfung der Schwingung auf.
 \ \\\
 
-\item $U=U_0 \ e^{i\omega t} \qquad$ erzwungene Schwingung:	
+\item \textbf{ erzwungene Schwingung:}\qquad $U=U_0 \ e^{i\omega t}$\\
 \ \\
 Wir wählen erneut den Ansatz $I=I_0 e^{i\omega t}$
 
@@ -86,9 +88,9 @@ U  \ &= \ L \ \dot{I} \ + \ R \ I \ + \ \frac{Q}{C}\\
 Die Mittelung dieser Energie über eine Periode liefert uns mit $\langle N \rangle = \langle N_{\textsc{Joule}} \rangle$:
 
 \begin{align*}
-\langle I^2 \rangle \ &= \ I_0^2 \ \langle\cos^2\omega t \rangle  \ = \  \frac{1}{2}I_0^2 \quad \Rightarrow\quad I_{\text{eff}} := \frac{1}{\sqrt{2}}I_0; \; \; U_{\text{eff}}:= \frac{1}{\sqrt{2}}U_0\\
+\langle I^2 \rangle \ &= \ I_0^2 \ \langle\cos^2\omega t \rangle  \ = \  \frac{1}{2}I_0^2 \quad \Rightarrow\quad I_{\text{eff}} := \frac{1}{\sqrt{2}}I_0, \; \; U_{\text{eff}}:= \frac{1}{\sqrt{2}}U_0\\
 \ \\
-\langle N \rangle  \ &= \ U_0 \ I_0 \ \Big\langle\cos (\omega t) \ \cos(\omega t \ + \ \phi) \Big\rangle  \ = \  \frac{1}{2}U_0 \ I_0 \ \Big\langle\left(\cos(2\omega t \ + \ \phi) \ + \cos (\phi)\right)\Big\rangle  \ = \ U_{\text{eff}} \ I_{\text{eff}} \ \cos(\phi)
+\langle N \rangle  \ &= \ U_0 \ I_0 \ \Big\langle\cos (\omega t) \ \cos(\omega t + \phi) \Big\rangle  \ = \  \frac{1}{2}U_0 \ I_0 \ \Big\langle\left(\cos(2\omega t + \phi) \ + \cos (\phi)\right)\Big\rangle  \ = \ U_{\text{eff}} \ I_{\text{eff}} \ \cos(\phi)
 \end{align*}
 
 \newpage
@@ -177,8 +179,8 @@ Diese beiden Gleichungen lassen sich nun zu sogenannten \textbf{Telegraphengleic
 
 Diese Gleichung wollen wir nun für folgende zwei Fälle genauer untersuchen:
 
-\begin{enumerate}[label=\roman*]
-\item \underline{Ideale Leitung:} $\qquad r=0, \; \; g=0$
+\begin{enumerate}
+\item \textbf{ Ideale Leitung:} $\qquad r=0, \; \; g=0$
 \ \\
 \ \\
 Für die ideale Leitung gilt:
@@ -197,9 +199,8 @@ Weiterhin folgt:
 
 Den Ausdruck $\sqrt{\frac{l}{\zeta}}$ bezeichnet man der Anschauung nach auch als \textbf{Wellenwiderstand} $Z$.\\
 Verbindet man nun die beiden Teile des Doppelleiters über einen Widerstand $R$, so kommt es bei $R\neq Z$ zu einer teilweisen Reflexion der Welle.\\
-\ \\
-\item \underline{Nichtideale Leitung:}
-\ \\
+
+\item \textbf{ Nichtideale Leitung:}
 \ \\
 
 Zum Lösen der Telegraphengleichung unter nichtidealen Bedingungen wählen wir den Ansatz: $I=I_0 e^{-i(kx-\omega t)}$. Setzen wir diesen nun ein, erhalten wir daraus, dass $k$ komplex sein muss: $k=k_0 + ik_1$. Dementsprechend folgt auch für $I$:
@@ -220,6 +221,7 @@ k_1  \ = \ \frac{1}{2v_0} \ \left(\frac{r}{l} \ - \ \frac{g}{\zeta}\right)
 \end{equation*}
 \end{enumerate}
 
+\newpage
 \section{Quasistationäre Ströme in Leitern}
 
 Ausgangspunkt unserer Betrachtungen sollen in diesem Kapitel wieder die \textsc{Maxwell}-Gleichungen sein, wobei wir aber noch das \textsc{Ohm}'sche Gesetz hinzunehmen:
@@ -234,8 +236,8 @@ Ausgangspunkt unserer Betrachtungen sollen in diesem Kapitel wieder die \textsc{
 Wenn wir nun die Annahme machen, dass die Leitungsströme $\vec{j}_L$ nahezu sämtliche Stromdichten ausmachen $(\vec{j}_L\rightarrow\vec{j})$ erhalten wir:
 
 \begin{align*}
-\rot \vec{j} \ = \ \sigma \rot\vec{E}  \ = \ -\sigma\dot{\vec{B}}\\
-\Rightarrow \frac{1}{\mu} \ \rot\rot \vec{B} \ = \ -\sigma \dot{\vec{B}}  \ = \ \frac{1}{\mu}\left(\grad\underbrace{\div\vec{B}}_{=0} \ - \ \laplace\vec{B}\right)
+&\rot \vec{j} \ = \ \sigma \rot\vec{E}  \ = \ -\sigma\dot{\vec{B}}\\
+\Rightarrow \quad &\frac{1}{\mu} \ \rot\rot \vec{B} \ = \ -\sigma \dot{\vec{B}}  \ = \ \frac{1}{\mu}\Big(\grad\underbrace{\div\vec{B}}_{=0} \ - \ \laplace\vec{B}\Big)
 \end{align*}
 
 Über analoge Vorgehensweisen für $\vec{E}$ und $\vec{j}$ erhalten wir schlussendlich folgende drei Differentialgleichungen:
@@ -253,6 +255,7 @@ Die erhaltenen Gleichungen sind sogenannte \textbf{Diffusionsgleichungen}, da si
 k_0  \ &= \ \sqrt{\frac{\mu\sigma\omega}{2}} \ =: \ \frac{1}{\delta}
 \end{align*}
 
+\newpage
 Wenn wir nun ohne Beschränkung der Allgemeinheit annehmen, dass $\vec{k}\parallel\vec{e}_x$ ist, erhalten wir für unser $\vec{B}$-Feld:
 
 \begin{equation*}
@@ -274,6 +277,7 @@ Die Felder und Ströme fallen innerhalb des Leiters also exponentiell ab. Der Au
 }
 	\caption{Leiter in $z$-Richtung}
 \end{wrapfigure}
+
 Ein Beispiel für dieses Verhalten von Feldern und Strömen in Leitern ist die Entstehung von Wirbelströmen in von einem Magnetfeld durchsetzten Eisenkern. Dieser fungiert als Abschirmstrom und verhindert somit das tiefe Durchdringen des Kerns durch das Magnetfeld. In technischen Anwendungen wie z.B. dem Transformator wird dem entgegengewirkt, indem die Leitfähigkeit $\sigma$ durch Lamellierung stark abgesenkt wird.\\
 \ \\ \linebreak
 
@@ -298,13 +302,14 @@ Ein Beispiel für dieses Verhalten von Feldern und Strömen in Leitern ist die E
 	}
 	\caption{Skin-Effekt im Leiter}
 \end{wrapfigure}
+
 Ein anderes Beispiel ist der sogenannte \textbf{Skin-Effekt}, welcher dafür sorgt, dass Wechselströme an der Drahtoberfläche fließen. Der Widerstand eines Drahtes bei Skin-Effekt lässt sich folgendermaßen berechnen:
 
 \begin{equation*}
 Z \ = \ \frac{U}{I} \ = \ \frac{E \cdot l}{I} \quad \Rightarrow \quad \frac{Z}{l} \ = \ \frac{E}{I}
 \end{equation*}
 
-$E$ ist dabei ein von außen angelegtes elektrisches Feld. Weiterhin nehmen wir an, dass ein starker Skin-Effekt vorleigt $(\delta\ll r)$. Zunächst müssen wir also den Strom $I$ berechnen, um den Widerstand zu erhalten:
+$E$ ist dabei ein von außen angelegtes elektrisches Feld. Weiterhin nehmen wir an, dass ein starker Skin-Effekt vorliegt $(\delta\ll r)$. Zunächst müssen wir also den Strom $I$ berechnen, um den Widerstand zu erhalten:
 
 
 \begin{align*}
@@ -312,13 +317,14 @@ I  \ &= \ \Int{}{}{\vec{A}_F}\cdot\vec{j} \ = \ \sigma \ 2 \pi \ r \Int{0}{\inft
 &= \ 2\pi \sigma \ E \ r \Int{0}{\infty}{x}e^{(i-1)k_0 x}  \ = \ 2\pi\sigma \ E \ r  \frac{1}{(i-1)k_0}\cdot(-1) 
 \end{align*}
 
+\newpage
 Somit erhalten wir für den Widerstand:
 
 \begin{equation*}
 \frac{Z}{l}  \ = \ \frac{(1-i)k_0}{2\pi\sigma \ r} \ = \ \frac{1-i}{2\pi \ r}\ \sqrt{\frac{\mu\omega}{2\sigma}}
 \end{equation*}
 
-Vergleicht man dies mit dem normalen \textsc{Ohm}'schen Widerstand eines Leiters, so stellt man fest, dass der Widerstand bei Skin-Effekt sehr viel größt als dieser ist:
+Vergleicht man dies mit dem normalen \textsc{Ohm}'schen Widerstand eines Leiters, so stellt man fest, dass der Widerstand bei Skin-Effekt sehr viel größer als dieser ist:
 
 \begin{equation*}
 \frac{R}{l} \ = \ \frac{1}{\pi \ r^2 \ \sigma} \quad \Rightarrow \quad \frac{Z}{R}  \ = \ \frac{1-i}{2} \ \frac{r}{\delta} \ \gg \ 1

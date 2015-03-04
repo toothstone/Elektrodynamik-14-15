@@ -1,4 +1,3 @@
-
 \chapter{Elektrostatik}
 
 \section{Grundgleichungen und elektrostatisches Potential}
@@ -11,13 +10,13 @@ Damit erhalten wir aus der dritten \textsc{Maxwell}-Gleichung, dass rot $\vec{E}
 \vec{E} =: \ -\grad \varphi
 \end{equation*}
 
-Mit div $\vec{E} = \frac{\rho}{\epsilon_0}$ erhält man daraus die \textsc{Poisson}-Gleichung der Elektrostatik:
+Mit div $\vec{E} = \frac{\rho}{\epsilon_0}$ erhält man daraus die \textbf{\textsc{Poisson}-Gleichung} der Elektrostatik:
 
-\begin{equation*}\textbf{\textsc{Poisson}-Gleichung der Elektrostatik}\qquad
+\begin{empheq}[box=\highlightbox]{equation*}
 \laplace\varphi = - \frac{\rho}{\epsilon_0}
-\end{equation*}
+\end{empheq}
 
-Für $\laplace\varphi = 0$ nennt man die \textsc{Poisson}-Gleichung auch \textsc{Laplace}-Gleichung.
+Für $\laplace\varphi = 0$ nennt man die \textsc{Poisson}-Gleichung auch \textbf{\textsc{Laplace}-Gleichung}.
 
 \section{Kugelsymmetrische Ladungsverteilung}
 
@@ -27,7 +26,7 @@ Für eine kugelsymmetrische Ladungsverteilung gilt:
 \rho(\vec{r}) = \rho(|\vec{r}|) = \rho(r) \; \Rightarrow \; \varphi(\vec{r}) = \varphi(r)
 \end{equation*}
 
-Dem kann man entnehmen, dass die Äquipotentialflächen Kugelflächen sein müssen und somit der Gradient von $\varphi$ auch parallel zum Ortsvektor stehen muss.($\vec{E}(\vec{r}) = \vec{E}(r)\vec{e}_r$ \
+Dem kann man entnehmen, dass die Äquipotentialflächen Kugelflächen sein müssen und somit der Gradient von $\varphi$ auch parallel zum Ortsvektor stehen muss.($\vec{E}(\vec{r}) = \vec{E}(r)\vec{e}_r$)\\
 Für das $\vec{E}$-Feld gilt weiterhin:
 
 \begin{equation*}
@@ -36,33 +35,33 @@ Für das $\vec{E}$-Feld gilt weiterhin:
 
 Damit ergibt sich für das $\vec{E}$-Feld und das Potential:
 
-\begin{align*}
+\begin{empheq}[box=\highlightbox]{align*}
 \vec{E}(r) &= \frac{Q_{\mathrm{in}}(r)}{4\pi\epsilon_0\cdot r^2} \cdot \vec{e}_r\\
 \ \\
-\varphi(r) &= \frac{Q_{\mathrm{in}}(r)}{4\pi\epsilon_0\cdot r} + \varphi_0 \; \text{ mit } \; \varphi_0 = \varphi(r \rightarrow 0)
-\end{align*}
+\varphi(r) &= \frac{Q_{\mathrm{in}}(r)}{4\pi\epsilon_0\cdot r} + \varphi_0 \quad \text{ mit } \quad \varphi_0 = \varphi(r \rightarrow 0)
+\end{empheq}
 
 \section{Feld einer beliebigen räumlich begrenzten Ladungsverteilung}
 
 \begin{enumerate}
-	\item Punktladung bei $\vec{r}_0$:
-	\begin{equation*}
-	\varphi(\vec{r}) = \frac{Q}{4\pi\epsilon_0 \ |\vec{r}-\vec{r}_0|}
-	\end{equation*}
-	
-	
-	\item Mehrere Punktladungen (Superpositionsprinzip anwendbar wegen Linearität der \textsc{Maxwell}-Gleichungen):
-	\begin{equation*}
-	\varphi(\vec{r}) = \sum\limits_i \ \frac{Q_i}{4\pi\epsilon_0 \ |\vec{r}-\vec{r}_i|}
-	\end{equation*}
-	
-	\item Kontinuierliche Ladungsverteilung:
-	\begin{equation*}
-	\varphi(\vec{r}) = \int\mathrm{d}V' \ \frac{Q(\vec{r}')}{4\pi\epsilon_0 \ |\vec{r}-\vec{r}'|}
-	\end{equation*}
+\item \textbf{Punktladung bei} $\vec{r}_0$:
+\begin{equation*}
+\varphi(\vec{r}) = \frac{Q}{4\pi\epsilon_0 \ |\vec{r}-\vec{r}_0|}
+\end{equation*}
+
+
+\item \textbf{Mehrere Punktladungen} (Superpositionsprinzip anwendbar wegen Linearität der \textsc{Maxwell}-Gleichungen):
+\begin{equation*}
+\varphi(\vec{r}) = \sum\limits_i \ \frac{Q_i}{4\pi\epsilon_0 \ |\vec{r}-\vec{r}_i|}
+\end{equation*}
+
+\item \textbf{Kontinuierliche Ladungsverteilung}:
+\begin{empheq}[box=\highlightbox]{equation*}
+\varphi(\vec{r}) = \Int{\vphantom{a}}{\vphantom{a}}{V'} \ \frac{\rho(\vec{r}')}{4\pi\epsilon_0 \ |\vec{r}-\vec{r}'|}
+\end{empheq}
 \end{enumerate}
 
-Die allgemeine Gleichung für die kontinuerliche Ladugnsverteilung ergibt sich aus der Lösung der \textsc{Poisson}-Gleichung mithilfe der bekannten \textsc{Green}'schen Funktion für eine Punktladung der Größe 1:\ $G(\vec{r}) = \frac{1}{4\pi\epsilon_0 \cdot |\vec{r}|}$\
+Die allgemeine Gleichung für die kontinuierliche Ladungsverteilung ergibt sich aus der Lösung der \textsc{Poisson}-Gleichung mithilfe der bekannten \textsc{Green}'schen Funktion für eine Punktladung der Größe 1:\quad $G(\vec{r}) = \frac{1}{4\pi\epsilon_0 \cdot |\vec{r}|}$\
 
 \begin{align*}
 -\epsilon_0 \cdot \laplace\varphi &= \rho\\
@@ -79,7 +78,7 @@ Dabei gilt: $G(\vec{r},\vec{r}') = G(\vec{r}-\vec{r}')$ aufgrund der Translation
 Aus dieser allgemeinen Form lässt sich natürlich auch im umgekehrten Falle das $\vec{E}$-Feld einer Punktladung in $\vec{r}_0$ herleiten. Dafür muss nur $\rho(\vec{r}) = Q\cdot\delta(\vec{r}-\vec{r}_0)$ gesetzt werden:
 
 \begin{equation*}
-\varphi(\vec{r}) = \int\mathrm{d}V' \ \frac{\rho(\vec{r}')}{4\pi\epsilon_0 \cdot |\vec{r}-\vec{r}'|} = \ \frac{Q}{4\pi\epsilon_0} \ \underbrace{\int\mathrm{d}V'\frac{\delta(\vec{r}'-\vec{r}_0)}{|\vec{r}-\vec{r}'|}}_{=\frac{1}{|\vec{r}-\vec{r}_0|}}
+\varphi(\vec{r}) = \int\mathrm{d}V' \ \frac{\rho(\vec{r}')}{4\pi\epsilon_0 \cdot |\vec{r}-\vec{r}'|} = \ \frac{Q}{4\pi\epsilon_0} \ \underbrace{\int\mathrm{d}V' \ \frac{\delta(\vec{r}'-\vec{r}_0)}{|\vec{r}-\vec{r}'|}}_{=\frac{1}{|\vec{r}-\vec{r}_0|}}
 \end{equation*}
 
 \section{Feld eines elektrischen Dipols}
@@ -89,12 +88,12 @@ Aus dieser allgemeinen Form lässt sich natürlich auch im umgekehrten Falle das
 		\colorbox{hgrey}{
 			\begin{tikzpicture}
 			
-			\draw[->](0,0)-- node[left]{$\vec{r}$} (0,2.8) ;
-			\draw[->](0,0)--node[right]{$\ \vec{r}+\vec{a}$}(2.85,2.8);
-			\draw[->](0.2,3)-- node[above]{$\vec{a}$}(2.75,3);
-			\filldraw[black] (0,0) circle (2pt) node[below left]{$0$};
-			\filldraw[black] (0,3) circle (2pt) node[above]{$+Q$};
-			\filldraw[black] (3,3) circle (2pt) node[above]{$-Q$};
+				 \draw[->](0,0)-- node[left]{$\vec{r}$} (0,2.8) ;
+				 \draw[->](0,0)--node[right]{$\ \vec{r}+\vec{a}$}(2.85,2.8);
+				 \draw[->](0.2,3)-- node[above]{$\vec{a}$}(2.75,3);
+				 \filldraw[black] (0,0) circle (2pt) node[below left]{$0$};
+				 \filldraw[black] (0,3) circle (2pt) node[above]{$+Q$};
+				 \filldraw[black] (3,3) circle (2pt) node[above]{$-Q$};
 			
 			
 			\end{tikzpicture}
@@ -104,9 +103,9 @@ Aus dieser allgemeinen Form lässt sich natürlich auch im umgekehrten Falle das
 \end{wrapfigure}
 Ein Dipol besteht aus zwei gleich großen, entgegengesetzt geladenen Ladungen $\pm Q $, welche  einen festen Abstand $\vec{a}$ voneinander entfernt sind. Daher ergibt es Sinn, als charakteristische Eigenschaft des Dipols das \textbf{Dipolmoment} $\vec{p}$ wie folgt zu definieren:
 
-\begin{equation*}
-\vec{p} := Q \cdot \vec{a}
-\end{equation*}
+\begin{empheq}[box=\highlightbox]{equation*}
+\vec{p} := Q \cdot \vec{a}\vphantom{\Bigg|}
+\end{empheq}
 
 \begin{equation*}
 \text{Dipollimit: } \quad |\vec{a}| \ \rightarrow \ 0, \ Q \ \rightarrow \ \infty 
@@ -131,19 +130,21 @@ Dazu betrachten wir den Term $\frac{1}{|\vec{r}+\vec{a}|}$ ein wenig genauer:\\
 \ \\
 Damit gilt für das Potential:
 
-\begin{equation*}
+\begin{empheq}[box=\highlightbox]{equation*}
 \varphi(\vec{r})=\frac{Q}{4\pi\epsilon_0}\left(\frac{1}{r}-\frac{1}{r}-\left(\vec{a}\cdot\pdiff{}{\vec{r}}\right)\frac{1}{r}\right) = \frac{\vec{p}\cdot\vec{r}}{4\pi\epsilon_o\cdot r^3}
-\end{equation*}
+\end{empheq}
 
 und das $\vec{E}$-Feld:
 
 \begin{align*}
 \vec{E}(\vec{r}) &= - \nabla \varphi = \frac{1}{4\pi\epsilon_0}\ \nabla \left(\vec{p}\cdot\nabla\right)\ \frac{1}{r} = \frac{\vec{p}}{4\pi\epsilon_0}\ \underbrace{\left(\nabla \circ \nabla\right)\ \frac{1}{r}}_{(*)}\\
-&= \frac{1}{4\pi\epsilon_0}\ \frac{3(\vec{p}\cdot\vec{r})\vec{r} - \vec{p}r^2}{r^5}\\
+\alignedbox{\hphantom{a}\vec{E}(\vec{r})}{= \frac{1}{4\pi\epsilon_0}\ \frac{3(\vec{p}\cdot\vec{r})\vec{r} - \vec{p}r^2}{r^5}\hphantom{a}}\\
 \ \\
 \text{mit}\quad (*) &= \left(\pdiff{}{\vec{r}} \circ \pdiff{}{\vec{r}}\right)\frac{1}{|\vec{r}|} = - \pdiff{}{\vec{r}}\circ\frac{\vec{r}}{|\vec{r}|^3} = \frac{3\vec{r}\circ\vec{r}-\mathbbm{1}\cdot\vec{r}^2}{|\vec{r}|^5}
 \end{align*}
-\section{Fernfeld einer räumlich eingegrenzten Ladungsverteilung}
+\ \\
+
+\section[Fernfeld einer Ladungsverteilung]{Fernfeld einer räumlich eingegrenzten Ladungsverteilung}
 
 \begin{wrapfigure}[]{l}[0cm]{0cm}
 	\raisebox{0pt}[\dimexpr\height-1\baselineskip\relax]{
@@ -167,18 +168,19 @@ Wenn man das Fernfeld einer räumlich begrenzten Ladungsverteilung ermitteln mö
 Wir betrachten nun eine räumlich eingegrenzte Ladunugsverteilung der Dichte $\rho$, für die zunächst einmal allgemein gilt:
 
 \begin{equation*}
-\varphi\left(\vec{r}\right) = \frac{1}{4\pi\epsilon_0}\cdot\int\d V \frac{\rho(\vec{r}'}{|\vec{r}-\vec{r}'|}
+\varphi\left(\vec{r}\right) = \frac{1}{4\pi\epsilon_0}\cdot\int\d V \frac{\rho(\vec{r}')}{|\vec{r}-\vec{r}'|}
 \end{equation*}
 
 Unter der Annahme, dass $|\vec{r}| \gg \ a$ gilt (wobei $a$ die größte räumliche Ausdehnungsrichtung der Ladungsverteilung ist), werden wir nun den Term $\frac{1}{|\vec{r}-\vec{r}'|}$ entwickeln:
-
+\newpage
 \begin{equation*}
 \frac{1}{|\vec{r}-\vec{r}'|} = \sum_{n=0}^{\infty} \; \frac{1}{n!}\left(-\vec{r}'\cdot\pdiff{}{\vec{r}}\right)^n \ \frac{1}{r} = \frac{1}{r} + \frac{\vec{r}'\cdot\vec{r}}{r^3} + \frac{1}{2} \ \frac{3 (\vec{r}'\cdot\vec{r})^2 - \vec{r}'^2 \ \vec{r}^2}{r^5} + \dotsc
 \end{equation*}
 
 \begin{align*}
 \Rightarrow \quad \varphi(\vec{r}) &= \frac{1}{4\pi\epsilon_0} \left[ \frac{1}{r}\int\d V' \rho(\vec{r}') + \frac{\vec{r}}{r^3} \int\d V' \vec{r}' \rho(\vec{r}') + \sum_{i,j} \ \frac{x_i x_j}{r^5} \ \int\d V' \rho(\vec{r}') \ (3x_i'x_j' - \delta_{ij}\vec{r}'^2) + \dotsc\right] \\
-&= \frac{1}{4\pi\epsilon_0} \Big[\underbrace{\frac{Q}{r}}_{\sim\frac{1}{r}} \quad + \quad \underbrace{\frac{\vec{r}\cdot\vec{p}}{r^3}}_{\sim\frac{1}{r^2}} \quad + \quad \underbrace{\frac{1}{2}\frac{\vec{r}\cdot \tens{D} \cdot\vec{r}}{r^5}}_{\sim\frac{1}{r^3}} \quad + \quad \dotsc \quad \Big]
+\alignedbox{}{= \frac{1}{4\pi\epsilon_0} \Big[\frac{Q}{r} \quad + \quad \frac{\vec{r}\cdot\vec{p}}{r^3} \quad + \quad \frac{1}{2}\frac{\vec{r}\cdot \tens{D} \cdot\vec{r}}{r^5} \quad + \quad \dotsc \quad \Big]}\\
+& \hspace{1.35cm} {\scriptstyle \sim\frac{1}{r}} \hspace{1.15cm} {\scriptstyle \sim \frac{1}{r^2}} \hspace{2cm} {\scriptstyle\sim\frac{1}{r^3}}
 \end{align*}
 
 Die einzelnen Summanden bezeichnet man auch als \textbf{Multipolmomente} einer Ladungsverteilung:
@@ -186,22 +188,25 @@ Die einzelnen Summanden bezeichnet man auch als \textbf{Multipolmomente} einer L
 \begin{align*}
 \mathrm{Monopol:}& \qquad Q = \int\d V \rho(\vec{r})\\
 \mathrm{Dipol:}& \qquad \vec{p} = \int\d V \rho(\vec{r})\vec{r}\\
-\mathrm{Quadrupol:}& \qquad \tens{D} = \int\d V \rho(\vec{r}) \ (3\vec{r}\circ\vec{r}-\mathbb{1}\vec{r}^2)\\
+\mathrm{Quadrupol:}& \qquad \tens{D} = \int\d V \rho(\vec{r}) \ (3\vec{r}\circ\vec{r}-\mathbbm{1}\vec{r}^2)\\
 \mathrm{Oktupol:}& \qquad \dotsc\\
 \vdots \qquad &
 \end{align*}
 
-Im Allgemeinen hängen die Multipolmomente vom Bezugspunkt ab, nur das erste nicht verschwindende Moment ist unabhängig vom selbigen.
+Im Allgemeinen hängen die Multipolmomente vom Bezugspunkt ab, nur das erste nicht verschwindende Moment ist unabhängig vom selbigen.\\
+Der Quadrupol-Tensor $\tens{D}$ hat dabei folgende Eigenschaften:\\
 
-Der Quadrupol-Tensor $\tens{D}$ hat dabei folgende Eigenschaften:
+\begin{itemize}
+\item $\bm{D}_{ij} = \bm{D}_{ji}$, insbesondere gilt:
 
-\begin{align*}
-- \qquad & \bm{D}_{ij} = \bm{D}_{ji}\text{, insbesondere } \; \text{ Spur } \tens{D} = \sum_j \bm{D}_{jj} = \int\d V (3\vec{r}^2 - 3\vec{r}^2)=0 \\
-- \qquad & \tens{D} \text{ hat 5 unabhängige Komponenten}\\
-- \qquad & \tens{D} \text{ kann hauptachsentransformiert werden}\\
-- \qquad & \text{Spur } \tens{D} =0 \text{ ist } \tens{D}=0 \text{ für Kugel und Kegel}
-\end{align*}
+\begin{equation*}
+\operatorname{Spur}\tens{D} = \sum_j \bm{D}_{jj} = \Int{}{}{V}(3\vec{r}^2 - 3 \vec{r}^2) =0
+\end{equation*}
 
+\item $\tens{D}$ hat 5 unabhängige Komponenten
+\item $\tens{D}$ kann hauptachsentransformiert werden
+\item aus $\operatorname{Spur} \tens{D}=0$ folgt $\tens{D}=0$ für Kugel und Kegel 
+\end{itemize}
 \ \\
 
 Aufgrund der der charakteristischen Richtungsabhängigkeit ist es sinnvoll, das Potential der Ladungsverteilung mit Kugelflächenfunktionen zu entwickeln. Ausgangspunkt ist hierbei wieder das allgemeine Potential für eine beliebige Ladungsverteilung: 
@@ -269,8 +274,7 @@ Y_{lm}(\theta,\phi) = \sqrt{\frac{2l + 1}{4\pi} \ \frac{(l-|m|)!}{(l+|m|)!}} \ P
 (Die ersten $Y_{lm}$ lauten explizit: $Y_{00} = \frac{1}{\sqrt{4\pi}}, \; Y_{10} = \sqrt{\frac{3}{4\pi}}\cos\theta, \; Y_{1,\pm1} = \mp \sqrt{\frac{3}{8\pi}}\sin\theta \ e^{i\phi}$\
 \\
 \ \\
-\underline{Bemerkung zu den $Y_{lm}$:}\
-\\
+\underline{Bemerkung zu den $Y_{lm}$:}\\
 \ \\
 Die $Y_{lm}$ sind sogenannte \textbf{Kugelflächenfunktionen} und Lösungen der Differentialgleichung
 
@@ -279,29 +283,29 @@ Die $Y_{lm}$ sind sogenannte \textbf{Kugelflächenfunktionen} und Lösungen der 
 l \in \mathbb{N}, m \in [-l,l]
 \end{align*}
 
-Sie stellen zudem eine Orthonormalbasis für alle Funktionen auf Kugeloberflächen dar. Dazu überprüfen wir zunächst die Orthogonalität der Basiselemente zueinander:
+Anschaulich gesprochen sind die Kugelflächenfunktionen die Eigenfunktionen des Winkelanteils des \textsc{Laplace}-Operators und daher sehr gut als Darstellungsbasis für sämtliche Funktionen auf Kugeloberflächen geeignet. Man kann auch zeigen, dass sie nicht nur eine beliebige Basis, sondern sogar eine Orthonormalbasis sind; dazu überprüfen wir zunächst die Orthogonalität der Basiselemente zueinander:
 
 \begin{equation*}
-\langle Y_{lm},Y_{l'm'}\rangle =: \int_{-1}^1\d(\cos\theta)\int_{0}^2\pi\d\phi \ Y^{*}_{lm}(\theta\phi) Y_{lm}(\theta\phi) = \delta_{ll'}\delta_{mm'}
+\langle Y_{lm},Y_{l'm'}\rangle =: \int_{-1}^1\d(\cos\theta)\int_{0}^{2\pi}\d\phi \ Y^{*}_{lm}(\theta\phi) Y_{lm}(\theta\phi) = \delta_{ll'}\delta_{mm'}
 \end{equation*}
 
 Nach bekannter Vorgehensweise lässt sich nun jede beliebige Funktion $f$ auf einer Kugeloberfläche aus den $Y_{lm}$ darstellen:
 
 \begin{align*}
-f = (\theta,\phi) &= \sum_{l=0}^{\infty} \sum_{m=-l}^{l} f_{lm} Y_{lm}(\theta,\phi)\\
+f(\theta,\phi) &= \sum_{l=0}^{\infty} \sum_{m=-l}^{l} f_{lm} Y_{lm}(\theta,\phi)\\
 \text{mit } f_{lm} &= \langle Y_{lm},f\rangle = \int\d(\cos\theta) \int\d\phi \ Y^{*}_{lm}(\theta,\phi)f(\theta,\phi)
 \end{align*}
 
 Somit lässt sich auch mit ihnen die allgemeine Lösung der \textsc{Laplace}-Gleichung $\laplace\varphi=0$ darstellen: 
 
 \begin{equation*}
-\varphi(r,\theta,\phi) = \sum_{l=0}^{\infty}\sum_{m=-l}^{\infty} \left(A_l \cdot r^l + B_l \cdot r^{-l-1}\right) Y_{lm}(\theta,\phi)
+\varphi(r,\theta,\phi) = \sum_{l=0}^{\infty}\sum_{m=-l}^{l} \left(A_l \cdot r^l + B_l \cdot r^{-l-1}\right) Y_{lm}(\theta,\phi)
 \end{equation*}
 
 Wir können nun zur Entwicklung von $\frac{1}{|\vec{r} - \vec{r}'|}$ zurückkehren:
 
 \begin{align*}
-\frac{1}{|\vec{r} - \vec{r}'|} = \sum_{l=0} \left(A_l \cdot r^l + B_l \cdot r^{-l-1}\right) P_l(\cos\gamma) \; \text{ mit } \gamma = \angle\left(\vec{r},\vec{r}'\right)\\
+\frac{1}{|\vec{r} - \vec{r}'|} = \sum_{l=0} \left(A_l \cdot r^l + B_l \cdot r^{-l-1}\right) P_l(\cos\gamma) \quad \text{ mit } \gamma = \sphericalangle\left(\vec{r},\vec{r}'\right)\\
 (\gamma\text{ ohne $\phi$-Abhängigkeit wegen axialer Symmetrie)}
 \end{align*}
 
@@ -312,18 +316,18 @@ Wähle nun für die $A_l, B_l$, dass $\vec{r}\parallel\vec{r}'$ ist und führe s
 &= \frac{1}{r_{<}}\sum_{l=0}^{\infty} \ \left(\frac{r_{>}}{r_{<}}\right)^l\\
 &=  \sum_{l=0}^{\infty} \frac{r_{>}}{r_{<}^{l+1}} \ P_l (\cos\gamma)\\
 \\
-P_l (\cos\gamma) &= \frac{4\pi}{2l+1}\sum_{m=-l}^{l}  Y^{*}_{lm}(\theta',\varphi')Y_{lm}(\theta,\phi)\\
+P_l (\cos\gamma) &= \frac{4\pi}{2l+1}\sum_{m=-l}^{l}  Y^{*}_{lm}(\theta',\phi')Y_{lm}(\theta,\phi)\\
 & \quad\left(\cos\gamma = \cos\theta\cos\theta' \ + \ \sin\theta\sin\theta'\cos(\phi-\phi')\right)\\
 \\
 \Rightarrow \frac{1}{|\vec{r}-\vec{r}'|} &= 4\pi \sum_{l=0}^{\infty}\sum_{m=-l}^{l} \frac{1}{2l+1}\ \frac{r_{>}^l}{r_{<}^{l+1}} Y^{*}_{lm}(\theta',\phi')Y_{lm}(\theta,\phi)
 \end{align*}
 
-Wir haben nun $\frac{1}{|\vec{r}-\vec{r}'|}$ vollständig faktorisiert und können nun das Potential einer Ladungsverteilung aufstellen:
+Wir haben nun $\frac{1}{|\vec{r}-\vec{r}'|}$ vollständig faktorisiert und können nun das Potential einer Ladungsverteilung aufstellen:\\
 
-\begin{equation*}
-\varphi (\vec{r}) = \frac{1}{4\pi\epsilon_0} \sum_{l,m} \ \sqrt{\frac{4\pi}{2l +1}} \ \frac{Y_{lm}(\theta,\phi)}{r^{l+1}} \ \underbrace{\int\d V' \  \rho(\vec{r}) \  Y_{lm}^{*}(\theta',\phi') \ {r'}^l \sqrt{\frac{4\pi}{2l+1}}}_{q_{lm} \hat{=} \text{ Multipolmomente}}
-\end{equation*}
-
+\begin{empheq}[box=\highlightbox]{equation*}
+\varphi (\vec{r}) = \frac{1}{4\pi\epsilon_0} \sum_{l,m} \ \sqrt{\frac{4\pi}{2l +1}} \ \frac{Y_{lm}(\theta,\phi)}{r^{l+1}} \ \underbrace{\Int{}{\vphantom{\Big|}}{V'} \  \rho(\vec{r}) \  Y_{lm}^{*}(\theta',\phi') \ {r'}^l \sqrt{\frac{4\pi}{2l+1}}}_{q_{lm} \hat{=} \text{ Multipolmomente}}
+\end{empheq}
+\newpage
 Aus dem allgemeinen Ausdruck $q_{lm}$ für die Multipolmomente können wir nun auch die uns bereits bekannten Momente ableiten:
 
 \begin{align*}
@@ -336,29 +340,30 @@ q_{1,\pm 1} &= \pm \frac{1}{\sqrt{2}} \ \int\d V' \ \rho(\vec{r}')  \ r'\sin\the
 
 \section{Randbedingungen}
 
-Die allgemeine Lösung der \textsc{Poisson}-Gleichung $\epsilon_0 \bigtriangleup \varphi = \rho$ hängt von ihren Randbedingungen ab. Die vollständige Lösung erhält man durch Addition der allgemeinen Lösung der zugehörigen homogenen Differentialgleichung und einer partikulären Lösung der inhomogenen Gleichung: $\quad \varphi = \varphi_p + \varphi_h$. Es bietet sich an die Randbedingungen in den homogenen Teil einzubauen (bisher haben wir immer angenommen, dass $\varphi (\infty) = 0$). Mathematisch liefert uns eine einzige Randbedingung auf einem geschlossenen Rand R eine physikalisch eindeutige Lösung für eine Differentialgleichung 2. Ordnung, da es sich durch den geschlossenen Rand effektiv um zwei Randbedingungen handelt. Wir unterscheiden dabei verschiedene gängige Varianten sich dem Problem zu nähern:
+Die allgemeine Lösung der \textsc{Poisson}-Gleichung $\epsilon_0 \bigtriangleup \varphi = \rho$ hängt von ihren Randbedingungen ab. Die vollständige Lösung erhält man durch Addition der allgemeinen Lösung der zugehörigen homogenen Differentialgleichung und einer partikulären Lösung der inhomogenen Gleichung: $\quad \varphi = \varphi_p + \varphi_h$.\\
+Es bietet sich an die Randbedingungen in den homogenen Teil einzubauen (bisher haben wir immer angenommen, dass $\varphi (\infty) = 0$). Mathematisch liefert uns eine einzige Randbedingung auf einem geschlossenen Rand R eine physikalisch eindeutige Lösung für eine Differentialgleichung 2. Ordnung, da es sich durch den geschlossenen Rand effektiv um zwei Randbedingungen handelt. Wir unterscheiden dabei verschiedene gängige Varianten sich dem Problem zu nähern:
 
 
 \begin{enumerate}
-	\item $\varphi(R)$ ist gegeben\
-	\\
-	Diese Variante nennt man auch die \textsc{Dirichlet}-Randbedingung\
-	
-	\item $\pdiff{\varphi}{n}(R)$ ist gegeben\
-	\\
-	\ \\
-	Diese Variante nennt man auch die \textsc{von-Neumann}-Randbedingung\
-	\\
-	\ \\
-	($\pdiff{\varphi}{n} := \pdiff{\varphi}{\vec{r}}\cdot\vec{e}_n = - \vec{E}_n$ ist dabei die Normalenableitung)\
-	
-	\item $\alpha \varphi \ + \ \beta\pdiff{\varphi}{n}$ ist gegeben
+\item $\varphi(R)$ ist gegeben\
+\\
+Diese Variante nennt man auch die \textsc{Dirichlet}-Randbedingung\
+
+\item $\pdiff{\varphi}{n}(R)$ ist gegeben\
+\\
+\ \\
+Diese Variante nennt man auch die \textsc{von-Neumann}-Randbedingung\
+\\
+\ \\
+($\pdiff{\varphi}{n} := \pdiff{\varphi}{\vec{r}}\cdot\vec{e}_n = - \vec{E}_n$ ist dabei die Normalenableitung)\
+
+\item $\alpha \varphi \ + \ \beta\pdiff{\varphi}{n}$ ist gegeben
 \end{enumerate}
 
 \section{Leiter im elektrischen Feld}
 
 Bis jetzt hatten wir in der Elektrostatik nur ruhende Ladungen betrachtet. In Leitern  gibt es allerdings bewegliche Ladungen im Inneren. Diese befinden sich im Gleichgewicht bei $\vec{F}=0 \ \Rightarrow \vec{E}= 0$
-Daraus kann man dieser folgern, dass $\varphi =$ const. im Inneren des Leiters und auf der Leiteroberfläche gilt. Dafür muss gelten, dass $\rho = 0$ im Leiterinneren ist. Außerdem folgt direkt, dass $\vec{E} = -\pdiff{\varphi}{\vec{r}}$ senkrecht zur Oberfläche stehen muss und das es ausschließlich von \textbf{Oberflächenladungen} erzeugt wird. Um diese zu definieren betrachten wir ein Volumen $\Delta V$ auf dem Leiteroberflächenstück $\Delta \vec{A}$, welches die Ladung $\Delta Q$ in sich trägt.
+Daraus kann man dieser folgern, dass $\varphi =$ \textit{const.} \ im Inneren des Leiters und auf der Leiteroberfläche gilt. Dafür muss gelten, dass $\rho = 0$ im Leiterinneren ist. Außerdem folgt direkt, dass $\vec{E} = -\pdiff{\varphi}{\vec{r}}$ senkrecht zur Oberfläche stehen muss und das es ausschließlich von \textbf{Oberflächenladungen} erzeugt wird. Um diese zu definieren betrachten wir ein Volumen $\Delta V$ auf dem Leiteroberflächenstück $\Delta \vec{A}$, welches die Ladung $\Delta Q$ in sich trägt.
 
 \begin{equation*}
 \epsilon_0 \oiint_{\partial\Delta V}\d\vec{A}\cdot\vec{E} = \Delta Q \quad \Rightarrow \quad \epsilon_0 \ \Delta\vec{A}\cdot\vec{E}_n = \Delta Q
@@ -367,21 +372,21 @@ Daraus kann man dieser folgern, dass $\varphi =$ const. im Inneren des Leiters u
 Darüber können wir uns die \textbf{Flächenladungsdichte} $\sigma$ definieren, um die Oberflächenladungen beschreiben zu können:
 
 \begin{align*}
-\sigma &:= \frac{\Delta Q}{\Delta A} = \epsilon_0 \ E_n\\
+\alignedbox{\hphantom{a}\sigma} {:= \frac{\Delta Q}{\Delta A} = \epsilon_0 \ E_n\vphantom{\Bigg|}\hphantom{a}}\\
 Q  &= \iint\d A \cdot \sigma
 \end{align*}
 
 Die Oberflächenladungen werden durch äußere elektrische Felder bestimmt und schirmen das Leiterinnere von diesen Feldern ab.\
 \\
 \ \\
-Betrachten wir nun den Innenraum eines Hohlleiters. Hier gilt genau wie bei einem normalen Leiter, dass auf der Leiteroberfläche das Potential konstant ist. Zudem ist der Innenraum ladungsfrei, woraus folgt, dass auch dort $\varphi$ = const. gilt uns somit auch $\vec{E} = 0$. Dieses Prinzip ist auch als \textbf{\textsc{Faraday}'scher Käfig} bekannt.\
+Betrachten wir nun den Innenraum eines Hohlleiters. Hier gilt genau wie bei einem normalen Leiter, dass auf der Leiteroberfläche das Potential konstant ist. Zudem ist der Innenraum ladungsfrei, woraus folgt, dass auch dort $\varphi$ =\textit{const.} \ gilt uns somit auch $\vec{E} = 0$. Dieses Prinzip ist auch als \textbf{\textsc{Faraday}'scher Käfig} bekannt.\
 \\
 Die Begründung für dieses Prizip kann man auch direkt aus den \textsc{Maxwell}-Gleichungen herleiten, denn es gilt div $\vec{E} = 0$ und rot $\vec{E} = 0$ im Inneren des Hohlleiters. Jede Feldlinie im Inneren müsste demzufolge auf dem Rand anfangen und enden. Für eine Integration entlang einer Feldlinie $\int\d \vec{r} \cdot \vec{E} = \Delta \varphi$ würde dies jedoch ein endliches $\Delta \varphi$ zwischen Anfangs- und Endpunkt liefern, welches im Widerspruch zu $\varphi$ = const. auf dem Rand stehen würde. Also muss $\vec{E} = 0$ im Inneren des Hohlleiters gelten.
 
-\section{Beispiele}
-\ \\
-\underline{A)  Punktladung und ebene Leiterfläche}\
-\\
+\newpage
+\underline{\textbf{Beispiele}}
+\begin{enumerate}
+\item \textbf{ Punktladung und ebene Leiterfläche}\\
 \ \\
 Wir betrachten eine Punktladung $Q$, welche sich im Abstand $a$ von einer ebenen Leiteroberfläche befindet. Letztere sei entlang der y-Achse unseres Koordinatensystems ausgerichtet, während sich $Q$ auf der x-Achse befindet.
 Demzufolge erhalten wir die \textsc{Poisson}-Gleichung:
@@ -402,13 +407,11 @@ welche für das Potential liefert:
 \begin{equation*}
 \varphi = \frac{Q}{4\pi\epsilon_0} \left(\frac{1}{|\vec{r}-a\vec{e}_x|} \ - \ \frac{1}{|\vec{r}+a\vec{e}_x|}\right)
 \end{equation*}
-\ \\
-\ \\
+\newpage
 
-\underline{B) Kugeloberfläche in einem asymptotisch homogenen Feld}\
-\\
+\item \textbf{ Kugeloberfläche in einem asymptotisch homogenen Feld}\\
 \ \\
-Wir betrachten eine leitende Kugel mit dem Radius $R$, welche sich im Ursprung des Koordinatensystems in einem homogenen elektrischen Feld $\vec{E}_0$ befindet. Für $|\vec{r}|>R$ gilt dementsprechend: $\bigtriangleup\varphi = 0$ mit den Randbedingunge $\varphi(|\vec{r}| = R) = \varphi_0 := 0$ und $\varphi(|\vec{r}|\rightarrow\infty) = -\vec{E}_0\cdot\vec{r}$ (Homogenität des Feldes). Aus Symmetrieüberlegungen erhalten wir außerdem, dass $\varphi(\vec{r},R,\vec{E}_0)$ linear in $\vec{E}_0$ sein muss.\
+Wir betrachten eine leitende Kugel mit dem Radius $R$, welche sich im Ursprung des Koordinatensystems in einem homogenen elektrischen Feld $\vec{E}_0$ befindet. Für $|\vec{r}|>R$ gilt dementsprechend: $\bigtriangleup\varphi = 0$ mit den Randbedingungen $\varphi(|\vec{r}| = R) = \varphi_0 := 0$ und $\varphi(|\vec{r}|\rightarrow\infty) = -\vec{E}_0\cdot\vec{r}$ (Homogenität des Feldes). Aus Symmetrieüberlegungen erhalten wir außerdem, dass $\varphi(\vec{r},R,\vec{E}_0)$ linear in $\vec{E}_0$ sein muss.\
 Dementsprechend wählen wir den Ansatz $\varphi = -\vec{E}_0 \cdot\vec{r} \ G(r,R)$ mit den resultierenden Randbedingungen $G(r=R)=0$ und $G(r\rightarrow\infty
 ) =1$, welcher nach Einsetzen in die \textsc{Laplace}-Gleichung folgende homogene DGL für $G$ liefert:
 
@@ -416,9 +419,7 @@ Dementsprechend wählen wir den Ansatz $\varphi = -\vec{E}_0 \cdot\vec{r} \ G(r,
 \laplace\varphi = -\vec{E}_0\cdot\vec{r} \ \left(\frac{4}{r} \ \diff{G}{r} \ + \ \ddiff{G}{r}\right) = 0
 \end{equation*}
 \ \\
-Diese lösen wir mit dem Ansatz $ G \sim r^n$:
-
-
+Diese lösen wir mit dem Ansatz $G \sim r^n$:
 \begin{align*}
 & 4n + n(n+1) = 0\\
 \Rightarrow & n_1 = 0, n_2=3\\
@@ -431,15 +432,17 @@ Diese lösen wir mit dem Ansatz $ G \sim r^n$:
 Also ergibt sich für $\varphi$:
 
 \begin{equation*}
-\varphi = \vec{E}_0 \ + \ \frac{\vec{p} \cdot\vec{r}}{4\pi\epsilon_0 r^3} \quad
+\varphi = \vec{E}_0\cdot\vec{r} \ + \ \frac{\vec{p} \cdot\vec{r}}{4\pi\epsilon_0 r^3} \quad
 \text{ mit } \quad \frac{\vec{p}}{4\pi\epsilon_0} = \vec{E}_0 \cdot R^3
 \end{equation*}
 
 Das äußere elektrische Feld induziert also offensichtlich ein Dipolmoment in der Kugel, welches für den zusätzlichen Term in $\varphi$ verantwortlich ist.
+\end{enumerate}
+\newpage
 
 \section{Mehrere Leiter}
 
-Wir betrachten mehrere Leiter im Raum mit den Oberflächen $\mathcal{S}_i$. Erneut gilt die Tatsache, dass es keine Raumladungen gibt ($\bigtriangleup\varphi = 0$) und die Randbedingungen für die Leiteroberflächen ($\varphi = \varphi_i$ auf den $\mathcal{S}_i, \ \varphi_0 = 0$ wird willkürlich festgelegt).\
+Wir betrachten mehrere Leiter im Raum mit den Oberflächen $\mathcal{S}_i$. Erneut gilt die Tatsache, dass es keine Raumladungen gibt ($\bigtriangleup\varphi = 0$) und die Randbedingungen für die Leiteroberflächen $\varphi_i = \varphi$ auf den $\mathcal{S}_i. \ (\varphi_0 = 0$ wird willkürlich festgelegt)\\
 Nun gilt aufgrund der Linearität der \textsc{Maxwell}-Gleichungen für das Gesamtpotential:
 
 \begin{equation*}
@@ -453,12 +456,12 @@ Wenn wir nun die Quellen auf den $\mathcal{S}_i$ mit in die Betrachtung mit einb
 \sigma &= \epsilon_0 \vec{E}_n\big|_{\mathcal{S}_i}  = -\epsilon_0 \pdiff{\varphi}{n}\Bigg|_{\mathcal{S}_i} = - \epsilon_0 \sum_k \pdiff{G_K(\vec{r})}{n}\Bigg|_{\mathcal{S}_i} \ \varphi_k \\
 \ \\
 \Rightarrow Q_i &= \Oiint{\mathcal{S}_i}{}{A} \ \sigma = -\epsilon_0\sum_k\Oiint{\mathcal{S}_i}{}{\vec{A}}\  \cdot \ \pdiff{G_K(\vec{r})}{\vec{r}} \ \varphi_k\\
-&=: \sum_k C_{ik} \varphi_k \quad \text{ mit } \quad C_{ik} = -\epsilon_0 \Oiint{\mathcal{S}_i}{}{\vec{A}} \ \cdot \ \pdiff{G_k}{\vec{r}}
+\alignedbox{Q_i}{=: \sum_k C_{ik} \varphi_k \quad \text{ mit } \quad C_{ik} = -\epsilon_0 \Oiint{\mathcal{S}_i}{\vphantom{A}}{\vec{A}} \ \cdot \ \pdiff{G_k}{\vec{r}}}
 \end{align*}
 
 
 Die $C_{ik}$ nennen wir die \textbf{Kapazitätskoeffizienten}. Für sie gilt $C_{ik} = C_{ki}$. Speziell für zwei sich umschließende Leiter ($\hat{=}$ Kondensator) folgt daraus:
 
 \begin{equation*}
-Q_1 = C_{11}\varphi_1 \quad (\text{und } Q_0 = -Q_1) \quad \hat{=} \ Q=C \cdot U
+Q_1 = C_{11}\varphi_1 \quad (\text{und } Q_0 = -Q_1) \quad \hat{=} \quad \ Q=C \cdot U
 \end{equation*}

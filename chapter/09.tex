@@ -1,7 +1,7 @@
 \chapter{Elektromagnetische Felder in Substanzen}
 
 Bisher haben wir die mikroskopischen \textsc{Maxwell}-Gleichungen betrachtet, die im Vakuum auch auf makroskopischen Längenskalen ihre Gültigkeit behalten. Dabei haben wir angenommen, dass $\rho$ und $\vec{j}$ alle Quellen enthalten. \\
-Um nun den Schritt zu Betrachtung von Feldern in Substanzen zu machen, müssen wir weitere Feldquellen (Polarisationsladungen, Abschirmströme) betrachten. Eine sehr ausführliche Diskussion dazu findet man im \emph{Jackson} Kapitel 7.
+Um nun den Schritt zu Betrachtung von Feldern in Substanzen zu machen, müssen wir weitere Feldquellen (Polarisationsladungen, Abschirmströme) betrachten.
 
 \section{Elektrische Polarisation}
 
@@ -9,13 +9,13 @@ Man stellt fest, dass sich die makroskopische Ladungsdichte
 \begin{equation*}
 \rho = \rho_0 + \rho_p
 \end{equation*}
-aus der Dichte der freien Ladungen $\rho_0$ und der der sogenannten Polarisationsladungen $\rho_P$ zusammensetzt. Letztere werden durch ein äußeres Feld induziert und sind im Experiment allgemein nicht bekannt. \\
+aus der Dichte der freien Ladungen $\rho_0$ und der der sogenannten \textbf{Polarisationsladungen} $\rho_P$ zusammensetzt. Letztere werden durch ein äußeres Feld induziert und sind im Experiment allgemein nicht bekannt. \\
 Aufgrund der Ladungserhaltung muss die Polarisationsladung im \emph{gesamten }Raum verschwinden.
 \begin{equation*}
 \rho_P\neq 0, \qquad \text{aber}\quad \int\mathrm{d}V \rho_P = Q_P = 0
 \end{equation*}
 Das ist insofern intuitiv, da ein äußeres Feld Ladungen voneinander trennen und somit lokal Dichteschwankungen hervorrufen, aber nie Ladungen vernichten kann. \\
-Auch die Polarisationsladungen erfüllen die Kontinuitätsgleichung, die so zur Definition der Polarisationsstromdichte $\vec{j}_P$ dient.
+Auch die Polarisationsladungen erfüllen die Kontinuitätsgleichung, die so zur Definition der \textbf{Polarisationsstromdichte} $\vec{j}_P$ dient.
 \begin{equation*}
 \dot{\rho}_P+\div\vec{j}_P=0
 \end{equation*}
@@ -23,7 +23,7 @@ Wir erhalten so
 \begin{equation*}
 \rho_P = -\nabla\underbrace{\int\limits_0^t\mathrm{d}t'\ \vec{j}_P}_{\vec{=:P}} + \underbrace{\rho_P(0)}_{=0}.
 \end{equation*}
-Wobei wir $\vec{P}$ als elektrische Polarisation bezeichnen wollen.
+Wobei wir $\vec{P}$ als \textbf{elektrische Polarisation} bezeichnen wollen.
 \begin{align*}
 \vec{P} &=\int\vec{j}_P\mathrm{d}t\\
 \rho_P &= -\div\vec{P}\\
@@ -31,9 +31,9 @@ Q_P &=-\int\mathrm{d}V\ \nabla\vec{P}=-\oiint\mathrm{d}\vec{A}_F\cdot\vec{P}=0
 \end{align*}
 Nun gilt aber außerdem
 \begin{equation*}
-\int\vec{j}_P\mathrm{d}V = \int\dot{\vec{P}} = \dot{\vec{p}}.
+\int\vec{j}_P\mathrm{d}V = \int\d V\dot{\vec{P}} = \dot{\vec{p}}.
 \end{equation*}
-Man sieht, dass man die Polarisation auch als Dipoldichte auffassen kann. Das wollen wir anhand des Potentials einer Polarisationsladungsverteilung nachprüfen.
+Man sieht, dass man die Polarisation auch als \textbf{Dipoldichte} auffassen kann. Das wollen wir anhand des Potentials einer Polarisationsladungsverteilung nachprüfen.
 \begin{align*}
 \varphi_P(\vec{r}) &=\frac{1}{4\pi\epsilon_0} \int\mathrm{d}V'\ \frac{\rho_P(\vec{r'})}{|\vec{r}-\vec{r}'|} = -\frac{1}{4\pi\epsilon_0}\int\mathrm{d}V'\ \frac{1}{|\vec{r}-\vec{r}'|}\nabla_{\vec{r}'}\vec{P}(\vec{r}') = \\
 &=\frac{1}{4\pi\epsilon_0}\int\mathrm{d}V'\ \vec{P}(\vec{r}')\cdot\nabla_{\vec{r}'}\frac{1}{|\vec{r}-\vec{r}'|} =-\frac{1}{4\pi\epsilon_0}\int\mathrm{d}V' \vec{P}(\vec{r}')\nabla_{\vec{r}'}\frac{1}{|\vec{r}-\vec{r}'|}
@@ -42,7 +42,7 @@ Vergleicht man das mit dem Potential eines Dipols
 \begin{equation*}
 \varphi(\vec{r})=-\frac{1}{4\pi\epsilon_0}\cdot\vec{p}\cdot\nabla\frac{1}{r},
 \end{equation*}
-so bestätigt sich unsere Auffassung. Makroskopisch entspricht die elektrische Polarisation
+so bestätigt sich unsere Auffassung. Makroskopisch entspricht die elektrische Polarisation also:
 \begin{equation*}
 \vec{P} = \diff{\vec{p}}{V}.
 \end{equation*}
@@ -59,7 +59,7 @@ Nach umstellen erhalten wir die erste makroskopische \textsc{Maxwell}-Gleichung
 \div\left(\epsilon_0\vec{E}+\vec{P}\right)&=\rho_0\\
 \div\vec{D} &= \rho_0 ,
 \end{align*}
-wobei $\vec{D} = \epsilon_0\vec{E} +\vec{P}$ das elektrische Verschiebefeld ist, das allein von den freien Ladungen $\rho_0$ abhängt.
+wobei $\vec{D} = \epsilon_0\vec{E} +\vec{P}$ das \textbf{elektrische Verschiebefeld} ist, das allein von den freien Ladungen $\rho_0$ abhängt.
 
 \section{Magnetisierung}
 
@@ -72,7 +72,7 @@ Die Kontinuitätsgleichung lautet
 \begin{equation*}
 \dot{\rho}+\div\vec{j} = \dot{\rho}_0 + \dot{\rho}_P + \div\vec{j}_0 + \div\vec{j}_P + \div\vec{j}_M = 0.
 \end{equation*}
-Da $\vec{j}_0$ und $\vec{j}_P$ jeweils separat eine Kontinuitätsgleichung erfüllen, muss $\div\vec{j}_P=0$ sein. Ein Magnetisierungsstrom hat also keine Ladungsträger. Da er divergenzfrei ist, können wir mit Einführung der Magnetisierung $\vec{M}$
+Da $\vec{j}_0$ und $\vec{j}_P$ jeweils separat eine Kontinuitätsgleichung erfüllen, muss $\div\vec{j}_M=0$ sein. Ein Magnetisierungsstrom hat also keine Ladungsträger. Da er divergenzfrei ist, können wir mit Einführung der Magnetisierung $\vec{M}$
 \begin{equation*}
 \vec{j}_M  = \rot\vec{M}
 \end{equation*}
@@ -86,15 +86,15 @@ Vergleichen wir das nun wieder mit dem magnetischen Dipolpotential
 \begin{equation*}
 \vec{A}(\vec{r}) = -\frac{\mu_0}{4\pi}\vec{m}\times\nabla\frac{1}{r},
 \end{equation*}
-so können wir analog zum elektrischen Fall, die Magnetisierung als magnetische Dipoldichte
+so können wir analog zum elektrischen Fall, die Magnetisierung als \textbf{magnetische Dipoldichte} auffassen:
 \begin{equation*}
 \vec{M} = \diff{\vec{m}}{V}
 \end{equation*}
-auffassen. Daraus ergibt sich nun mit
+Daraus ergibt sich nun mit
 \begin{equation*}
 \frac{1}{\mu_0}\rot\vec{B}=\vec{j} + \epsilon_0\dot{\vec{E}} = \vec{j}_0 + \dot{\vec{P}} + \rot\vec{M} + \epsilon_0\dot{\vec{E}}
 \end{equation*}
-das \textsc{Ampére}sche Gesetz für Substanzen
+das \textbf{\textsc{Ampére}sche Gesetz für Substanzen}
 \begin{align*}
 \rot\left(\frac{\vec{B}}{\mu_0}-\vec{M}\right) & = \vec{j}_0 + \pdiff{}{t}\left(\epsilon_0\vec{E}+\vec{P}\right)\\
 \rot\vec{H} &= \vec{j}_0 + \dot{\vec{D}}.
@@ -115,22 +115,21 @@ Sowohl Polarisation $\vec{P}$, Magnetisierung $\vec{M}$ als auch der Leitungsstr
 Dazu wollen wir ein paar einfache Beispiele betrachten.
 
 \begin{enumerate}
-	\item[\textbf{a.}] \textbf{Ohmsches Gesetz}
+	\item \textbf{\textsc{Ohm}'sches Gesetz}
 	\begin{equation*}
 	I = \vec{A}_F\cdot\vec{j} = A_F\sigma E = A_F\sigma\frac{U}{l} = \frac{U}{R}
 	\end{equation*}
-	\item[\textbf{b.}] \textbf{Verschiebefeld}
+	\item \textbf{Verschiebefeld}
 	\begin{equation*}
 	\vec{D}=\epsilon_0\vec{E}+\vec{P}=(1+\chi_l)\epsilon_0\vec{E}=\epsilon_0\epsilon_r \vec{E}
 	\end{equation*}
-	\item[\textbf{b.}] \textbf{Magnetische Dipoldichte}
+	\item \textbf{Magnetische Dipoldichte}
 	\begin{equation*}
 	\vec{H} = \frac{1}{\mu_0}\vec{B}-\vec{M} = (1-\chi_m)\frac{1}{\mu_0}\vec{B}  = \frac{1}{\mu_0\mu_r}\vec{B}
 	\end{equation*} 
 \end{enumerate}
 
-So werden die \textsc{Maxwell}-Gleichungen mit \\\
-{linearen} Materialgesetzen zu
+So werden die \textsc{Maxwell}-Gleichungen mit linearen Materialgesetzen zu
 \begin{align*}
 \div\vec{B}&=0 &\div(\epsilon_0\epsilon_r\vec{E})&=\rho_0\\
 \rot \vec{E}+\dot{\vec{B}}&=0 &\rot\frac{\vec{B}}{\mu_0}-\epsilon_0\epsilon_r\dot{\vec{E}}&=\vec{j}_0.
@@ -140,19 +139,19 @@ Natürlich können $\mu=\mu_0\mu_r$ und $\epsilon=\epsilon_0\epsilon_r$ auch ric
 
 Untersuchen wir nun, wie sich uns bereits aus dem Vakuum bekannte Größen in Substanzen verhalten.
 \begin{enumerate}
-		\item[\textbf{a.}] \textbf{Phasengeschwindigkeit}
+		\item \textbf{Phasengeschwindigkeit}
 		\begin{equation*}
 		u_P=\frac{\omega}{k}=\frac{1}{\sqrt{\mu\epsilon}}=\frac{c}{\sqrt{\mu_r\epsilon_r}} =: \frac{c}{n}\quad\quad\text{mit}\ n=\sqrt{\mu_r\epsilon_r}
 		\end{equation*}
-		\item[\textbf{b.}] \textbf{Energiedichte}
+		\item \textbf{Energiedichte}
 		\begin{equation*}
 		w=\frac{\epsilon}{2}E^2 + \frac{1}{2\mu}B^2 = \frac{1}{2}\left(\vec{D}\cdot\vec{E}+\vec{B}\cdot\vec{H}\right)
 		\end{equation*}
-		\item[\textbf{c.}] \textbf{Energiestromdichte}
+		\item \textbf{Energiestromdichte}
 		\begin{equation*}
 		\vec{S}_P = \frac{1}{\mu}\vec{E}\times\vec{B} = \vec{E}\times\vec{H}
 		\end{equation*}
-		\item[\textbf{d.}] \textbf{Impulsdichte}
+		\item \textbf{Impulsdichte}
 		\begin{equation*}
 		\vec{g}=\epsilon\vec{E}\times\vec{B}=\vec{D}\times\vec{B}=\frac{u_P^2}{c^2}\vec{S}_P
 		\end{equation*}
@@ -201,7 +200,7 @@ D_{2n}-D_{1n}=\frac{Q_0}{A_F}=\sigma_0.
 
 $\vec{D}$ ist also nur stetig an Grenzflächen, wenn es keine Oberflächenladungen gibt.\\
 
-Ähnlich zum obigen Integrationsvolumen verwenden wir nun eine Fläche mit fast verschwindender Breite $d\rightarrow 0$, und der Höhe $L$, die parallel zu $\vec{n}$ aus der Fläche zeigt - man stelle sich Abbildung 10.1 mit $L$ statt $A_F$ vor.\\
+Ähnlich zum obigen Integrationsvolumen verwenden wir nun eine Fläche mit fast verschwindender Breite $d\rightarrow 0$, und der Höhe $L$, die parallel zu $\vec{n}$ aus der Fläche zeigt - man stelle sich Abbildung 9.1 mit $L$ statt $A_F$ vor.\\
 
 Wir nehmen an, dass sich das Magnetfeld über die Zeit nicht ändert ($\dot{\vec{B}}=0$), so erhalten wir aus $\rot \vec{E} = 0$
 \begin{equation*}
@@ -229,14 +228,14 @@ Für stromfreie Grenzflächen gilt also
 
 Dieselben Ergebnisse für $E_t$ hätte man auch aus der Überlegung heraus erzielt, dass im Falle statischer Felder ($\dot{\vec{D}}=0,\ \dot{\vec{B}}=0$) das Potential stetig sein muss. Es muss nämlich gelten
 \begin{align*}
-\left.\varphi_1(\vec{r})\right|_\textit{Grenzfl.} &= \left.\varphi_2(\vec{r})\right|_\textit{Grenzfl.}\\
+\left.\varphi_1(\vec{r})\right|_\text{Grenzfl.} &= \left.\varphi_2(\vec{r})\right|_\text{Grenzfl.}\\
 \varphi_1(\vec{r}+\mathrm{d}\vec{r}) &=\varphi_2(\vec{r}+\mathrm{d}\vec{r})	\\
 \Rightarrow
 \pdiff{\varphi_1}{\vec{t}} &=\pdiff{\varphi_2}{\vec{t}}\\
 E_{1t} &= E_{2t}
 \end{align*}
 
-\textbf{a.\ Plattenkondensator mit Dielektrikum}\\
+i) \textbf{ Plattenkondensator mit Dielektrikum}\\
 
 \begin{wrapfigure}[]{l}[0cm]{0cm}
 	\raisebox{0pt}[\dimexpr\height-1\baselineskip\relax]{
@@ -266,7 +265,7 @@ E_{1t} &= E_{2t}
 Die Tangentialkomponente von $\vec{E}$ muss stetig sein, da sich $\vec{B}$ nicht ändert. Die Polarisation muss jedoch für $\epsilon_1\neq\epsilon_2$ in beiden Bereichen unterschiedlich groß sein.\\ \linebreak\linebreak\linebreak\linebreak\linebreak\linebreak\linebreak
 
 \begin{wrapfigure}[]{r}[0cm]{0cm}
-	\raisebox{0pt}[\dimexpr\height-1\baselineskip\relax]{
+	\raisebox{-.5cm}[\dimexpr\height-1\baselineskip\relax]{
 		\colorbox{hgrey}{
 			\begin{tikzpicture}
 			%Platten
@@ -293,7 +292,7 @@ Die Tangentialkomponente von $\vec{E}$ muss stetig sein, da sich $\vec{B}$ nicht
 \end{wrapfigure}
 Da $D_n$ aufgrund der fehlenden Oberflächenladungen stetig  ist, müssen die E-Felder unterschiedlich groß sein.\\ \linebreak\linebreak\linebreak\linebreak\linebreak
 
-\textbf{b.\ Grenzfläche schräg zu den Feldlinien}\\
+ii) \textbf{ Grenzfläche schräg zu den Feldlinien}\\
 
 \begin{wrapfigure}[10]{l}[0cm]{0cm}
 	\raisebox{0pt}[\dimexpr\height-1\baselineskip\relax]{
@@ -319,16 +318,21 @@ D_{1n}&=D_{2n} &\Rightarrow& &\epsilon_1E_1\cos\alpha &= \epsilon_2E_2\cos\beta.
 Diese beiden Gleichungen können wir dividieren und erhalten
 \begin{equation*}
 \frac{\tan\alpha}{\tan\beta}=\frac{\epsilon_1}{\epsilon_2}.
-\end{equation*}
+\end{equation*}\\
 
-\section{Dielektrische Kugel im homogenen Feld}
+
+\underline{\textbf{Beispiel}}
+\ \\
+\ \\
+\textbf{Dielektrische Kugel im homogenen Feld}\\
+\ \\
 
 Eine dielektrische Kugel mit Radius $a$ möge sich in einem homogenen elektrischen Feld $\vec{E}_0$ befinden. Wir legen den Koordinatenursprung in die Kugelmitte. 
 \begin{align*}
 \rot \vec{E} &=0 &\Rightarrow & &\vec{E}=-\grad\varphi\\
-\div\vec{D} &=0 &\Rightarrow& &-\div(\epsilon\grad\varphi)=0
+\div\vec{D} &=0 &\Rightarrow& &-\div(\epsilon \ \grad\varphi)=0
 \end{align*}
-Wenn das Potential an der Grenzfläche $r=a$ stetig ist, dann ist es auch $E_t$. Ebenso ist $\epsilon\pdiff{\varphi}{r}$ stetig, wenn $D_n$ stetig ist. Wir wählen deshalb ähnlich wie in Kapitel 4.8. den Ansatz
+Wenn das Potential an der Grenzfläche $r=a$ stetig ist, dann ist es auch $E_t$. Ebenso ist $\epsilon\pdiff{\varphi}{r}$ stetig, wenn $D_n$ stetig ist. Wir wählen deshalb ähnlich wie in Kapitel 3.7 den Ansatz
 \begin{equation*}
 \varphi(\vec{r})=-\vec{E}_0\cdot\vec{r}\cdot g(r,a,\epsilon_i,\epsilon_a).
 \end{equation*}
@@ -338,14 +342,14 @@ Durch Separation erhalten wir
 \end{equation*}
 und schließlich
 \begin{equation*}
-g(r)=\left\lbrace\begin{matrix}
-\alpha + \beta\frac{a^3}{r^3} \quad\text{für}\ r<a\\
-\gamma + \delta\frac{a^3}{r^3}\quad\text{für}\ r>a
-\end{matrix}\right. .
+g(r)=\begin{cases}
+\alpha + \beta\frac{a^3}{r^3} \qquad&\text{für}\ r<a\\
+\gamma + \delta\frac{a^3}{r^3}\qquad&\text{für}\ r>a
+\end{cases}
 \end{equation*}
 Aus den Randbedingungen, dass $g(r=0)$ regulär, $g(r\rightarrow a)=1$ und $\varphi$ stetig sein, muss folgt jeweils $\beta=1$, $\gamma=1$ und $\alpha=1+\delta$. Da
 \begin{equation*}
-\left.\pdiff{\varphi}{r}\right|_\textit{Kugeloberfl.} = -\pdiff{}{r}\left(\vec{E}_0\cdot\vec{n}\cdot r\cdot g(r)\right)
+\left.\pdiff{\varphi}{r}\right|_\text{Kugeloberfl.} = -\pdiff{}{r}\left(\vec{E}_0\cdot\vec{n}\cdot r\cdot g(r)\right)
 \end{equation*}
 muss $D_n$ stetig sein. Das heißt also
 \begin{equation*}
@@ -353,14 +357,14 @@ muss $D_n$ stetig sein. Das heißt also
 \end{equation*}
 Das können wir eindeutig nach $\alpha$ und $\delta$ auflösen und erhalten
 \begin{align*}
-\delta & = \frac{\epsilon_a-\epsilon_i}{\epsilon_i+2\epsilon_a}, &\alpha&=\frac{3\epsilon_a}{\epsilon_i+2\epsilon_a}.
+\delta & = \frac{\epsilon_a-\epsilon_i}{\epsilon_i+2\epsilon_a}, &\alpha &=\frac{3\epsilon_a}{\epsilon_i+2\epsilon_a}.
 \end{align*}
 womit wir das Potential bestimmt hätten.
 \begin{equation*}
-\varphi(r)=\left\lbrace\begin{matrix}
--\vec{E}_0\cdot\vec{r}\ (1+\delta) \qquad\ \ \text{für}\ r<a\\
-\ \ \ -\vec{E}_0\cdot\vec{r}  (1+\delta\frac{a^3}{r^3})\quad\text{für}\ r>a
-\end{matrix}\right. 
+\varphi(r)=\begin{cases}
+-\vec{E}_0\cdot\vec{r}\ (1+\delta) \qquad\ &\text{für}\ r<a\\
+-\vec{E}_0\cdot\vec{r}  (1+\delta\frac{a^3}{r^3})\quad &\text{für}\ r>a
+\end{cases}
 \end{equation*}
 Das Feld im inneren der Kugel ist
 \begin{equation*}
@@ -399,27 +403,27 @@ Den Faktor $\frac{1}{3}$ bezeichnet man als Entelektrisierungsfaktor. Dieser ist
 
 Wir haben bereits gesehen, dass das elektrische Feld lokal Dipolmoment induzieren kann.
 \begin{equation*}
-\vec{p}\left(\vec{E}_\textit{lokal}\right) = \alpha\epsilon_0\vec{E}_\textit{lokal}
+\vec{p}\left(\vec{E}_\text{lokal}\right) = \alpha\epsilon_0\vec{E}_\text{lokal}
 \end{equation*}
 Man nennt $\alpha$ die atomare Polarisierbarkeit. Es ist ganz wichtig zu beachten, dass dieses lokale Feld nicht dem makroskopischen (gemittelten) Feld entspricht, da es nicht das Feld des Dipols selbst enthält! \\
 \begin{equation*}
-\vec{E}_\textit{lokal}=\vec{E}_\textit{gemittelt} + \frac{1}{3\epsilon_0}\vec{P}
+\vec{E}_\text{lokal}=\vec{E}_\text{gemittelt} + \frac{1}{3\epsilon_0}\vec{P}
 \end{equation*}
 Sei $n$ die Anzahl der Dipole pro Volumen, dann können wir $\vec{P}$ schreiben als
 \begin{equation*}
 \vec{P}=n\vec{p} = \underbrace{n\cdot\alpha}_{=:\kappa}\cdot\epsilon_0\left(\vec{E}+\frac{1}{3\epsilon_0}\vec{P}\right) =\frac{\kappa}{1-\frac{\kappa}{3}}\epsilon_0\vec{E}.
 \end{equation*}
-Vergleichen wir das nun mit $\vec{P}=\chi_\textit{el}\epsilon_0\vec{E}$, sehen wir sofort
+Vergleichen wir das nun mit $\vec{P}=\chi_\text{el}\epsilon_0\vec{E}$, sehen wir sofort
 \begin{align*}
-\chi_\textit{el}&=\frac{\kappa}{1-\frac{\kappa}{3}} &\Rightarrow& &\epsilon_r = 1+ \chi_\textit{el}=\frac{2\kappa+3}{3-\kappa}.
+\chi_\text{el}&=\frac{\kappa}{1-\frac{\kappa}{3}} &\Rightarrow& &\epsilon_r = 1+ \chi_\text{el}=\frac{2\kappa+3}{3-\kappa}.
 \end{align*}
-Das lässt sich in die \textsc{Clausius-Mosotti}-Formel umstellen
+Das lässt sich in die \textbf{\textsc{Clausius-Mosotti}-Formel} umstellen
 \begin{equation*}
 \frac{\epsilon_r-1}{\epsilon_r+2}=\frac{\kappa}{3},
 \end{equation*}
 die Gültigkeit für alle homogenen, isotropen Medien hat.
 
-\section{Reflexion und Brechung von Wellen an Grenzflächen}
+\section[Wellen an Grenzflächen]{Reflexion und Brechung von Wellen an Grenzflächen}
 
 \begin{wrapfigure}[11]{r}[0cm]{0cm}
 	\raisebox{0pt}[\dimexpr\height-1\baselineskip\relax]{
@@ -476,8 +480,9 @@ gelten muss und wir $\vec{B}=\frac{\vec{k}\times\vec{E}}{\omega}$ setzen können
 \begin{equation*}
 \frac{(\vec{k}_e\times\vec{E}^e)_t}{\mu_1}+\frac{(\vec{k}_r\times\vec{E}^r)_t}{\mu_1} = \frac{(\vec{k}_d\times\vec{E}^d)_t}{\mu_2}.
 \end{equation*}
-\ \\
-\textbf{a.\ senkrechter Einfall}\\
+
+\begin{enumerate}
+\item \textbf{ senkrechter Einfall}\\
 
 Der tritt mit $\alpha=0$ auf und so können wir, statt der Tangentialkomponenten auch einfach
 \begin{equation*}
@@ -500,13 +505,13 @@ mit
 \begin{equation*}
 \nu:=\frac{k_2\mu_1}{k_1\mu_2}=\frac{n_2\mu_1}{k_1\mu_2}=\sqrt{\frac{\mu_1\epsilon1}{\mu_2\epsilon_2}}.
 \end{equation*}
-Wir erhalten damit die \textbf{\textsc{Fresnel}schen Formeln für senkrechten Einfall}
+Wir erhalten damit die \textbf{\textsc{Fresnel}'schen Formeln für senkrechten Einfall}
 \begin{align*}
 a^d&=\frac{2}{1+\nu} & a^r &=\frac{1-\nu}{1+\nu}.
 \end{align*}
 Achtung: Bei Reflexion am dichten Medium kann in $a^r$ ein Phasensprung entstehen.\\
 \newpage
-\textbf{b.\ Schräger Einfall}\\
+\item \textbf{ Schräger Einfall}\\
 
 Die eben gesehenen \textsc{Fresnel}-Gleichungen lassen sich für beliebige Winkel verallgemeinern (hier Rechnung). Man unterscheidet dabei, ob $\vec{E}$ senkrecht oder parallel zur Einfallsebene, die von einfallendem, reflektierten und durchgelassenem Strahl aufgespannt wird, steht.
 \begin{align*}
@@ -517,8 +522,8 @@ Dabei ist
 \begin{equation*}
 \xi=\frac{\cos\beta}{\cos\alpha}.
 \end{equation*}
-\ \\ \linebreak
-\textbf{c.\ Energiebilanz für senkrechten Einfall}\\
+
+\item \textbf{ Energiebilanz für senkrechten Einfall}\\
 
 Man erwartet natürlich
 \begin{equation*}
@@ -538,10 +543,12 @@ Zusammengefasst ist das
 \begin{equation*}
 S_P^d=S_P^e-S_P^r=TS_P^e
 \end{equation*}
-Man führt dann zum sogenannten Transmissionskoeffizienten $T$ noch den Reflexionskoeffizienten $R=\left(a^r\right)^2$ ein. Es gilt offensichtlich
+Man führt dann zum sogenannten \textbf{Transmissionskoeffizienten} $T$ noch den \textbf{Reflexionskoeffizienten} $R=\left(a^r\right)^2$ ein. Es gilt offensichtlich
 \begin{equation*}
 R+T=1.
 \end{equation*}
+\end{enumerate}
+
 
 \section{Totalflexion}
 

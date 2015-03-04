@@ -2,7 +2,8 @@
 
 \section{Skalar- und Vektorfelder}
 
-Felder entsprechen Größen, die an jedem Raumpunkt einen bestimmten Wert haben, der zeitabhängig sein kann.\\ \linebreak
+Felder sind Größen, welche an jedem Raumpunkt einen bestimmten Wert haben, der zudem noch zeitabhängig sein kann.\\ \linebreak
+
 
 \begin{wrapfigure}[]{r}[0cm]{0cm}
 	\raisebox{0pt}[\dimexpr\height-1\baselineskip\relax]{
@@ -20,7 +21,8 @@ Felder entsprechen Größen, die an jedem Raumpunkt einen bestimmten Wert haben,
 	\caption{Isothermen}
 \end{wrapfigure}
 
-\textbf{a. skalare Felder}\ $\phi=\phi(x,y,z,t)$\\ 
+
+i)\textbf{ skalare Felder}\ $\phi=\phi(x,y,z,t)$\\ 
 
 
 Jedem Raumpunkt wird ein Wert in Form einer (reellen) Zahl zugeordnet, wie zum Beispiel Temperatur, Druck, Ladung oder Energie. Flächen oder Linien mit konstantem Wert nennt man Äquipotentialflächen beziehungsweise -linien.\\ \linebreak\linebreak
@@ -52,18 +54,18 @@ Jedem Raumpunkt wird ein Wert in Form einer (reellen) Zahl zugeordnet, wie zum B
 \end{wrapfigure}
 
 
-\textbf{b. Vektorfelder}\ $\vec{E}=\vec{E}(x,y,z,t)$\\
+ii)\textbf{ Vektorfelder}\ $\vec{E}=\vec{E}(x,y,z,t)$\\
 
 Jedem Raumpunkt wird ein Vektor zugeordnet, der lokal die Richtung des Feldes beschreibt, wie etwa ein Geschwindigkeits- oder Kraftfeld. Vektorfelder lassen sich durch Feldlinien veranschaulichen, entlang derer sich zum Beispiel ein Teilchen bewegt, das die entsprechende Kraft erfährt.
 
 
 \section{Integrale auf Feldern}
-Integrale über skalare Felder werden wie bekannt bebildet; sie sind zu vermeiden.\\
+Integrale über skalare Felder werden wie bekannt gebildet.\\
 Integriert man über ein Vektorfeld, spielt die Richtungsinformation eine entscheidende Rolle. Man unterscheidet je nach Dimension des Parameterbereichs von Linien-, Flächen- und Volumenintegralen.\\
 \linebreak
 
 
-\textbf{a. Linienintegrale}
+i) \textbf{Linienintegrale}
 
 \begin{equation*}
 \varphi=\int\limits_{C}\vec{E}(\vec{r})\d\vec{r}
@@ -114,18 +116,18 @@ Ein Speziallfall des Linienintegrals ist das sogenannte \textbf{geschlossene Lin
 \end{wrapfigure}
 
 
-\textbf{b. Flächenintegrale}\\
+ii) \textbf{Flächenintegrale}\\
 \begin{equation*}
 \Phi=\iint\limits_{S}\vec{B}\cdot\d \vec{A} \ \ \ \text{mit } \d\vec{A}=\d A\cdot\vec{n}
 \end{equation*}
 
 
-Ganz analog zu \textbf{a.} kann die Fläche $\vec{r}=\vec{r}(u,v)$ parametrisiert werden. Es ist jedoch beim Bilden der Funktionaldeterminante auf die Richtung des Flächenelements zu achten. Die beiden möglichen Lösungen unterscheiden sich natürlich nur um ein Vorzeichen. Wir erhalten also
+Ganz analog zu i) kann die Fläche $\vec{r}=\vec{r}(u,v)$ parametrisiert werden. Es ist jedoch beim Bilden der Funktionaldeterminante auf die Richtung des Flächenelements zu achten. Die beiden möglichen Lösungen unterscheiden sich natürlich nur um ein Vorzeichen. Wir erhalten also
 \begin{equation*}
 \Phi=\int\limits_{v_1}^{v_2}\int\limits_{u_1}^{u_2}\vec{B}(u,v)\cdot\left(\pdiff{\vec{r}}{u}\times\pdiff{\vec{r}}{v}\right)\d u\d v
 \end{equation*}
 
-\textbf{c. Volumenintegrale}\\
+iii) \textbf{Volumenintegrale}\\
 \linebreak
 \begin{equation*}
 Q=\iiint\limits_G\d V\cdot\rho(\vec{r})=\iiint\limits_G\d ^3 r\cdot\rho(\vec{r})=
@@ -136,35 +138,48 @@ q=\int\limits_{w_1}^{w_2}\int\limits_{v_1}^{v_2}\int\limits_{u_1}^{u_2}\rho(u,v,
 \end{equation*}
 
 \section{Vektorielle Ableitungen und Integrale}
-\textbf{a. Gradient}\\
-\linebreak
-Der Gradient $\grad\varphi\ $ eines Skalarfeldes beschreibt dessen Änderung und steht senkrecht auf den Äquipotentialflächen (oder allgemeiner: Niveaumengen). Der Gradient lässt sich durch den Nabla-Operator ausdrücken und lautet in karthesischen Koordinaten: 
+
+\begin{enumerate}
+\item \textbf{Gradient}\\
+
+Der Gradient $\grad\varphi\ $ eines Skalarfeldes beschreibt dessen Änderung und steht senkrecht auf den Äquipotentialflächen (oder allgemeiner: Niveaumengen). Der Gradient lässt sich durch den \textbf{Nabla-Operator} ausdrücken welcher in kartesischen Koordinaten lautet:
+ 
 \begin{equation*}
 \nabla=\pdiff{}{x}\vec{e}_x+\pdiff{}{y}\vec{e}_y+\pdiff{}{z}\vec{e}_z
 \end{equation*}
+
 Wichtig ist, dass $\nabla$ ein vektorieller Differenzialoperator ist. Er folgt Ableitungsregeln, wie etwa der Kettenregel, und $\nabla\varphi$ verhält sich unter Koordinatentransformation wie ein Vektor.\\
 \linebreak
 Andere Schreibweisen: $\pdiff{}{\vec{r}},\ \partial_{\vec{r}},\ \nabla_{\vec{r}}$\\
 \linebreak
-\underline{Beispiele:}\\
-\linebreak
-$\nabla |\vec{r}|=\frac{\vec{r}}{|\vec{r}|}=\vec{e}_r\\
-\nabla \frac{1}{|\vec{r}|}=-\frac{1}{r^2}\vec{e}_r$\\
-\linebreak\linebreak
-\textbf{b. Divergenz} (Quellenstärke eines Vektorfeldes)\\
-\linebreak
-Die Divergenz div $\vec{E}=\nabla\cdot\vec{E}$ ist ein Skalar unter Koordinatentransformation und kann als \textbf{lokale Quellenstärke} interpretiert werden. Häufig benötigt man auch den \textsc{Laplace}-Operator, der die \textbf{zweite Ableitung} repräsentiert.\\
+
+\underline{Beispiele:}
+
+\begin{align*}
+\nabla |\vec{r}|  \ &= \ \frac{\vec{r}}{|\vec{r}|} \ = \ \vec{e}_r\\
+\nabla \frac{1}{|\vec{r}|} \ &= \ -\frac{1}{r^2}\vec{e}_r
+\end{align*}
+
+\ \\
+\item \textbf{Divergenz} (Quellenstärke eines Vektorfeldes)\\
+
+Die Divergenz $\div\vec{E}=\nabla\cdot\vec{E}$ ist ein Skalar unter Koordinatentransformation und kann als \textbf{lokale Quellenstärke} interpretiert werden. Häufig benötigt man auch den \textsc{Laplace}-Operator, der die zweite Ableitung repräsentiert.\\
+
 \begin{equation*}
 \div\grad \varphi \ = \ \nabla^2\varphi \ = \ \laplace\varphi
 \end{equation*}
-\underline{Beispiele:}\\
-\linebreak
-div $\vec{r}=3$ (Anzahl der Dimensionen)\\
-div $(\varphi\vec{A})=\nabla\cdot(\varphi\vec{A})=\vec{A}(\nabla\varphi)+\varphi(\nabla\vec{A})=\vec{A}\cdot\grad \varphi+\varphi\cdot\div\vec{A}$\\
-\linebreak
-\textbf{c. Rotation} (Wirbelstärke eines Vektorfeldes)\\
-\linebreak
-Die Rotation rot $\vec{B}=\nabla\times\vec{B}$
+
+\underline{Beispiele:}
+
+\begin{align*}
+\div\vec{r}\ &= \ 3 \quad\text{(Anzahl der Dimensionen)}\\
+\div(\varphi\vec{A}) \ &= \ \nabla\cdot(\varphi\vec{A}) \ = \ \vec{A}(\nabla\varphi)+\varphi(\nabla\vec{A}) \ = \ \vec{A}\cdot\grad \varphi+\varphi\cdot\div\vec{A}
+\end{align*}
+
+\ \\
+\item \textbf{Rotation} (Wirbelstärke eines Vektorfeldes)\\
+
+Die Rotation $\rot\vec{B}=\nabla\times\vec{B}$
 
 \begin{equation*}
 \nabla\times\vec{B}=\begin{vmatrix}
@@ -177,20 +192,26 @@ B_x & B_y & B_z
 kann als \textbf{lokale Wirbelstärke} verstanden werden. Ihre Komponenten lassen sich auch als
 
 \begin{equation*}
-(\nabla\times\vec{B})_i=\sum\limits_{j,k}\epsilon_{ijk}\cdot\pdiff{}{x_j}\cdot B_k
+(\nabla\times\vec{B})_i=\sum\limits_{j,k}\varepsilon_{ijk}\cdot\pdiff{}{x_j}\cdot B_k
 \end{equation*}
 
-darstellen wobei $\epsilon_{ijk}\ $ der total antisymetrische Tensor 3. Stufe ist.\\
-\linebreak
-\underline{Beispiele:}\\
-\linebreak
-$\vec{v}=\vec{\omega}\times\vec{r} \ \Rightarrow \ \nabla\times\vec{v}=2\vec{\omega}$\\
-$\nabla\times\vec{r}=0$\\
-\linebreak\linebreak
-\textbf{d. \textsc{Gauss}'scher Satz}\\
+darstellen wobei $\varepsilon_{ijk}$ der total antisymmetrische Tensor 3. Stufe ist.\\
+\newpage
+
+\underline{Beispiele:}
+
+\begin{align*}
+&\vec{v} \ = \ \vec{\omega}\times\vec{r} \quad \Rightarrow \quad \nabla\times\vec{v} \ = \ 2\vec{\omega}\\
+&\nabla\times\vec{r} \ = \ 0
+\end{align*}
+
+\ \\
+\item \textbf{\textsc{Gauss}'scher Satz}\\
+
 \begin{equation*}
 \iiint\limits_V\div\vec{E}\cdot\d V=\oiint\limits_{\partial V}\vec{E}\cdot\d \vec{A}
 \end{equation*}
+
 Der Satz von \textsc{Gauss} verknüpft Eigenschaften im Inneren eines Volumens mit dem Verhalten auf dem Rand.\\
 
 Über den Satz von \textsc{Gauss} lässt sich auch die partielle Integration in drei Dimensionen umformen zu:
@@ -200,84 +221,110 @@ Der Satz von \textsc{Gauss} verknüpft Eigenschaften im Inneren eines Volumens m
 \end{equation*}
 
 \ \\
-\textbf{e. \textsc{Green}'scher Satz}\\
+\item \textbf{\textsc{Green}'scher Satz}\\
+
 \begin{equation*}
-\Int{V}{}{(\varphi\laplace\psi-\psi\laplace\varphi)}{V}=\Oint{\partial V}{}{(\varphi\nabla\psi-\psi\nabla\varphi)}{\vec{A}}
+\Int{V}{}{V}(\varphi\laplace\psi-\psi\laplace\varphi) \ = \ \Oint{\partial V}{}{\vec{A}_F}(\varphi\nabla\psi-\psi\nabla\varphi)
 \end{equation*}
-\linebreak
-\textbf{f. \textsc{Stokes}'scher Satz}\\
+
+\ \\
+\item \textbf{\textsc{Stokes}'scher Satz}\\
+
 \begin{equation*}
 \iint\limits_S\rot\vec{B}\cdot\d\vec{A}=\oint\limits_{\partial A}\vec{B}\cdot\d\vec{r}
 \end{equation*}
-Analog zu \textsc{Gauss}'schen Satz verknüft der Satz von \textsc{Stokes} das Verhalten eines Feldes auf einer Fläche mit dem auf dem Rand der Fläche. Für geschlossene Flächen gilt
+
+Analog zum \textsc{Gauss}'schen Satz verknüpft der Satz von \textsc{Stokes} das Verhalten eines Feldes auf einer Fläche mit dem auf dem Rand der Fläche. Für geschlossene Flächen gilt:
+
 \begin{equation*}
 \oiint\limits_{S=\partial V}\rot\vec{B}\cdot\d\vec{A}=0
 \end{equation*}
+\end{enumerate}
 
 \section{Differentialoperatoren in krummlinigen Koordinaten}
-Karthesische /Kugel-/Zylinderkoordinaten sind hier wichtig.\\
-\linebreak
-z.B: \ $\nabla_x\psi=\partial_x\psi\vec{e}_x+\partial_y\psi\vec{e}_y+\partial_z\psi\vec{e}_z$\\
-\linebreak
-$\nabla_\theta\psi=\pdiff{}{r}\psi\vec{e}_r+\frac{1}{r}\pdiff{}{\theta}\psi\vec{e}_\theta+\frac{1}{r\sin\theta}\pdiff{}{\phi}\psi\vec{e}_\phi$\\
-\linebreak
-Generell: $(\nabla\psi)_u\equiv(\nabla\psi)\vec{e}_u=\frac{1}{g_u}\pdiff{\psi}{u}$ \ mit \ $g_u=|\pdiff{\psi}{u}|$\\
+
+Hier sind vor allem Kartesische Koordinaten als auch Kugel- und Zylinderkoordinaten wichtig.\\
+
+\begin{align*}
+\text{Kartesische Koordinaten:}\qquad &\nabla\psi \ = \ \pdiff{}{x}\psi\vec{e}_x + \pdiff{}{y}\psi\vec{e}_y + \pdiff{}{z}\psi\vec{e}_z\\
+\text{Zylinderkoordinaten:}\qquad &\nabla\psi \ = \ \pdiff{}{\rho}\psi\vec{e}_\rho + \frac{1}{\rho}\pdiff{}{\phi}\psi\vec{e}_\phi + \pdiff{}{z}\psi\vec{e}_z\\
+\text{Kugelkoordinaten:} \qquad &\nabla\psi \ = \ \pdiff{}{r}\psi\vec{e}_r+\frac{1}{r}\pdiff{}{\theta}\psi\vec{e}_\theta+\frac{1}{r\sin\theta}\pdiff{}{\phi}\psi\vec{e}_\phi\\
+\\
+\text{Generell:}\qquad &(\nabla\psi)_u \ \equiv \ (\nabla\psi)\vec{e}_u \ = \ \frac{1}{g_u}\pdiff{\psi}{u} \text{ mit } g_u \ = \ \left|\pdiff{\psi}{u}\right|
+\end{align*}
+
 
 \section{\textsc{Fourier}-Transformation}
+
 \begin{equation*}
-\tilde{f}(\omega)=\frac{1}{\sqrt{2\pi}}\Int{-\infty}{\infty}{f(t)e^{-i\omega t}}{t}
+\tilde{f}(\omega) \ = \ \frac{1}{\sqrt{2\pi}}\Int{-\infty}{\infty}{t} f(t)e^{-i\omega t}
 \end{equation*}
+
 \begin{equation*}
-f(t)=\frac{1}{\sqrt{2\pi}}\Int{-\infty}{\infty}{\tilde{f}(t)e^{i\omega t}}{\omega}
+f(t) \ = \ \frac{1}{\sqrt{2\pi}}\Int{-\infty}{\infty}{\omega} \tilde{f}(t)e^{i\omega t}
 \end{equation*}
+
 Verallgemeinert auf $n$ Dimensionen ergibt sich:\\
+
 \begin{equation*}
-\tilde{f}(\vec{k})=\frac{1}{({2\pi})^{\frac{n}{2}}}\Int{-\infty}{\infty}{f(\vec{r})e^{-i\vec{k}\vec{r}}}{^nr}
+\tilde{f}(\vec{k}) \ = \ \frac{1}{({2\pi})^{\frac{n}{2}}}\Int{-\infty}{\infty}{^n r}f(\vec{r})e^{-i\vec{k}\vec{r}}
 \end{equation*}
-\linebreak
-\textbf{a. Differentiation}\\
+
+\ \linebreak
+
+\begin{enumerate}
+
+\item \textbf{Differentiation}\\
+
 \begin{equation*}
-\diff{}{t}f(t)=\frac{1}{\sqrt{2\pi}}\Int{-\infty}{\infty}{i\omega\tilde{f}(\omega)e^{i\omega t}}{\omega}
+\diff{}{t}f(t)=\frac{1}{\sqrt{2\pi}}\Int{-\infty}{\infty}{\omega}i\omega\tilde{f}(\omega)e^{i\omega t}
 \end{equation*}
-\linebreak
-\textbf{b. Faltung}\\
+
+\ \linebreak
+\item \textbf{Faltung}\\
+
 \begin{equation*}
-(f*g)(t)=\frac{1}{\sqrt{2\pi}}\Int{-\infty}{\infty}{f(t-s)G(s)}{s}
+(f*g)(t)=\frac{1}{\sqrt{2\pi}}\Int{-\infty}{\infty}{s}f(t-s)G(s)
 \end{equation*}
+
 \begin{equation*}
 \widetilde{(f*g)}(\omega)=\tilde{f}(\omega)\tilde{g}(\omega)
 \end{equation*}
-\textbf{c. Rechenregeln}\\
+
+\ \\
+\item \textbf{Rechenregeln}\\
+
 \begin{align*}
-f'(t) & \leftrightarrow i\omega\tilde{f}(\omega)\\
+f'(t) & \leftrightarrow  i\omega\tilde{f}(\omega)\\
 -itf(t) & \leftrightarrow \tilde{f}'(\omega)\\
 f(t+a) & \leftrightarrow  e^{i\omega a}\tilde{f}(\omega)\\
-e^{i\omega t}f(t) &\leftrightarrow & \tilde{f}(\omega-a)\\
+e^{i\omega t}f(t) &\leftrightarrow  \tilde{f}(\omega-a)\\
 f(at) & \leftrightarrow \frac{1}{|a|}\tilde{f}\left(\frac{\omega}{a}\right)\\
-f^*(t) & \leftrightarrow \tilde{f}^*(\omega)\\
-\tilde{\tilde{f}}(t) &\leftrightarrow & f(-t)\\
+f^*(t) & \leftrightarrow  \tilde{f}^*(\omega)\\
+\tilde{\tilde{f}}(t) & \leftrightarrow  f(-t)\\
 \end{align*}
+\end{enumerate}
 
 \section{Delta-Distribution}
 
 Die Delta-Distribution ist über folgende Eigenschaften definiert:
 
 \begin{enumerate}
-	\item
-	\begin{equation*}
-	\delta(\vec{r}) = \begin{cases}
-	0 & \text{für }\vec{r}\neq\vec{r}_0\\
-	\infty & \text{für } \vec{r} = \vec{r}_0
-	\end{cases}
-	\end{equation*}
-	
-	\item
-	\begin{equation*}
-	\int\limits_{\vec{r}_0\in V}\d V \ \delta({\vec{r}-\vec{r}_0}) = 1
-	\end{equation*}
+\item
+\begin{equation*}
+\delta(\vec{r}) = \begin{cases}
+0 & \text{für }\vec{r}\neq\vec{r}_0\\
+\infty & \text{für } \vec{r} = \vec{r}_0
+\end{cases}
+\end{equation*}
+
+\item
+\begin{equation*}
+\int\limits_{\vec{r}_0\in V}\d V \ \delta({\vec{r}-\vec{r}_0}) = 1
+\end{equation*}
 \end{enumerate}
 
-Alle Aussagen gelten analog für die Delta-Distribution $\delta(x)$ in einer Dimension.\
+Alle Aussagen gelten analog für die Delta-Distribution $\delta(x)$ in einer Dimension.\\
 Bei höherdimensionalen Deltadistributionen gilt allerdings nur in kartesischen Koordinaten:
 
 \begin{equation*}
@@ -288,9 +335,10 @@ Faltet man die Delta-Distribution mit einer Funktion $f(\vec{r})$, so ergibt sic
 
 \begin{equation*}
 \int\limits_{\vec{r}_0\in V}\d V \ \delta({\vec{r}-\vec{r}_0}) \ f(\vec{r}) = f(\vec{r}_0)
-\end{equation*}
+\end{equation*}\\
+\ \\
 
-\section{\textsc{Green}'sche Funktion zur Lösung inhomogener linearer DGL}
+\section[\textsc{Green}'sche Funktion]{\textsc{Green}'sche Funktion zur Lösung inhomogener linearer DGL}
 
 Wir betrachten die lineare, inhomogene Differentialgleichung
 
@@ -305,7 +353,7 @@ Die \textsc{Green}'sche Funktion $G(x,x)$ zum Operator $L$ ist die Lösung der D
 \begin{equation*}
 L \ G(x,x') = \delta (x-x') \; [= \delta(x_1-x_1')\cdot\dotsc\cdot\delta(x_n - x_n')]
 \end{equation*}
-\ \\
+\newpage
 Wenn $g$ bekannt ist, dann kann die Lösung für beliebige Inhomogenität durch Superposition gewonnen werden.
 
 \begin{equation*}
@@ -317,4 +365,3 @@ Den Beweis hierfür erhält man leicht durch Einsetzen:
 \begin{equation*}
 L \ \phi(x) = \int\d x' \ L \ G(x,x') \rho(x') = \rho(x)
 \end{equation*}
-

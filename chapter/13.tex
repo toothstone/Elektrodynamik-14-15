@@ -1,10 +1,6 @@
-\chapter{\textsc{Lagrange}-Formulierung der Elektrodynamik}
+\chapter[\textsc{Lagrange}-Formulierung]{\textsc{Lagrange}-Formulierung der Elektrodynamik}
 
-Zur Erinnerung: Der \textsc{Lagrange}-Formalismus basiert auf dem Prinzip der kleinsten Wirkung. Betrachten wir dazu o.B.d.A ein Teilchen im eindimensionalen Raum, dessen von der generalisierten Koordinate $q$ abhängige \textsc{Lagrange}-Funktion
-\begin{equation*}
-L(q,\dot{q},t)
-\end{equation*}
-ist. Die Wirkung
+Zur Erinnerung: Der \textsc{Lagrange}-Formalismus basiert auf dem Prinzip der kleinsten Wirkung. Betrachten wir dazu o.B.d.A ein Teilchen im eindimensionalen Raum, dessen von der generalisierten Koordinate $q$ abhängige \textsc{Lagrange}-Funktion $L(q,\dot{q},t)$ ist. Die Wirkung
 \begin{equation*}
 \mathcal{S} = \int_{t_1}^{t_2}L\ \mathrm{d}t
 \end{equation*}
@@ -17,30 +13,31 @@ Das führt auf die \textsc{Euler-Lagrange}-Gleichung
 \begin{equation*}
 \diff{}{t}\frac{\partial L}{\partial \dot{q}} - \frac{\partial L}{\partial q} = 0.
 \end{equation*}
-Diese führt auf dasselbe Ergebnis, wie die \textsc{Newton}schen Bewegungsgleichungen. Tatsächlich ist das Prinzip der kleinsten Wirkung aber noch viel allgemeiner und lässt sich nutzen, um die meisten Feldtheorien, wie etwa die Quantenfeldtheorie oder eben auch die Elektrodynamik abzuleiten. \\
-Deshalb werden wir nun probieren, alles zu vergessen, was wir in Kapitel 1 bis 5 gelernt haben und den Versuch unternehmen auf Basis des \textsc{Lagrange}-Formalismus ein möglichst einfaches, relativistisches Funktional zu finden, aus dem sich die \textsc{Maxwell}-Gleichungen automatisch ergeben werden.
+Diese führt auf dasselbe Ergebnis, wie die \textsc{Newton}'schen Bewegungsgleichungen. Tatsächlich ist das Prinzip der kleinsten Wirkung aber noch viel allgemeiner und lässt sich nutzen, um die meisten Feldtheorien, wie etwa die Quantenfeldtheorie oder eben auch die Elektrodynamik abzuleiten. \\
+Deshalb werden wir nun probieren, alles zu vergessen, was wir in den  Kapiteln 2 bis 4 gelernt haben und den Versuch unternehmen auf Basis des \textsc{Lagrange}-Formalismus ein möglichst einfaches, relativistisches Funktional zu finden, aus dem sich die \textsc{Maxwell}-Gleichungen automatisch ergeben werden.
 
-\section{\textsc{Lagrange}-Formalismus der relativistischen Mechanik}
+\section[\textsc{Lagrange}:relativistische Mechanik]{\textsc{Lagrange}-Formalismus der relativistischen Mechanik}
 
 Wir haben im vorangegangen Kapitel gesehen, dass sich der differenzielle Viererabstand $\mathrm{d}s$ beim Wechsel des Bezugsystems nicht ändert und das dies äquivalent zur Konstanz der Lichtgeschwindigkeit ist. Die Tatsache, dass sich Wirkungen in jedem Inertialsystem gleich schnell ausbreiten, deutet darauf hin, dass die Wirkung $\mathcal{S}$ selbst invariant, also ein \textsc{Lorentz}-Skalar sein muss.
 \begin{equation*}
 \mathcal{S}=\int\mathrm{d}\tau\ L
 \end{equation*}
-Aufgrund dessen muss auch die \textsc{Lagrange}-Funktion invariant sein. Wir versuchen uns nun aus einfachen Überlegungen diese zu konstruieren.\\
+Aufgrund dessen muss auch die \textsc{Lagrange}-Funktion invariant sein. Wir versuchen uns nun aus einfachen Überlegungen diese zu konstruieren.
 
-\textbf{a.\ Ansatz für freies Teilchen}\\
+\begin{enumerate}
+\item \textbf{ Ansatz für freies Teilchen}\\
 
 Es wird schnell klar, dass die \textsc{Lagrange}-Funktion eines freien Teilchens nicht von seinem Ort und ebenso nicht explizit von der Zeit abhängen kann. Damit bleibt nur noch die Vierergeschwindigkeit übrig.
 \begin{equation*}
 L = L_0 \left(u^\mu \right)
 \end{equation*}
-Es gibt nun verschiedene Möglichkeiten aus $u^\mu$ ein \textit{Lorentz}-Skalar zu bilden. Intuitiv wäre natürlich das Skalarprodukt mit sich selbst, von dem wir bereits wissen, dass es invariant ist. Letztendlich ins die Festlegung jedoch willkürlich. Wir wählen
+Es gibt nun verschiedene Möglichkeiten aus $u^\mu$ ein \textsc{Lorentz}-Skalar zu bilden. Intuitiv wäre natürlich das Skalarprodukt mit sich selbst, von dem wir bereits wissen, dass es invariant ist. Letztendlich ins die Festlegung jedoch willkürlich. Wir wählen
 \begin{equation*}
 L_0 = -m_0c\sqrt{u^\mu u_\mu}
 \end{equation*}
 und werden später sehen, das diese Wahl sinnvoll ist.\\
 
-\textbf{b.\ Freies Teilchen mit Wechselwirkung}\\
+\item \textbf{ Freies Teilchen mit Wechselwirkung}\\
 
 Natürlich kann ein Wechselwirkungsterm $L_\text{W}$ beliebig von Ort und Geschwindigkeit abhängen. Aus der \textsc{Lagrange}-Funktion 
 \begin{equation*}
@@ -51,8 +48,9 @@ ergibt sich dann
 m_0 \ddiff{}{\tau} x_\mu = \diff{}{t}\pdiff{L_\text{W}}{u^\mu}-\pdiff{L_\text{W}}{x^\mu},
 \end{align*}
 wobei die rechte Seite genau die ausgeübte Kraft auf das Teilchen ist.
+\end{enumerate}
 
-\section{\textsc{Lagrange}-Formalismus für geladene Teilchen}
+\section[\textsc{Lagrange}: geladene Teilchen]{\textsc{Lagrange}-Formalismus für geladene Teilchen}
 
 Die Wechselwirkung kann natürlich auch für geladene Teilchen sehr wohl von Ort und Geschwindigkeit abhängen. Zusätzlich muss das ganze natürlich die Ladung $Q$ bestimmt sein. Wir wählen deshalb als Ansatz
 \begin{equation*}
@@ -76,8 +74,9 @@ Es erscheint also angemessen die Zuordnung $V^\mu\rightarrow A^\mu$ zu treffen. 
 L = -m_0c\sqrt{u^\mu u_\mu} - Qu_\mu A^\mu
 \end{equation*}
 Man erkennt daran, das die primären Größen der elektromagnetischen Wechselwirkung nicht die Felder $\vec{E}$ und $\vec{B}$ sind, sondern tatsächlich das Viererpotential $A^\mu$. 
+\newpage
 
-\section{Formalismus für Feldtheorien}
+\section[\textsc{Lagrange}: Feldtheorien]{Formalismus für Feldtheorien}
 
 Sei $\phi_\mu(x)$ ein beliebiges Feld. Das Wirkungsfunktional dieses Feldes ist
 \begin{equation*}
@@ -95,17 +94,17 @@ Für einen stationären Punkt der Wirkung, also nach dem Prinzip der kleinsten W
 \partial_\nu\pdiff{\mathcal{L}}{(\partial_\nu\phi_\mu)} - \pdiff{\mathcal{L}}{\phi_\mu}= 0.
 \end{equation*}  
 
-\section{\textsc{Lagrange}-Formalismus des elektromagnetischen Feldes}
+\section[\textsc{Lagrange}: elektromagnetisches Feld]{\textsc{Lagrange}-Formalismus des elektromagnetischen Feldes}
 
 Wir suchen nun nach einer \textsc{Lagrange}-Dichte für das elektromagnetische Feld, die invariant sein soll und $\partial_\nu A^\mu$ enthält. Da diese Dichte ein Skalar sein soll, ist die einfachste Wahl
 \begin{equation*}
-\mathcal{L}_\text{e.m.}=-\frac{1}{\mu_0}F^{\mu\nu}F_{\mu\nu}.
+\mathcal{L}_\text{em}=-\frac{1}{\mu_0}F^{\mu\nu}F_{\mu\nu}.
 \end{equation*}
-Dem Wechselwirkungsterm $L_\text{W}$ können wir natürlich auch ganz leicht durch den Übergang $Qu_\mu\rightarrow j_\mu$ eine \textsc{Lagrange}-Dichte zuordnen. So fassen wir zur \textsc{Maxwell-Lagrange}-Dichte 
+Dem Wechselwirkungsterm $L_\text{W}$ können wir natürlich auch ganz leicht durch den Übergang $Qu_\mu\rightarrow j_\mu$ eine \textsc{Lagrange}-Dichte zuordnen. So fassen wir diese zur \textsc{Maxwell-Lagrange}-Dichte zusammen:
 \begin{equation*}
 \mathcal{L}_\textsc{Maxwell} = -\frac{1}{\mu_0}F^{\mu\nu}F_{\mu\nu} - j_\mu A^\mu
 \end{equation*}  
-zusammen. Setzen wir das in die \textsc{Euler-Lagrange}-Gleichung für Felder ein, so erhalten wir
+Setzen wir das in die \textsc{Euler-Lagrange}-Gleichung für Felder ein, so erhalten wir
 \begin{align*}
 \partial_\nu\pdiff{\mathcal{L}_\text{e.m.}}{(\partial_\nu\phi_\mu)} + \underbrace{\partial_\nu\pdiff{\mathcal{L}_\text{W}}{(\partial_\nu\phi_\mu)}}_{=0} &= \underbrace{\pdiff{\mathcal{L}_\text{e.m.}}{A_\mu}}_{=0} + \pdiff{\mathcal{L}_\text{W}}{A_\mu}\\
 \frac{1}{\mu_0}\partial_\nu F^{\mu\nu} &= -j^\nu.

@@ -29,3 +29,20 @@
 
 %Other Symbols
 \newcommand{\rectangle}{\fboxsep0pt\fbox{\rule{1em}{0pt}\rule{0pt}{1ex}}}
+
+%Highlightbox
+\newcommand{\highlightbox}[1]{\colorbox{bblue}{\hspace{1em}#1\hspace{1em}}}
+
+%Colorbox in Align-Environment
+\newlength\dlf
+\newcommand\alignedbox[2]{
+  % #1 = before alignment
+  % #2 = after alignment
+  &
+  \begingroup
+  \settowidth\dlf{$\displaystyle #1$}
+  \addtolength\dlf{\fboxsep+\fboxrule}
+  \hspace{-\dlf}
+  \fcolorbox{bblue}{bblue}{$\displaystyle #1 #2$}
+  \endgroup
+}

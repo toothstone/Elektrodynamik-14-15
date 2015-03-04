@@ -9,7 +9,7 @@ Da für das $\vec{B}$-Feld unter diesen Bedingungen gilt, dass rot $\vec{B} = \m
 \vec{B}(\vec{r}) = \rot \vec{A}(\vec{r})
 \end{equation*}
 
-$\vec{B}$ bestimmt $\vec{A}$ bis auf Eichtransformation $\vec{A}\ \rightarrow \ \vec{A} \ + \ \grad \vec{chi}$ eindeutig, da beide Vektorpotentiale das selbe $\vec{B}$-Feld liefern. Bei spezieller Wahl von $\chi$ spricht man von fixierter Eichung.\
+$\vec{B}$ bestimmt $\vec{A}$ bis auf Eichtransformation $\vec{A}\ \rightarrow \ \vec{A} \ + \ \grad \chi$ eindeutig, da beide Vektorpotentiale das selbe $\vec{B}$-Feld liefern. Bei spezieller Wahl von $\chi$ spricht man von fixierter Eichung.\\
 Mit der Einführung von $\vec{A}$ folgt mit $\frac{1}{\mu_0}\ \rot \vec{B} = \vec{j}$:
 
 \begin{equation*}
@@ -22,13 +22,13 @@ Es bietet sich an, die Eichung div $\vec{A} = 0$ (\textsc{Coulomb}-Eichung) zu w
 -\laplace\vec{A}=\mu_0 \ \vec{j}
 \end{equation*}
 
-Eine ähnliche Gleichung haben wir mit der \textsc{Poisson}-Gleichung $-\epsilon_0 \ \laplace\varphi = \rho$ in der Elektrostatik hergeleitet und diese mit $\varphi = \frac{1}{4\pi\epsilon_0}\Int{}{}{V'}\frac{\rho(\vec{r})}{|\vec{r}-\vec{r}'|}$ gelöst.\ \\
+Eine ähnliche Gleichung haben wir mit der \textsc{Poisson}-Gleichung $-\epsilon_0 \ \laplace\varphi = \rho$ in der Elektrostatik hergeleitet und diese mit $\varphi = \frac{1}{4\pi\epsilon_0}\Int{}{}{V'}\frac{\rho(\vec{r}')}{|\vec{r}-\vec{r}'|}$ gelöst.\ \\
 Analog erhalten wir auch die Lösung für $\vec{A}$:
 
 \begin{align*}
-\vec{A}(\vec{r}) = \frac{\mu_0}{4\pi}\Int{}{}{V'} \ \frac{\vec{j}(\vec{r})}{|\vec{r}-\vec{r}'|} \qquad \text{mit div }\vec{A} = 0 \\
+\vec{A}(\vec{r}) &= \frac{\mu_0}{4\pi}\Int{}{}{V'} \ \frac{\vec{j}(\vec{r}')}{|\vec{r}-\vec{r}'|} \qquad \text{mit div }\vec{A} = 0 \\
 \ \\
-\vec{B}(\vec{r}) = \rot \vec{A}(\vec{r}) = \frac{\mu_0}{4\pi}\ \Int {}{}{V'} \ \frac{\vec{j}(\vec{r})\times (\vec{r}-\vec{r}')}{|\vec{r}-\vec{r}'|^3}
+\vec{B}(\vec{r}) &= \rot \vec{A}(\vec{r}) = \frac{\mu_0}{4\pi}\ \Int {}{}{V'} \ \frac{\vec{j}(\vec{r}')\times (\vec{r}-\vec{r}')}{|\vec{r}-\vec{r}'|^3}
 \end{align*}
 
 Die Kontrolle, ob div $\vec{A} =0$ ist, ergibt:
@@ -44,9 +44,9 @@ Die Kontrolle, ob div $\vec{A} =0$ ist, ergibt:
 		\colorbox{hgrey}{
 			\begin{tikzpicture}
 			
-			\draw[ultra thick] plot[smooth, tension=.8] coordinates {(1.7,-0.1) (1.9,1.5) (2.4,3) };	
-			\draw[->] (0,0) -- node[above left]{$\vec{r}'$} (2,2);
-			\draw[->] (0,0) -- node[below right]{$\ \vec{r}$} (4,1) ;
+				\draw[ultra thick] plot[smooth, tension=.8] coordinates {(1.7,-0.1) (1.9,1.5) (2.4,3) };	
+				\draw[->] (0,0) -- node[above left]{$\vec{r}'$} (2,2);
+				\draw[->] (0,0) -- node[below right]{$\ \vec{r}$} (4,1) ;
 			
 			
 			\end{tikzpicture}
@@ -54,7 +54,7 @@ Die Kontrolle, ob div $\vec{A} =0$ ist, ergibt:
 	}
 	\caption{Ausschnitt einer Leiterschleife}
 \end{wrapfigure}
-Wir betrachten einen Leiter der Dicke $d$ an der Position $\vec{r}'$. Für "dünne" Leiter, d.h. $d \ll |\vec{r}-\vec{r}'|$, kann man d$V' \vec{j}(\vec{r})$ vereinfachen zu: d$\vec{r}' \cdot I$, wobei das Längenelement d$\vec{r}'$ entlang des Leiters verlaufen soll.\
+Wir betrachten einen Leiter der Dicke $d$ an der Position $\vec{r}'$. Für "`dünne"' Leiter, d.h. $d \ll |\vec{r}-\vec{r}'|$, kann man d$V' \vec{j}(\vec{r})$ vereinfachen zu: d$\vec{r}' \cdot I$, wobei das Längenelement d$\vec{r}'$ entlang des Leiters verlaufen soll.\
 Für mehrere Leiter $\mathcal{L}_n$ folgt demnach für das Vektorpotential:
 
 \begin{align*}
@@ -63,7 +63,7 @@ Für mehrere Leiter $\mathcal{L}_n$ folgt demnach für das Vektorpotential:
 \overset{\vec{B}= \rot\vec{A}}{\Rightarrow} \quad \vec{B}(\vec{r}) &= \frac{\mu_0}{4\pi} \ \sum_n \ I_n \int\limits_{\mathcal{L}_n} \frac{\mathrm{d}\vec{r}' \times (\vec{r}-\vec{r}')}{|\vec{r}-\vec{r}'|^3}
 \end{align*}
 \ \\
-Diese Gleichung zur Bestimmung des $\vec{B}$-Feldes einer beliebigen Anordnung dünner Leiter nennt man das \textsc{Biot-Savart}-Gesetz.\
+Diese Gleichung zur Bestimmung des $\vec{B}$-Feldes einer beliebigen Anordnung dünner Leiter nennt man das \textbf{\textsc{Biot-Savart}-Gesetz}.\
 \\
 \ \\
 Betrachten wir nun bei mehreren geschlossenen Leiterschleifen den magnetischen Fluss auf deren Oberflächen $\mathcal{S}_m$:
@@ -72,6 +72,7 @@ Betrachten wir nun bei mehreren geschlossenen Leiterschleifen den magnetischen F
 \Phi = \Iint{\mathcal{S}_m}{}{\vec{A}_{\mathcal{S}_m}}\cdot\vec{B} = \Oint{\partial\mathcal{S}_m}{}{\vec{r}}\cdot\vec{A}
 \end{equation*}
 
+\newpage
 Mit \textsc{Biot-Savart} ergibt sich:
 
 \begin{equation*}
@@ -82,7 +83,7 @@ Mit \textsc{Biot-Savart} ergibt sich:
 \text{mit } L_{mn} = \frac{\mu_0}{4\pi} \ \Oint{\partial\mathcal{S}_m}{}{\vec{r}}\ \Oint{\partial\mathcal{S}_n}{}{\vec{r}'}\frac{1}{|\vec{r}-\vec{r}'|}
 \end{equation*}
 
-Die $L_{mn}$ sind die sogenannten \textbf{Induktionskoeffizienten}, welche ebenso wie die Kapazitätskoeefizienten symmetrisch sind: $L_{mn} = L_{nm}$. Für $m=n$ redet man von \textbf{Selbstinduktivitäten} der Leiter, welche allerdings  nicht mit der obigen Formel berechnet werden können, da dann die Näherung der "dünnen" Leiter zusammenbricht.
+Die $L_{mn}$ sind die sogenannten \textbf{Induktionskoeffizienten}, welche ebenso wie die Kapazitätskoeefizienten symmetrisch sind: $L_{mn} = L_{nm}$. Für $m=n$ redet man von \textbf{Selbstinduktivitäten} der Leiter, welche allerdings  nicht mit der obigen Formel berechnet werden können, da dann die Näherung der "`dünnen"' Leiter zusammenbricht.
 
 \section{Magnetischer Dipol}
 
@@ -104,9 +105,9 @@ Um das Vektorpotential
 für diesen Dipol zu berechnen entwickeln wir dieses unter der Näherung großer Abstände zum Dipol( $r\gg a$, wobei $a$ die größte Ausdehnung des Dipols in eine Raumrichtung ist):
 
 \begin{equation*}
-\frac{1}{|\vec{r}-\vec{r}'|} \cong  \frac{1}{|\vec{r}|} + \frac{\vec{r}\cdot\vec{r}'}{|\vec{r}|^3} + \dotsc \quad \Rightarrow \quad \oint\frac{\mathrm{d}\vec{r}'}{|\vec{r}-\vec{r}'|} = \underbrace{\frac{1}{r} \Oint{}{}{\vec{r}'}}_{=0} \ + \ \frac{\vec{r}}{r^2}\Oint{}{}{\vec{r}} \circ\vec{r}' \ + \dotsc
+\frac{1}{|\vec{r}-\vec{r}'|} \cong  \frac{1}{|\vec{r}|} + \frac{\vec{r}\cdot\vec{r}'}{|\vec{r}|^3} + \dotsc \quad \Rightarrow \quad \oint\frac{\mathrm{d}\vec{r}'}{|\vec{r}-\vec{r}'|} = \underbrace{\frac{1}{r} \Oint{}{}{\vec{r}'}}_{=0} \ + \ \frac{\vec{r}}{r^2}\oint\d\vec{r} \circ\vec{r}' \ + \dotsc
 \end{equation*}
-
+\newpage
 Umformen ergibt:
 
 \begin{align*}
@@ -122,13 +123,13 @@ Umformen ergibt:
 \vec{B}(\vec{r}) = \rot\vec{A}(\vec{r}) &= - \frac{\mu_0 I}{4\pi} \ \nabla \times \left(A_F\times\nabla\frac{1}{r}\right) \ = \ \frac{\mu_0}{4\pi} \ \cdot \ 3(\vec{m}\cdot\vec{r})\vec{r} \ - \ \vec{m}r^2\\
 \ \\
 &= \ \underbrace{\vec{A}_F \ \laplace\frac{1}{r}}_{(*)} \quad - \quad \underbrace{(\vec{A}_F
-	\cdot\nabla)\ \nabla \ \frac{1}{r}}_{= \ \vec{A}_F (\nabla \circ \nabla) \frac{1}{r}}
+\cdot\nabla)\ \nabla \ \frac{1}{r}}_{= \ \vec{A}_F (\nabla \circ \nabla) \frac{1}{r}}
 \end{align*}
 
 $(*) = 4\pi\delta(\vec{r})$ wird im Fernfeld vernachlässigt
 \ \\
 \ \\
-\underline{Ladung auf Umlaufbahn}:$\qquad$ (Ladung $Q$, Masse $M$)
+\underline{\textbf{Ladung auf Umlaufbahn:}}$\qquad$ (Ladung $Q$, Masse $M$)
 
 \begin{equation*}
 I = \frac{Q}{\tau} \qquad \text{ mit } \qquad \tau \; \hat{=} \; \text{Umlaufzeit}
@@ -143,16 +144,13 @@ Das Magnetische Dipolmoment ist also bei einer Ladung auf einer Umlaufbahn eng m
 \vec{m}  \ =\ I \ \cdot \ \vec{A}_F \ = \ \frac{1}{2} \ \underbrace{\frac{Q}{M}}_{=: g_B} \ \vec{L}
 \end{equation*}
 
-(Zum Vergleich das \textsc{Bohr}'sche Magnetron: $\mu_b = \frac{e\hbar}{2m}$)
-\ \\
-\ \\
-\ \\
-\ \\
-\underline{Allgemeine Stromverteilung}
+(Zum Vergleich das \textsc{Bohr}'sche Magnetron: $\mu_B = \frac{e\hbar}{2m}$)
+\newpage
 
+\underline{\textbf{Allgemeine Stromverteilung:}}
 
 \begin{equation*}
 \vec{m} \ = \ \frac{1}{2} \ \Int{}{}{V} \; \vec{r}\ \times \ \vec{j}(\vec{r})
 \end{equation*}
 
-(Zum Vergleich der elektrische Dipol: $\vec{p} = \Int{}{}{V} \vec{r}\rho(\vec{r})$)
+(Zum Vergleich der elektrische Dipol: $\vec{p} = \Int{}{}{V} \vec{r}\cdot\rho(\vec{r})$)

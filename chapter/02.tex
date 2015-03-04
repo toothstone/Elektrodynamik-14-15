@@ -1,4 +1,3 @@
-
 \chapter{Grundbegriffe und \textsc{Maxwell}-Gleichungen}
 \section{Kräfte und Punktladungen}
 
@@ -8,32 +7,33 @@ Aus der Erfahrung ergibt sich für eine ruhende Ladung
 \vec{F}(\vec{r},t)=Q\cdot\vec{E}(\vec{r},t)
 \end{equation*}
 
-Dabei ist die Ladung $Q$ eine Körpereigenschaft und $\vec{E}$ eine Eigenschaft, die die Umwelt charakterisiert. Über den Vergleich der Kraft auf zwei Körper $\vec{F}_1(\vec{r},t)=\frac{Q_1}{Q_2}\vec{F}_2(\vec{r},t)$ lässt sich so eine Einheit für die Ladung definieren.\\
-\linebreak
-
+Dabei ist die Ladung $Q$ eine Körpereigenschaft und $\vec{E}$ eine Eigenschaft, die die Umwelt charakterisiert.\\
+\ \\
 Bei bewegten Ladungen beobachten wir etwas anderes. Die Kraft hat hier die Form
 
 \begin{equation*}
 \vec{F}=Q(\vec{E}+\vec{v}\times\vec{B})
 \end{equation*}
+\linebreak
 
 \section{Ladungs- und Stromdichte, Ladungserhaltung}
 
-Über eine Ladung in einem Volumenelement lässt sich der Begriff der Ladungsdichte definieren.
+Über eine Ladung in einem Volumenelement lässt sich der Begriff der \textbf{Ladungsdichte} definieren.
 
 \begin{equation*}
-\textbf{Ladungsdichte}\qquad\rho(\vec{r},t)=\diff{Q}{V}
+\rho(\vec{r},t)=\diff{Q}{V}
 \end{equation*}
-
+\newpage
 Eine Ladungsänderung nennen wir schließlich den elektrischen Strom.
 
 \begin{equation*}
 -I:=\dot{Q}=\diff{}{t}\Int{V}{}{\rho(\vec{r},t)}{V}=\Int{V}{}{\pdiff{\rho}{t}}{V}
-\end{equation*}	
-Betrachten wir nun den Stromfluss durch ein Oberflächenelement d$\vec{A}$. Die Ladungsträger, welche durch diese Fläche wandern haben die Geschwindigkeit $\vec{v}$, sodass anschaulich ein kleines Volumenelement dV$ = \vec{v}\mathrm{d}t\cdot\mathrm{d}\vec{A}$ aufgespannt wird:
+\end{equation*}
+
+Betrachten wir nun den Stromfluss durch ein Oberflächenelement d$\vec{A}$. Die Ladungsträger, welche durch diese Fläche wandern haben die Geschwindigkeit $\vec{v}$, sodass anschaulich ein kleines Volumenelement $\d V = \vec{v}\mathrm{d}t\cdot\mathrm{d}\vec{A}$ aufgespannt wird:
 
 \begin{align*}
-\mathrm{d}Q &= \rho(\vec{r},t)\vec{v}(\vec{r},t)\mathrm{d}t\mathrm{d}\vec{A}\\
+\mathrm{d}Q &= \rho(\vec{r},t) \ \vec{v}(\vec{r},t) \ \mathrm{d}t \ \mathrm{d}\vec{A}\\
 \diff{Q}{t} =-I &= \rho\vec{v}\cdot\mathrm{d}\vec{A}=:\vec{j}(\vec{r},t)\cdot\mathrm{d}\vec{A}
 \end{align*}
 
@@ -49,11 +49,10 @@ Setzen wir nun dies in die Gleichung für die Ladungserhaltung ein:
 0 = \dot{Q} + I = \iiint\limits_V\mathrm{d}V\pdiff{\rho}{t} \ + \oiint\limits_{\partial V}\mathrm{d}\vec{A}\cdot\vec{j} = \iiint\limits_V \mathrm{d}V\left(\pdiff{\rho}{t} + \pdiff{\vec{j}}{\vec{r}}\right) 
 \end{equation*}
 
-Da dies für für alle möglichen Volumina gelten soll, folgt daraus die
-
-\begin{equation*}
-\textbf{Kontinuitätsgleichung}\qquad\dot{\rho} + \div\vec{j} = 0
-\end{equation*} 
+Da dies für für alle möglichen Volumina gelten soll, folgt daraus die \textbf{Kontinuitätsgleichung}:
+\begin{empheq}[box=\highlightbox]{equation*}
+\dot{\rho} + \div\vec{j} = 0 \vphantom{\bigg|}
+\end{empheq}
 
 Für den Grenzfall eines unendlich großen Volumens gilt zunächst $\vec{j}\rightarrow 0$ auf der Oberfläche, woraus man auf die für diesen Grenzfall logische Konsequenz schließen kann, dass
 
@@ -61,17 +60,16 @@ Für den Grenzfall eines unendlich großen Volumens gilt zunächst $\vec{j}\righ
 \dot{Q} = -\oiint\vec{j}\mathrm{d}\vec{A} = 0
 \end{equation*}
 
-die Ladung im gesamten Raum erhalten ist.\ \\
-
-
-Mit der eingeführten Stromdichte $\vec{j}$ kann man nun auch den Ausdruck der \textsc{Lorentz}kraft-Dichte $\vec{f} := \frac{\vec{F}}{V}$ definieren:
+die Ladung im gesamten Raum erhalten ist.\\
+Mit der eingeführten Stromdichte $\vec{j}$ kann man nun auch den Ausdruck der \textbf{\textsc{Lorentz}kraft-Dichte} $\vec{f} := \frac{\vec{F}}{V}$ definieren:
 
 \begin{align*}
-\mathrm{d}\vec{F} & = \mathrm{d}Q(\vec{E} + \vec{v}\times\vec{B}) \\
-\Rightarrow \vec{f} & = \rho(\vec{r},t)\cdot(\vec{E}(\vec{r},t) + \vec{v}(\vec{r},t)\times\vec{B}(\vec{r},t) = \rho\vec{E}+ \vec{j}\times\vec{B}
+\mathrm{d}\vec{F} & \ = \ \mathrm{d}Q(\vec{E} + \vec{v}\times\vec{B}) \\
+\alignedbox{\hphantom{a}\Rightarrow \vec{f}}{ \ = \ \rho(\vec{r},t)\cdot\left(\vec{E}(\vec{r},t) + \vec{v}(\vec{r},t)\times\vec{B}(\vec{r},t)\right) \ = \ \rho\vec{E}+ \vec{j}\times\vec{B}\hphantom{a}\vphantom{\Bigg|}}
 \end{align*}
 
 \section{Die \textsc{Maxwell}-Gleichungen}
+
 Die \textsc{Maxwell}-Gleichungen wurden 1864 vom schottischen Physiker James Clerk \textsc{Maxwell} aufgestellt und bilden ein Differentialgleichungssystem für die Felder  $\vec{B}(\vec{r})$ und $\vec{E}(\vec{r})$. Zusammen mit der Kontinuitätsgleichung beschreiben sie die gesamte (klassische) Elektrodynamik, da $\rho$ und $\vec{j}$ die Quellen und Wirbel des $ \ \vec{B} \ $- und $ \ \vec{E} \ $-Feldes eindeutig bestimmen:
 
 \begin{align*}
@@ -90,104 +88,100 @@ Betrachten wir nun also zunächst das Transformationsverhalten verschiedener Obj
 
 
 \begin{tabular}{c|c|c|l}
-	Objekt & $t\rightarrow-t$ & $\vec{r}\rightarrow-\vec{r}$ & Bemerkung\\
-	\hline $t, \pdiff{}{t}$ & - & + & Definition\\
-	$\vec{r},\pdiff{}{\vec{r}}$ & + & -& Definition\\
-	$\dot{\vec{r}}$ & -& - & durch Multiplikation der Vorzeichen erhalten\\
-	$\ddot{\vec{r}},\vec{F},\vec{f}$ & + & - & Erfahrung aus Mechanik:\ $\ddot{\vec{r}}=\frac{\vec{F}}{m}$\\
-	$Q,\rho$ & + & + & Annahme\\
-	$\vec{j}\ (=\rho\cdot\dot{\vec{r}})$ & - & - & \\
-	$\vec{E}$ & + & - & Vektor, erhalten aus: $\vec{F}=Q(\vec{E}+\vec{v}\times\vec{B})$\\
-	$\vec{B}$ & - & + & Pseudovektor\\
-	$\pdiff{}{\vec{r}}\cdot\vec{E}$ & + & + & Skalar\\
-	$\pdiff{}{\vec{r}}\cdot\vec{B}$ & - & - & Pseudoskalar\\
-	$\pdiff{}{\vec{r}}\times\vec{E}$ & + & + & Pseudovektor\\
-	$\pdiff{}{\vec{r}}\times\vec{B}$ & - & - & Vektor\\
-	$\pdiff{}{t}\vec{E}$ & - & - & Vektor\\
-	$\pdiff{}{t}\vec{B}$ & + & + & Pseudovektor
+Objekt & $t\rightarrow-t$ & $\vec{r}\rightarrow-\vec{r}$ & Bemerkung\\
+\hline $t, \pdiff{}{t}$ & - & + & Definition\\
+$\vec{r},\pdiff{}{\vec{r}}$ & + & -& Definition\\
+$\dot{\vec{r}}$ & -& - & durch Multiplikation der Vorzeichen erhalten\\
+$\ddot{\vec{r}},\vec{F},\vec{f}$ & + & - & Erfahrung aus Mechanik:\ $\ddot{\vec{r}}=\frac{\vec{F}}{m}$\\
+$Q,\rho$ & + & + & Annahme\\
+$\vec{j}\ (=\rho\cdot\dot{\vec{r}})$ & - & - & \\
+$\vec{E}$ & + & - & Vektor, erhalten aus: $\vec{F}=Q(\vec{E}+\vec{v}\times\vec{B})$\\
+$\vec{B}$ & - & + & Pseudovektor\\
+$\pdiff{}{\vec{r}}\cdot\vec{E}$ & + & + & Skalar\\
+$\pdiff{}{\vec{r}}\cdot\vec{B}$ & - & - & Pseudoskalar\\
+$\pdiff{}{\vec{r}}\times\vec{E}$ & + & + & Pseudovektor\\
+$\pdiff{}{\vec{r}}\times\vec{B}$ & - & - & Vektor\\
+$\pdiff{}{t}\vec{E}$ & - & - & Vektor\\
+$\pdiff{}{t}\vec{B}$ & + & + & Pseudovektor
 \end{tabular}
 \ \\
 \ \\
 \ \\
 \ \\
+Da wir gefordert hatten, dass unsere gewünschten Gleichungen invariant unter den Transformationen sein sollten, dürfen wir nun nur die Größen mit dem gleichen Transformationsverhalten verknüpfen:\\
 \ \\
-\ \\
-Da wir gefordert hatten, dass unsere gewünschten Gleichungen invariant unter den Transformationen sein sollten, dürfen wir nun nur die Größen mit dem gleichen Transformationsverhalten verknüpfen:\ \\
 
 
 \begin{enumerate}
-	\item
-	\underline{$++$ Skalar} \quad $\rho,\div \vec{E}\\
-	\\
-	\Rightarrow \rho = \epsilon_0 \cdot \div\vec{E} \qquad (\epsilon_0$  ist beliebige Konstante)
-	
-	\item
-	\underline{$--$ Vektor} \quad $\vec{j}, \rot \vec{B},\dot{\vec{B}}\\
-	\\
-	\Rightarrow \vec{j} = \alpha\cdot\dot{E} + \frac{1}{\mu_0}\cdot\rot \vec{B}  \qquad (\alpha,\frac{1}{\mu_0}$ sind beliebige Konstanten)
-	
-	\item
-	\underline{$--$ Skalar} \quad $\div \vec{B}\\ 
-	\\
-	\Rightarrow \ 0 = \div \vec{B}$
-	
-	\item
-	\underline{$++$ Vektor} \quad $\rot\vec{E},\dot{\vec{B}}\\
-	\\
-	\Rightarrow \ 0 = \rot \vec{E} + \beta\cdot\dot{\vec{B}} \qquad (\beta$  ist beliebige Konstante)
-	\\
-	\\
-	
-	\item
-	\underline{$+-$ Vektor}  \quad $\vec{E},(\vec{r},\ddot{\vec{r}})\\
-	\\
-	\Rightarrow \ 0 =  \vec{E}$
-	
-	\item
-	\underline{$-+$ Vektor} \quad $\vec{B}\\
-	\\
-	\Rightarrow \ 0 = \vec{B}$
+\item
+\underline{$++$ Skalar} \quad $\rho,\div \vec{E}\\
+\\
+\Rightarrow \rho = \epsilon_0 \cdot \div\vec{E} \hspace{4cm}  (\epsilon_0$  ist beliebige Konstante)
+
+\item
+\underline{$--$ Vektor} \quad $\vec{j}, \rot \vec{B},\dot{\vec{E}}\\
+\\
+\Rightarrow \vec{j} = \alpha\cdot\dot{\vec{E}} + \frac{1}{\mu_0}\cdot\rot \vec{B} \hspace{2.8cm} (\alpha,\frac{1}{\mu_0}$ sind beliebige Konstanten)
+
+\item
+\underline{$--$ Skalar} \quad $\div \vec{B}\\ 
+\\
+\Rightarrow \ 0 = \div \vec{B}$
+
+\item
+\underline{$++$ Vektor} \quad $\rot\vec{E},\dot{\vec{B}}\\
+\\
+\Rightarrow \ 0 = \rot \vec{E} + \beta\cdot\dot{\vec{B}} \hspace{3.4cm}(\beta$  ist beliebige Konstante)\qquad
+\newpage
+
+\item
+\underline{$+-$ Vektor}  \quad $\vec{E},(\vec{r},\ddot{\vec{r}})\\
+\\
+\Rightarrow \ 0 =  \vec{E}$
+
+\item
+\underline{$-+$ Vektor} \quad $\vec{B}\\
+\\
+\Rightarrow \ 0 = \vec{B}$
 \end{enumerate}
 \ \\
 
-Das System 1-4 ist ein widerspruchsfreies und vollständiges System von Differentialgleichungen für das $\vec{E}$- und das $\vec{B}$-Feld, da diese durch ihre Quellen und Wirbel jeweils eindeutig bis auf Konstanten bestimmt sind. Diese werden problemabhängig aus den gegebenen Randbedingungen bestimmt. Die Gleichungen 5 und 6 werden aus naheliegenden Gründen weggelassen; sie stehen zwar nicht im Widerspruch zu den ersten 4 Gleichungen, doch würde das Differentialgleichungssystem mit ihnen nur noch die Triviallösung ohne physikalisch interessante Bedeutung liefern.\
-\\
-\ \\
+Das System i)-iv) ist ein widerspruchsfreies und vollständiges System von Differentialgleichungen für das $\vec{E}$- und das $\vec{B}$-Feld, da diese durch ihre Quellen und Wirbel jeweils eindeutig bis auf Konstanten bestimmt sind. Diese werden problemabhängig aus den gegebenen Randbedingungen bestimmt. Die Gleichungen v) und vi) werden aus naheliegenden Gründen weggelassen; sie stehen zwar nicht im Widerspruch zu den ersten 4 Gleichungen, doch würde das Differentialgleichungssystem mit ihnen nur noch die Triviallösung ohne physikalisch interessante Bedeutung liefern.\\
 \ \\
 
 \underline{\textbf{Konstantendiskussion:}}
 \ \\
 \begin{enumerate}
-	\item Die Konstante $\epsilon_0$ ist zunächst frei wählbar, da die Ladung $Q$ nur bis auf einen Faktor genau bestimmt ist. Für die Wahl von $\epsilon_0$ gibt es verschiedene Ansätze:\
-	\begin{enumerate}
-		\item $\epsilon_0$ wird als 1 definiert. Diese Defintion wird im cgs-System umgesetzt.\
-		\\
-		\item $4\pi\cdot\epsilon_0$ wird 1 gesetzt. Das sich aus dieser Definition ergebende Einheitensystem nennt man das \textsc{Gauss}-System.\
-	\end{enumerate}
-	\ \\
-	Im SI-System wird dagegen $\epsilon_0$ über $\mu_0$ festgelegt, wobei für $\mu_0$ gilt:
-	
-	\begin{equation*}
-	[\mu_0] = \frac{[\vec{E}]}{[I]}\frac{[l]^2}{[l]}=\frac{[\vec{f}]}{[\vec{j}]}\frac{[l]}{[I]}=\frac{[\vec{F}]}{[I]^2}=\frac{N}{A^2}
-	\end{equation*}
-	\begin{equation*}
-	\mu_0 = 4\pi\cdot 10^{-7} \frac{N}{A^2}
-	\end{equation*}
-	
-	$\epsilon_0$ erhält man nun daraus über die Fundamentalbeziehung im SI-System:
-	\begin{equation*}
-	\epsilon_0\mu_0 = \frac{1}{c^2}
-	\end{equation*}
-	
-	\item
-	Die Konstante $\alpha$ erhalten wir, in dem wir von Gleichung (2) die Divergenz bilden und dann div $\vec{j}$ aus der Kontinuitätsgleichung einsetzen:
-	
-	\begin{equation*}
-	(\epsilon_0 + \alpha) \ \pdiff{}{t} \ \div \vec{E} \overset{!}{=} 0 \; \Rightarrow \; \alpha = -\epsilon_0 
-	\end{equation*}
-	
-	\item
-	Dass die Konstante $\beta$ im SI-System gleich 1 sein musss, erhält man aus Überlegungen, dass die \textsc{Maxwell}-Gleichungen von Inertialsystem zu Inertialsystem invariant sein müssen.
+\item Die Konstante $\epsilon_0$ ist zunächst frei wählbar, da die Ladung $Q$ nur bis auf einen Faktor genau bestimmt ist. Für die Wahl von $\epsilon_0$ gibt es verschiedene Ansätze:\
+\begin{enumerate}
+\item $\epsilon_0$ wird als 1 definiert. Diese Defintion wird im cgs-System umgesetzt.\
+\\
+\item $4\pi\cdot\epsilon_0$ wird 1 gesetzt. Das sich aus dieser Definition ergebende Einheitensystem nennt man das \textsc{Gauss}-System.\
+\end{enumerate}
+\ \\
+Im SI-System wird dagegen $\epsilon_0$ über $\mu_0$ festgelegt, wobei für $\mu_0$ gilt:
+
+\begin{equation*}
+[\mu_0] = \frac{[\vec{E}]}{[I]}\frac{[l]^2}{[l]}=\frac{[\vec{f}]}{[\vec{j}]}\frac{[l]}{[I]}=\frac{[\vec{F}]}{[I]^2}=\frac{N}{A^2}
+\end{equation*}
+\begin{equation*}
+\mu_0 = 4\pi\cdot 10^{-7} \frac{N}{A^2}
+\end{equation*}
+
+$\epsilon_0$ erhält man nun daraus über die Fundamentalbeziehung im SI-System:
+\begin{equation*}
+\epsilon_0\mu_0 = \frac{1}{c^2}
+\end{equation*}
+
+\item
+Die Konstante $\alpha$ erhalten wir, in dem wir von Gleichung (2) die Divergenz bilden und dann div $\vec{j}$ aus der Kontinuitätsgleichung einsetzen:
+
+\begin{equation*}
+(\epsilon_0 + \alpha) \ \pdiff{}{t} \ \div \vec{E} \overset{!}{=} 0 \; \Rightarrow \; \alpha = -\epsilon_0 
+\end{equation*}
+
+\item
+Dass die Konstante $\beta$ im SI-System gleich 1 sein musss, erhält man aus Überlegungen, dass die \textsc{Maxwell}-Gleichungen von Inertialsystem zu Inertialsystem invariant sein müssen.
 \end{enumerate}
 \ \\
 \underline{Bemerkung:}
@@ -204,16 +198,17 @@ woraus folgt:
 Die integrale Formulierung der \textsc{Maxwell}-Gleichungen ist äquivalent zu der differentiellen und ergibt sich entweder aus Volumen- oder Flächenintegration auf beiden Seiten der entsprechenden Gleichung und dann der Anwendung der Integralsätze von \textsc{Gauss} oder \textsc{Stokes}:
 \ \\
 \begin{align*}
-\text{i)} \quad & \epsilon_0 \ \div \vec{E} = \rho & \Leftrightarrow \qquad\qquad & \epsilon_0\oiint \mathrm{d}\vec{A} \cdot\vec{E} = Q_{\text{in}} \\
-\text{ii)} \quad & \div\vec{B} = 0 & \Leftrightarrow \qquad\qquad & \oiint \mathrm{d}\vec{A}\cdot\vec{B} = 0 \\
+\text{i)} \quad & \epsilon_0 \ \div \vec{E} = \rho & \Leftrightarrow \qquad\qquad & \epsilon_0\oiint\limits_{\partial V} \mathrm{d}\vec{A} \cdot\vec{E} = Q_{\text{in}} \\
+\text{ii)} \quad & \div\vec{B} = 0 & \Leftrightarrow \qquad\qquad & \oiint\limits_{\partial V} \mathrm{d}\vec{A}\cdot\vec{B} = 0 \\
 \text{iii)} \quad & \rot \vec{E} + \dot{\vec{B}} = 0 & \Leftrightarrow \qquad\qquad & \oint\limits_{\partial A} \mathrm{d}\vec{r}\cdot\vec{E} \ + \ \iint\limits_A \mathrm{d}\vec{A}\cdot\dot{\vec{B}} = 0 \\
 \text{iv)} \quad & \frac{1}{\mu_0} \ \rot \vec{B} - \epsilon_0 \dot{\vec{E}} = \vec{j} & \Leftrightarrow \qquad\qquad & \frac{1}{\mu_0}\oint\limits_{\partial A}\mathrm{d}\vec{r}\cdot\vec{B} \ - \ \epsilon_0\iint\limits_A\mathrm{d}\vec{A}\cdot\dot{\vec{E}} = I_{\text{in}}
 \end{align*}
-\newpage
+
 \underline{Bemerkung:}\\
 
 $\vec{r}$ und $t$ sind unabhängige Variablen, das heißt, dass die Felder $\vec{B}$ und $\vec{E}$ jeweils von $\vec{r}$ und $t$ abhängen, nicht aber von $\dot{\vec{r}}$.
 Zudem ist es aufgrund unserer Forderungen bei der Konstruktion der \textsc{Maxwell}-Gleichungen verboten, dass eine explizite Abhängigkeit der Grundgleichungen von $\vec{r}$ und $t$ vorliegt, da es sonst außergewöhnliche Zeiten und Orte gäbe, was aber die geforderte Homogenität verletzen würde.
+
 \section{Induktionsgesetz für Leiterschleifen}
 
 \begin{wrapfigure}[]{l}[0cm]{0cm}
@@ -249,10 +244,11 @@ Man sieht leicht, dass sich der Fluss $\Phi$ bei Flächenänderung und Änderung
 \Rightarrow \dot{\Phi} &= \iint\limits_A\mathrm{d}\vec{A}\cdot\dot{\vec{B}} \; - \; \oint\limits_{\partial A}\mathrm{d}\vec{r} \ \left(\vec{v}\times\vec{B}\right)
 \end{align*}
 
-Nach Anwenden der dritten \textsc{Maxwell}-Gleichung erhält man das
-\begin{equation*}\textbf{Induktionsgesetz}\qquad
-U_\text{ind} =  \oint\limits_{\partial A}\mathrm{d}\vec{r} \ \left(\vec{E} + \vec{v}\times\vec{B}\right) = - \dot{\Phi}
-\end{equation*}
+Nach Anwenden der dritten \textsc{Maxwell}-Gleichung erhält man das \textbf{Induktionsgesetz}:
+
+\begin{empheq}[box=\highlightbox]{equation*}
+\dot{\Phi} = - \oint\limits_{\partial A}^{\vphantom{a}}\mathrm{d}\vec{r} \ \left(\vec{E} + \vec{v}\times\vec{B}\right) = - U_{\mathrm{induziert}}
+\end{empheq}
 
 Das letzte Minuszeichen nennt man auch die \textbf{\textsc{Lenz}`sche Regel}, welche besagt, dass ein induzierter Strom immer ein Magnetfeld erzeugt, welches seiner eigenen Ursache ($U_{\mathrm{induziert}}$) entgegengerichtet ist.
 \ \\
