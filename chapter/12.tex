@@ -40,14 +40,14 @@ Abstände zwischen zwei Punkten (Ereignissen) werden nach
 \mathrm{d}s^2 = c^2\mathrm{d}t^2 -\mathrm{d}x^2 - \mathrm{d}y^2 - \mathrm{d}z^2 
 \end{equation*}
 definiert. Das lässt sich alternativ auch unter Verwendung des metrischen Tensors $g_{\mu\nu}$ ausdrücken.
-\begin{equation*}
+\begin{empheq}[box=\highlightbox]{equation*}
 \mathrm{d}s^2 = g_{\mu\nu}\mathrm{d}x^\mu\mathrm{d}x^\nu \qquad \text{mit}\ g_{\mu\nu}=\begin{pmatrix}
 1 & 0& 0 & 0 \\
 0 &-1& 0 & 0\\
 0 & 0 & -1 & 0 \\
 0 & 0 & 0 & -1 \\
 \end{pmatrix}
-\end{equation*}
+\end{empheq}
 \emph{Bemerkung: Hier wird die \textsc{Einstein}sche Summenkonvention verwendet. Über Indizes, die einmal oben und einmal unten auftauchen, wird summiert!}\\
 
 Für die Lichtausbreitung gilt $\mathrm{d}s=0$ in allen Intertialsystemen. \\
@@ -106,11 +106,11 @@ Ein Koeffizientenvergleich liefert
 a&=\frac{1}{\sqrt{1-\frac{v^2}{c^2}}} & w&=-\frac{v}{c^2}.
 \end{align*}
 Wir kürzen $(1-\frac{v^2}{c^2})^{\frac{1}{2}}$ mit $\gamma$ ab und erhalten die spezielle (nicht kommutative) \textsc{Lorentz}-Transformation
-\begin{align*}
+\begin{empheq}[box=\highlightbox]{align*}
 x'&=\gamma(x-vt) & x &=\gamma(x'+vt')\\
 t'&=\gamma\left(t-\frac{v}{c^2}x\right) & t &=\gamma\left(t'+\frac{v}{c^2}x'\right)\\
 y &=y'   & z' &=z
-\end{align*}
+\end{empheq}
 
 Eine Folgerung der \textsc{Lorentz}-Transformation ist die \textbf{Längenkontraktion}:\\
 Ist ein Objekt in $k'$ in Ruhe und habe dort die Länge $l_0$. In $k$ hat es jedoch die Länge
@@ -205,9 +205,9 @@ Diese Schreibweisen verdeutlichen, dass sowohl die Viererdivergenz, also auch de
 \begin{align*}
 \partial_\alpha A^\alpha &= \partial^\alpha A_\alpha =\pdiff{A^0}{x^0}+\div\vec{A}\\
 \partial_\alpha\partial^\alpha&=\partial^\alpha\partial_\alpha = \left(\pdiff{}{x^0}\right)^2-\nabla^2
-\end{align*}
+\end{align*}\\
 
-\text{Matrixschreibweise der \textsc{Lorentz}-Transformation}\\
+\textbf{Matrixschreibweise der \textsc{Lorentz}-Transformation}\\
 
 Wie bereits erwähnt beschreibt eine solche Transformation nichts anderes als eine Drehung im \textsc{Minkowski}-Raum. Sie lässt sich also bei gegebener Relativgeschwindigkeit eindeutig als Matrix ausdrücken.
 \begin{equation*}
@@ -267,10 +267,10 @@ p^\mu =\left(\frac{E}{c},\vec{p}\right)\qquad\text{mit}\quad p^\mu p_\mu = \left
 \end{equation*}
 
 Nun folgt aus der letzten Beziehung schließlich die \textbf{relativistische Energie-Impulsbeziehung}
-\begin{align*}
+\begin{empheq}[box=\highlightbox]{align*}
 E^2 &= \left(m_0c^2\right)^2 + \left(p c\right)^2\\
 E &= \sqrt{m_0^2c^4 + p^2c^2}.
-\end{align*}
+\end{empheq}
 Im Grenzfall $v\ll c$ wird die Energie zu
 \begin{equation*}
 E = m_0c^2\sqrt{1+\frac{p^2}{m_0^2c^2}} \cong m_0c^2 + \frac{p^2}{2m_0}.
@@ -290,9 +290,9 @@ Aus der dreidimensionalen Formulierung kennen wir die fundamentale Kontinuitäts
 j^\mu  = (\rho c, \vec{j})
 \end{equation*}
 und der Viererdivergenz ganz einfach zu
-\begin{equation*}
-\partial_\mu j^\mu = \dot{\rho}+\div\vec{j}= 0 .
-\end{equation*}
+\begin{empheq}[box=\highlightbox]{equation*}
+\partial_\mu j^\mu = \dot{\rho}+\div\vec{j}= 0 \vphantom{\bigg|}.
+\end{empheq}
 Am Beispiel eines Konvektionsstroms $\vec{j}=\rho\vec{v}$ sieht man leicht
 \begin{equation*}
 j^\mu = \rho(c,\vec{v}) = \frac{\rho}{\gamma} \cdot\gamma(c,\vec{v}) = \rho_0 u^\mu,
@@ -303,7 +303,7 @@ Aus \textsc{Lorentz}-Kraft wird mit der kovarianten Vierergeschwindigkeit $u_\nu
 F^\mu =\gamma\left(\frac{\vec{v}\vec{F}}{c},\vec{F}\right)= QF^{\mu\nu}u_\nu
 \end{equation*}
 Der Ausdruck $F^{\mu\nu}$ ist ein Konstrukt, das man den \textbf{Feldstärketensor} nennt. Seine Komponenten erhalten wir, indem wir die Felder in $F^\mu$ einsetzen und einen Koeffizientenvergleich machen.
-\begin{equation*}
+\begin{empheq}[box=\highlightbox]{equation*}
 F^{\mu\nu}=\begin{pmatrix}
 0 & -\frac{E_1}{c} & -\frac{E_2}{c} & -\frac{E_3}{c}\\
 \frac{E_1}{c} & 0 & -B_3 & B_2\\
@@ -313,7 +313,7 @@ F^{\mu\nu}=\begin{pmatrix}
 0 & -\frac{\vec{E}^T}{c} \\
 \frac{\vec{E}}{c} & \mathbbm{1}\times\vec{B}
 \end{pmatrix}
-\end{equation*}
+\end{empheq}
 Die Schreibweise $\mathbbm{1}\times\vec{B}$ erweist sich als sehr effizient, um den Feldstärketensor in eine kompaktere Form zu bringen. Sie erfüllt
 \begin{equation*}
 (\mathbbm{1}\times\vec{B})_{kl}=\vec{e}_k(\mathbbm{1}\times\vec{B})\vec{e}_l = (\vec{e}_k\times\vec{B})\vec{e}_l = -(\vec{e}_k\times\vec{e}_l)\vec{B}
@@ -333,9 +333,9 @@ F_{\mu\nu}= \begin{pmatrix}
 
 Auf der rechten Seite erkennen wir sofort die Viererstromdichte $j^\mu$ wieder. So können wir unter Verwendung des Feldstärketensors die beiden Gleichungen in eine zusammenfassen.
 
-\begin{equation*}
-\partial_\mu F^{\mu\nu} =j^\nu
-\end{equation*}
+\begin{empheq}[box=\highlightbox]{equation*}
+\partial_\mu F^{\mu\nu} =j^\nu\vphantom{\bigg|}
+\end{empheq}
 \ \\
 
 \item \textbf{ Homogene \textsc{Maxwell}-Gleichungen}
@@ -344,9 +344,9 @@ Auf der rechten Seite erkennen wir sofort die Viererstromdichte $j^\mu$ wieder. 
 \rot\vec{E}+\dot{\vec{B}}\quad &=\quad 0
 \end{align*}
 wird analog zu
-\begin{equation*}
-\partial_\kappa F_{\lambda\mu} + \partial_\mu F_{\kappa\lambda}+\partial_\lambda F_{\mu\kappa} = 0.
-\end{equation*}
+\begin{empheq}[box=\highlightbox]{equation*}
+\partial_\kappa F_{\lambda\mu} + \partial_\mu F_{\kappa\lambda}+\partial_\lambda F_{\mu\kappa} = 0\vphantom{\bigg|}.
+\end{empheq}
 Das ist ein antisymmetrischer Tensor 3. Stufe. Wir werden gleich noch eine Möglichkeit kennen lernen, diesen Ausdruck noch zu vereinfachen. \\
 Man kann die Richtigkeit dessen schnell nachprüfen, in dem man testweise ein paar Indizes einsetzt. Zum Beispiel liefert $\kappa,\lambda,\mu=1,2,3$
 \begin{equation*}
@@ -355,14 +355,14 @@ Man kann die Richtigkeit dessen schnell nachprüfen, in dem man testweise ein pa
 und analog $\kappa,\lambda,\mu = 0,2,3$ bei zyklischem vertauschen zu $\rot\vec{E}+\dot{\vec{B}} = 0$. \\
 
 Für die zweite Möglichkeit, diese Gleichungen zu formulieren, führt man den \textbf{dualen Feldstärketensor} ein.
-\begin{equation*}
+\begin{empheq}[box=\highlightbox]{equation*}
 \mathcal{F}^{\mu\nu}=\begin{pmatrix}
 0 & -B_1 & -B_2 & -B_3 \\
 B_1 & 0 & \frac{E_3}{c} & -\frac{E_2}{c}\\
 B_2 & -\frac{E_1}{c} & 0 & \frac{E_1}{c} \\
 B_3 & \frac{E_2}{c} & -\frac{E_3}{c} & 0 
 \end{pmatrix} = \frac{1}{2}\varepsilon^{\mu\nu\gamma\delta}F_{\gamma\delta},
-\end{equation*}
+\end{empheq}
 wobei $\varepsilon^{\mu\nu\gamma\delta}$ der total antisymmetrische Permutationstensor 4. Stufe ist, gegeben durch
 \begin{equation*}
 \varepsilon^{\mu\nu\gamma\delta} = \left\lbrace \begin{array}{rl}
@@ -372,10 +372,9 @@ wobei $\varepsilon^{\mu\nu\gamma\delta}$ der total antisymmetrische Permutations
 \end{array}\right. 
 \end{equation*}
 Damit lauten die homogenen \textsc{Maxwell}-Gleichungen ganz einfach
-\begin{equation*}
-\partial_\mu \mathcal{F}^{\mu\nu}=0
-\end{equation*}
-\ \\
+\begin{empheq}[box=\highlightbox]{equation*}
+\partial_\mu \mathcal{F}^{\mu\nu}=0\vphantom{\bigg|}
+\end{empheq}
 
 \item \textbf{ Viererpotential}\\
 
@@ -389,9 +388,9 @@ F^{\mu\nu} & = \partial^\mu A^\mu - \partial^\nu A^\mu\\
 F_{\mu\nu} & = \partial_\mu A_\nu - \partial_\nu A_\mu
 \end{align*}
 Mit der \textsc{Lorenz}-Eichung $\partial_\mu A^\mu = \div\vec{A}+\frac{1}{c^2}\partial_t\varphi=0$ erfüllt repräsentiert erfüllt das Viererpotential auch die Wellengleichungen für $\varphi$ und $\vec{A}$.
-\begin{equation*}
-\Dalembert A^\mu = \mu_0j^\mu.
-\end{equation*}
+\begin{empheq}[box=\highlightbox]{equation*}
+\Dalembert A^\mu = \mu_0j^\mu\vphantom{\bigg|}.
+\end{empheq}
 \end{enumerate}
 
 \section{Transformation des elektromagnetischen Feldes}
@@ -411,11 +410,11 @@ A'^\mu &= \Omega_\kappa^\mu A^\kappa\\
 F'^{\mu\nu} &= \Omega_\kappa^\mu\Omega_\lambda^\nu F^{\kappa\lambda}
 \end{align*}
 Führen wir das durch und setzen die Felder ein, erhalten wir
-\begin{align*}
-\vec{E}'_\parallel &= \vec{E}_\parallel & \vec{B}'_\parallel &=\vec{B}_\parallel\\
+\begin{empheq}[box=\highlightbox]{align*}
+\vphantom{\big|}\vec{E}'_\parallel &= \vec{E}_\parallel & \vec{B}'_\parallel &=\vec{B}_\parallel\\
 \vec{E}'_\perp &= \gamma\left(\vec{E}_\perp + \vec{v}\times\vec{B}\right)
-& \vec{B}'_\perp &= \gamma\left(\vec{B}_\perp - \vec{v}\times\frac{\vec{E}}{c}\right).
-\end{align*}
+& \vec{B}'_\perp &= \gamma\left(\vec{B}_\perp - \vec{v}\times\frac{\vec{E}}{c}\right)
+\end{empheq}
 Im nichtrelativistischen Grenzfall erhalten wir so
 \begin{align*}
 \vec{E}' &= \vec{E} + \vec{v}\times\vec{B}\\
@@ -431,7 +430,7 @@ Unter Verwendung des Feldstärketensors sowie des dualen Feldstärketensors sehe
 \frac{1}{2}F^{\mu\nu}F_{\mu\nu}= \vec{B}^2 -\frac{\vec{E}^2}{c^2} \\
 \frac{1}{8}\mathcal{F}^{\mu\nu}\mathcal{F}^{\kappa\lambda}\varepsilon_{\mu\nu\kappa\lambda} = \frac{\vec{E}\cdot\vec{B}}{c}.
 \end{align*}
-
+\newpage
 \textbf{Potential einer gleichförmig bewegten Punktladung}\\
 
 Im Ruhesystem der Ladung ist das Potential
@@ -465,9 +464,9 @@ f^k &= j_0F^{k0} + j_l F^{kl} = j_0 F^{k0}-j_l F^{lk} = \\
 &=\rho c\frac{\vec{E}}{c} + \vec{j}(\mathbbm{1}\times\vec{B})=\rho\vec{E}+\vec{j}\times\vec{B} = \vec{f}
 \end{align*}
 Damit können wir auch die Komponenten des Vierervektors hinschreiben.
-\begin{equation*}
-j^\mu = \left(\frac{\vec{j}\vec{E}}{c},\vec{f}\right) = \left(-\frac{\nu_\textit{em}}{c},\vec{f}\right)
-\end{equation*}
+\begin{empheq}[box=\highlightbox]{equation*}
+f^\mu = \left(\frac{\vec{j}\vec{E}}{c},\vec{f}\right) = \left(-\frac{\nu_\text{em}}{c},\vec{f}\right)
+\end{empheq}
 Achtung: Das $-\nu_\textit{em}$ im letzten Ausdruck ist hier kein Index, sondern steht für die Änderung der Energiedichte (vgl. Kapitel 6).\\
 Es fällt auf, dass die Vierer-\textsc{Lorentz}-Kraftdichte keinen Faktor $\gamma$ enthält. Das liegt daran, dass hier durch ein invariantes Volumenelement dividiert wird.
 
@@ -479,16 +478,16 @@ Die aus Kap. 6 bekannten Erhaltungsgleichungen
 \dot{\vec{g}} + \div\tens{T} &= -\vec{f}
 \end{align*} 
 lassen sich nun zu
-\begin{equation*}
-\partial_\nu T^{\mu\nu}= -f^\mu
-\end{equation*}
+\begin{empheq}[box=\highlightbox]{equation*}
+\partial_\nu T^{\mu\nu}= -f^\mu\vphantom{\bigg|}
+\end{empheq}
 zusammenfassen. Diese Tensorgleichung ist gilt für alle Feldtheorien. Es müssen nur die entsprechenden Wechselwirkungen richtig zugeordnet werden. Der hier vorkommende \textbf{Energie-Impuls-Tensor} ist gegeben durch
-\begin{equation*}
+\begin{empheq}[box=\highlightbox]{equation*}
 T^{\mu\nu} = \begin{pmatrix}
 w & \vec{S}_P^T/c\\
 c\vec{g} & \tens{T}
 \end{pmatrix}.
-\end{equation*}
+\end{empheq}
 Aus der \textsc{Lorentz}-Transformation dieses Tensors folgen sofort die Transformationsvorschriften für $w$, $\vec{g}$, $\vec{S}_P$ und $\tens{T}$.\\
 Außerdem erkennt man aus dem Zusammenhang von $w$ und $\vec{S}_P$ mit den Feldern
 \begin{align*}
@@ -508,19 +507,19 @@ T^{xy}&=T^{yx}\\
 c\vec{g} & =\frac{\vec{S}_P}{c}
 \end{align*}
 In der Mechanik lässt sich ebenfalls ein Energie-Impuls-Tensor $T^{\mu\nu}_\text{m}$ formulieren. Nach Konvention erfüllt dieser die Erhaltungsgleichung 
-\begin{equation*}
-\partial_\nu T_m^{\mu\nu} = f^\mu.
-\end{equation*}
+\begin{empheq}[box=\highlightbox]{equation*}
+\partial_\nu T_\text{m}^{\mu\nu} = f^\mu\vphantom{\bigg|}.
+\end{empheq}
 Zur Erinnerung: beim elektromagnetischen Energie-Impuls-Tensor stand hinter dem Gleichheitszeichen ein $-f^\mu$. Die Vorzeichen sind so gewählt, dass die sogenannte \textbf{globale Energie-Impuls-Erhaltung} gilt.
-\begin{equation*}
-\partial_\nu\left(T_\text{m}^{\mu\nu} + T^{\mu\nu}_\text{el}\right) = 0
-\end{equation*}
+\begin{empheq}[box=\highlightbox]{equation*}
+\partial_\nu\left(T_\text{m}^{\mu\nu} + T^{\mu\nu}_\text{el}\right) = 0\vphantom{bigg|}
+\end{empheq}
 
 \section{Strahlung einer bewegten Punktladung II}
 
 In Kapitel 8.7 haben wir uns bereits mit einer Ladung $Q$ auf der Bahn $\vec{R}(t)$ beschäftigt. Die Potentiale in diesem Fall sind
 \begin{align*}
-\varphi(\vec{r},t) &= \frac{Q}{4\pi\epsilon_0} \int\mathrm{d}t'\ \frac{1}{|\vec{r}-\vec{R}(t)|}\delta\left(t'-t-\frac{|\vec{r}-\vec{R}(t)|}{c}\right)\\
+\varphi(\vec{r},t) &= \frac{Q}{4\pi\epsilon_0} \int\mathrm{d}t'\ \frac{1}{|\vec{r}-\vec{R}(t)|}\cdot\delta\left(t'-t-\frac{|\vec{r}-\vec{R}(t)|}{c}\right)\\
 &=\frac{Q}{4\pi\epsilon_0}
 \left[\frac{1}{|\vec{r}-\vec{R}|-\frac{\dot{\vec{R}}}{c}(\vec{r}-\vec{R}) }\right]_\text{ret}\\
 \vec{A}(\vec{r},t) &=\frac{\mu_0Q}{4\pi}
@@ -531,16 +530,16 @@ Um das für die folgenden Überlegungen etwas abzukürzen, führen wir die folge
 \vec{\beta}(t) &= \frac{\dot{\vec{R}}(t)}{c} & L(t)&=|\vec{r}-\vec{R}(t)|\\
 \vec{e}_L(t) &=\frac{\vec{r}-\vec{R}(t)}{L(t)} &k(t) &=1-\vec{e}_L\cdot\vec{\beta}
 \end{align*}
-Die Potentiale sind dann
-\begin{align*}
-\varphi(\vec{r},t)&=\frac{Q}{4\pi\epsilon_0}\frac{1}{L_\text{ret}k_\text{ret}}
-&\vec{A}(\vec{r},t) &= \frac{\mu_0 Q}{4\pi}\frac{\vec{\beta}_\text{ret}}{L_\text{ret}k_\text{ret}}.
-\end{align*}
-Bildet man das elektrische Feld $\vec{E}=-\grad\varphi -\dot{\vec{A}}$, so erhält man, dass das Feld aus zwei Bestandteilen 
+Die Potentiale sind dann:
+\begin{empheq}[box=\highlightbox]{align*}
+\varphi(\vec{r},t)&=\frac{Q\vphantom{\big|}}{4\pi\epsilon_0\vphantom{\big|}}\frac{1}{L_\text{ret}k_\text{ret}}
+&\vec{A}(\vec{r},t) &= \frac{\mu_0 Q}{4\pi}\frac{\vec{\beta}_\text{ret}}{L_\text{ret}k_\text{ret}}
+\end{empheq}
+Bildet man das elektrische Feld $\vec{E}=-\grad\varphi -\dot{\vec{A}}$, so erkennt man, dass das Feld aus zwei Bestandteilen besteht:
 \begin{equation*}
 \vec{E} = \vec{E}_v + \vec{E}_a
 \end{equation*}
-besteht. Dabei entspricht $\vec{E}_v$ einfach einem statischen \textsc{Coulomb}-Feld, aber in einem bewegten Bezugssystem.
+Dabei entspricht $\vec{E}_v$ einfach einem statischen \textsc{Coulomb}-Feld, allerdings in einem bewegten Bezugssystem.
 \begin{equation*}
 \vec{E}_v = \frac{Q}{4\pi\epsilon_0}\left[(1-\beta)^2\frac{\vec{e}_L-\vec{\beta}}{k^3L^2}\right]_\text{ret}
 \end{equation*}
@@ -553,7 +552,7 @@ Das magnetische Feld ist dann natürlich
 \vec{B}=\frac{1}{c}\vec{e}_\text{\textit{L},ret}\times\vec{E}.
 \end{equation*}
 \ \\
-
+\ \\
 \textbf{i)\quad Gleichförmige Bewegung}\\
 
 
@@ -582,8 +581,8 @@ und die Potentiale wie in Kapitel 13.5. Wir betrachten das Feld zum Zeitpunkt $t
 \begin{equation*}
 \vec{E}_v = \frac{Q}{4\pi\epsilon_0}\frac{\gamma\vec{r}}{(\gamma^2x^2+r_\perp^2)^\frac{3}{2}}.
 \end{equation*}
-Das ist offensichtlich trotz Punktladung nicht kugelsymmetriscch, sondern abhängig von $\gamma$ in $x$-Richtung gestaucht.\\
-
+Das ist offensichtlich trotz Punktladung nicht kugelsymmetriscch, sondern abhängig von $\gamma$ in $x$-Richtung gestaucht.
+\newpage
 \textbf{ii) \quad Energieabstrahlung}\\
 
 Da sich die beiden Felder $\vec{E}$ und $\vec{B}$ abhängig von der Beschleunigung in zwei verschiedene Anteile aufteilen, trifft das auch für die Energiestromdichte zu.
@@ -591,7 +590,7 @@ Da sich die beiden Felder $\vec{E}$ und $\vec{B}$ abhängig von der Beschleunigu
 \vec{S}_P &= \frac{\vec{E}\times\vec{B}}{\mu_0} = \frac{1}{\mu_0}(\underbrace{\vec{E}_v}_{\sim L^{-2}}+\underbrace{\vec{E}_a}_{\sim L^{-1}}) \ \times \ (\vec{B}_v+\vec{B}_a) \\
 &=\underbrace{\frac{1}{\mu_0}\vec{E}_a\times\vec{B}_a}_{\text{Abstrahlung ins Unendliche}} + \underbrace{o\left(\frac{1}{L^3},\frac{1}{L^3}\right)}_{\text{Abstrahlung ins Endliche}}.
 \end{align*}
-Der vordere Abstrahlungsterm ist der eigentlich entscheidende, da der hintere Term sehr schnell abklingen wird.
+Der vordere Abstrahlungsterm ist der Entscheidende, da der hintere Term sehr schnell abklingen wird.
 \begin{equation*}
 \vec{S}_a = \frac{1}{\mu_0}\left(\vec{E}_a+\vec{B}_a\right) = 
 \frac{1}{\mu_0c}\left[\vec{e}_\text{\textit{L}}\vec{E}_a^2\right]_{\text{ret}}
@@ -602,21 +601,20 @@ t &= t' + \frac{|\vec{r}-\vec{R}(t')|}{c} & \mathrm{d}t &= \diff{t}{t'}\mathrm{t
 \end{align*} 
 beobachtet werden. 
 \begin{equation*}
-\mathrm{d}E(t') = \diff{t}{t'}\mathrm{d}t'\vec{S}(\vec{r},t)\cdot\vec{e}_{\vec{r}-\vec{R}(t')}\mathrm{d}\Omega L^2
+\d E(t') = \diff{t}{t'}\d t'\vec{S}(\vec{r},t) \cdot\vec{e}_{\vec{r}-\vec{R}(t')}\d\Omega L^2
 \end{equation*}
 Das führt dann schließlich auf die Leistungsabstrahlung
-\begin{align*}
-\diff{P}{\Omega}&=\frac{\mathrm{d}E(t')}{\mathrm{d}t\mathrm{d}\Omega}=\frac{1}{\mu_0c}(L\vec{E})^2k = \\
-\diff{P}{\Omega}&=\frac{Q^2}{16\pi^2\epsilon_0c}\frac{1}{k^5}\left(\vec{e}_L\times\left[(\vec{e}_L-\vec{\beta})\times\dot{\vec{\beta}}\right]\right)^2_\text{ret},
-\end{align*}
+\begin{equation*}
+\diff{P}{\Omega} \ = \  \frac{\d E(t')}{\d t\d\Omega} \ = \ \frac{1}{\mu_0c}(L\vec{E})^2k \ = \ \frac{Q^2}{16\pi^2\epsilon_0c} \frac{1}{k^5}\left(\vec{e}_L\times\left[(\vec{e}_L-\vec{\beta})\times\dot{\vec{\beta}}\right]\right)^2_\text{ret},
+\end{equation*}
 die nur durch $\vec{e}_L$ und die Bahnkurve bestimmt wird. Sie ist damit unabhängig vom Beobachter, was sehr sinnvoll erscheint. \\
-
+\newpage
 \textbf{iii) \quad Nichtrelativistischer Grenzfall}\\
 
-\begin{wrapfigure}[11]{l}[0cm]{0cm}
+\begin{wrapfigure}[11]{r}[0cm]{0cm}
 	\raisebox{0pt}[\dimexpr\height-1\baselineskip\relax]{
 		\colorbox{hgrey}{
-			\begin{tikzpicture}
+			\begin{tikzpicture}[scale=.9]
 			\draw[->] (0,0)--(4,0);
 			\draw (2.7,0) node[below]{$\vec{a}$};
 			\fill (1.5,0) circle(0.1cm);
@@ -635,26 +633,9 @@ Sollte $\beta \ll 1$ und damit $k\approx 1$ sein, wird die Abstrahlung
 \begin{equation*}
 \diff{P}{\Omega}=\frac{Q^2}{16\pi^2\epsilon_0c}|\dot{\vec{\beta}}|^2\sin^2\vartheta_a\qquad\text{mit}\quad\vartheta_a=\sphericalangle\left(\vec{e}_L,\dot{\vec{\beta}}\right)
 \end{equation*}
-maximal in Richtung der Beschleunigung $\vec{a}$. Das entspricht tatsächlich einem \textsc{Hertz}'schen Dipol.\\ \linebreak\linebreak\newpage
+senkrecht zur Beschleunigung $\vec{a}$ maximal. Das entspricht tatsächlich einem \textsc{Hertz}'schen Dipol.\\[2cm]
 \textbf{iv) \quad Ultrarelativistischer Grenzfall}\\
 
-\begin{wrapfigure}[11]{r}[0cm]{0cm}
-	\raisebox{0pt}[\dimexpr\height-1\baselineskip\relax]{
-		\colorbox{hgrey}{
-			\begin{tikzpicture}
-			\draw[->] (0,0)--(4,0);
-			\draw (1,0) node[below]{$\vec{a}$};
-			\fill (1.5,0) circle(0.1cm);
-			\draw[ultra thick,->] (1.5,0)--(3.5,0) node[below right]{$\vec{S}_P$};
-			\draw[ultra thick,->] (1.5,0)--(3.2,0.3);
-			\draw[ultra thick,->] (1.5,0)--(3.2,-0.3);
-			\draw[color=hgrey] (0,2) node{a};
-			\draw[color=hgrey] (0,-2) node{a};
-			\end{tikzpicture}
-		}
-	}
-	\caption{relativistische Strahlung}
-\end{wrapfigure}
 Es wird $\beta\approx 1$ und 
 \begin{equation*}
 k=1-\dot{\vec{e}}_L\cdot\vec{\beta}\approx 1-\cos\vartheta_v\qquad\text{mit}\quad\vartheta_v=\sphericalangle\left(\vec{e}_L,\vec{\beta}\right).
@@ -664,4 +645,21 @@ Somit ist für sehr große Geschwindigkeiten die Strahlung
 \diff{P}{\Omega}&\sim \frac{1}{K^5}\left|\vec{e}_L\times\left[(\vec{e}_L - \vec{\beta})\times\dot{\vec{\beta}}\right]\right|^2\\
 & \sim \frac{1}{(1-\cos\vartheta_v)}
 \end{align*}
-parallel zur Beschleunigung $\vec{a}$.
+parallel zur Beschleunigung $\vec{a}$.\\[1cm]
+
+\begin{figure}[hb]
+	\centering
+	\colorbox{hgrey}{
+			\begin{tikzpicture}[scale=.9]
+			\draw[->] (0,0)--(4,0);
+			\draw (1,0) node[below]{$\vec{a}$};
+			\fill (1.5,0) circle(0.1cm);
+			\draw[ultra thick,->] (1.5,0)--(3.5,0) node[below right]{$\vec{S}_P$};
+			\draw[ultra thick,->] (1.5,0)--(3.2,0.3);
+			\draw[ultra thick,->] (1.5,0)--(3.2,-0.3);
+			\draw[color=hgrey] (0,2) node{a};
+			\draw[color=hgrey] (0,-2) node{a};
+			\end{tikzpicture}
+	}
+	\caption{relativistische Strahlung}
+\end{figure}

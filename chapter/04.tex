@@ -3,7 +3,7 @@
 \section{Grundgleichungen und Vektorpotential}
 
 Wenn wir stationäre Ströme betrachten, dann gilt ebenso wie in der Elektrostatik, dass die Felder zeitunabhängig sind: $\dot{\vec{E}} = 0, \dot{\vec{B}}=0$. Außerdem ist div $\vec{j} = 0$.\
-Da für das $\vec{B}$-Feld unter diesen Bedingungen gilt, dass rot $\vec{B} = \mu_0 \ \vec{j}$, ist es nicht möglich ein $\psi$ zu finden, sodass grad $\psi = \vec{B}$. Anstattdessen macht man sich die Quellenfreiheit eines Wirbelfelds zu nutze und führt ein Vektorpotential $\vec{A}(\vec{r})$ ein, sodass:
+Da für das $\vec{B}$-Feld unter diesen Bedingungen gilt, dass rot $\vec{B} = \mu_0 \ \vec{j}$, ist es nicht möglich ein $\psi$ zu finden, sodass grad $\psi = \vec{B}$. Stattdessen macht man sich die Quellenfreiheit eines Wirbelfelds zu nutze und führt ein Vektorpotential $\vec{A}(\vec{r})$ ein, sodass:
 
 \begin{equation*}
 \vec{B}(\vec{r}) = \rot \vec{A}(\vec{r})
@@ -18,15 +18,16 @@ Mit der Einführung von $\vec{A}$ folgt mit $\frac{1}{\mu_0}\ \rot \vec{B} = \ve
 
 Es bietet sich an, die Eichung div $\vec{A} = 0$ (\textsc{Coulomb}-Eichung) zu wählen, sodass folgt:
 
-\begin{equation*}
--\laplace\vec{A}=\mu_0 \ \vec{j}
-\end{equation*}
+\begin{empheq}[box=\highlightbox]{equation*}
+-\laplace\vec{A}=\vphantom{\Bigg|}\mu_0 \ \vec{j}
+\end{empheq}
 
-Eine ähnliche Gleichung haben wir mit der \textsc{Poisson}-Gleichung $-\epsilon_0 \ \laplace\varphi = \rho$ in der Elektrostatik hergeleitet und diese mit $\varphi = \frac{1}{4\pi\epsilon_0}\Int{}{}{V'}\frac{\rho(\vec{r}')}{|\vec{r}-\vec{r}'|}$ gelöst.\ \\
+Eine ähnliche Gleichung haben wir mit der \textsc{Poisson}-Gleichung $-\epsilon_0 \ \laplace\varphi = \rho$ in der Elektrostatik hergeleitet und diese mit $\varphi = \frac{1}{4\pi\epsilon_0}\Int{}{}{V'}\frac{\rho(\vec{r}')}{|\vec{r}-\vec{r}'|}$ gelöst.
+\newpage
 Analog erhalten wir auch die Lösung für $\vec{A}$:
 
 \begin{align*}
-\vec{A}(\vec{r}) &= \frac{\mu_0}{4\pi}\Int{}{}{V'} \ \frac{\vec{j}(\vec{r}')}{|\vec{r}-\vec{r}'|} \qquad \text{mit div }\vec{A} = 0 \\
+\alignedbox{\hphantom{a}\vec{A}(\vec{r})} {= \frac{\mu_0}{4\pi}\Int{}{\vphantom{a}}{V'} \ \frac{\vec{j}(\vec{r}')}{|\vec{r}-\vec{r}'|}\hphantom{a}} \qquad \text{mit div }\vec{A} = 0 \\
 \ \\
 \vec{B}(\vec{r}) &= \rot \vec{A}(\vec{r}) = \frac{\mu_0}{4\pi}\ \Int {}{}{V'} \ \frac{\vec{j}(\vec{r}')\times (\vec{r}-\vec{r}')}{|\vec{r}-\vec{r}'|^3}
 \end{align*}
@@ -60,12 +61,10 @@ Für mehrere Leiter $\mathcal{L}_n$ folgt demnach für das Vektorpotential:
 \begin{align*}
 \vec{A}(\vec{r}) &= \frac{\mu_0}{4\pi}\ \sum_n \ I_n \ \int\limits_{\mathcal{L}_n} \frac{\mathrm{d}\vec{r}'}{|\vec{r}-\vec{r}'|}\\
 \ \\
-\overset{\vec{B}= \rot\vec{A}}{\Rightarrow} \quad \vec{B}(\vec{r}) &= \frac{\mu_0}{4\pi} \ \sum_n \ I_n \int\limits_{\mathcal{L}_n} \frac{\mathrm{d}\vec{r}' \times (\vec{r}-\vec{r}')}{|\vec{r}-\vec{r}'|^3}
+\overset{\vec{B}= \rot\vec{A}}{\Rightarrow} \qquad\qquad \alignedbox{\hphantom{a}\vec{B}(\vec{r})}{= \frac{\mu_0}{4\pi} \ \sum_n \ I_n \int\limits_{\mathcal{L}_n}^{\vphantom{A}} \frac{\mathrm{d}\vec{r}' \times (\vec{r}-\vec{r}')}{|\vec{r}-\vec{r}'|^3}\hphantom{a}}
 \end{align*}
 \ \\
-Diese Gleichung zur Bestimmung des $\vec{B}$-Feldes einer beliebigen Anordnung dünner Leiter nennt man das \textbf{\textsc{Biot-Savart}-Gesetz}.\
-\\
-\ \\
+Diese Gleichung zur Bestimmung des $\vec{B}$-Feldes einer beliebigen Anordnung dünner Leiter nennt man das \textbf{\textsc{Biot-Savart}-Gesetz}.\\
 Betrachten wir nun bei mehreren geschlossenen Leiterschleifen den magnetischen Fluss auf deren Oberflächen $\mathcal{S}_m$:
 
 \begin{equation*}
@@ -75,9 +74,9 @@ Betrachten wir nun bei mehreren geschlossenen Leiterschleifen den magnetischen F
 \newpage
 Mit \textsc{Biot-Savart} ergibt sich:
 
-\begin{equation*}
-\Phi = \frac{\mu_0}{4\pi}\ \sum_n \ I_n \ \Oint{\partial\mathcal{S}_m}{}{\vec{r}}\ \cdot \ \Oint{\partial\mathcal{S}_n}{}{\vec{r}'}\frac{1}{|\vec{r}-\vec{r}'|} \ =: \ \sum_n \ L_{mn} \ I_n
-\end{equation*}
+\begin{empheq}[box=\highlightbox]{equation*}
+\Phi = \frac{\mu_0}{4\pi}\ \sum_n \ I_n \ \Oint{\partial\mathcal{S}_m}{\vphantom{A}}{\vec{r}}\ \cdot \ \Oint{\partial\mathcal{S}_n}{}{\vec{r}'}\frac{1}{|\vec{r}-\vec{r}'|} \ =: \ \sum_n \ L_{mn} \ I_n
+\end{empheq}
 
 \begin{equation*}
 \text{mit } L_{mn} = \frac{\mu_0}{4\pi} \ \Oint{\partial\mathcal{S}_m}{}{\vec{r}}\ \Oint{\partial\mathcal{S}_n}{}{\vec{r}'}\frac{1}{|\vec{r}-\vec{r}'|}
@@ -89,9 +88,9 @@ Die $L_{mn}$ sind die sogenannten \textbf{Induktionskoeffizienten}, welche ebens
 
 Für eine geschlossene Leiterschleife der Fläche $\vec{A}_F$, durch die der Ringstrom $I$ fließt, definieren wir das \textbf{magnetische Dipolmoment} $\vec{m}$ wie folgt:
 
-\begin{equation*}
-\vec{m} \ := \ I \ \cdot \ \vec{A}_F
-\end{equation*}
+\begin{empheq}[box=\highlightbox]{equation*}
+\vec{m} \ := \ I \ \cdot \ \vec{A}_F\vphantom{\Bigg|}
+\end{empheq}
 \begin{equation*}
 \text{Dipollimit: } \quad |\vec{A}_F| \ \rightarrow \ 0, \ I \ \rightarrow \ \infty \ \Rightarrow \ |\vec{m}| \ = \ \text{const.}
 \end{equation*}
@@ -114,7 +113,7 @@ Umformen ergibt:
 \Oint{}{}{\vec{r}'} (\vec{r}'\cdot\vec{a}) &= \frac{1}{2}\Bigg[\Oint{}{}{\vec{r}'}(\vec{r}'\cdot\vec{a}) \ - \oint(\mathrm{d}\vec{r}'\cdot\vec{a})\vec{r}'\Bigg] \ + \ \frac{1}{2} \Bigg[\Oint{}{}{\vec{r}'}(\vec{r}'\cdot\vec{a}) \ + \ \oint(\mathrm{d}\vec{r}'\cdot\vec{a})\vec{r}'\Bigg]\\
 &= \underbrace{\frac{1}{2}\oint(\vec{r}'\times\mathrm{d}\vec{r}')}_{\text{Fläche }A_F} \times\vec{a} \ + \ \frac{1}{2} \oint\mathrm{d}\left[\vec{r}'(\vec{r}'\cdot\vec{a})\right]\\ 
 \ \\
-& \Rightarrow \quad \vec{A}(\vec{r}) = \frac{\mu_0 I }{4\pi} \; \vec{A}_F\times\frac{\vec{r}}{r^3} = \frac{\mu_0}{4\pi} \cdot \frac{\vec{m}\times\vec{r}}{r^3}
+\Rightarrow \qquad\qquad \alignedbox{\phantom{a}\vec{A}(\vec{r})} {= \frac{\mu_0 I \vphantom{\big|}}{4\pi\vphantom{\big|}} \; \vec{A}_F\times\frac{\vec{r}}{r^3} = \frac{\mu_0}{4\pi} \cdot \frac{\vec{m}\times\vec{r}}{r^3}\hphantom{a}}
 \end{align*}
 \ \\
 (zum Vergleich das Potential eines Elektrischen Dipols: $\varphi(\vec{r}) = \frac{1}{4\pi\epsilon_0} \cdot \frac{\vec{p}\cdot\vec{r}}{r^3}$)

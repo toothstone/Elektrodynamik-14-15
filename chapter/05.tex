@@ -22,9 +22,9 @@ Daraus folgt zunächst für die \textsc{Maxwell}-Gleichungen:
 \end{align*}
 
 \begin{align*}
-\Rightarrow & \qquad \rot\dot{\vec{B}} = \epsilon_0\mu_0\ddot{\vec{E}} = -\rot\rot\vec{E} = -\nabla\underbrace{(\nabla\cdot\vec{E})}_{\div\vec{E}=0} \ + \ \nabla^2 \vec{E}\\
+\Rightarrow\qquad & \rot\dot{\vec{B}} = \epsilon_0\mu_0\ddot{\vec{E}} = -\rot\rot\vec{E} = -\nabla\underbrace{(\nabla\cdot\vec{E})}_{\div\vec{E}=0} \ + \ \nabla^2 \vec{E}\\
 \ \\
-\overset{\epsilon_0\mu_0 = \frac{1}{c^2}}{\Rightarrow} &\quad \left(\frac{1}{c^2} \ \pddiff{}{t} \ - \ \laplace\right)\vec{E} =: \Dalembert\vec{E} = 0
+\overset{\epsilon_0\mu_0 = \frac{1}{c^2}}{\Rightarrow} \quad \alignedbox{}{\hphantom{a}\left(\frac{1}{c^2} \ \pddiff{}{t} \ - \ \laplace\right)\vec{E} \ =: \ \Dalembert\vec{E} \ = \ 0\hphantom{a}}
 \end{align*}
 
 Die erhaltene partielle Differentialgleichung ist die sogenannte \textbf{Wellengleichung}, welche sich auch analog für das $\vec{B}$-Feld herleiten lässt. Das Symbol $\Dalembert$ wird auch als \textbf{Wellen-} oder \textbf{\textsc{D'Alembert}-Operator} bezeichnet.
@@ -81,7 +81,7 @@ U(\vec{r},t) \ = \ \operatorname{Re} \left(\int\mathrm{d}^3 k \; U(\vec{k}) \ e^
 \end{equation*}
 
 mit $\omega = \omega(\vec{k}) = |\vec{k}| \cdot c$\\
-Man hat somit wieder zwei freie Funktionen $\operatorname{Re}(U(\vec{k})),\; \operatorname{Im}(U(\vec{k}))$ für zwei reelle Anfangsbedingungen $U(\vec{r},t=0), \partial_t U(\vec{r},t=0)$
+Man hat somit wieder zwei freie Funktionen $\operatorname{Re}(U(\vec{k})),\; \operatorname{Im}(U(\vec{k}))$ für zwei reelle Anfangsbedingungen $U(\vec{r},t=0),\ \partial_t U(\vec{r},t=0)$
 
 \end{enumerate}
 
@@ -120,15 +120,15 @@ Betrachte die spezielle Lösung $\vec{E}_0 \cdot e^{i(\vec{k}\vec{r} - \omega t)
 \underline{$\div\vec{E} = 0$:}
 
 \begin{equation*}
-\div \vec{E} = i\vec{k}\cdot\vec{E}_0 \cdot e^{i(\vec{k}\vec{r} - \omega t)} \overset{!}{=} 0 \quad \Rightarrow \quad \vec{k}\perp\vec{E}
+\div \vec{E} = i\vec{k}\cdot\vec{E}_0 \cdot e^{i(\vec{k}\vec{r} - \omega t)} \overset{!}{=} 0 \quad \Rightarrow \quad \text{\colorbox{bblue}{$\hspace{.5em}\vec{k}\perp\vec{E}\hspace{.5em}$\vphantom{\big|}}}
 \end{equation*}
 \ \\
 
 \underline{$\rot\vec{E} = - \dot{\vec{B}}$}
 
 \begin{align*}
-\rot\vec{E} = i\vec{k}\times\vec{E} \overset{!}{=} i \omega\vec{B} \quad &\Rightarrow \quad \vec{e}_k\times\vec{E} = \frac{\omega}{k}\vec{B}\\
-\Rightarrow\quad\vec{e}_k\times\vec{E} = c \cdot\vec{B} \quad &\Rightarrow \quad \vec{B} \perp \vec{k}
+\rot\vec{E} = i\vec{k}\times\vec{E} \overset{!}{=} i \omega\vec{B} \quad \Rightarrow \quad &\vec{e}_k\times\vec{E} = \frac{\omega}{k}\vec{B}\\
+\Rightarrow\quad\vec{e}_k\times\vec{E} = c \cdot\vec{B} \quad\Rightarrow \quad \alignedbox{}{\hspace{.5em}\vec{B} \perp \vec{k}\hspace{.5em}\vphantom{\big|}}
 \end{align*}
 
 Daraus folgt, dass elektromagnetische Wellen transversal sind.\

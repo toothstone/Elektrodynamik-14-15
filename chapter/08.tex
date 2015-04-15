@@ -16,10 +16,10 @@ Die Gleichung $\rot\vec{E} \ + \ \dot{\vec{B}} = 0 \; \Rightarrow \; \rot (\vec{
 \ \\
 Somit können alle Felder durch das \textbf{Viererpotential} $(\varphi,\vec{A})$ ausgedrückt werden, sodass im Endeffekt immer 4 skalare Felder bestimmt werden müssen:
 
-\begin{align*}
-\vec{B} \ &= \ \rot \vec{A}\\
+\begin{empheq}[box=\highlightbox]{align*}
+\vec{B} \ &= \ \rot \vec{A}\vphantom{\big|}\\
 \vec{E} \ &= \ - \grad \varphi - \dot{\vec{A}}
-\end{align*}
+\end{empheq}
 
 \newpage
 Das Einsetzen in die \textsc{Maxwell}-Gleichungen und Ausnutzung des \textsc{d'Alembert}-Operators  $\Dalembert  =  \frac{1}{c^2}\pddiff{}{t} - \laplace$ liefert:
@@ -133,11 +133,11 @@ u(\vec{r},t) \ = \ \underbrace{u_0(\vec{r},t)}_{\text{homogene Lsg.}} \ + \ \fra
 Diese Lösung können wir nun auf unsere DGLn zur Bestimmung des Viererpotentials $\Dalembert\varphi = \frac{\rho}{\epsilon_0}$ und $\Dalembert\vec{A}= \mu_0\vec{j}$ anwenden:\\
 Für eine räumlich begrenzte Quellenverteilung und der Randbedingung, dass die Felder im Unendlichen gegen Null gehen, erhalten wir, wenn wir als homogene Lösungen $\varphi_0=0$ und $\vec{A}_0=0$ setzen, folgende allgemeine Lösung der \textsc{Maxwell}-Gleichungen:
 
-\begin{align*}
-\varphi(\vec{r},t)  \ &= \ \frac{1}{4\pi\epsilon_0} \ \Int{}{}{V'} \ \frac{\rho\left(\vec{r'}, t \ - \ \frac{|\vec{r}-\vec{r}'|}{c}\right)}{|\vec{r}-\vec{r}'|}\\
+\begin{empheq}[box=\highlightbox]{align*}
+\varphi(\vec{r},t)  \ &= \ \frac{1}{4\pi\epsilon_0} \ \Int{}{\vphantom{\big|}}{V'} \ \frac{\rho\left(\vec{r'}, t \ - \ \frac{|\vec{r}-\vec{r}'|}{c}\right)}{|\vec{r}-\vec{r}'|}\\
 \ \\
-\vec{A}(\vec{r},t)  \ &= \ \ \frac{\mu_0}{4\pi} \ \ \Int{}{}{V'} \ \frac{\vec{j}\left(\vec{r}',t \ - \ \frac{|\vec{r}-\vec{r}'|}{c}\right)}{|\vec{r}-\vec{r}'|} 
-\end{align*}
+\vec{A}(\vec{r},t)  \ &= \ \ \frac{\mu_0}{4\pi} \ \ \Int{\vphantom{A}}{}{V'} \ \frac{\vec{j}\left(\vec{r}',t \ - \ \frac{|\vec{r}-\vec{r}'|}{c}\right)}{|\vec{r}-\vec{r}'|} 
+\end{empheq}
 
 Die obigen Gleichungen beschreiben \textbf{retardierte Potentiale}, welche folgendermaßen interpretiert werden können:\\
 $\rho$ und $\vec{j}$ sind die Ursachen für die Wirkungen $\varphi$ und $\vec{A}$, welche allerdings eine Laufzeitverzögerung von $\frac{|\vec{r}-\vec{r}'|}{c}$ aufweisen.\\
@@ -209,10 +209,10 @@ Für den Fall der harmonischen Schwingung von $\vec{p}$ wollen wir nun die Absta
 \ \\
 \textbf{Nahfeld:} $\quad r \ll \lambda$
 
-\begin{align*}
-\vec{B}(\vec{r},t)  \ &= \ \frac{\mu_0}{4\pi\ r^2} \ \left(\dot{\vec{p}} \times \frac{\vec{r}}{r}\right)_{\text{ret}}\\
-\vec{E}(\vec{r},t)  \ &= \ \frac{1}{4\pi\epsilon_0 \ r^2} \ \left(\frac{3(\vec{p}\cdot\vec{r})\vec{r}}{r^2} \ - \ \vec{p}\right)_{\text{ret}} 
-\end{align*}
+\begin{empheq}[box=\highlightbox]{align*}
+\vec{B}(\vec{r},t)  \ &= \ \frac{\mu_0\vphantom{\big|}}{4\pi\ r^2} \ \left(\dot{\vec{p}} \times \frac{\vec{r}}{r}\right)_{\text{ret}}\\
+\vec{E}(\vec{r},t)  \ &= \ \frac{1}{4\pi\epsilon_0 \ r^2\vphantom{\big|}} \ \left(\frac{3(\vec{p}\cdot\vec{r})\vec{r}}{r^2} \ - \ \vec{p}\right)_{\text{ret}} 
+\end{empheq}
 
 Für das Nahfeld verzichtet man häufig auf die Retardierung, da sie kaum ins Gewicht fällt:
 
@@ -223,10 +223,10 @@ Für das Nahfeld verzichtet man häufig auf die Retardierung, da sie kaum ins Ge
 \ \\
 \textbf{Fernfeld:} $\quad r \gg \lambda \qquad\left(\frac{\vec{r}}{r} \ = \ \vec{e}_r\right)$
 
-\begin{align*}	
-\vec{B}(\vec{r},t)  \ &= \ \frac{\mu_0}{4\pi \ r \ c} \left(\ddot{\vec{p}}\times\vec{e}_r\right)_{\text{ret}}\\
-\vec{E}(\vec{r},t)  \ &= \ \frac{\mu_0}{4\pi \ r} \left(\left(\ddot{\vec{p}}\cdot\vec{e}_r\right)\cdot\vec{e}_r \ - \ \ddot{\vec{p}}\right)_{\text{ret}}  \ = \ \frac{\mu_0}{4\pi \ r}\left(\ddot{\vec{p}}\times\vec{e}_r\right)_{\text{ret}}\times\vec{e}_r  \ = \ c\cdot\vec{B}\times\vec{e}_r
-\end{align*}
+\begin{empheq}[box=\highlightbox]{align*}	
+\vec{B}(\vec{r},t)  \ &= \ \frac{\mu_0\vphantom{\big|}}{4\pi \ r \ c} \left(\ddot{\vec{p}}\times\vec{e}_r\right)_{\text{ret}}\\
+\vec{E}(\vec{r},t)  \ &= \ \frac{\mu_0}{4\pi \ r\vphantom{\big|}} \left(\left(\ddot{\vec{p}}\cdot\vec{e}_r\right)\cdot\vec{e}_r \ - \ \ddot{\vec{p}}\right)_{\text{ret}}  \ = \ \frac{\mu_0}{4\pi \ r}\left(\ddot{\vec{p}}\times\vec{e}_r\right)_{\text{ret}}\times\vec{e}_r  \ = \ c\cdot\vec{B}\times\vec{e}_r
+\end{empheq}
 
 Bei harmonisch schwingendem $\vec{p}$ breiten sich $\vec{E}$ und $\vec{B}$ also radial als transversale Welle aus:
 
@@ -251,7 +251,7 @@ w  \ = \ \frac{\epsilon_0}{2} \vec{E}^2  \ +  \ \frac{1}{2\mu_0} \vec{B}^2  \ = 
 
 \begin{align*}
 \vec{S}_P  \ &= \ \frac{1}{\mu_0} (\vec{E}\times\vec{B})  \ = \ \frac{c}{\mu_0} (\vec{B}\times\vec{e}_r\times\vec{B})  \ = \  \frac{c}{\mu_0}\Big(\vec{e}_r\vec{B}^2 \ - \ \vec{B}(\underbrace{\vec{n}\cdot\vec{B}}_{=0})\Big)  \ = \ c\cdot\vec{e}_r\cdot w\\
-|\vec{S}_P|  \ &= \ \frac{\mu_0}{(4\pi)^2c}\cdot \frac{\left(\ddot{\vec{p}}\times\vec{e}_r\right)^2}{r^2} \ = \ \frac{\mu_0}{(4\pi)^2c}\cdot\frac{\ddot{\vec{p}}^2\sin^2\theta}{r^2} \qquad \left(\text{mit } \theta = \sphericalangle(\ddot{\vec{p}},\vec{e}_r)\right)
+\alignedbox{\hspace{.5em}|\vec{S}_P|  \ }{= \ \frac{\mu_0}{(4\pi)^2c}\cdot \frac{\left(\ddot{\vec{p}}\times\vec{e}_r\right)^2}{r^2} \ = \ \frac{\mu_0}{(4\pi)^2c}\cdot\frac{\ddot{\vec{p}}^2\sin^2\theta}{r^2} \hspace{.5em}} \qquad \left(\text{mit } \theta = \sphericalangle(\ddot{\vec{p}},\vec{e}_r)\right)
 \end{align*}
 
 Man sieht hieran leicht, dass senkrecht zur Dipolachse $\vec{a}$ am stärksten ausgestrahlt wird (da auch $\ddot{\vec{p}}\perp \vec{a}$).
@@ -282,11 +282,11 @@ Wenn wir einen harmonisch oszillierenden Dipol betrachten, so gilt für $\ddot{\
 
 Damit gilt also für die (über eine Periode gemittelte) abgestrahlte Leistung:
 
-\begin{equation*}
-\langle N \rangle_T  \ = \  \frac{\mu_0 \ \omega^4\ \vec{p}_0^2}{12\pi \ c}
-\end{equation*}
+\begin{empheq}[box=\highlightbox]{equation*}
+\langle N \rangle_T  \ = \  \frac{\mu_0 \ \omega^4\ \vec{p}_0^2\vphantom{\big|}}{12\pi \ c\vphantom{\big|}}
+\end{empheq}
 
-\section{Strahlungsfeld einer räumlich begrenzten Quellenverteilung}
+\section[Strahlung räumlich begrenzter Quellen]{Strahlungsfeld einer räumlich begrenzten Quellenverteilung}
 
 Wir betrachten nun eine beliebige Quellenverteilung am Ort $\vec{r}'$ mit der maximalen räumlichen Ausdehnung $a$. Es gilt ganz allgemein für das Vektorpotential am Ort $\vec{r}$:
 
@@ -313,14 +313,14 @@ Das $\vec{B}$-Feld erhalten wir aus dem eben gewonnenen Ausdruck für $\vec{A}$ 
 \begin{align*}
 \pdiff{}{\vec{r}}\left[\frac{1}{r} f \left(t-\frac{r}{c},\vec{e}_r\right)\right] \ &= \ \Bigg[\underbrace{-\frac{\vec{e}_r}{c}\partial_t}_{\sigma\left(\frac{1}{\lambda}\right)} \ - \ \underbrace{\frac{\vec{e}_r}{r}}_{\sigma\left(\frac{1}{r}\right)} \ + \ \underbrace{\pdiff{}{\vec{r}}\left(\vec{e}_r\cdot\pdiff{}{\vec{e}_r}\right)}_{\sigma\left(\frac{1}{r}\right)}\Bigg ] \left(\frac{1}{r}f\right) \ \approx \ - \frac{\vec{e}_r}{c} \partial_t \left(\frac{1}{r}f\right)\\
 \ \\
-\overset{r\gg\lambda}{\Rightarrow} \qquad \vec{B}  \ &= \ -\frac{\vec{e}_r}{c}\times\dot{\vec{A}}  \ = \  \frac{\mu_0}{4\pi \ c} \cdot \frac{\ddot{\vec{q}}\times\vec{e}_r}{r}
+\overset{r\gg\lambda}{\Rightarrow} \qquad\quad \alignedbox{\hspace{.5em}\vec{B}  \ }{= \ -\frac{\vec{e}_r}{c}\times\dot{\vec{A}}  \ = \  \frac{\mu_0}{4\pi \ c} \cdot \frac{\ddot{\vec{q}}\times\vec{e}_r}{r}\hspace{.5em}}
 \end{align*}
 
 Das $\vec{E}$-Feld erhalten wir aus der inhomogenen \textsc{Maxwell}-Gleichung: $\frac{1}{\mu_0}\rot\vec{B}= \vec{j} + \epsilon_0\dot{\vec{E}}$. Unter Beachtung, dass $\vec{j}=0$ außerhalb der Quellenverteilung ist, erhalten wir zunächst für $\dot{\vec{E}}$:
 
 \begin{align*}
 \dot{\vec{E}}  \ &= \ c^2 \ \rot\vec{B} \ \approx \ - \frac{\vec{e}_r}{c}\partial_t\times c^2 \vec{B}\\
-\Rightarrow\qquad \vec{E} \ &= \ c\vec{B}\times\vec{e}_r  \ = \ \frac{\mu_0}{4\pi} \cdot \frac{\left(\ddot{\vec{q}}\times\vec{e}_r\right)\times\vec{e}_r}{r}
+\Rightarrow\qquad\quad \alignedbox{\hspace{.5em}\vec{E} \ }{= \ c\vec{B}\times\vec{e}_r  \ = \ \frac{\mu_0}{4\pi} \cdot \frac{\left(\ddot{\vec{q}}\times\vec{e}_r\right)\times\vec{e}_r}{r} \hspace{.5em}}
 \end{align*}
 
 Wir erhalten also wieder eine transversale Welle der Felder $\vec{E}$ und $\vec{B}$, welche beide mit $\frac{1}{r}$ abfallen. (Korrekturen aus höheren Termen fallen dabei schneller ab.)\\
@@ -404,11 +404,11 @@ D}}\right)_{\text{ret}}
 
 Somit folgt für die Felder einer kleinen Quelle:
 
-\begin{align*}
-\vec{B}  \ &= \ \frac{\mu_0}{4\pi \ c r} \left(\ddot{\vec{p}}\times\vec{e}_r \ + \ \frac{1}{c} \left(\ddot{\vec{m}}\times
+\begin{empheq}[box=\highlightbox]{align*}
+\vec{B}  \ &= \ \frac{\mu_0\vphantom{\big|}}{4\pi \ c r} \left(\ddot{\vec{p}}\times\vec{e}_r \ + \ \frac{1}{c} \left(\ddot{\vec{m}}\times
 \vec{e}_r\right) \times\vec{e}_r \ + \ \frac{1}{6c}\vec{e}_r\cdot\dddot{\tens{D}} \times\vec{e}_r\right)_{\text{ret}}\\
 \vec{E}  \ &= \ \frac{\mu_0}{4\pi \ c} \Bigg(\underbrace{\left(\ddot{\vec{p}}\times\vec{e}_r\right)\times\vec{e}_r}_{\text{el. Dipol}} \ - \ \underbrace{\frac{1}{c}\left(\ddot{\vec{m}}\times\vec{e}_r\right)}_{\text{mag. Dipol}} \ + \ \underbrace{\frac{1}{6c}\left(\vec{e}_r\cdot\dddot{\tens{D}}\times\vec{e}_r\right)\times\vec{e}_r}_{\text{el. Quadrupol}}\Bigg)_{\text{ret}}
-\end{align*}
+\end{empheq}
 
 \newpage
 Die Felder des magnetischen Dipols und des elektrischen Quadrupols kommen eine Ordnung später als der elektrische Dipol; sie sind also um $\frac{a}{\lambda}$ kleiner. Die Richtungsabhängigkeit der Felder (und damit auch die der Energiestromdichte) hat folgende Form:
@@ -522,11 +522,11 @@ Somit gilt für das Potential:
 
 Setzen wir nun für den Ausdruck $\vec{r}-\vec{R}$ die Abkürzung $\vec{r}''$ und für $\dot{\vec{R}}$ den Ausdruck $\vec{V}$ ein, erhalten wir die sogenannten \textbf{Liénard-Wiechert-Potentiale}:
 
-\begin{align*}
-\Rightarrow \quad \varphi(\vec{r},t)  \ &= \ \frac{Q}{4\pi\epsilon_0} \ \left[\frac{1}{|\vec{r}-\vec{R}| \ - \ \frac{\dot{\vec{R}}}{c} (\vec{r}-\vec{R})}\right]_{\text{ret}}  \ = \ \frac{Q}{4\pi\epsilon_0} \ \left(\frac{1}{r'' \ - \ \frac{ \vec{V}\cdot \vec{r}''}{c}}\right)_{\text{ret}}\\
+\begin{empheq}[box=\highlightbox]{align*}
+\varphi(\vec{r},t)  \ &= \ \frac{Q^{\vphantom{\big|}}}{4\pi\epsilon_0} \ \left[\frac{1}{|\vec{r}-\vec{R}| \ - \ \frac{\dot{\vec{R}}}{c} (\vec{r}-\vec{R})}\right]_{\text{ret}}  \ = \ \frac{Q}{4\pi\epsilon_0} \ \left(\frac{1}{r'' \ - \ \frac{ \vec{V}\cdot \vec{r}''}{c}}\right)_{\text{ret}}\\
 \ \\
 \vec{A}(\vec{r},t) \ &= \ \frac{\mu_0 \ Q}{4\pi} \ \left[\frac{\dot{\vec{R}}}{|\vec{r}-\vec{R}| \ - \ \frac{\dot{\vec{R}}}{c}(\vec{r}-\vec{R})}\right]_{\text{ret}}  \ = \  \frac{\mu_0 \ Q}{4\pi} \ \left(\frac{\vec{V}}{r'' \ - \ \frac{\vec{V}\cdot\vec{r}''}{c}}\right)_{\text{ret}} 
-\end{align*}	
+\end{empheq}	
 
 \newpage
 \section{Strahlungsbremsung}
@@ -557,8 +557,8 @@ Für $\dot{\vec{v}}\neq 0$ verliert das Teilchen also Bewegungsenergie in Form v
 
 Der Randterm verschwindet dabei für oszillierende Bewegungen, sodass man die Bremskraft $\vec{F}_S$ explizit ausrechnen kann mit:
 
-\begin{equation*}
-\vec{F}_S \ = \ \alpha \ddot{\vec{v}}  \ = \ \frac{Q^2}{6\pi\epsilon_0 \ c^3} \dddot{\vec{R}}
-\end{equation*}
+\begin{empheq}[box=\highlightbox]{equation*}
+\vec{F}_S \ = \ \alpha \ddot{\vec{v}}  \ = \ \frac{Q^2\vphantom{\big|}}{6\pi\epsilon_0 \ c^3\vphantom{\big|}} \dddot{\vec{R}}
+\end{empheq}
 
 Diese Formel ist allerdings nur anwendbar, wenn $\vec{F}_S$ eine kleine Korrektur ist.

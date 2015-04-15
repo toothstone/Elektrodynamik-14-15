@@ -16,7 +16,7 @@ Das führt auf die \textsc{Euler-Lagrange}-Gleichung
 Diese führt auf dasselbe Ergebnis, wie die \textsc{Newton}'schen Bewegungsgleichungen. Tatsächlich ist das Prinzip der kleinsten Wirkung aber noch viel allgemeiner und lässt sich nutzen, um die meisten Feldtheorien, wie etwa die Quantenfeldtheorie oder eben auch die Elektrodynamik abzuleiten. \\
 Deshalb werden wir nun probieren, alles zu vergessen, was wir in den  Kapiteln 2 bis 4 gelernt haben und den Versuch unternehmen auf Basis des \textsc{Lagrange}-Formalismus ein möglichst einfaches, relativistisches Funktional zu finden, aus dem sich die \textsc{Maxwell}-Gleichungen automatisch ergeben werden.
 
-\section[\textsc{Lagrange}:relativistische Mechanik]{\textsc{Lagrange}-Formalismus der relativistischen Mechanik}
+\section[\textsc{Lagrange}: relativistische Mechanik]{\textsc{Lagrange}-Formalismus der relativistischen Mechanik}
 
 Wir haben im vorangegangen Kapitel gesehen, dass sich der differenzielle Viererabstand $\mathrm{d}s$ beim Wechsel des Bezugsystems nicht ändert und das dies äquivalent zur Konstanz der Lichtgeschwindigkeit ist. Die Tatsache, dass sich Wirkungen in jedem Inertialsystem gleich schnell ausbreiten, deutet darauf hin, dass die Wirkung $\mathcal{S}$ selbst invariant, also ein \textsc{Lorentz}-Skalar sein muss.
 \begin{equation*}
@@ -44,9 +44,9 @@ Natürlich kann ein Wechselwirkungsterm $L_\text{W}$ beliebig von Ort und Geschw
 L = L_0\left(u^\mu \right) + L_\text{W}\left(u^\mu,x^\mu\right)
 \end{equation*}
 ergibt sich dann
-\begin{align*}
-m_0 \ddiff{}{\tau} x_\mu = \diff{}{t}\pdiff{L_\text{W}}{u^\mu}-\pdiff{L_\text{W}}{x^\mu},
-\end{align*}
+\begin{empheq}[box=\highlightbox]{align*}
+m_0 \ddiff{\vphantom{\big|}}{\tau\vphantom{\big|}} x_\mu = \diff{}{t}\pdiff{L_\text{W}}{u^\mu}-\pdiff{L_\text{W}}{x^\mu},
+\end{empheq}
 wobei die rechte Seite genau die ausgeübte Kraft auf das Teilchen ist.
 \end{enumerate}
 
@@ -57,22 +57,30 @@ Die Wechselwirkung kann natürlich auch für geladene Teilchen sehr wohl von Ort
 L_\text{W} = -Q u_\mu V^\mu\left(x(\tau)\right).
 \end{equation*}
 Dabei soll $V^\mu$ eine vorerst beliebige Funktion sein, die vom Ort abhängig sein kann. Die \textsc{Euler-Lagrange}-Gleichungen liefern 
+
 \begin{align*}
 m\diff{u^\mu}{\tau} &= Q u_\mu\pdiff{V^\mu}{x_\nu}-Q\pdiff{V^\nu}{x_\mu}\diff{x_\mu}{\tau} = \\
 & = Q\left(\partial^\nu V^\mu - \partial^\mu V^\nu \right)u_\mu.
 \end{align*}
+
 Dieser letzte Ausdruck erinnert sehr stark an den elektromagnetischen Feldstärketensor
+
 \begin{equation*}
 F^{\nu\mu}=\partial^\nu A^\mu - \partial^\mu A^\nu
 \end{equation*}
+
 durch das Viererpotential $A^\mu$. Das ergibt durchaus Sinn, denn ein geladenes Teilchen erfährt schließlich in erster Linie die \textsc{Lorentz}-Kraft
+
 \begin{equation*}
 m\diff{u^\mu}{\tau} = QF^{\nu\mu}u_\mu.
 \end{equation*}
+
 Es erscheint also angemessen die Zuordnung $V^\mu\rightarrow A^\mu$ zu treffen. Damit haben wir nun die \textsc{Lagrange}-Funktion eines geladenen Teilchens mit Wechselwirkungsterm gefunden.
-\begin{equation*}
-L = -m_0c\sqrt{u^\mu u_\mu} - Qu_\mu A^\mu
-\end{equation*}
+
+\begin{empheq}[box=\highlightbox]{equation*}
+L = -m_0c\sqrt{u^\mu u_\mu} - Qu_\mu A^\mu\vphantom{\bigg|}
+\end{empheq}
+
 Man erkennt daran, das die primären Größen der elektromagnetischen Wechselwirkung nicht die Felder $\vec{E}$ und $\vec{B}$ sind, sondern tatsächlich das Viererpotential $A^\mu$. 
 \newpage
 
@@ -90,9 +98,9 @@ Dabei ist $\mathcal{L}$ die sogenannte \textsc{Lagrange}-Dichte, eine lokale Fun
 &= \int\mathrm{d}^4 x\ \left[\pdiff{\mathcal{L}}{\phi_\mu}\delta\phi_\mu -\left(\partial_\nu\pdiff{\mathcal{L}}{(\partial_\nu\phi_\mu)}\right)\delta\phi_\mu\right] \quad+ \quad\text{Randterme}
 \end{align*}
 Für einen stationären Punkt der Wirkung, also nach dem Prinzip der kleinsten Wirkung, muss der Ausdruck im Integral verschwinden. So erhalten wir die \textsc{Euler-Lagrange}-Gleichung für Felder
-\begin{equation*}
-\partial_\nu\pdiff{\mathcal{L}}{(\partial_\nu\phi_\mu)} - \pdiff{\mathcal{L}}{\phi_\mu}= 0.
-\end{equation*}  
+\begin{empheq}[box=\highlightbox]{equation*}
+\partial_\nu\pdiff{\mathcal{L}\vphantom{\big|}}{(\partial_\nu\phi_\mu)\vphantom{\big|}} - \pdiff{\mathcal{L}}{\phi_\mu}= 0.
+\end{empheq}  
 
 \section[\textsc{Lagrange}: elektromagnetisches Feld]{\textsc{Lagrange}-Formalismus des elektromagnetischen Feldes}
 
@@ -102,11 +110,11 @@ Wir suchen nun nach einer \textsc{Lagrange}-Dichte für das elektromagnetische F
 \end{equation*}
 Dem Wechselwirkungsterm $L_\text{W}$ können wir natürlich auch ganz leicht durch den Übergang $Qu_\mu\rightarrow j_\mu$ eine \textsc{Lagrange}-Dichte zuordnen. So fassen wir diese zur \textsc{Maxwell-Lagrange}-Dichte zusammen:
 \begin{equation*}
-\mathcal{L}_\textsc{Maxwell} = -\frac{1}{\mu_0}F^{\mu\nu}F_{\mu\nu} - j_\mu A^\mu
+\mathcal{L}_\textsc{Maxwell} = \mathcal{L}_\text{em} + \mathcal{L}_\text{W} =  -\frac{1}{\mu_0}F^{\mu\nu}F_{\mu\nu} - j_\mu A^\mu
 \end{equation*}  
 Setzen wir das in die \textsc{Euler-Lagrange}-Gleichung für Felder ein, so erhalten wir
 \begin{align*}
-\partial_\nu\pdiff{\mathcal{L}_\text{e.m.}}{(\partial_\nu\phi_\mu)} + \underbrace{\partial_\nu\pdiff{\mathcal{L}_\text{W}}{(\partial_\nu\phi_\mu)}}_{=0} &= \underbrace{\pdiff{\mathcal{L}_\text{e.m.}}{A_\mu}}_{=0} + \pdiff{\mathcal{L}_\text{W}}{A_\mu}\\
+\partial_\nu\pdiff{\mathcal{L}_\text{em}}{(\partial_\nu\phi_\mu)} + \underbrace{\partial_\nu\pdiff{\mathcal{L}_\text{W}}{(\partial_\nu\phi_\mu)}}_{=0} &= \underbrace{\pdiff{\mathcal{L}_\text{em}}{A_\mu}}_{=0} + \pdiff{\mathcal{L}_\text{W}}{A_\mu}\\
 \frac{1}{\mu_0}\partial_\nu F^{\mu\nu} &= -j^\nu.
 \end{align*}
 Das sind gerade die inhomogenen \textsc{Maxwell}-Gleichungen in kovarianter Form. 

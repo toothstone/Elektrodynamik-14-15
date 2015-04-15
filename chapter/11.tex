@@ -14,7 +14,7 @@ Die \textsc{Maxwell}-Gleichungen liefern uns zusätzlich:
 \frac{1}{\mu_0}\rot\vec{B}  \ &= \  \vec{j}_0 \ + \ \dot{\vec{D}}  \ = \ \sigma\vec{E} \ + \ \epsilon\vec{E} \qquad\Big| \ \partial_t\\
 \frac{1}{\mu_0}\rot\dot{\vec{B}} \ &= \ \sigma\dot{\vec{E}} \ + \ \epsilon\ddot{\vec{E}}\\
 \ \\
-&\left(\rot\vec{E} \ = \ -\dot{\vec{B}}, \quad \epsilon\div\vec{E} \ = \ \rho_0  \ = \ 0\right)\\
+&\left(\rot\vec{E} \ = \ -\dot{\vec{B}}, \quad \epsilon \ \div\vec{E} \ = \ \rho_0  \ = \ 0\right)\\
 \ \\
 -\frac{1}{\mu_0} \rot\rot \vec{E}  \ &= \ - \frac{1}{\mu}\Big(\grad\underbrace{\div\vec{E}}_{=0} \ + \ \laplace\vec{E}\Big)  \ = \ \sigma\dot{\vec{E}} \ + \ \epsilon\ddot{\vec{E}}\\
 \ \\
@@ -120,11 +120,10 @@ m \ \ddot{\vec{r}} \ + \ \pdiff{V(\vec{r})}{\vec{r}} \ = \ -e \ \vec{E}_{\text{l
 \end{wrapfigure}
 
 Für kleine Auslenkungen können wir das Potential, also die Bindungsenergie, harmonisch nähern:
-
 \begin{align*}
-V(\vec{r})  \ &= \ V(0) \ + \ \frac{m\omega_0^2}{2}\vec{r}^2 \ + \ \ldots\\
+V(\vec{r})  \ = \ V(0) \ + \ \frac{m\omega_0^2}{2}\vec{r}^2 \ + \ \ldots\\
 \ \\
-\Rightarrow \qquad m \left(\ddot{\vec{r}} \ + \ \omega_0^2\vec{r}\right)  \ &= \ - e \ \vec{E}_{\text{lok}}
+\Rightarrow \qquad m \left(\ddot{\vec{r}} \ + \ \omega_0^2\vec{r}\right)  \ = \ - e \ \vec{E}_{\text{lok}}
 \end{align*}
 
 Da das elektrische Feld $\vec{E}_{\text{lok}}$ durch die elektromagnetische Welle hervorgerufen wird und somit mit $\vec{E}_{\text{lok}} = \vec{E}_0 e^{-i\omega t}$ oszilliert, erhalten wir für $\vec{r}$ eine erzwungene Schwingung mit der Erregerfrequenz $\omega$. Daher wählen wir für $\vec{r}$ den Ansatz $\vec{r}= \vec{r}_0 e^{-i\omega t}$:
@@ -147,9 +146,9 @@ Mit dem Gesetz von \textsc{Clausius - Mosotti} aus dem Kapitel 9 folgt nun das \
 
 Stellen wir dies nun nach $n$ um erhalten wir somit die Abhängigkeit $n(\omega)$ für normale Dispersion:
 
-\begin{equation*}
-n^2 \ = \ \frac{\mathcal{N} \ e^2}{\epsilon_0 m \left(\omega_0^{,2} \ - \ \omega^2\right)} \qquad \qquad \text{mit} \qquad \omega_0^{,2} \ = \ \omega_0^2\ \left(1 \ - \ \frac{\mathcal{N} \ e^2}{3 \epsilon_0 m \omega_0^2}\right)
-\end{equation*}
+\begin{empheq}[box=\highlightbox]{equation*}
+n^2 \ = \ \frac{\mathcal{N}^{\vphantom{\big|}} \ e^2}{\epsilon_0 m \left(\omega_0^{,2} \ - \ \omega^2\right)} \qquad \qquad \text{mit} \qquad \omega_0^{,2} \ = \ \omega_0^2\ \left(1 \ - \ \frac{\mathcal{N} \ e^2}{3 \epsilon_0 m \omega_0^2}\right)
+\end{empheq}\\
 
 \begin{wrapfigure}[9]{r}[0cm]{0cm}
 	\raisebox{0pt}[\dimexpr\height-1\baselineskip\relax]{
@@ -175,11 +174,11 @@ Anschaulich repräsentiert $\omega'$ den Einfluss der Inhomogenität des Feldes.
 \omega \ < \ \omega^{,}_0:& \qquad n^2 \ > \ 1, \vec{p},\vec{E} \text{ in Phase}\\
 \omega \ = \ \omega^{,}_0:& \qquad \text{Resonanz}\\
 \omega \ > \ \omega^{,}_0:& \qquad \vec{p},\vec{E} \text{ antiphasig}\\
-\omega \rightarrow \omega^{,}_0:& \qquad n^2 \ \rightarrow \ 1, \vec{p} \ \rightarrow \ 0 \\
+\omega \ \rightarrow \ \infty:& \qquad n^2 \ \rightarrow \ 1, \vec{p} \ \rightarrow \ 0 \\
 &\qquad\text{atomare Dipole können nicht  folgen}
 \end{align*}
 
-Zudem ist für einen kleinen Bereich oberhalb von $\omega'_0$ das Quadrat der Brechzahl negativ. Da daraus $k^2 = \frac{\omega^2}{c^2} n^2 < 0$ folgt, muss gelten, dass $k=ik'$ komplex ist. Damit wird aus $e^{ikx} \rightarrow e^{-k'x}$; das Feld fällt also im inneren des Dielektrikums analog zur Totalreflexion exponentiell ab.\\
+Zudem ist für einen kleinen Bereich oberhalb von $\omega'_0$ das Quadrat der Brechzahl negativ. Da daraus $k^2 = \frac{\omega^2}{c^2} n^2 < 0$ folgt, muss gelten, dass $k=ik'$ komplex ist. Damit wird aus $e^{ikx} \rightarrow e^{-k'x}$; das Feld fällt also im Inneren des Dielektrikums analog zur Totalreflexion exponentiell ab.\\
 \ \\
 Bis hierher haben wir bei unseren Betrachtungen immer sehr ideale Bedingungen vorausgesetzt, nämlich dass die atomaren Dipole ungedämpft oszillieren. Im Realen muss diese Dämpfung allerdings mitbeachtet werden, da dem System dissipativ Energie verloren geht. Mit der Einführung einer Dämpfungskonstanten $\gamma$ erhalten wir nun folgende DGL, welche wir abermals mit dem Ansatz $\vec{r}= \vec{r}_0 e^{-i\omega t}$ lösen:
 
@@ -207,9 +206,9 @@ Weiterhin muss man bei einem realen Material bedenken, dass es nicht nur einen s
 
 Damit wird der Ausdruck für die Dispersion $\tilde{n}(\omega)$ schlussendlich zu:
 
-\begin{equation*}
+\begin{empheq}[box=\highlightbox]{equation*}
 \tilde{n}^2 \ = \ 1 \ + \ a \cdot\sum_k \ \frac{f_k}{\omega_k^2 \ - \ \omega^2 \ - \ i\gamma_k\omega}
-\end{equation*}
+\end{empheq}
 
 \section{Anomale Dispersion}
 
@@ -246,7 +245,6 @@ Die Dämpfung $\gamma$ wird dann wichtig, wenn das Produkt $\gamma\omega \ \math
 \gamma\Omega \ \mathsmaller{\mathsmaller{\gtrsim}} \ |\Omega \ - \ \omega| \cdot 2\Omega \qquad \Rightarrow \qquad \frac{\gamma}{2} \ \mathsmaller{\mathsmaller{\gtrsim}} \ |\Omega \ - \ \omega|
 \end{equation*}
 
-[hier drei Bild]
 Unter diesen Bedingungen folgt für $n(\omega)$, dass es an der Resonanzstelle bei gleichzeitig starker Dämpfung \emph{abfällt}. Dieses Verhalten wird auch als \textbf{anomale Dispersion} bezeichnet.\\
 Mathematisch können wir diesen Fall der nicht zu kleinen Dämpfung, für die $\frac{A}{\gamma\Omega}\ll \overline{n}^2$ gilt, folgendermaßen behandeln:
 
@@ -293,9 +291,9 @@ Die Dämpfungskonstante $\gamma_L = \gamma$ kann im Zusammenhang mit diesem Mode
 \ \\
 Mit diesem Wissen können wir nun für Leiter folgendes formulieren:
 
-\begin{equation*}
+\begin{empheq}[box=\highlightbox]{equation*}
 \tilde{\epsilon}_r \ = \ n_0^2 \ - \ \frac{\omega_{\text{Pl}}^2}{\omega^2 \ + \ i\gamma\omega} \qquad \text{mit}\qquad \omega_{\text{Pl}}^2  \ = \  \left(\frac{\mathcal{N}\ e^2}{\epsilon_0 \ m}\right)_L \ = \ \frac{\sigma_0\gamma}{\epsilon_0}
-\end{equation*}
+\end{empheq}
 
 $n_0$ repräsentiert dabei den Beitrag der gebundenen Elektronen im Leiter und der neu eingeführte Ausdruck $\omega_{\text{Pl}}$ ist die sogenannte \textbf{Plasmafrequenz}, welche im folgenden Kapitel näher erläutert werden soll. Typische Materialfrequenzen $\gamma\ll\omega_{\text{Pl}}\ll\omega_L$ sind z.B. für Kupfer:
 
@@ -374,7 +372,7 @@ Es handelt sich dabei also um eine Plasmaschwingung durch eine Dichtewelle der L
 			\draw [color=red] (\x,-.3) circle[radius=.2cm] node[red]{$+$};}
 		\draw [blue] (-1,.3) node {Elektronen};
 		\foreach \x in {1,2.3,3.3,4.2,5,5.8,6.7,7.7,9}{
-			\draw [color=blue] (\x,.3) circle[radius=.2cm] node[blue]{$-$};}	
+			\draw [color=blue] (\x,.3) circle[radius=.2cm] node[blue]{\_};}	
 		\draw (2,-1) node {$\rho>0$};
 		\draw (5,-1) node {$\rho<0$};
 		\draw (8,-1) node {$\rho>0$};

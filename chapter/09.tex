@@ -24,11 +24,11 @@ Wir erhalten so
 \rho_P = -\nabla\underbrace{\int\limits_0^t\mathrm{d}t'\ \vec{j}_P}_{\vec{=:P}} + \underbrace{\rho_P(0)}_{=0}.
 \end{equation*}
 Wobei wir $\vec{P}$ als \textbf{elektrische Polarisation} bezeichnen wollen.
-\begin{align*}
+\begin{empheq}[box=\highlightbox]{align*}
 \vec{P} &=\int\vec{j}_P\mathrm{d}t\\
 \rho_P &= -\div\vec{P}\\
 Q_P &=-\int\mathrm{d}V\ \nabla\vec{P}=-\oiint\mathrm{d}\vec{A}_F\cdot\vec{P}=0
-\end{align*}
+\end{empheq}
 Nun gilt aber außerdem
 \begin{equation*}
 \int\vec{j}_P\mathrm{d}V = \int\d V\dot{\vec{P}} = \dot{\vec{p}}.
@@ -43,9 +43,9 @@ Vergleicht man das mit dem Potential eines Dipols
 \varphi(\vec{r})=-\frac{1}{4\pi\epsilon_0}\cdot\vec{p}\cdot\nabla\frac{1}{r},
 \end{equation*}
 so bestätigt sich unsere Auffassung. Makroskopisch entspricht die elektrische Polarisation also:
-\begin{equation*}
-\vec{P} = \diff{\vec{p}}{V}.
-\end{equation*}
+\begin{empheq}[box=\highlightbox]{equation*}
+\vec{P} = \diff{\vec{p}}{V} \vphantom{\Big|}
+\end{empheq}
 Auf atomarer Ebene sind die Dipolmomente natürlich nicht kontinuierlich, sondern diskret verteilt. In diesem Fall muss zur Summe übergegangen werden.
 \begin{equation*}
 \vec{P} = \frac{1}{|V|}\sum\limits_{i\in V}\vec{p}_i
@@ -73,9 +73,9 @@ Die Kontinuitätsgleichung lautet
 \dot{\rho}+\div\vec{j} = \dot{\rho}_0 + \dot{\rho}_P + \div\vec{j}_0 + \div\vec{j}_P + \div\vec{j}_M = 0.
 \end{equation*}
 Da $\vec{j}_0$ und $\vec{j}_P$ jeweils separat eine Kontinuitätsgleichung erfüllen, muss $\div\vec{j}_M=0$ sein. Ein Magnetisierungsstrom hat also keine Ladungsträger. Da er divergenzfrei ist, können wir mit Einführung der Magnetisierung $\vec{M}$
-\begin{equation*}
-\vec{j}_M  = \rot\vec{M}
-\end{equation*}
+\begin{empheq}[box=\highlightbox]{equation*}
+\vec{j}_M  = \rot\vec{M}\vphantom{\big|}
+\end{empheq}
 schreiben.\\
 Das resultierende Vektorpotential ist dann
 \begin{align*}
@@ -87,9 +87,9 @@ Vergleichen wir das nun wieder mit dem magnetischen Dipolpotential
 \vec{A}(\vec{r}) = -\frac{\mu_0}{4\pi}\vec{m}\times\nabla\frac{1}{r},
 \end{equation*}
 so können wir analog zum elektrischen Fall, die Magnetisierung als \textbf{magnetische Dipoldichte} auffassen:
-\begin{equation*}
-\vec{M} = \diff{\vec{m}}{V}
-\end{equation*}
+\begin{empheq}[box=\highlightbox]{equation*}
+\vec{M} = \diff{\vec{m}\vphantom{\big|}}{V\vphantom{\big|}}
+\end{empheq}
 Daraus ergibt sich nun mit
 \begin{equation*}
 \frac{1}{\mu_0}\rot\vec{B}=\vec{j} + \epsilon_0\dot{\vec{E}} = \vec{j}_0 + \dot{\vec{P}} + \rot\vec{M} + \epsilon_0\dot{\vec{E}}
@@ -100,14 +100,14 @@ das \textbf{\textsc{Ampére}sche Gesetz für Substanzen}
 \rot\vec{H} &= \vec{j}_0 + \dot{\vec{D}}.
 \end{align*}
 Zusammengefasst erhalten wir so die makroskopischen \textsc{Maxwell}-Gleichungen
-\begin{align*}
-\div\vec{B} &=0 &\div\vec{D} &= \rho_0\\
-\rot \vec{E} + \dot{\vec{B}} &= 0 &\rot \vec{H}-\dot{\vec{D}}&=0
-\end{align*}
+\begin{empheq}[box=\highlightbox]{align*}
+\vphantom{\big|}\div\vec{B} &=0 &\div\vec{D} &= \rho_0\\
+\rot \vec{E} + \dot{\vec{B}} &= 0 &\rot \vec{H}-\dot{\vec{D}}&=\vec{j}_0
+\end{empheq}
 mit den Materialeigenschaften
-\begin{align*}
-\vec{D}&=\epsilon_0\vec{E}+\vec{P} &\vec{H} &= \frac{\vec{B}}{\mu_0} -\vec{M}.
-\end{align*}
+\begin{empheq}[box=\highlightbox]{align*}
+\vec{D}&=\epsilon_0\vec{E}+\vec{P} &\vec{H} &= \frac{\vec{B}\vphantom{\big|}}{\mu_0\vphantom{\big|}} -\vec{M}.
+\end{empheq}
 
 \section{Materialgesetze}
 
@@ -378,11 +378,10 @@ ein entelektrisierendes Feld ist. Analog gilt
 \begin{equation*}
 \vec{D}_i = \epsilon_i\vec{E}_i = 3\frac{\epsilon_i}{\epsilon_i+2\epsilon_a}\vec{D}_0.
 \end{equation*}
-Der Außenraum der Kugel sieht natürlich bis auf das homogene äußere Feld aus, wie das Feld eines Dipols mit Moment
+Der Außenraum der Kugel sieht natürlich bis auf das homogene äußere Feld aus, wie das Feld eines Dipols mit dem Moment
 \begin{equation*}
 \vec{p} = -4\pi\epsilon_0\vec{E}_0\delta a^3
 \end{equation*}
-aus. \\
 Es gibt einige Spezialfälle zu betrachten. Im Fall, dass $\epsilon_i$ unendlich groß wird, verschwindet das Feld im Inneren der Kugel. Es wird $\delta=-1$ und das Potential im Außenraum zu
 \begin{equation*}
 \varphi_a(r)=\vec{E}_0\cdot\vec{r}\left(1-\frac{a^3}{r^3}\right).
@@ -418,9 +417,9 @@ Vergleichen wir das nun mit $\vec{P}=\chi_\text{el}\epsilon_0\vec{E}$, sehen wir
 \chi_\text{el}&=\frac{\kappa}{1-\frac{\kappa}{3}} &\Rightarrow& &\epsilon_r = 1+ \chi_\text{el}=\frac{2\kappa+3}{3-\kappa}.
 \end{align*}
 Das lässt sich in die \textbf{\textsc{Clausius-Mosotti}-Formel} umstellen
-\begin{equation*}
-\frac{\epsilon_r-1}{\epsilon_r+2}=\frac{\kappa}{3},
-\end{equation*}
+\begin{empheq}[box=\highlightbox]{equation*}
+\frac{\epsilon_r-1\vphantom{\big|}}{\epsilon_r+2\vphantom{\big|}}=\frac{\kappa}{3},
+\end{empheq}
 die Gültigkeit für alle homogenen, isotropen Medien hat.
 
 \section[Wellen an Grenzflächen]{Reflexion und Brechung von Wellen an Grenzflächen}
@@ -466,9 +465,9 @@ Mit $\omega_e=\omega_r=\omega_d$ und $\omega=\frac{c}{n}k$ folgt
 k_e&=k_r &\frac{k_e}{n_1}&=\frac{k_d}{n_2}.
 \end{align*}
 So erhalten wir das \textbf{Reflexions- und Brechungsgesetz}
-\begin{align*}
-\sin\alpha_e &=\sin\alpha_r &\frac{\sin\alpha_e}{\sin\alpha_d}=\frac{n_2}{n_1}=\frac{c_1}{c_2}.
-\end{align*}
+\begin{empheq}[box=\highlightbox]{align*}
+\sin\alpha_e &=\sin\alpha_r &\frac{\sin\alpha_e}{\sin\alpha_d}&=\frac{n_2}{n_1}= \frac{c_1\vphantom{\big|}}{c_2\vphantom{\big|}}
+\end{empheq}
 Im folgenden schreiben wir $k_1$ für $k_e=k_r$, $k_2$ für $k_d$, sowie $\alpha$ für $\alpha_e=\alpha_r$ und $\beta$ für $\alpha_d$.\\
 
 Werfen wir nun eine Blick auf das Verhalten der Amplituden an der Grenzfläche. Da $E_t$ und $H_t$ stetig sei müssen (keine Ströme!), also
@@ -506,18 +505,18 @@ mit
 \nu:=\frac{k_2\mu_1}{k_1\mu_2}=\frac{n_2\mu_1}{k_1\mu_2}=\sqrt{\frac{\mu_1\epsilon1}{\mu_2\epsilon_2}}.
 \end{equation*}
 Wir erhalten damit die \textbf{\textsc{Fresnel}'schen Formeln für senkrechten Einfall}
-\begin{align*}
-a^d&=\frac{2}{1+\nu} & a^r &=\frac{1-\nu}{1+\nu}.
-\end{align*}
+\begin{empheq}[box=\highlightbox]{align*}
+a^d&=\frac{2\vphantom{\big|}}{1+\nu\vphantom{\big|}} & a^r &=\frac{1-\nu}{1+\nu}.
+\end{empheq}
 Achtung: Bei Reflexion am dichten Medium kann in $a^r$ ein Phasensprung entstehen.\\
 \newpage
 \item \textbf{ Schräger Einfall}\\
 
 Die eben gesehenen \textsc{Fresnel}-Gleichungen lassen sich für beliebige Winkel verallgemeinern (hier Rechnung). Man unterscheidet dabei, ob $\vec{E}$ senkrecht oder parallel zur Einfallsebene, die von einfallendem, reflektierten und durchgelassenem Strahl aufgespannt wird, steht.
-\begin{align*}
-a_\perp^d&=\frac{2}{1+\nu\xi} & a_\perp^r&=\frac{1-\nu\xi}{1+\nu\xi}\\
-a_\parallel^d&=\frac{2}{\xi+\nu} &a_\parallel^r &=-\frac{\xi-\nu}{\xi+\nu}
-\end{align*}
+\begin{empheq}[box=\highlightbox]{align*}
+a_\perp^d&=\frac{2\vphantom{\big|}}{1+\nu\xi} & a_\perp^r&=\frac{1-\nu\xi}{1+\nu\xi}\\
+a_\parallel^d&=\frac{2}{\xi+\nu\vphantom{\big|}} &a_\parallel^r &=-\frac{\xi-\nu}{\xi+\nu}
+\end{empheq}
 Dabei ist
 \begin{equation*}
 \xi=\frac{\cos\beta}{\cos\alpha}.
@@ -553,9 +552,9 @@ R+T=1.
 \section{Totalflexion}
 
 Beim Übergang vom optisch dichteren ins optisch dünnere Medium ($n_2<n_1$) kann es zum Phänomen der Totalflexion kommen, bei dem ein eintreffender Strahl so stark vom Lot weggebrochen wird, dass er in der Grenzfläche liegt. Diesen Grenzwinkel liefert das Brechungsgesetz:
-\begin{equation*}
-\sin\alpha_G = \frac{n_2}{n_1}
-\end{equation*}
+\begin{empheq}[box=\highlightbox]{equation*}
+\sin\alpha_G = \frac{n_2\vphantom{\big|}}{n_1\vphantom{\big|}}
+\end{empheq}
 Für alle $\alpha > \alpha_G$ wird $\sin\beta>1$ und es gibt keine gebrochene Welle mehr. Die korrekte physikalische Interpretation ist
 \begin{equation*}
 \sin\beta=\frac{k_{2y}}{k_2}>1.

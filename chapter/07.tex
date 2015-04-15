@@ -34,14 +34,14 @@ Wir entwickeln diesen Ausdruck für das Dipollimit $|\vec{a}| \rightarrow 0$:
 
 \begin{align*}
 \vec{F}  \ &= \ Q \cdot \left( \vec{E} (\vec{r}) \ + \ \frac{1}{2} \left(\vec{a}\cdot\pdiff{}{\vec{r}}\right) \vec{E}(\vec{r}) \ - \ \vec{E}(\vec{r}) \ + \ \frac{1}{2} \left(\vec{a}\cdot\pdiff{}{\vec{r}}\right)\vec{E}(\vec{r})\right) \\
-\vec{F} \ &= \ Q\cdot \left(\vec{a}\cdot\nabla\right) \ \vec{E}  \ = \ \left( \vec{p} \cdot \nabla\right) \ \vec{E}
+\alignedbox{\hspace{.5em}\vec{F} \ }{= \ Q\cdot \left(\vec{a}\cdot\nabla\right) \ \vec{E}  \ = \ \left( \vec{p} \cdot \nabla\right) \ \vec{E}\hspace{.5em}}
 \end{align*}
 
 Den Ausdruck für das Drehmoment auf einen Dipol im elektrischen Feld erhalten wir analog:
 
 \begin{align*}
 \vec{M}  \ &= \ Q \cdot \left(\frac{\vec{a}}{2} \times \vec{E}\left(\vec{r} \ + \ \frac{a}{2}\right) \ + \ \frac{\vec{a}}{2} \times \vec{E}\left(\vec{r} \ - \ \frac{\vec{a}}{2}\right)\right)\\
-\vec{M}  \ &= \ Q \cdot \vec{a}\times\vec{E}  \ = \ \vec{p}\times\vec{E} 
+\alignedbox{\hspace{.5em}\vec{M}  \ }{= \ Q \cdot \vec{a}\times\vec{E}  \ = \ \vec{p}\times\vec{E}\hspace{.5em}}
 \end{align*}
 
 \section{Magnetischer Dipol}
@@ -97,7 +97,7 @@ $(**)=0$, da $\dot{\vec{E}}=0$ und $\mu_0\vec{j}\rightarrow 0$ außerhalb der Qu
 Somit :
 
 \begin{equation*}
-\vec{F}  \ = \  (\vec{m}\cdot\nabla) \vec{B} \qquad\qquad (\text{vgl. el. Dipol: } \vec{F}  \ = \ (\vec{p}\cdot\nabla)\vec{E})
+\text{\colorbox{bblue}{$\hspace{.5em}\vphantom{\big|}\vec{F}  \ = \  (\vec{m}\cdot\nabla) \vec{B}\hspace{.5em}$}} \qquad\qquad (\text{vgl. el. Dipol: } \vec{F}  \ = \ (\vec{p}\cdot\nabla)\vec{E})
 \end{equation*}
 
 Für das Drehmoment auf den magnetischen Dipol gilt:
@@ -115,7 +115,7 @@ Näherung: $\vec{B}$ ist homogen. Auflösung der Integrale:
 \end{align*}
 
 \begin{equation*}
-\Rightarrow \quad \vec{M}  \ = \ I\cdot \vec{A}_F \times \vec{B} \ = \ \vec{m}\times\vec{B} \qquad\qquad (\text{vgl. el. Dipol: } \vec{M}  \ = \ \vec{p}\times\vec{E})
+\Rightarrow \quad \text{\colorbox{bblue}{$\hspace{.5em}\vec{M}  \ = \ I\cdot \vec{A}_F \times \vec{B} \ = \ \vec{m}\times\vec{B}\hspace{.5em}\vphantom{\big|}$}} \qquad\qquad (\text{vgl. el. Dipol: } \vec{M}  \ = \ \vec{p}\times\vec{E})
 \end{equation*}
 
 \section[Multipolentwicklung der Feldenergie]{Multipolentwicklung der elektrischen Wechselwirkungsenergie}
@@ -161,7 +161,7 @@ W \ = \ Q\cdot\varphi(\vec{r}) \ + \ \vec{p}\cdot\nabla\varphi(\vec{r})  \ = \ \
 \begin{align*}
 \delta A \ &= \ \vec{F} \cdot \delta\vec{r} \ = \ -\delta W \\
 \Rightarrow \quad \vec{F}  \ &= \  -\pdiff{\varphi}{\vec{r}}  \ = \ -Q\ \pdiff{\varphi}{\vec{r}} \ - \ \pdiff{}{\vec{r}} \left(\vec{p}\cdot\pdiff{}{\vec{r}}\varphi\right) \ - \ \frac{1}{6} \ \left(\pdiff{}{\vec{r}}\cdot\tens{D}\cdot\pdiff{}{\vec{r}}\right)\pdiff{\varphi}{\vec{r}}\\
-\Rightarrow \quad \vec{F} \ &= \ Q \ \vec{E} \ + \ \left(\vec{p}\cdot\nabla\right)\vec{E} \ + \ \frac{1}{6}\left(\nabla\cdot\tens{D}\cdot\nabla\right)\vec{E}
+\alignedbox{\hspace{.5em}\vec{F} \ }{= \ Q \ \vec{E} \ + \ \left(\vec{p}\cdot\nabla\right)\vec{E} \ + \ \frac{1}{6}\left(\nabla\cdot\tens{D}\cdot\nabla\right)\vec{E} \ + \ \ldots\hspace{.5em}}
 \end{align*}
 
 \newpage
@@ -183,7 +183,7 @@ Somit gilt für $\delta W$ und schlussendlich für das Drehmoment:
 \begin{align*}
 \delta W  \ &= \  \delta\vec{p} \pdiff{\varphi}{\vec{r}} \ + \ \frac{1}{6}\left(\nabla\cdot\delta\tens{D}\cdot\nabla\right)\varphi \ + \ \ldots\\
 &= \ - \left(\delta\vec{\alpha}\times\vec{p}\right)\vec{E} \ - \ \frac{1}{6}\nabla\left(\delta\vec{\alpha}\times\tens{D} \ - \ \tens{D} \times\delta\vec{\alpha}\right)\vec{E} \ +  \ \ldots\\
-\Rightarrow\quad \vec{M} \ &= \ \vec{p}\times\vec{E} \ + \ \frac{1}{6}\left(\nabla\cdot\tens{D}\times\vec{E} \ - \ \nabla\times\tens{D}\cdot\vec{E}\right) \ + \ \ldots
+\alignedbox{\hspace{.5em}\vec{M} \ }{= \ \vec{p}\times\vec{E} \ + \ \frac{1}{6}\left(\nabla\cdot\tens{D}\times\vec{E} \ - \ \nabla\times\tens{D}\cdot\vec{E}\right) \ + \ \ldots\hspace{.5em}}
 \end{align*}
 
 Achtung: Die analoge Prozedur für den magnetischen Fall (Kraft/Drehmoment aus Änderung der Feldenergie bestimmen) liefert ein falsches Vorzeichen! Dies hat seine Ursache in der zusätzlichen Energie aus der Spannungsquelle durch Induktion.

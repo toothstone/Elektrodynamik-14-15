@@ -13,7 +13,7 @@ Damit erhalten wir aus der dritten \textsc{Maxwell}-Gleichung, dass rot $\vec{E}
 Mit div $\vec{E} = \frac{\rho}{\epsilon_0}$ erhält man daraus die \textbf{\textsc{Poisson}-Gleichung} der Elektrostatik:
 
 \begin{empheq}[box=\highlightbox]{equation*}
-\laplace\varphi = - \frac{\rho}{\epsilon_0}
+\laplace\varphi = - \frac{\rho\vphantom{\big|}}{\epsilon_0\vphantom{\big|}}
 \end{empheq}
 
 Für $\laplace\varphi = 0$ nennt man die \textsc{Poisson}-Gleichung auch \textbf{\textsc{Laplace}-Gleichung}.
@@ -41,7 +41,7 @@ Damit ergibt sich für das $\vec{E}$-Feld und das Potential:
 \varphi(r) &= \frac{Q_{\mathrm{in}}(r)}{4\pi\epsilon_0\cdot r} + \varphi_0 \quad \text{ mit } \quad \varphi_0 = \varphi(r \rightarrow 0)
 \end{empheq}
 
-\section{Feld einer beliebigen räumlich begrenzten Ladungsverteilung}
+\section[Feld einer beliebigen Ladungsverteilung]{Feld einer beliebigen räumlich begrenzten Ladungsverteilung}
 
 \begin{enumerate}
 \item \textbf{Punktladung bei} $\vec{r}_0$:
@@ -131,7 +131,7 @@ Dazu betrachten wir den Term $\frac{1}{|\vec{r}+\vec{a}|}$ ein wenig genauer:\\
 Damit gilt für das Potential:
 
 \begin{empheq}[box=\highlightbox]{equation*}
-\varphi(\vec{r})=\frac{Q}{4\pi\epsilon_0}\left(\frac{1}{r}-\frac{1}{r}-\left(\vec{a}\cdot\pdiff{}{\vec{r}}\right)\frac{1}{r}\right) = \frac{\vec{p}\cdot\vec{r}}{4\pi\epsilon_o\cdot r^3}
+\varphi(\vec{r})=\frac{Q\vphantom{\big|}}{4\pi\epsilon_0\vphantom{\big|}}\left(\frac{1}{r}-\frac{1}{r}-\left(\vec{a}\cdot\pdiff{}{\vec{r}}\right)\frac{1}{r}\right) = \frac{\vec{p}\cdot\vec{r}}{4\pi\epsilon_o\cdot r^3}
 \end{empheq}
 
 und das $\vec{E}$-Feld:
@@ -179,7 +179,7 @@ Unter der Annahme, dass $|\vec{r}| \gg \ a$ gilt (wobei $a$ die größte räumli
 
 \begin{align*}
 \Rightarrow \quad \varphi(\vec{r}) &= \frac{1}{4\pi\epsilon_0} \left[ \frac{1}{r}\int\d V' \rho(\vec{r}') + \frac{\vec{r}}{r^3} \int\d V' \vec{r}' \rho(\vec{r}') + \sum_{i,j} \ \frac{x_i x_j}{r^5} \ \int\d V' \rho(\vec{r}') \ (3x_i'x_j' - \delta_{ij}\vec{r}'^2) + \dotsc\right] \\
-\alignedbox{}{= \frac{1}{4\pi\epsilon_0} \Big[\frac{Q}{r} \quad + \quad \frac{\vec{r}\cdot\vec{p}}{r^3} \quad + \quad \frac{1}{2}\frac{\vec{r}\cdot \tens{D} \cdot\vec{r}}{r^5} \quad + \quad \dotsc \quad \Big]}\\
+\alignedbox{\hphantom{a}}{= \frac{1\vphantom{\big|}}{4\pi\epsilon_0\vphantom{\big|}} \left[\frac{Q}{r} \quad + \quad \frac{\vec{r}\cdot\vec{p}}{r^3} \quad + \quad \frac{1}{2}\frac{\vec{r}\cdot \tens{D} \cdot\vec{r}}{r^5} \quad + \quad \dotsc \quad \right]\hphantom{a}}\\
 & \hspace{1.35cm} {\scriptstyle \sim\frac{1}{r}} \hspace{1.15cm} {\scriptstyle \sim \frac{1}{r^2}} \hspace{2cm} {\scriptstyle\sim\frac{1}{r^3}}
 \end{align*}
 
@@ -456,7 +456,7 @@ Wenn wir nun die Quellen auf den $\mathcal{S}_i$ mit in die Betrachtung mit einb
 \sigma &= \epsilon_0 \vec{E}_n\big|_{\mathcal{S}_i}  = -\epsilon_0 \pdiff{\varphi}{n}\Bigg|_{\mathcal{S}_i} = - \epsilon_0 \sum_k \pdiff{G_K(\vec{r})}{n}\Bigg|_{\mathcal{S}_i} \ \varphi_k \\
 \ \\
 \Rightarrow Q_i &= \Oiint{\mathcal{S}_i}{}{A} \ \sigma = -\epsilon_0\sum_k\Oiint{\mathcal{S}_i}{}{\vec{A}}\  \cdot \ \pdiff{G_K(\vec{r})}{\vec{r}} \ \varphi_k\\
-\alignedbox{Q_i}{=: \sum_k C_{ik} \varphi_k \quad \text{ mit } \quad C_{ik} = -\epsilon_0 \Oiint{\mathcal{S}_i}{\vphantom{A}}{\vec{A}} \ \cdot \ \pdiff{G_k}{\vec{r}}}
+\alignedbox{\hphantom{a}Q_i}{=: \sum_k C_{ik} \varphi_k \quad \text{ mit } \quad C_{ik} = -\epsilon_0 \Oiint{\mathcal{S}_i}{\vphantom{A}}{\vec{A}} \ \cdot \ \pdiff{G_k}{\vec{r}}\hphantom{a}}
 \end{align*}
 
 
